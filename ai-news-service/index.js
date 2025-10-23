@@ -40,9 +40,8 @@ app.get('/', async (req, res) => {
       // Assuming the model returns a JSON string as requested implicitly by the follow-up processing.
       // For robustness, we will attempt to parse it, assuming it might be wrapped in markdown.
       let responseText = candidate.content.parts[0].text;
-      responseText = responseText.replace(/^```json
-/, '').replace(/
-```$/, '');
+      // Fix: Use \n for newlines in the regex, not a literal newline
+      responseText = responseText.replace(/^```json\n/, '').replace(/\n```$/, '');
       
       const parsedResponse = JSON.parse(responseText);
       res.json(parsedResponse);
