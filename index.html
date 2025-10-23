@@ -336,8 +336,7 @@
       <div class="px-4 md:px-10 lg:px-20 flex flex-1 justify-center py-10 md:py-20">
         <div class="layout-content-container flex flex-col max-w-7xl flex-1">
           <h2 class="text-hack-green text-4xl md:text-5xl lg:text-6xl font-bold font-display text-center text-glow-hack pb-8 pt-5">Prompt Hacks: Get Better Answers NOW</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 @container">
-            <!-- Card 1 -->
+<div id="prompt-hacks-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 @container">            <!-- Card 1 -->
             <div class="flex flex-col items-stretch justify-start rounded-lg border border-hack-green/50 bg-black/30 backdrop-blur-sm shadow-neon-hack">
               <div class="p-4 border-b border-hack-green/50">
                 <p class="text-hack-green text-lg font-bold font-mono">The Persona Hack</p>
@@ -723,34 +722,64 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
   <script>
     document.addEventListener('DOMContentLoaded', () => {
 
-      // --- HACK 1: Prompt Hack Copy Buttons ---
-      const promptHackSection = document.querySelector('h2.text-glow-hack')?.closest('.layout-content-container');
-      if (promptHackSection) {
-        const copyButtons = promptHackSection.querySelectorAll('.btn-glitch-hack');
-        copyButtons.forEach(button => {
-          button.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent any default link behavior
-            const codeElement = button.closest('.flex-col').querySelector('pre code');
-            if (codeElement) {
-              navigator.clipboard.writeText(codeElement.innerText)
-                .then(() => {
-                  const originalTextEl = button.querySelector('span:last-child');
-                  if (!originalTextEl) return;
-                  const originalText = originalTextEl.innerText;
-                  originalTextEl.innerText = 'COPIED!';
-                  // Optional: change color on success
-                  button.style.borderColor = '#00FFFF'; 
-                  button.style.color = '#00FFFF';
-                  setTimeout(() => {
-                    originalTextEl.innerText = originalText;
-                    button.style.borderColor = ''; // Revert style
-                    button.style.color = '';
-                  }, 2000);
-                })
-                .catch(err => console.error('Failed to copy: ', err));
+      // --- HACK 1: Dynamic Prompt Hack Loading ---
+      const container = document.getElementById('prompt-hacks-container');
+      if (container && container.firstElementChild) { // Check for template
+        const template = container.firstElementChild.outerHTML;
+        container.innerHTML = ''; // Clear existing static cards
+
+        fetch('./prompts.json')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok: ' + response.statusText);
             }
+            return response.json();
+          })
+          .then(prompts => {
+            prompts.forEach(prompt => {
+              let cardHtml = template;
+              // Using regex to replace content robustly
+              cardHtml = cardHtml.replace(
+                /(<p class="text-hack-green text-lg font-bold font-mono">)(.*?)(<\/p>)/,
+                `$1${prompt.title}$3`
+              );
+              cardHtml = cardHtml.replace(
+                /(<code class="text-[#e0e0e0] text-base font-normal font-mono leading-normal">)([\s\S]*?)(<\/code>)/,
+                `$1${prompt.code}$3`
+              );
+              container.innerHTML += cardHtml;
+            });
+
+            // Re-attach copy button listeners AFTER cards are rendered
+            const copyButtons = container.querySelectorAll('.btn-glitch-hack');
+            copyButtons.forEach(button => {
+              button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const codeElement = button.closest('.flex-col').querySelector('pre code');
+                if (codeElement) {
+                  navigator.clipboard.writeText(codeElement.innerText)
+                    .then(() => {
+                      const originalTextEl = button.querySelector('span:last-child');
+                      if (!originalTextEl) return;
+                      const originalText = 'Copy Code'; // Assuming this is the original text
+                      originalTextEl.innerText = 'COPIED!';
+                      button.style.borderColor = '#00FFFF';
+                      button.style.color = '#00FFFF';
+                      setTimeout(() => {
+                        originalTextEl.innerText = originalText;
+                        button.style.borderColor = '';
+                        button.style.color = '';
+                      }, 2000);
+                    })
+                    .catch(err => console.error('Failed to copy: ', err));
+                }
+              });
+            });
+          })
+          .catch(error => {
+            console.error('Error fetching or parsing prompts:', error);
+            container.innerHTML = '<p class="text-red-500 text-center col-span-full">Error loading prompt hacks. Please check console.</p>';
           });
-        });
       }
 
       // --- HACK 2: Hero Gem Workflow Copy Buttons ---

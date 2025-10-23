@@ -1,0 +1,14 @@
+[
+  {
+    "title": "The Persona Hack",
+    "code": "Act as an expert [ROLE, e.g., 'growth marketer', 'CFO', 'narrative designer']...\n\nYour goal is to [TASK, e.g., 'write a high-converting ad campaign']..."
+  },
+  {
+    "title": "The Follow-Up Suffix",
+    "code": "[YOUR PROMPT GOES HERE]\n\n...Before you answer, ask me 3 critical follow-up questions to ensure your response is perfectly tailored to my needs."
+  },
+  {
+    "title": "The Format Constraint",
+    "code": "[YOUR PROMPT GOES HERE]\n\n...Format your entire response as a [FORMAT, e.g., 'Markdown table', 'JSON object', '3-slide presentation outline']."
+  }
+]
