@@ -20,37 +20,35 @@ const promptText = "What are the top 3 most important announcements from Google 
 const tools = [{ googleSearch: {} }];
 
 app.get('/', async (req, res) => {
-  // Set CORS header for public access, specifically for your GitHub Pages site
+  // Set CORS header for public access
   res.set('Access-Control-Allow-Origin', '*');
 
   try {
-    // Generate content using the Vertex AI model
+    // A simpler prompt, just asking for a text response.
+    const promptText = "What are the top 3 most important announcements from Google related to AI, Gemini, or AI Studio from the last 7 days? Summarize each in 1 sentence and provide the source URL. Format it as a simple bulleted list.";
+
     const result = await generativeModel.generateContent({
       contents: [{ role: 'user', parts: [{ text: promptText }] }],
-      tools: tools,
+      tools: tools, // Still use tools to get fresh search data
     });
 
     const response = result.response;
     const candidate = response.candidates[0];
 
-    // The model should return a response containing a function call to the search tool.
-    // We are interested in the result of that tool call, which is then processed by the model
-    // to generate the final text summary.
     if (candidate.content && candidate.content.parts && candidate.content.parts[0].text) {
-      // Assuming the model returns a JSON string as requested implicitly by the follow-up processing.
-      // For robustness, we will attempt to parse it, assuming it might be wrapped in markdown.
-      let responseText = candidate.content.parts[0].text;
-      // Fix: Use \n for newlines in the regex, not a literal newline
-      responseText = responseText.replace(/^```json\n/, '').replace(/\n```$/, '');
+      const aiResponseText = candidate.content.parts[0].text;
       
-      const parsedResponse = JSON.parse(responseText);
-      res.json(parsedResponse);
+      console.log("Sending AI text response:", aiResponseText);
+      
+      // Send the raw text, not JSON
+      res.status(200).send(aiResponseText);
     } else {
-      // This case handles scenarios where the response is not in the expected format.
-      res.status(500).json({ error: "Unexpected response format from AI model." });
+      throw new Error("Unexpected response format from AI model.");
     }
   } catch (error) {
-    console.error('Error generating content from Vertex AI:', error);
+    console.error("FAILED TO PROCESS AI REQUEST:", {
+      errorMessage: error.message,
+    });
     res.status(500).send('Error fetching news from the AI service.');
   }
 });

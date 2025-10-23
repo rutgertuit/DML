@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<!-- 
-  MASTER COMPILED FILE
-  This file is a combination of all 6 of your Stitch-generated HTML files.
-  - All <head> elements have been merged.
-  - All tailwind.config.js properties have been merged into one.
-  - All HTML classes have been refactored to use the new unified config.
-  - All content (prompts, descriptions) has been injected.
-  - A final <script> has been added for interactivity (tabs and copy buttons).
--->
 <html class="dark" lang="en">
 
 <head>
@@ -15,10 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>DMLive: The Aftershow</title>
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-  <!-- Google Fonts (Merged from all 6 files) -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -26,7 +15,6 @@
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Staatliches&family=VT323&family=Permanent+Marker&display=swap"
     rel="stylesheet" />
 
-  <!-- Unified Tailwind Config (Merged from all 6 files) -->
   <script>
     tailwind.config = {
       darkMode: "class",
@@ -111,7 +99,6 @@
     }
   </script>
 
-  <!-- All Custom <style> Blocks (Merged from all 6 files) -->
   <style>
     /* From hero_section_code.html */
     @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
@@ -466,15 +453,9 @@
     }
   </style>
 </head>
-<!-- ============================================= -->
-<!-- ===== SECTION 0: NEWS ===== -->
-<!-- ============================================= -->
 
 <body class="bg-base-bg font-display">
   <div id="ai-news-container" class="p-8"></div>
-  <!-- ============================================= -->
-  <!-- ===== SECTION 1: HERO (from hero_section_code.html) ===== -->
-  <!-- ============================================= -->
   <div class="relative flex h-screen w-full flex-col bg-black dark group/design-root overflow-hidden"
     style="font-family: 'Space Grotesk', sans-serif; background-color: #191022;">
     <div class="absolute inset-0 z-0 opacity-20" data-alt="Looping ASCII art animation of digital rain"
@@ -488,7 +469,6 @@
         </h1>
         <h2 class="font-graffiti text-3xl md:text-4xl mt-4 text-hero-green"
           style="text-shadow: 0 0 3px #00ff00, 0 0 5px #00ff00;">
-          <!-- CONTENT INJECTION: Remember to change [Your Name] -->
           Rutger's AI Cheat Codes
         </h2>
       </div>
@@ -503,15 +483,11 @@
       <div
         class="absolute top-4 right-4 text-xs font-pixel text-gray-500 opacity-50 hover:opacity-100 transition-opacity cursor-pointer glitch"
         data-alt="Hidden message that appears on hover.">
-        <!-- Easter Egg -->
         <span class="hidden group-hover/design-root:inline">[ACCESS_GRANTED]</span>
       </div>
     </div>
   </div>
 
-  <!-- ======================================================== -->
-  <!-- ===== SECTION 2: HACKS (from prompt_hacks_section_code.html) ===== -->
-  <!-- ======================================================== -->
   <div class="relative flex h-auto min-h-screen w-full flex-col dark group/design-root overflow-x-hidden"
     style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqVGUHkb6RpJrsb2RF6lS0ogs5NIU2lTrVxwi_bB1JAnVe3g_caJMC68aaXu5MfguP2c904vAXbhdo_8lENQ-cuY2v5D7Zy03b7O0WbiaCzuhNFp9WC37HNJmJIS9K8qFjCsRqXBYPXGrNEni0I2qixQYIMRErHdk3N1PMjg9VTev83kpYW-jnpOsIQILuVhW7vLmq71AZpaWQQrAXvwLshEAJtlS9_RiWjWjKXmEMKOZivwtDB5ah6XPP0__OsghUZG5DOeeESWem'); background-color: #1a1a1a;">
     <div class="layout-container flex h-full grow flex-col">
@@ -521,14 +497,12 @@
             class="text-hack-green text-4xl md:text-5xl lg:text-6xl font-bold font-display text-center text-glow-hack pb-8 pt-5">
             Prompt Hacks: Get Better Answers NOW</h2>
           <div id="prompt-hacks-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 @container">
-            <!-- Card 1 -->
             <div
               class="flex flex-col items-stretch justify-start rounded-lg border border-hack-green/50 bg-black/30 backdrop-blur-sm shadow-neon-hack">
               <div class="p-4 border-b border-hack-green/50">
                 <p class="text-hack-green text-lg font-bold font-mono">The Persona Hack</p>
               </div>
               <div class="flex flex-col flex-grow p-4">
-                <!-- CONTENT INJECTION -->
                 <pre class="flex-grow"><code class="text-[#e0e0e0] text-base font-normal font-mono leading-normal">Act as an expert [ROLE, e.g., 'growth marketer', 'CFO', 'narrative designer']...
 
 Your goal is to [TASK, e.g., 'write a high-converting ad campaign']...</code></pre>
@@ -539,14 +513,12 @@ Your goal is to [TASK, e.g., 'write a high-converting ad campaign']...</code></p
                 </button>
               </div>
             </div>
-            <!-- Card 2 -->
             <div
               class="flex flex-col items-stretch justify-start rounded-lg border border-hack-green/50 bg-black/30 backdrop-blur-sm shadow-neon-hack">
               <div class="p-4 border-b border-hack-green/50">
                 <p class="text-hack-green text-lg font-bold font-mono">The Follow-Up Suffix</p>
               </div>
               <div class="flex flex-col flex-grow p-4">
-                <!-- CONTENT INJECTION -->
                 <pre
                   class="flex-grow"><code class="text-[#e0e0e0] text-base font-normal font-mono leading-normal">[YOUR PROMPT GOES HERE]
 
@@ -558,14 +530,12 @@ Your goal is to [TASK, e.g., 'write a high-converting ad campaign']...</code></p
                 </button>
               </div>
             </div>
-            <!-- Card 3 -->
             <div
               class="flex flex-col items-stretch justify-start rounded-lg border border-hack-green/50 bg-black/30 backdrop-blur-sm shadow-neon-hack">
               <div class="p-4 border-b border-hack-green/50">
                 <p class="text-hack-green text-lg font-bold font-mono">The Format Constraint</p>
               </div>
               <div class="flex flex-col flex-grow p-4">
-                <!-- CONTENT INJECTION -->
                 <pre
                   class="flex-grow"><code class="text-[#e0e0e0] text-base font-normal font-mono leading-normal">[YOUR PROMPT GOES HERE]
 
@@ -583,9 +553,6 @@ Your goal is to [TASK, e.g., 'write a high-converting ad campaign']...</code></p
     </div>
   </div>
 
-  <!-- ========================================================== -->
-  <!-- ===== SECTION 3: WORKFLOW (from hero_gem_workflow_code.html) ===== -->
-  <!-- ========================================================== -->
   <div
     class="relative flex min-h-screen w-full flex-col overflow-x-hidden p-4 sm:p-8 bg-gem-bg font-display text-gem-text">
     <div class="absolute inset-0 z-0 opacity-10"
@@ -598,7 +565,6 @@ Your goal is to [TASK, e.g., 'write a high-converting ad campaign']...</code></p
       </header>
       <main class="w-full">
         <div class="relative flex flex-col items-center gap-16">
-          <!-- Step 1: Research -->
           <div class="w-full max-w-md data-block bg-gem-bg/80 p-6 rounded-lg backdrop-blur-sm">
             <div class="flex items-start gap-6">
               <div class="text-6xl font-bold text-gem-secondary" style="text-shadow: 0 0 8px #00FFFF;">1</div>
@@ -606,14 +572,13 @@ Your goal is to [TASK, e.g., 'write a high-converting ad campaign']...</code></p
                 <h2 class="text-2xl font-bold uppercase text-gem-primary mb-4" style="text-shadow: 0 0 5px #00FF00;">
                   Research</h2>
                 <div class="ascii-art text-sm sm:text-base mb-4">
-                  <pre data-alt="ASCII art of a magnifying glass">  .//.      
- //  \\     
-||    ||    
- \\__//     
-   ||       
-   ||       </pre>
+                  <pre data-alt="ASCII art of a magnifying glass">  .//.      
+ //  \\     
+||    ||    
+ \\__//     
+   ||       
+   ||       </pre>
                 </div>
-                <!-- CONTENT INJECTION -->
                 <p class="text-gem-text text-glow-gem">First, use the 'Deep Research Prompt' to have Gemini gather the
                   foundational knowledge (studies, papers, articles) that will make your Gem an expert.</p>
               </div>
@@ -622,7 +587,6 @@ Your goal is to [TASK, e.g., 'write a high-converting ad campaign']...</code></p
           <div class="h-16 w-px bg-gem-primary shadow-neon-green-gem relative">
             <div class="absolute w-full h-full bg-gem-primary animate-flicker"></div>
           </div>
-          <!-- Step 2: Instruct -->
           <div class="w-full max-w-md data-block bg-gem-bg/80 p-6 rounded-lg backdrop-blur-sm">
             <div class="flex items-start gap-6">
               <div class="text-6xl font-bold text-gem-secondary" style="text-shadow: 0 0 8px #00FFFF;">2</div>
@@ -630,15 +594,14 @@ Your goal is to [TASK, e.g., 'write a high-converting ad campaign']...</code></p
                 <h2 class="text-2xl font-bold uppercase text-gem-primary mb-4" style="text-shadow: 0 0 5px #00FF00;">
                   Instruct</h2>
                 <div class="ascii-art text-sm sm:text-base mb-4">
-                  <pre data-alt="ASCII art of a brain">  .---.      
- /     \     
- \_.-._/     
- .-~ ~-.     
-| |   | |    
- \ `-' /     
-  `---'      </pre>
+                  <pre data-alt="ASCII art of a brain">  .---.      
+ /     \     
+ \_.-._/     
+ .-~ ~-.     
+| |   | |    
+ \ `-' /     
+  `---'      </pre>
                 </div>
-                <!-- CONTENT INJECTION -->
                 <p class="text-gem-text text-glow-gem">Next, use the 'System Instruction Prompt'. This is the master
                   prompt where you paste in the research and give your Gem its new persona, rules, and purpose.</p>
               </div>
@@ -647,7 +610,6 @@ Your goal is to [TASK, e.g., 'write a high-converting ad campaign']...</code></p
           <div class="h-16 w-px bg-gem-primary shadow-neon-green-gem relative">
             <div class="absolute w-full h-full bg-gem-primary animate-flicker"></div>
           </div>
-          <!-- Step 3: Deploy -->
           <div class="w-full max-w-md data-block bg-gem-bg/80 p-6 rounded-lg backdrop-blur-sm">
             <div class="flex items-start gap-6">
               <div class="text-6xl font-bold text-gem-secondary" style="text-shadow: 0 0 8px #00FFFF;">3</div>
@@ -655,17 +617,16 @@ Your goal is to [TASK, e.g., 'write a high-converting ad campaign']...</code></p
                 <h2 class="text-2xl font-bold uppercase text-gem-primary mb-4" style="text-shadow: 0 0 5px #00FF00;">
                   Deploy</h2>
                 <div class="ascii-art text-sm sm:text-base mb-4">
-                  <pre data-alt="ASCII art of a rocket">    /\\
-   //\\\\
-  //  \\\\
- |   |
- |   |
+                  <pre data-alt="ASCII art of a rocket">    /\\
+   //\\\\
+  //  \\\\
+ |   |
+ |   |
 /-----\
 |USA|
-|   |
+|   |
 /-----\</pre>
                 </div>
-                <!-- CONTENT INJECTION -->
                 <p class="text-gem-text text-glow-gem">Deploy your Gem. Paste your System Instruction into Google AI
                   Studio, create a new Gemini Gem, or use it as a custom instruction in your favorite tool.</p>
               </div>
@@ -674,9 +635,7 @@ Your goal is to [TASK, e.g., 'write a high-converting ad campaign']...</code></p
         </div>
       </main>
 
-      <!-- CONTENT INJECTION: Adding the prompt templates -->
       <div class="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center px-4 mt-16">
-        <!-- Prompt 1: Deep Research -->
         <div class="w-full max-w-2xl mb-8 gem-prompt-container">
           <h3 class="text-2xl font-bold text-gem-primary mb-4" style="text-shadow: 0 0 5px #00FF00;">1. The Deep
             Research Prompt</h3>
@@ -690,10 +649,8 @@ For each source, you must provide:
 3. The 3 most powerful statistics or "killer facts" from the source.
 
 Format your output as a Markdown table.</code></pre>
-          <!-- Copy button will be added here by JS -->
         </div>
 
-        <!-- Prompt 2: System Instruction -->
         <div class="w-full max-w-2xl mb-16 gem-prompt-container">
           <h3 class="text-2xl font-bold text-gem-secondary mb-4" style="text-shadow: 0 0 5px #00FFFF;">2. The "Hero Gem"
             System Instruction</h3>
@@ -714,15 +671,11 @@ When I provide you with a challenge, you will:
 **Tone:** Expert, concise, data-driven.
 
 **[END OF SYSTEM INSTRUCTION]**</code></pre>
-          <!-- Copy button will be added here by JS -->
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ======================================================== -->
-  <!-- ===== SECTION 4: TEAM BRAIN (from team's_shared_brain_code.html) ===== -->
-  <!-- ======================================================== -->
   <div
     class="relative flex h-auto min-h-screen w-full flex-col bg-team-bg dark font-display group/design-root overflow-x-hidden">
     <div class="layout-container flex h-full grow flex-col">
@@ -733,19 +686,16 @@ When I provide you with a challenge, you will:
             data-text="ACCESS TEAM PROTOCOLS">ACCESS TEAM PROTOCOLS</h1>
           <div class="pb-3">
             <div class="flex border-b border-team-green/30 px-4 gap-8">
-              <!-- Tab 1: CFO -->
               <a class="flex flex-col items-center justify-center border-b-[3px] border-b-team-green text-glow-team pb-[13px] pt-4"
                 href="#">
                 <p class="text-team-green text-sm font-bold leading-normal tracking-[0.015em]">CFO</p>
               </a>
-              <!-- Tab 2: CMO -->
               <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-team-green/50 pb-[13px] pt-4"
                 href="#">
                 <p
                   class="text-team-green/50 text-sm font-bold leading-normal tracking-[0.015em] hover:text-team-green hover:text-glow-team transition-all duration-300">
                   CMO</p>
               </a>
-              <!-- Tab 3: CEO -->
               <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-team-green/50 pb-[13px] pt-4"
                 href="#">
                 <p
@@ -755,9 +705,7 @@ When I provide you with a challenge, you will:
             </div>
           </div>
 
-          <!-- CONTENT INJECTION: New container for tabbed content -->
           <div class="flex items-start gap-8 px-4 py-8">
-            <!-- CFO Content (Visible by default) -->
             <div id="cfo-content" class="flex-grow">
               <h2 class="text-white tracking-light text-[28px] font-bold leading-tight text-left pb-3 pt-5">FOR THE
                 CHIEF FINANCIAL OFFICER</h2>
@@ -765,11 +713,10 @@ When I provide you with a challenge, you will:
                 all project docs (budgets, forecasts, reports).</p>
               <pre
                 class="bg-black/50 border border-team-green/50 p-4 rounded-lg overflow-x-auto"><code class="text-white text-sm font-mono">Based *only* on the sources, identify all mentions of 'budget,' 'cost,' 'pricing,' 'headcount,' and 'revenue projections.' 
-        
+ 
 Synthesize these into a 5-bullet summary of the project's financial status, highlighting key risks and opportunities.</code></pre>
             </div>
 
-            <!-- CMO Content (Hidden) -->
             <div id="cmo-content" class="flex-grow hidden">
               <h2 class="text-white tracking-light text-[28px] font-bold leading-tight text-left pb-3 pt-5">FOR THE
                 CHIEF MARKETING OFFICER</h2>
@@ -782,7 +729,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
 **Slide 3:** Three proposed marketing campaign ideas with a target audience for each.</code></pre>
             </div>
 
-            <!-- CEO Content (Hidden) -->
             <div id="ceo-content" class="flex-grow hidden">
               <h2 class="text-white tracking-light text-[28px] font-bold leading-tight text-left pb-3 pt-5">FOR THE
                 CHIEF EXECUTIVE OFFICER</h2>
@@ -795,7 +741,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
 4. **Action Item:** (The single most important decision I need to make this week)</code></pre>
             </div>
 
-            <!-- Icon (will be updated by JS) -->
             <div class="w-1/4 flex-shrink-0 flex justify-center items-center pt-24">
               <span class="material-symbols-outlined text-team-green text-9xl text-glow-team"
                 style="font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 48">account_balance</span>
@@ -810,9 +755,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
     </div>
   </div>
 
-  <!-- ======================================================= -->
-  <!-- ===== SECTION 5: FLOW/VIBE (from flow_vs_vibe_code.html) ===== -->
-  <!-- ======================================================= -->
   <div
     class="relative min-h-screen w-full flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-hidden bg-flow-bg text-flow-text">
     <div class="absolute inset-0 z-0 opacity-10"
@@ -823,7 +765,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
         <h1 class="text-5xl md:text-7xl font-black tracking-tighter uppercase font-display">Flow vs. Vibe</h1>
       </header>
       <main class="grid md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-12 items-start">
-        <!-- Flow Coding Column -->
         <div
           class="flex flex-col items-center text-center p-6 border border-flow-blue/20 rounded-lg hover:border-flow-blue/50 transition-all duration-300">
           <h2 class="text-3xl font-bold text-flow-blue mb-6 font-display">Flow Coding</h2>
@@ -832,7 +773,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
               data-alt="Animated SVG of nodes, connectors, and logic gates pulsing and connecting"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHJpMtHvJ9TP_zT56GAF4VDgtx4BB9FwEd4f62ht0xPAtZjW0aD16cnUPFRy4fdxQYX9s1w9B0Wsfr52TNc2BseubZOABGpmx_OjfI4UaMD1ZYdlC2nRAWn3Zt20pRoqpmx4kAqrGbJmslpqBGr4eFL1M6Uh8TM33nX6_mIPACAtZ99Ddl2xTMSnlDQBdbKLL_fnh_4UmSc5jt6rsNIZIjxZSct2mnO6Y4ZxRz3daYL2w6he8SS5x1n0SEvi3jphg0ptMMJePoM3tO" />
           </div>
-          <!-- CONTENT INJECTION -->
           <p class="font-pixel text-lg leading-relaxed text-flow-text/80">The "Architect." This is visual, node-based
             programming. You connect logical blocks to build deterministic, step-by-step systems. It's about precision,
             structure, and control. Think of tools like Make.com or Node-RED.</p>
@@ -842,11 +782,9 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
             <span class="material-symbols-outlined text-flow-blue text-3xl" data-icon="">account_tree</span>
           </div>
         </div>
-        <!-- Divider -->
         <div class="hidden md:flex justify-center items-stretch h-full">
           <div class="glitch-divider"></div>
         </div>
-        <!-- Vibe Coding Column -->
         <div
           class="flex flex-col items-center text-center p-6 border border-vibe-pink/20 rounded-lg hover:border-vibe-pink/50 transition-all duration-300">
           <h2 class="text-3xl font-bold text-vibe-pink mb-6 font-display">Vibe Coding</h2>
@@ -855,7 +793,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
               data-alt="Abstract, glowing, sound-wave-like generative art pattern"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuALbr0pdfV0tRdhwjJKbxYd_EEgtbD-xJJFmjI6nhOd_JX7nOo2tPlyYS5gWrSUKCCdHnBuSXbQIhXC8vH-3UosKPby2Q3rxjQXbenxXL5a6QjGcpSxMby2yPqP_rBhLpC5GMyteXggCtmtWXI7Sdwq4L16jXqcdhw0GdNPgct8dM24jFavJYlP6UvZ7mMU-NnOf_mX4Qu9ap9pNAMK7BymVl_-fkaLdoZk9fHda24YQ_MGlMtG8XlDcnzMyFemb5XqAVxGmwoKpMsT" />
           </div>
-          <!-- CONTENT INJECTION -->
           <p class="font-pixel text-lg leading-relaxed text-flow-text/80">The "Director." This is what we do in Google
             AI Studio. You use natural language to rapidly iterate on an AI's behavior. You're less a coder, more a
             director, shaping the "vibe" and personality of your AI until it's perfect.</p>
@@ -869,9 +806,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
     </div>
   </div>
 
-  <!-- ========================================================== -->
-  <!-- ===== SECTION 6: GEAR LOCKER (from gear_locker_&_footer_code.html) ===== -->
-  <!-- ========================================================== -->
   <div class="relative flex min-h-screen w-full flex-col dark group/design-root overflow-x-hidden"
     style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJTRK4PHrzkBEknzRlcFuKmkG-oQ06cQPSrmaGpRNNc-zFrfRfAgDSNBJgQvETRE_RJrI0onzJODJu4qqx56GBLxPFqWgi038jOSMicPLltmoMr5DUgt53PTWo0lkTVwxnayecBF9FDW8qNSajHBihLVCtmCaaHNQ_T5OeaKwomcPaGdwUqFOY509ubmFddzkY684dK5A7RhzGCtZCV33cKqNMjLp2lQKy2ktqgAZZ5m2b8WNBkmgAP0zZJ1ow62hH-DXRlcgcHVhy'); background-color: #1a1a1a;">
     <div class="layout-container flex h-full grow flex-col">
@@ -881,9 +815,7 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
             class="text-white text-5xl md:text-6xl font-stencil leading-tight tracking-widest px-4 pb-3 pt-5 text-center title-glow">
             Gear Locker</h2>
 
-          <!-- CONTENT INJECTION: Replaced grid with new linked items -->
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
-            <!-- Item 1: Google Stitch -->
             <a href="https://labs.google.com/stitch" target="_blank" rel="noopener noreferrer">
               <div
                 class="group flex flex-1 flex-col items-center gap-3 rounded-lg border border-gear-green/30 bg-gray-900/50 p-6 transition-all duration-300 hover:border-gear-green hover:bg-gray-900 h-full">
@@ -895,7 +827,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
                 </div>
               </div>
             </a>
-            <!-- Item 2: Google AI Studio -->
             <a href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer">
               <div
                 class="group flex flex-1 flex-col items-center gap-3 rounded-lg border border-gear-blue/30 bg-gray-900/50 p-6 transition-all duration-300 hover:border-gear-blue hover:bg-gray-900 h-full">
@@ -907,7 +838,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
                 </div>
               </div>
             </a>
-            <!-- Item 3: NotebookLM -->
             <a href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer">
               <div
                 class="group flex flex-1 flex-col items-center gap-3 rounded-lg border border-gear-magenta/30 bg-gray-900/50 p-6 transition-all duration-300 hover:border-gear-magenta hover:bg-gray-900 h-full">
@@ -919,7 +849,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
                 </div>
               </div>
             </a>
-            <!-- Item 4: Gemini CLI -->
             <a href="https://ai.google.dev/docs/gemini_api_cli" target="_blank" rel="noopener noreferrer">
               <div
                 class="group flex flex-1 flex-col items-center gap-3 rounded-lg border border-gear-blue/30 bg-gray-900/50 p-6 transition-all duration-300 hover:border-gear-blue hover:bg-gray-900 h-full">
@@ -931,7 +860,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
                 </div>
               </div>
             </a>
-            <!-- Item 5: YouTube (NotebookLM) -->
             <a href="https://www.youtube.com/watch?v=O4bFDJ5oq9Q" target="_blank" rel="noopener noreferrer">
               <div
                 class="group flex flex-1 flex-col items-center gap-3 rounded-lg border border-gear-magenta/30 bg-gray-900/50 p-6 transition-all duration-300 hover:border-gear-magenta hover:bg-gray-900 h-full">
@@ -943,7 +871,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
                 </div>
               </div>
             </a>
-            <!-- Item 6: YouTube (Prompting) -->
             <a href="https://www.youtube.com/watch?v=yrdt0l00DEo" target="_blank" rel="noopener noreferrer">
               <div
                 class="group flex flex-1 flex-col items-center gap-3 rounded-lg border border-gear-green/30 bg-gray-900/50 p-6 transition-all duration-300 hover:border-gear-green hover:bg-gray-900 h-full">
@@ -957,12 +884,10 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
             </a>
           </div>
 
-          <!-- AI News Section -->
           <div class="px-4 pt-10">
             <h3 class="text-white text-3xl font-stencil leading-tight tracking-widest text-center title-glow mb-4">AI
               Dispatches</h3>
             <div id="ai-news-container" class="max-w-2xl mx-auto text-center font-pixel text-lg">
-              <!-- JS will populate this -->
             </div>
           </div>
 
@@ -978,9 +903,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
     </div>
   </div>
 
-  <!-- =================================================== -->
-  <!-- ===== FINAL SCRIPT: For All Interactivity ===== -->
-  <!-- =================================================== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       fetchAiNews();
@@ -1140,41 +1062,42 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
       }
     });
 
+    // === START OF REPLACED BLOCK ===
     async function fetchAiNews() {
-      const url = 'https://ai-news-service-113214288365.europe-west1.run.app'; // Placeholder
+      // !!! IMPORTANT: Replace this with your actual Cloud Run URL !!!
+      const url = 'https://ai-news-service-113214288365.europe-west1.run.app';
       const container = document.getElementById('ai-news-container');
+
       if (!container) return;
 
       try {
         container.innerHTML = '<p class="text-hack-green">Loading latest dispatches...</p>';
+
         const response = await fetch(url);
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const newsItems = await response.json();
 
+        // Get the response as raw text, not JSON
+        const newsText = await response.text();
+
+        // Clear loading message
         container.innerHTML = '';
-        const ul = document.createElement('ul');
-        ul.classList.add('list-none', 'space-y-2');
 
-        newsItems.forEach(item => {
-          const li = document.createElement('li');
-          const a = document.createElement('a');
-          a.href = item.url;
-          a.target = '_blank';
-          a.rel = 'noopener noreferrer';
-          a.textContent = item.summary;
-          a.classList.add('text-flow-text', 'hover:text-hero-purple', 'transition-colors', 'duration-300');
-          li.appendChild(a);
-          ul.appendChild(li);
-        });
+        // Render the raw text, preserving line breaks
+        // (We'll use your site's "vibe" for styling)
+        const pre = document.createElement('pre');
+        pre.className = 'text-flow-text font-pixel text-lg whitespace-pre-wrap text-left'; // Apply styling
+        pre.textContent = newsText;
+        container.appendChild(pre);
 
-        container.appendChild(ul);
       } catch (error) {
         console.error('Failed to fetch AI news:', error);
         container.innerHTML = '<p class="text-hero-pink">Error loading dispatches. Please check back later.</p>';
       }
     }
+    // === END OF REPLACED BLOCK ===
   </script>
 
 </body>
