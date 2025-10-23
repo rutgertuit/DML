@@ -5,7 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Initialize Vertex AI client
-const vertex_ai = new VertexAI({ project: 'YOUR_PROJECT_ID', location: 'us-central1' });
+const vertex_ai = new VertexAI({ project: 'dml2025rt', location: 'europe-west1' });
 const model = 'gemini-1.5-flash-001';
 
 // Define the generative model
