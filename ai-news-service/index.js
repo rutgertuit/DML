@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 8080;
 
 // Initialize Vertex AI client
 const vertex_ai = new VertexAI({ project: 'dml2025rt', location: 'europe-west1' });
-const model = 'gemini-1.5-flash-001';
+const model = 'gemini-2.5-flash';
 
 // Define the generative model
 const generativeModel = vertex_ai.getGenerativeModel({
