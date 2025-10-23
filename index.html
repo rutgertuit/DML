@@ -295,9 +295,11 @@
     }
   </style>
 </head>
-
+  <!-- ============================================= -->
+  <!-- ===== SECTION 0: NEWS ===== -->
+  <!-- ============================================= -->
 <body class="bg-base-bg font-display">
-
+<div id="ai-news-container" class="p-8"></div>
   <!-- ============================================= -->
   <!-- ===== SECTION 1: HERO (from hero_section_code.html) ===== -->
   <!-- ============================================= -->
@@ -306,11 +308,11 @@
     <div class="relative z-10 flex h-full grow flex-col items-center justify-center p-4">
       <div class="text-center">
         <h1 class="font-pixel text-6xl md:text-8xl font-black tracking-tighter text-hero-purple glitch" style="text-shadow: 0 0 5px #9f00ff, 0 0 10px #9f00ff, 0 0 20px #9f00ff, 0 0 40px #9f00ff;">
-          DMLive: The Aftershow
+          DMLive '25: The Aftershow
         </h1>
         <h2 class="font-graffiti text-3xl md:text-4xl mt-4 text-hero-green" style="text-shadow: 0 0 3px #00ff00, 0 0 5px #00ff00;">
           <!-- CONTENT INJECTION: Remember to change [Your Name] -->
-          [Your Name]'s AI Cheat Codes
+          Rutger's AI Cheat Codes
         </h2>
       </div>
       <div class="absolute bottom-10 flex flex-col items-center text-center">
@@ -706,6 +708,14 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
             </a>
           </div>
 
+          <!-- AI News Section -->
+          <div class="px-4 pt-10">
+            <h3 class="text-white text-3xl font-stencil leading-tight tracking-widest text-center title-glow mb-4">AI Dispatches</h3>
+            <div id="ai-news-container" class="max-w-2xl mx-auto text-center font-pixel text-lg">
+              <!-- JS will populate this -->
+            </div>
+          </div>
+
           <footer class="flex flex-col gap-6 px-5 py-10 mt-10 text-center @container">
             <div class="flex justify-center">
               <p class="font-stencil text-2xl text-transparent bg-clip-text" style="background-image: linear-gradient(45deg, #00ff00, #00ffff, #ff00ff); text-shadow: 0 0 5px #00ff00, 0 0 8px #00ffff, 0 0 10px #ff00ff;">CYBERSTREET</p>
@@ -721,6 +731,7 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
   <!-- =================================================== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      fetchAiNews();
 
       // --- HACK 1: Dynamic Prompt Hack Loading ---
       const container = document.getElementById('prompt-hacks-container');
@@ -876,6 +887,42 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
         });
       }
     });
+
+    async function fetchAiNews() {
+      const url = 'YOUR_CLOUD_RUN_SERVICE_URL'; // Placeholder
+      const container = document.getElementById('ai-news-container');
+      if (!container) return;
+
+      try {
+        container.innerHTML = '<p class="text-hack-green">Loading latest dispatches...</p>';
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const newsItems = await response.json();
+        
+        container.innerHTML = '';
+        const ul = document.createElement('ul');
+        ul.classList.add('list-none', 'space-y-2');
+
+        newsItems.forEach(item => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.url;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.textContent = item.summary;
+          a.classList.add('text-flow-text', 'hover:text-hero-purple', 'transition-colors', 'duration-300');
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+
+        container.appendChild(ul);
+      } catch (error) {
+        console.error('Failed to fetch AI news:', error);
+        container.innerHTML = '<p class="text-hero-pink">Error loading dispatches. Please check back later.</p>';
+      }
+    }
   </script>
 
 </body>
