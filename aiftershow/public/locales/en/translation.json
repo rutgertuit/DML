@@ -13,6 +13,7 @@
     "cta3": "I need to synthesize 50 documents."
   },
   "promptImprover": {
+    "intro": "Research shows that iterative, dialogue-based refinement yields 20-50% better AI outputs compared to one-shot prompts, as it uncovers hidden assumptions and builds specificity organically.",
     "title": "The Prompt Improver: Stop Memorizing, Start Discussing.",
     "description": "Mastering AI isn't about learning complex prompt structures by heart. Based on the latest best practices, the key is *dialogue*. This tool demonstrates that principle: it helps you refine your prompt by discussing it with the LLM (powered by Google AI Studio), ensuring you both understand the goal, constraints, and context before execution. Try it below.",
     "placeholder": "Paste your draft prompt here...",
