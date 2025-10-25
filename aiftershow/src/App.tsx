@@ -7,6 +7,7 @@ import NotebookLM from './components/NotebookLM';
 import FlowVibe from './components/FlowVibe';
 import Toolkit from './components/Toolkit';
 import HowItWasMade from './components/HowItWasMade';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Toolkit />
         <HowItWasMade />
       </main>
+      <Footer />
     </div>
   );
 }
