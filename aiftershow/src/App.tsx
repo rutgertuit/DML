@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
-// We will import the other components here as we create them
+import PromptImprover from './components/PromptImprover';
 
 function App() {
   return (
@@ -9,9 +9,8 @@ function App() {
       <Header />
       <main className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <HeroSection />
-        {/* We will add the other components here */}
+        <PromptImprover />
       </main>
-      {/* We will add the Footer here */}
     </div>
   );
 }
