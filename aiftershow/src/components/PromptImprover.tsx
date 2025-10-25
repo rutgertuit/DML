@@ -9,22 +9,7 @@ interface Message {
 }
 
 // The new system prompt, as specified
-const SYSTEM_PROMPT = `You are Prompt Scribe, a patient, empathetic coach who helps users craft killer prompts through friendly dialogue. Your goal: Guide them to specificity without overwhelming – think collaborator, not critic. Never execute or answer their original prompt; only refine it collaboratively.
-
-Core Rules:
-- Analyze the draft for gaps in: Audience, Goal/Objective, Tone/Style, Format/Length, Constraints (e.g., sources, ethics), Examples/Context.
-- Respond with empathy first: Acknowledge their idea positively (e.g., "Love the AI blog angle – let's make it pop!").
-- Ask exactly 3-5 targeted, open-ended questions to fill gaps. Number them for clarity. Keep it concise (under 150 words total).
-- After their reply, synthesize: Update the draft prompt, show diffs (e.g., "Added: target=beginners"), and ask 1-2 follow-ups if needed. Cap at 2 rounds.
-- End by generating the final prompt. You MUST wrap this final, complete prompt in a single, non-nested code block, starting *exactly* with 
-[FINAL_PROMPT]
- and ending *exactly* with 
-[/FINAL_PROMPT]
-. 
-- After the `[/FINAL_PROMPT]` tag, you MUST add a concluding sign-off (e.g., 'Here's the refined prompt, ready to use in Gemini!').
-- **Crucially, after you use the `[FINAL_PROMPT]` tags, your turn is over. You MUST NOT ask any more follow-up questions.**
-- If they say "stop" or "finalize," output the prompt immediately.
-- Stay fun and encouraging: End responses with a micro-tip (e.g., "Pro tip: Specificity = magic!")`;
+const SYSTEM_PROMPT = `You are Prompt Scribe, a patient, empathetic coach who helps users craft killer prompts through friendly dialogue. Your goal: Guide them to specificity without overwhelming – think collaborator, not critic. Never execute or answer their original prompt; only refine it collaboratively.\n\nCore Rules:\n- Analyze the draft for gaps in: Audience, Goal/Objective, Tone/Style, Format/Length, Constraints (e.g., sources, ethics), Examples/Context.\n- Respond with empathy first: Acknowledge their idea positively (e.g., "Love the AI blog angle – let\\'s make it pop!").\n- Ask exactly 3-5 targeted, open-ended questions to fill gaps. Number them for clarity. Keep it concise (under 150 words total).\n- After their reply, synthesize: Update the draft prompt, show diffs (e.g., "Added: target=beginners"), and ask 1-2 follow-ups if needed. Cap at 2 rounds.\n- End by generating the final prompt. You MUST wrap this final, complete prompt in a single, non-nested code block, starting *exactly* with \`[FINAL_PROMPT]\` and ending *exactly* with \`[/FINAL_PROMPT]\`.\n- After the \`[/FINAL_PROMPT]\` tag, you MUST add a concluding sign-off (e.g., \'Here\\\'s the refined prompt, ready to use in Gemini!\' ).\n- **Crucially, after you use the \`[FINAL_PROMPT]\` tags, your turn is over. You MUST NOT ask any more follow-up questions.**\n- If they say "stop" or "finalize," output the prompt immediately.\n- Stay fun and encouraging: End responses with a micro-tip (e.g., "Pro tip: Specificity = magic!").`;
 
 export const PromptImprover: React.FC = () => {
   const { t } = useTranslation();
@@ -81,14 +66,14 @@ export const PromptImprover: React.FC = () => {
     let aiChatText = aiResponseText;
 
     // Check for our final prompt tags
-    const promptMatch = aiResponseText.match(/\n\[FINAL_PROMPT\]([\s\S]*)\[\/FINAL_PROMPT\]\n/);
+    const promptMatch = aiResponseText.match(/\n?\[FINAL_PROMPT\]([\s\S]*)\[\/FINAL_PROMPT\]\n?/);
     
     if (promptMatch && promptMatch[1]) {
       const extractedPrompt = promptMatch[1].trim();
       setFinalPrompt(extractedPrompt);
       
       // The chat message should be *everything else*
-      aiChatText = aiResponseText.replace(/\n\[FINAL_PROMPT\][\s\S]*\[\/FINAL_PROMPT\]\n/, '').trim();
+      aiChatText = aiResponseText.replace(/\n?\[FINAL_PROMPT\][\s\S]*\[\/FINAL_PROMPT\]\n?/, '').trim();
     }
 
     const newAiMessage: Message = { role: 'model', text: aiChatText };
@@ -186,10 +171,10 @@ export const PromptImprover: React.FC = () => {
           className="mt-8 p-1 border border-primary/50 shadow-glow-blue"
         >
           <h3 className="font-display text-2xl font-bold text-text-light px-6 pt-6">
-            Your Refined Prompt
+            Your Refined Prompt is Ready
           </h3>
           <p className="font-body text-text-light/80 mt-2 mb-4 px-6">
-            Ready to use! Copy this and paste it into Gemini or your preferred LLM.
+            Copy the prompt below and paste it into your favorite LLM to see the results.
           </p>
           <div className="bg-card-dark p-4 border border-primary/20 relative m-6 mt-0">
             <button 
@@ -203,6 +188,23 @@ export const PromptImprover: React.FC = () => {
                 {finalPrompt}
               </code>
             </pre>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-6 px-6 pb-6">
+            <a href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer" className="font-mono text-sm uppercase bg-primary/80 text-background-dark px-4 py-2 hover:bg-primary hover:shadow-glow-blue transition-all">
+              Test in Gemini
+            </a>
+            <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" className="font-mono text-sm uppercase bg-white/80 text-background-dark px-4 py-2 hover:bg-white hover:shadow-glow-blue transition-all">
+              Test in ChatGPT
+            </a>
+            <a href="https://chat.mistral.ai/" target="_blank" rel="noopener noreferrer" className="font-mono text-sm uppercase bg-red-500/80 text-white px-4 py-2 hover:bg-red-500 hover:shadow-glow-blue transition-all">
+              Test in LeChat
+            </a>
+            <a href="https://x.ai/grok" target="_blank" rel="noopener noreferrer" className="font-mono text-sm uppercase bg-blue-400/80 text-white px-4 py-2 hover:bg-blue-400 hover:shadow-glow-blue transition-all">
+              Test in Grok
+            </a>
+            <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer" className="font-mono text-sm uppercase bg-orange-500/80 text-white px-4 py-2 hover:bg-orange-500 hover:shadow-glow-blue transition-all">
+              Test in Claude
+            </a>
           </div>
         </div>
       )}
