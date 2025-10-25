@@ -455,7 +455,6 @@
 </head>
 
 <body class="bg-base-bg font-display">
-  <div id="ai-news-container" class="p-8"></div>
   <div class="relative flex h-screen w-full flex-col bg-black dark group/design-root overflow-hidden"
     style="font-family: 'Space Grotesk', sans-serif; background-color: #191022;">
     <div class="absolute inset-0 z-0 opacity-20" data-alt="Looping ASCII art animation of digital rain"
@@ -884,12 +883,7 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
             </a>
           </div>
 
-          <div class="px-4 pt-10">
-            <h3 class="text-white text-3xl font-stencil leading-tight tracking-widest text-center title-glow mb-4">AI
-              Dispatches</h3>
-            <div id="ai-news-container" class="max-w-2xl mx-auto text-center font-pixel text-lg">
-            </div>
-          </div>
+
 
           <footer class="flex flex-col gap-6 px-5 py-10 mt-10 text-center @container">
             <div class="flex justify-center">
@@ -905,7 +899,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      fetchAiNews();
 
       // --- HACK 1: Dynamic Prompt Hack Loading ---
       const container = document.getElementById('prompt-hacks-container');
@@ -1062,42 +1055,7 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
       }
     });
 
-    // === START OF REPLACED BLOCK ===
-    async function fetchAiNews() {
-      // !!! IMPORTANT: Replace this with your actual Cloud Run URL !!!
-      const url = 'https://ai-news-service-113214288365.europe-west1.run.app';
-      const container = document.getElementById('ai-news-container');
 
-      if (!container) return;
-
-      try {
-        container.innerHTML = '<p class="text-hack-green">Loading latest dispatches...</p>';
-
-        const response = await fetch(url);
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        // Get the response as raw text, not JSON
-        const newsText = await response.text();
-
-        // Clear loading message
-        container.innerHTML = '';
-
-        // Render the raw text, preserving line breaks
-        // (We'll use your site's "vibe" for styling)
-        const pre = document.createElement('pre');
-        pre.className = 'text-flow-text font-pixel text-lg whitespace-pre-wrap text-left'; // Apply styling
-        pre.textContent = newsText;
-        container.appendChild(pre);
-
-      } catch (error) {
-        console.error('Failed to fetch AI news:', error);
-        container.innerHTML = '<p class="text-hero-pink">Error loading dispatches. Please check back later.</p>';
-      }
-    }
-    // === END OF REPLACED BLOCK ===
   </script>
 
 </body>
