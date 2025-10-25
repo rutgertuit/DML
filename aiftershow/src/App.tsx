@@ -3,6 +3,7 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import PromptImprover from './components/PromptImprover';
 import HeroGem from './components/HeroGem';
+import NotebookLM from './components/NotebookLM';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <HeroSection />
         <PromptImprover />
         <HeroGem />
+        <NotebookLM />
       </main>
     </div>
   );
