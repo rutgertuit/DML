@@ -1,0 +1,15 @@
+{
+  "header": {
+    "improvePrompts": "Improve My Prompts",
+    "buildExpert": "Build an Expert AI",
+    "teamCollab": "Team Collaboration",
+    "toolkit": "The Toolkit"
+  },
+  "hero": {
+    "title": "Marketing & Effie Live - the AIftershow",
+    "subtitle": "Level Up Your Stack. A Tactical Guide to Vibe Coding, Hero Gems, and NotebookLM.",
+    "cta1": "I need to build a prototype fast.",
+    "cta2": "I need AI grounded in my own data.",
+    "cta3": "I need to synthesize 50 documents."
+  }
+}

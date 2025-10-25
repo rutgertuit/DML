@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import './index.css';
+import './i18n.ts';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import React, { Suspense } from 'react'; // <-- Import Suspense
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <Suspense fallback="Loading..."> {/* <-- Add Wrapper */}
+      <App />
+    </Suspense> {/* <-- Add Wrapper */}
+  </React.StrictMode>,
+);

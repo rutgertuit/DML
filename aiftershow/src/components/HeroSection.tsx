@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const HeroSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="h-screen flex flex-col items-center justify-center text-center relative" id="hero">
       {/* Background Video Placeholder */}
@@ -19,29 +22,29 @@ export const HeroSection: React.FC = () => {
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center gap-8 px-4">
         <h1 className="font-display text-5xl md:text-7xl font-bold text-text-light text-glow-blue">
-          Marketing & Effie Live - the AIftershow
+          {t('hero.title')}
         </h1>
         <p className="font-body text-xl md:text-2xl text-text-light/90 max-w-3xl">
-          Level Up Your Stack. A Tactical Guide to Vibe Coding, Hero Gems, and NotebookLM.
+          {t('hero.subtitle')}
         </p>
         <div className="flex flex-col md:flex-row items-center gap-4 mt-8">
           <a
             className="font-mono text-sm uppercase border border-solid border-secondary text-text-light/90 hover:text-primary hover:border-primary hover:shadow-glow-purple transition-all px-6 py-3 w-full md:w-auto"
             href="#flow-vibe"
           >
-            I need to build a prototype fast.
+            {t('hero.cta1')}
           </a>
           <a
             className="font-mono text-sm uppercase border border-solid border-secondary text-text-light/90 hover:text-primary hover:border-primary hover:shadow-glow-purple transition-all px-6 py-3 w-full md:w-auto"
             href="#hero-gem"
           >
-            I need AI grounded in my own data.
+            {t('hero.cta2')}
           </a>
           <a
             className="font-mono text-sm uppercase border border-solid border-secondary text-text-light/90 hover:text-primary hover:border-primary hover:shadow-glow-purple transition-all px-6 py-3 w-full md:w-auto"
             href="#notebooklm"
           >
-            I need to synthesize 50 documents.
+            {t('hero.cta3')}
           </a>
         </div>
       </div>
