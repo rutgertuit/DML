@@ -22,13 +22,25 @@
     "howItWorksDesc": "This AI 'brain' powers the Prompt Improver. This System Instruction guides the AI to act as a helpful collaborator.",
     "copy": "Copy to Clipboard"
   },
-  "heroGem": {
-    "title": "How to Build a \"Hero Gem\" — Your Personal AI Specialist",
-    "description": "A 'Hero Gem' is a specialized AI assistant grounded in your specific expertise. The critical step is 'Deep Research'. Why? Generic AI provides generic answers. By synthesizing the best knowledge (Step 1) and restricting answers ONLY to that knowledge (Step 2), you create a specialized expert that avoids hallucinations and provides data-driven advice.",
-    "step1Title": "Step 1: The Deep Research Prompt (Template 1)",
-    "step1Desc": "Use this in Gemini Advanced to synthesize the foundational knowledge for your Gem.",
-    "step2Title": "Step 2: Hero Gem System Instruction (Template 2)",
-    "step2Desc": "Use this as the System Instruction in Google AI Studio."
+  "heroGemWizard": {
+    "title": "Build Your \"Hero Gem\" — Your Personal AI Specialist",
+    "step1Title": "Step 1: Define Your Expert's Mission",
+    "domainLabel": "Domain",
+    "domainPlaceholder": "e.g., 'early-stage SaaS marketing'",
+    "roleLabel": "Role",
+    "rolePlaceholder": "e.g., 'CMO of a Series A startup'",
+    "taskLabel": "Core Task",
+    "taskPlaceholder": "e.g., 'lowering Customer Acquisition Cost'",
+    "step1Button": "Generate Research Prompt",
+    "step2Title": "Step 2: Run the Deep Research",
+    "step2Instructions": "1. Copy the research prompt below.\n2. Paste it into Gemini Advanced.\n3. Paste the complete Markdown table it gives you back into the text box.",
+    "copyPrompt": "Copy Research Prompt",
+    "pasteLabel": "Paste your Markdown research table here",
+    "step2Button": "Build My Hero Gem",
+    "step3Title": "Step 3: Your Hero Gem is Ready!",
+    "step3Instructions": "Your expert AI is ready. Copy the full system prompt below and paste it into Google AI Studio (or your preferred LLM) in the 'System Instruction' field to activate your expert.",
+    "copyFinalPrompt": "Copy Hero Gem Prompt",
+    "copied": "Copied!"
   },
   "notebookLM": {
     "title": "NotebookLM: Content First, Formatting Later.",
