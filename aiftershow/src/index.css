@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --glow-blue: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF;
+    --glow-purple: 0 0 5px #D900FF, 0 0 10px #D900FF, 0 0 15px #D900FF;
+}
+html {
+    scroll-behavior: smooth;
+}
+.text-glow-blue { text-shadow: var(--glow-blue); }
+.border-glow-blue:hover, .border-glow-blue:focus-within { box-shadow: 0 0 0 1px #00FFFF, var(--glow-blue); }
+.border-glow-purple:hover, .border-glow-purple:focus-within { box-shadow: 0 0 0 1px #D900FF, var(--glow-purple); }
+.button-glow-blue:hover, .button-glow-blue:focus { box-shadow: var(--glow-blue); }
+.button-glow-purple:hover, .button-glow-purple:focus { box-shadow: var(--glow-purple); }
+.tab-active { border-color: #00FFFF; text-shadow: var(--glow-blue); box-shadow: 0 2px 15px -3px #00FFFF; }
