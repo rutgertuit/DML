@@ -48,10 +48,10 @@
             "flow-blue": "#00ffff",
             "vibe-pink": "#ff00ff",
 
-            // Gear Locker
+            // Gear Locker & YouTube Section
             "gear-bg": "#1a1a1a",
             "gear-green": "#00ff00",
-            "gear-blue": "#00ffff",
+            "gear-blue": "#00ffff", // Used for YouTube section loading/links
             "gear-magenta": "#ff00ff"
           },
           fontFamily: {
@@ -73,13 +73,10 @@
             'neon-fuchsia-gem': '0 0 5px #FF00FF, 0 0 10px #FF00FF, 0 0 20px #FF00FF'
           },
           animation: {
-            // From Gear Locker & Hero Gem
             glitch: 'glitch 1s linear infinite',
-            // From Hero Gem
             'flicker': 'flicker 2s infinite'
           },
           keyframes: {
-            // From Gear Locker & Hero Gem (using 1s version)
             glitch: {
               '0%': { transform: 'translate(0)' },
               '20%': { transform: 'translate(-3px, 3px)' },
@@ -88,7 +85,6 @@
               '80%': { transform: 'translate(3px, -3px)' },
               'to': { transform: 'translate(0)' }
             },
-            // From Hero Gem
             flicker: {
               '0%, 100%': { opacity: 1 },
               '50%': { opacity: 0.7 },
@@ -100,7 +96,7 @@
   </script>
 
   <style>
-    /* From hero_section_code.html */
+    /* Merged Styles... (Keeping these collapsed for brevity) */
     @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
     body {
@@ -160,7 +156,6 @@
       }
     }
 
-    /* From prompt_hacks_section_code.html */
     .text-glow-hack {
       text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 15px #39ff14;
     }
@@ -195,7 +190,6 @@
       }
     }
 
-    /* From hero_gem_workflow_code.html */
     .ascii-art {
       font-family: 'Courier New', Courier, monospace;
       white-space: pre;
@@ -239,7 +233,6 @@
       text-shadow: 0 0 2px #F0F0F0;
     }
 
-    /* From team's_shared_brain_code.html */
     .glow-team {
       box-shadow: 0 0 5px #00FF00, 0 0 15px #00FF00, 0 0 25px #00FF00, 0 0 35px #00FF00;
     }
@@ -385,7 +378,6 @@
       }
     }
 
-    /* From flow_vs_vibe_code.html */
     .glitch-divider {
       position: relative;
       width: 2px;
@@ -399,7 +391,6 @@
       width: 100%;
       height: 100%;
       background: #1a1a1a;
-      /* Assuming flow-bg */
       top: 0;
       left: 0;
       animation: glitch-flow 1.5s infinite steps(2, end);
@@ -407,14 +398,12 @@
 
     .glitch-divider::before {
       background-color: #00ffff;
-      /* flow-blue */
       animation-delay: -0.5s;
       clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
     }
 
     .glitch-divider::after {
       background-color: #ff00ff;
-      /* vibe-pink */
       animation-delay: -1s;
       clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%);
     }
@@ -443,7 +432,6 @@
       }
     }
 
-    /* From gear_locker_&_footer_code.html */
     .icon-glow {
       text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
     }
@@ -455,6 +443,7 @@
 </head>
 
 <body class="bg-base-bg font-display">
+
   <div class="relative flex h-screen w-full flex-col bg-black dark group/design-root overflow-hidden"
     style="font-family: 'Space Grotesk', sans-serif; background-color: #191022;">
     <div class="absolute inset-0 z-0 opacity-20" data-alt="Looping ASCII art animation of digital rain"
@@ -496,56 +485,6 @@
             class="text-hack-green text-4xl md:text-5xl lg:text-6xl font-bold font-display text-center text-glow-hack pb-8 pt-5">
             Prompt Hacks: Get Better Answers NOW</h2>
           <div id="prompt-hacks-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 @container">
-            <div
-              class="flex flex-col items-stretch justify-start rounded-lg border border-hack-green/50 bg-black/30 backdrop-blur-sm shadow-neon-hack">
-              <div class="p-4 border-b border-hack-green/50">
-                <p class="text-hack-green text-lg font-bold font-mono">The Persona Hack</p>
-              </div>
-              <div class="flex flex-col flex-grow p-4">
-                <pre class="flex-grow"><code class="text-[#e0e0e0] text-base font-normal font-mono leading-normal">Act as an expert [ROLE, e.g., 'growth marketer', 'CFO', 'narrative designer']...
-
-Your goal is to [TASK, e.g., 'write a high-converting ad campaign']...</code></pre>
-                <button
-                  class="btn-glitch-hack mt-4 flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-4 bg-hack-green/20 text-hack-green text-sm font-bold leading-normal border border-hack-green hover:bg-hack-green hover:text-background-dark transition-colors duration-300">
-                  <span class="material-symbols-outlined mr-2">content_copy</span>
-                  <span class="truncate">Copy Code</span>
-                </button>
-              </div>
-            </div>
-            <div
-              class="flex flex-col items-stretch justify-start rounded-lg border border-hack-green/50 bg-black/30 backdrop-blur-sm shadow-neon-hack">
-              <div class="p-4 border-b border-hack-green/50">
-                <p class="text-hack-green text-lg font-bold font-mono">The Follow-Up Suffix</p>
-              </div>
-              <div class="flex flex-col flex-grow p-4">
-                <pre
-                  class="flex-grow"><code class="text-[#e0e0e0] text-base font-normal font-mono leading-normal">[YOUR PROMPT GOES HERE]
-
-...Before you answer, ask me 3 critical follow-up questions to ensure your response is perfectly tailored to my needs.</code></pre>
-                <button
-                  class="btn-glitch-hack mt-4 flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-4 bg-hack-green/20 text-hack-green text-sm font-bold leading-normal border border-hack-green hover:bg-hack-green hover:text-background-dark transition-colors duration-300">
-                  <span class="material-symbols-outlined mr-2">content_copy</span>
-                  <span class="truncate">Copy Code</span>
-                </button>
-              </div>
-            </div>
-            <div
-              class="flex flex-col items-stretch justify-start rounded-lg border border-hack-green/50 bg-black/30 backdrop-blur-sm shadow-neon-hack">
-              <div class="p-4 border-b border-hack-green/50">
-                <p class="text-hack-green text-lg font-bold font-mono">The Format Constraint</p>
-              </div>
-              <div class="flex flex-col flex-grow p-4">
-                <pre
-                  class="flex-grow"><code class="text-[#e0e0e0] text-base font-normal font-mono leading-normal">[YOUR PROMPT GOES HERE]
-
-...Format your entire response as a [FORMAT, e.g., 'Markdown table', 'JSON object', '3-slide presentation outline'].</code></pre>
-                <button
-                  class="btn-glitch-hack mt-4 flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-4 bg-hack-green/20 text-hack-green text-sm font-bold leading-normal border border-hack-green hover:bg-hack-green hover:text-background-dark transition-colors duration-300">
-                  <span class="material-symbols-outlined mr-2">content_copy</span>
-                  <span class="truncate">Copy Code</span>
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -883,7 +822,12 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
             </a>
           </div>
 
-
+          <div class="px-4 pt-10">
+            <h3 class="text-white text-3xl font-stencil leading-tight tracking-widest text-center title-glow mb-4">From
+              The Community</h3>
+            <div id="youtube-community-container" class="max-w-4xl mx-auto text-center">
+            </div>
+          </div>
 
           <footer class="flex flex-col gap-6 px-5 py-10 mt-10 text-center @container">
             <div class="flex justify-center">
@@ -899,6 +843,8 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Removed fetchAiNews();
+      fetchYouTubeContent(); // <-- ADDED THIS CALL
 
       // --- HACK 1: Dynamic Prompt Hack Loading ---
       const container = document.getElementById('prompt-hacks-container');
@@ -916,7 +862,6 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
           .then(prompts => {
             prompts.forEach(prompt => {
               let cardHtml = template;
-              // Using regex to replace content robustly
               cardHtml = cardHtml.replace(
                 /(<p class="text-hack-green text-lg font-bold font-mono">)(.*?)(<\/p>)/,
                 `$1${prompt.title}$3`
@@ -939,7 +884,7 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
                     .then(() => {
                       const originalTextEl = button.querySelector('span:last-child');
                       if (!originalTextEl) return;
-                      const originalText = 'Copy Code'; // Assuming this is the original text
+                      const originalText = 'Copy Code';
                       originalTextEl.innerText = 'COPIED!';
                       button.style.borderColor = '#00FFFF';
                       button.style.color = '#00FFFF';
@@ -1055,7 +1000,89 @@ Synthesize these into a 5-bullet summary of the project's financial status, high
       }
     });
 
+    // === START OF YOUTUBE FUNCTION ===
+    async function fetchYouTubeContent() {
+      // !!! IMPORTANT: Replace with your NEW, client-safe API key !!!
+      const apiKey = 'AIzaSyDi90GDLquZeqvlROZNsB-3LoMQ_Eiy4rQ';
+      const container = document.getElementById('youtube-community-container');
 
+      if (!container) return;
+      container.innerHTML = '<p class="text-gear-blue">Loading community videos...</p>'; // Loading state
+
+      const playlistIds = [
+        'PL590L5WQmH8draox2uxr1iR9SbEz6Ykc_', // Playlist 1
+        'PLBgogxgQVM9vYmseCf6mVKpt3qQ_EqQ8w'  // Playlist 2
+      ];
+      const channelId = 'UCeeFfhMcJa1kjtfZAGskOCA'; // Google Nederland
+      const maxResultsPerSource = 2; // Fetch 2 videos from each
+
+      try {
+        let allVideos = [];
+
+        // --- Fetch from Playlists ---
+        for (const playlistId of playlistIds) {
+          const playlistUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=${maxResultsPerSource}&key=${apiKey}`;
+          const response = await fetch(playlistUrl);
+          if (!response.ok) throw new Error(`HTTP error fetching playlist ${playlistId}! status: ${response.status}`);
+          const data = await response.json();
+
+          const playlistVideos = data.items.map(item => ({
+            videoId: item.snippet.resourceId.videoId,
+            title: item.snippet.title,
+            thumbnail: item.snippet.thumbnails.medium.url // Use medium quality thumbnail
+          }));
+          allVideos = allVideos.concat(playlistVideos);
+        }
+
+        // --- Fetch from Channel Uploads ---
+        const channelUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&order=date&maxResults=${maxResultsPerSource}&type=video&key=${apiKey}`;
+        const channelResponse = await fetch(channelUrl);
+        if (!channelResponse.ok) throw new Error(`HTTP error fetching channel ${channelId}! status: ${channelResponse.status}`);
+        const channelData = await channelResponse.json();
+
+        const channelVideos = channelData.items.map(item => ({
+          videoId: item.id.videoId,
+          title: item.snippet.title,
+          thumbnail: item.snippet.thumbnails.medium.url
+        }));
+        allVideos = allVideos.concat(channelVideos);
+
+        // --- Render Videos ---
+        container.innerHTML = ''; // Clear loading message
+        const gridDiv = document.createElement('div');
+        gridDiv.className = 'grid grid-cols-2 md:grid-cols-3 gap-4 p-4';
+
+        allVideos.forEach(video => {
+          const videoLink = `https://www.youtube.com/watch?v=${video.videoId}`;
+
+          const videoCard = document.createElement('a');
+          videoCard.href = videoLink;
+          videoCard.target = '_blank';
+          videoCard.rel = 'noopener noreferrer';
+          videoCard.className = 'group flex flex-col items-center gap-2 rounded-lg border border-gear-blue/30 bg-gray-900/50 p-4 transition-all duration-300 hover:border-gear-blue hover:bg-gray-900';
+
+          const img = document.createElement('img');
+          img.src = video.thumbnail;
+          img.alt = video.title;
+          img.className = 'w-full aspect-video object-cover rounded';
+
+          const title = document.createElement('p');
+          title.textContent = video.title;
+          title.className = 'text-white text-sm font-bold leading-tight text-center line-clamp-2';
+
+          videoCard.appendChild(img);
+          videoCard.appendChild(title);
+          gridDiv.appendChild(videoCard);
+        });
+
+        container.appendChild(gridDiv);
+
+      } catch (error) {
+        console.error('Failed to fetch YouTube content:', error);
+        container.innerHTML = '<p class="text-hero-pink">Error loading community videos. Please check API key and quotas.</p>';
+      }
+    }
+    // === END OF YOUTUBE FUNCTION ===
   </script>
 
 </body>
