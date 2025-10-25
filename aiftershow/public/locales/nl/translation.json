@@ -11,5 +11,82 @@
     "cta1": "Ik moet snel een prototype bouwen.",
     "cta2": "Ik heb AI nodig gebaseerd op mijn eigen data.",
     "cta3": "Ik moet 50 documenten synthetiseren."
+  },
+  "promptImprover": {
+    "title": "De Prompt Verbeteraar: Stop met Memoriseren, Begin met Discussiëren.",
+    "description": "AI beheersen gaat niet over het uit je hoofd leren van complexe promptstructuren. Gebaseerd op de laatste best practices, is de sleutel *dialoog*. Deze tool demonstreert dat principe: het helpt je jouw prompt te verfijnen door het te bespreken met het LLM (aangedreven door Google AI Studio), zodat jullie beiden het doel, de beperkingen en de context begrijpen voor uitvoering. Probeer het hieronder.",
+    "placeholder": "Plak hier je concept-prompt...",
+    "submit": "Verstuur",
+    "howItWorksTitle": "Hoe het Werkt: De Systeeminstructie",
+    "howItWorksDesc": "Dit AI 'brein' drijft de Prompt Verbeteraar aan. Deze Systeeminstructie begeleidt de AI om als een behulpzame collaborator op te treden.",
+    "copy": "Kopieer naar klembord"
+  },
+  "heroGem": {
+    "title": "Hoe Bouw je een \"Hero Gem\" — Jouw Persoonlijke AI Specialist",
+    "description": "Een 'Hero Gem' is een gespecialiseerde AI-assistent gebaseerd op jouw specifieke expertise. De cruciale stap is 'Deep Research'. Waarom? Generieke AI geeft generieke antwoorden. Door de beste kennis te synthetiseren (Stap 1) en antwoorden ALLEEN tot die kennis te beperken (Stap 2), creëer je een gespecialiseerde expert die hallucinaties vermijdt en data-gedreven advies geeft.",
+    "step1Title": "Stap 1: Het Deep Research Prompt (Template 1)",
+    "step1Desc": "Gebruik dit in Gemini Advanced om de fundamentele kennis voor jouw Gem te synthetiseren.",
+    "step2Title": "Stap 2: Hero Gem Systeeminstructie (Template 2)",
+    "step2Desc": "Gebruik dit als de Systeeminstructie in Google AI Studio."
+  },
+  "notebookLM": {
+    "title": "NotebookLM: Eerst de Inhoud, dan de Vormgeving.",
+    "description": "NotebookLM revolutioneert samenwerking door de focus te verleggen. Maak je niet vooraf zorgen over hoe de CFO data geformatteerd wil hebben versus de CEO. Focus op structuur en input. Dump alles—transcripties, PDF's, decks, links—in een Notebook. NotebookLM wordt het centrale brein. Je kunt dan snel itereren en het exacte presentatieformaat genereren dat nodig is voor elke stakeholder.",
+    "cta": "Probeer NotebookLM",
+    "tabCFO": "Voor de CFO",
+    "tabCMO": "Voor de CMO",
+    "tabCEO": "Voor de CEO",
+    "tabManager": "Voor je Manager",
+    "tabTeam": "Voor je Team"
+  },
+  "flowVibe": {
+    "title": "Begrijp Je Nieuwe Krachten: Flow Coding vs. Vibe Coding",
+    "vibeTitle": "Vibe Coding (De \"Regisseur\")",
+    "vibeDesc": "Prototype AI-gedrag met natuurlijke taal in minuten. Voor creatieven (geen codering nodig) en ontwikkelaars (sla boilerplate over).",
+    "vibeTools": "Tools: Google AI Studio, Gemini CLI.",
+    "flowTitle": "Flow Coding (De \"Architect\")",
+    "flowDesc": "Bouw visueel nauwkeurige, multi-step AI-workflows. Definieer logica, dataverwerking en sequenties voor complexe systemen die controle en schaalbaarheid vereisen.",
+    "flowTools": "Tool: Google Agentspace."
+  },
+  "toolkit": {
+    "title": "Jouw AI Acceleratie Toolkit",
+    "card1Title": "Google Stitch",
+    "card1Desc": "De AI webdesigner. Zet ideeën om in front-end code.",
+    "card2Title": "Google AI Studio",
+    "card2Desc": "De Vibe Coding omgeving. Bouw AI-breinen.",
+    "card3Title": "NotebookLM",
+    "card3Desc": "De team kennisbank. Maak van docs een expert.",
+    "card4Title": "Gemini CLI",
+    "card4Desc": "De power user tool. Vibe code vanaf je terminal.",
+    "card5Title": "Google Agentspace",
+    "card5Desc": "Het Flow Coding platform. Bouw robuuste workflows.",
+    "card6Title": "Video: Prompting voor Marketeers",
+    "card6Desc": "De 5 Elementen van effectief prompten."
+  },
+  "howItWasMade": {
+    "title": "De Meta Workflow: Hoe We Deze Site Hebben Gebouwd",
+    "step1Title": "Onderzoek & Strategie",
+    "step1Tools": "Tools: Gemini Advanced",
+    "step1Action": "Het Deep Research Prompt (Template 1) gebruikt.",
+    "step2Title": "Ontwerp Prompting",
+    "step2Tools": "Tools: Gemini",
+    "step2Action": "De gedetailleerde design prompt voor Stitch gebouwd (waar deze site op gebaseerd is).",
+    "step3Title": "Visueel Ontwerp (De \"Look\")",
+    "step3Tools": "Tools: Google Stitch",
+    "step3Action": "De initiële front-end HTML & CSS gegenereerd.",
+    "step4Title": "Vibe Coding (Het \"Brein\")",
+    "step4Tools": "Tools: Google AI Studio",
+    "step4Action": "De \"Prompt Improver\" app-logica gebouwd en getest.",
+    "step5Title": "Integratie en CLI (De \"Lijm\")",
+    "step5Tools": "Tools: Gemini CLI, VS Code, GitHub",
+    "step5Action": "Stitch's ontwerp en AI Studio-code samengevoegd in deze React-app. De CLI maakt snel testen, integratie en implementatie-automatisering mogelijk.",
+    "step6Title": "Implementatie & Distributie",
+    "step6Tools": "Tools: GitHub, Google Cloud Run",
+    "step6Action": "Versiebeheer beheerd en de live site geïmplementeerd."
+  },
+  "footer": {
+    "title": "Word Lid van de AIftershow Community",
+    "description": "Klaar om AI-workflows naar het volgende niveau te tillen? Word lid van onze community voor exclusieve templates, tutorials en live Q&A met AI-experts.",
+    "cta": "Word Lid"
   }
 }

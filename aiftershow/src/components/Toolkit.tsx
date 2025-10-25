@@ -1,44 +1,46 @@
 import React from 'react';
-
-// Define an array of toolkit items for easy mapping
-const toolkitItems = [
-  {
-    title: 'Google Stitch',
-    description: 'The AI web designer. Turn ideas into front-end code.',
-    link: '#', // Add correct link later
-  },
-  {
-    title: 'Google AI Studio',
-    description: 'The Vibe Coding environment. Build AI brains.',
-    link: '[https://aistudio.google.com](https://aistudio.google.com)',
-  },
-  {
-    title: 'NotebookLM',
-    description: 'The team knowledge base. Turn docs into an expert.',
-    link: '[https://notebooklm.google.com](https://notebooklm.google.com)',
-  },
-  {
-    title: 'Gemini CLI',
-    description: 'The power user tool. Vibe code from your terminal.',
-    link: '#', // Add correct link later
-  },
-  {
-    title: 'Google Agentspace',
-    description: 'The Flow Coding platform. Build robust workflows.',
-    link: '#', // Add correct link later
-  },
-  {
-    title: 'Video: Prompting for Marketers',
-    description: 'The 5 Elements of effective prompting.',
-    link: '[https://www.youtube.com/watch?v=yrdt0l00DEo](https://www.youtube.com/watch?v=yrdt0l00DEo)',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 export const Toolkit: React.FC = () => {
+  const { t } = useTranslation();
+
+  const toolkitItems = [
+    {
+      title: t('toolkit.card1Title'),
+      description: t('toolkit.card1Desc'),
+      link: '#', // Add correct link later
+    },
+    {
+      title: t('toolkit.card2Title'),
+      description: t('toolkit.card2Desc'),
+      link: '[https://aistudio.google.com](https://aistudio.google.com)',
+    },
+    {
+      title: t('toolkit.card3Title'),
+      description: t('toolkit.card3Desc'),
+      link: '[https://notebooklm.google.com](https://notebooklm.google.com)',
+    },
+    {
+      title: t('toolkit.card4Title'),
+      description: t('toolkit.card4Desc'),
+      link: '#', // Add correct link later
+    },
+    {
+      title: t('toolkit.card5Title'),
+      description: t('toolkit.card5Desc'),
+      link: '#', // Add correct link later
+    },
+    {
+      title: t('toolkit.card6Title'),
+      description: t('toolkit.card6Desc'),
+      link: '[https://www.youtube.com/watch?v=yrdt0l00DEo](https://www.youtube.com/watch?v=yrdt0l00DEo)',
+    },
+  ];
+
   return (
     <section className="py-24" id="toolkit">
       <h2 className="font-display text-4xl font-bold text-text-light mb-12">
-        Your AI Acceleration Toolkit
+        {t('toolkit.title')}
       </h2>
       
       {/* Responsive Grid:

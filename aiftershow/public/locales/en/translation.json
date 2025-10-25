@@ -11,5 +11,82 @@
     "cta1": "I need to build a prototype fast.",
     "cta2": "I need AI grounded in my own data.",
     "cta3": "I need to synthesize 50 documents."
+  },
+  "promptImprover": {
+    "title": "The Prompt Improver: Stop Memorizing, Start Discussing.",
+    "description": "Mastering AI isn't about learning complex prompt structures by heart. Based on the latest best practices, the key is *dialogue*. This tool demonstrates that principle: it helps you refine your prompt by discussing it with the LLM (powered by Google AI Studio), ensuring you both understand the goal, constraints, and context before execution. Try it below.",
+    "placeholder": "Paste your draft prompt here...",
+    "submit": "Submit",
+    "howItWorksTitle": "How it Works: The System Instruction",
+    "howItWorksDesc": "This AI 'brain' powers the Prompt Improver. This System Instruction guides the AI to act as a helpful collaborator.",
+    "copy": "Copy to Clipboard"
+  },
+  "heroGem": {
+    "title": "How to Build a \"Hero Gem\" — Your Personal AI Specialist",
+    "description": "A 'Hero Gem' is a specialized AI assistant grounded in your specific expertise. The critical step is 'Deep Research'. Why? Generic AI provides generic answers. By synthesizing the best knowledge (Step 1) and restricting answers ONLY to that knowledge (Step 2), you create a specialized expert that avoids hallucinations and provides data-driven advice.",
+    "step1Title": "Step 1: The Deep Research Prompt (Template 1)",
+    "step1Desc": "Use this in Gemini Advanced to synthesize the foundational knowledge for your Gem.",
+    "step2Title": "Step 2: Hero Gem System Instruction (Template 2)",
+    "step2Desc": "Use this as the System Instruction in Google AI Studio."
+  },
+  "notebookLM": {
+    "title": "NotebookLM: Content First, Formatting Later.",
+    "description": "NotebookLM revolutionizes collaboration by shifting the focus. Stop worrying upfront about how the CFO wants data formatted versus the CEO. Focus on structure and input. Dump everything—transcripts, PDFs, decks, links—into a Notebook. NotebookLM becomes the central brain. You can then rapidly iterate and generate the exact presentation format needed for any stakeholder instantly.",
+    "cta": "Try NotebookLM",
+    "tabCFO": "For the CFO",
+    "tabCMO": "For the CMO",
+    "tabCEO": "For the CEO",
+    "tabManager": "For your Manager",
+    "tabTeam": "For your Team"
+  },
+  "flowVibe": {
+    "title": "Understanding Your New Powers: Flow Coding vs. Vibe Coding",
+    "vibeTitle": "Vibe Coding (The \"Director\")",
+    "vibeDesc": "Prototype AI behavior with natural language in minutes. For creatives (no coding needed) and developers (skip boilerplate).",
+    "vibeTools": "Tools: Google AI Studio, Gemini CLI.",
+    "flowTitle": "Flow Coding (The \"Architect\")",
+    "flowDesc": "Build precise, multi-step AI workflows visually. Define logic, data handling, and sequences for complex systems requiring control and scalability.",
+    "flowTools": "Tool: Google Agentspace."
+  },
+  "toolkit": {
+    "title": "Your AI Acceleration Toolkit",
+    "card1Title": "Google Stitch",
+    "card1Desc": "The AI web designer. Turn ideas into front-end code.",
+    "card2Title": "Google AI Studio",
+    "card2Desc": "The Vibe Coding environment. Build AI brains.",
+    "card3Title": "NotebookLM",
+    "card3Desc": "The team knowledge base. Turn docs into an expert.",
+    "card4Title": "Gemini CLI",
+    "card4Desc": "The power user tool. Vibe code from your terminal.",
+    "card5Title": "Google Agentspace",
+    "card5Desc": "The Flow Coding platform. Build robust workflows.",
+    "card6Title": "Video: Prompting for Marketers",
+    "card6Desc": "The 5 Elements of effective prompting."
+  },
+  "howItWasMade": {
+    "title": "The Meta Workflow: How We Built This Site",
+    "step1Title": "Research & Strategy",
+    "step1Tools": "Tools: Gemini Advanced",
+    "step1Action": "Used the Deep Research Prompt (Template 1).",
+    "step2Title": "Design Prompting",
+    "step2Tools": "Tools: Gemini",
+    "step2Action": "Built the detailed design prompt for Stitch (the one this site is based on).",
+    "step3Title": "Visual Design (The \"Look\")",
+    "step3Tools": "Tools: Google Stitch",
+    "step3Action": "Generated the initial front-end HTML & CSS.",
+    "step4Title": "Vibe Coding (The \"Brains\")",
+    "step4Tools": "Tools: Google AI Studio",
+    "step4Action": "Built and tested the \"Prompt Improver\" app logic.",
+    "step5Title": "Integration and CLI (The \"Glue\")",
+    "step5Tools": "Tools: Gemini CLI, VS Code, GitHub",
+    "step5Action": "Assembled Stitch’s design and AI Studio code into this React app. The CLI allows for rapid testing, integration, and deployment automation.",
+    "step6Title": "Deployment & Distribution",
+    "step6Tools": "Tools: GitHub, Google Cloud Run",
+    "step6Action": "Managed version control and deployed the live site."
+  },
+  "footer": {
+    "title": "Join the AIftershow Community",
+    "description": "Ready to take AI workflows to the next level? Join our community for exclusive templates, tutorials, and live Q&A with AI experts.",
+    "cta": "Join Now"
   }
 }

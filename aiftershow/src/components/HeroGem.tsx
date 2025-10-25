@@ -1,13 +1,16 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const HeroGem: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24" id="hero-gem">
       <h2 className="font-display text-4xl font-bold text-text-light mb-4">
-        How to Build a "Hero Gem" — Your Personal AI Specialist
+        {t('heroGem.title')}
       </h2>
       <p className="font-body text-lg text-text-light/80 leading-relaxed max-w-4xl mb-12">
-        A 'Hero Gem' is a specialized AI assistant grounded in your specific expertise. The critical step is 'Deep Research'. Why? Generic AI provides generic answers. By synthesizing the best knowledge (Step 1) and restricting answers ONLY to that knowledge (Step 2), you create a specialized expert that avoids hallucinations and provides data-driven advice.
+        {t('heroGem.description')}
       </p>
 
       <div className="flex flex-col gap-12">
@@ -19,14 +22,14 @@ export const HeroGem: React.FC = () => {
           </div>
           <div className="md:col-span-11 flex flex-col gap-4">
             <h3 className="font-display text-2xl font-bold text-text-light">
-              Step 1: The Deep Research Prompt (Template 1)
+              {t('heroGem.step1Title')}
             </h3>
             <p className="font-body text-text-light/80">
-              Use this in Gemini Advanced to synthesize the foundational knowledge for your Gem.
+              {t('heroGem.step1Desc')}
             </p>
             <div className="bg-card-dark p-4 border border-secondary/20 relative">
               <button className="absolute top-2 right-2 font-mono text-xs uppercase bg-secondary/70 text-text-light px-2 py-1 hover:bg-secondary hover:shadow-glow-purple transition-all">
-                Copy to Clipboard
+                {t('promptImprover.copy')}
               </button>
               <pre className="font-mono text-sm text-text-light/90 whitespace-pre-wrap overflow-x-auto">
                 <code>
@@ -56,14 +59,14 @@ export const HeroGem: React.FC = () => {
           </div>
           <div className="md:col-span-11 flex flex-col gap-4">
             <h3 className="font-display text-2xl font-bold text-text-light">
-              Step 2: Hero Gem System Instruction (Template 2)
+              {t('heroGem.step2Title')}
             </h3>
             <p className="font-body text-text-light/80">
-              Use this as the System Instruction in Google AI Studio.
+              {t('heroGem.step2Desc')}
             </p>
             <div className="bg-card-dark p-4 border border-secondary/20 relative">
               <button className="absolute top-2 right-2 font-mono text-xs uppercase bg-secondary/70 text-text-light px-2 py-1 hover:bg-secondary hover:shadow-glow-purple transition-all">
-                Copy to Clipboard
+                {t('promptImprover.copy')}
               </button>
               <pre className="font-mono text-sm text-text-light/90 whitespace-pre-wrap overflow-x-auto">
                 <code>

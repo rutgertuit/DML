@@ -1,32 +1,35 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-// Data for the 6 timeline steps
-const timelineSteps = [
-  {
-    title: 'Research & Strategy',
-    tools: 'Gemini Advanced',
-    action: 'Used the Deep Research Prompt (Template 1).',
-  },
-  {
-    title: 'Design Prompting',
-    tools: 'Gemini',
-    action: 'Built the detailed design prompt for Stitch (the one this site is based on).',
-  },
-  {
-    title: 'Visual Design (The "Look")',
-    tools: 'Google Stitch',
-    action: 'Generated the initial front-end HTML & CSS.',
-  },
-  {
-    title: 'Vibe Coding (The "Brains")',
-    tools: 'Google AI Studio',
-    action: 'Built and tested the "Prompt Improver" app logic.',
-  },
-  {
-    title: 'Integration and CLI (The "Glue")',
-    tools: 'Gemini CLI, VS Code, GitHub',
-    action: 'Assembled Stitch’s design and AI Studio code into this React app. The CLI allows for rapid testing, integration, and deployment automation.',
-    code: `
+export const HowItWasMade: React.FC = () => {
+  const { t } = useTranslation();
+
+  const timelineSteps = [
+    {
+      title: t('howItWasMade.step1Title'),
+      tools: t('howItWasMade.step1Tools'),
+      action: t('howItWasMade.step1Action'),
+    },
+    {
+      title: t('howItWasMade.step2Title'),
+      tools: t('howItWasMade.step2Tools'),
+      action: t('howItWasMade.step2Action'),
+    },
+    {
+      title: t('howItWasMade.step3Title'),
+      tools: t('howItWasMade.step3Tools'),
+      action: t('howItWasMade.step3Action'),
+    },
+    {
+      title: t('howItWasMade.step4Title'),
+      tools: t('howItWasMade.step4Tools'),
+      action: t('howItWasMade.step4Action'),
+    },
+    {
+      title: t('howItWasMade.step5Title'),
+      tools: t('howItWasMade.step5Tools'),
+      action: t('howItWasMade.step5Action'),
+      code: `
 # 1. Install the tool
 npm install -g @google/gemini-cli
 
@@ -39,19 +42,18 @@ gemini invoke --prompt "[Template 3]" --input "Write an email"
 # 4. Example deployment command (conceptual)
 gemini deploy --source ./site --destination gcp-cloud-run
     `.trim(),
-  },
-  {
-    title: 'Deployment & Distribution',
-    tools: 'GitHub, Google Cloud Run',
-    action: 'Managed version control and deployed the live site.',
-  },
-];
+    },
+    {
+      title: t('howItWasMade.step6Title'),
+      tools: t('howItWasMade.step6Tools'),
+      action: t('howItWasMade.step6Action'),
+    },
+  ];
 
-export const HowItWasMade: React.FC = () => {
   return (
     <section className="py-24" id="how-it-was-made">
       <h2 className="font-display text-4xl font-bold text-text-light mb-12">
-        The Meta Workflow: How We Built This Site
+        {t('howItWasMade.title')}
       </h2>
       
       {/* The main container for the timeline. The border-l creates the vertical line. */}
@@ -69,7 +71,7 @@ export const HowItWasMade: React.FC = () => {
               {index + 1}. {step.title}
             </h3>
             <p className="font-body text-text-light/80 mt-2">
-              <strong>Tools:</strong> {step.tools}
+              {step.tools}
             </p>
             <p className="font-body text-text-light/80 mt-2">
               {step.action}

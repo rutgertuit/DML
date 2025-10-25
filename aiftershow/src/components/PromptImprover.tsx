@@ -1,10 +1,13 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const PromptImprover: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24" id="prompt-improver">
       <h2 className="font-display text-4xl font-bold text-text-light mb-12">
-        The Prompt Improver: Stop Memorizing, Start Discussing.
+        {t('promptImprover.title')}
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -12,25 +15,25 @@ export const PromptImprover: React.FC = () => {
         {/* Column 1: App UI */}
         <div className="flex flex-col gap-6">
           <p className="font-body text-text-light/80 leading-relaxed">
-            Mastering AI isn't about learning complex prompt structures by heart. Based on the latest best practices, the key is *dialogue*. This tool demonstrates that principle: it helps you refine your prompt by discussing it with the LLM (powered by Google AI Studio), ensuring you both understand the goal, constraints, and context before execution. Try it below.
+            {t('promptImprover.description')}
           </p>
           
           {/* Interactive Form */}
           <form className="flex flex-col gap-4">
             <label htmlFor="prompt-input" className="sr-only">
-              Paste your draft prompt here...
+              {t('promptImprover.placeholder')}
             </label>
             <textarea
               id="prompt-input"
               rows={6}
               className="bg-card-dark text-text-light font-mono text-sm p-4 border border-secondary/50 focus:border-primary focus:ring-0 focus:shadow-glow-blue transition-all"
-              placeholder="Paste your draft prompt here..."
+              placeholder={t('promptImprover.placeholder')}
             />
             <button
               type="submit"
               className="font-mono uppercase text-lg bg-primary text-background-dark font-bold py-3 px-6 hover:shadow-glow-blue transition-shadow"
             >
-              Submit
+              {t('promptImprover.submit')}
             </button>
           </form>
           
@@ -43,16 +46,16 @@ export const PromptImprover: React.FC = () => {
         {/* Column 2: System Instruction */}
         <div className="flex flex-col gap-4">
           <h3 className="font-display text-2xl font-bold text-text-light">
-            How it Works: The System Instruction
+            {t('promptImprover.howItWorksTitle')}
           </h3>
           <p className="font-body text-text-light/80 leading-relaxed">
-            This AI 'brain' powers the Prompt Improver. This System Instruction guides the AI to act as a helpful collaborator.
+            {t('promptImprover.howItWorksDesc')}
           </p>
           
           {/* Prompt Box */}
           <div className="bg-card-dark p-4 border border-secondary/20 relative">
             <button className="absolute top-2 right-2 font-mono text-xs uppercase bg-secondary/70 text-text-light px-2 py-1 hover:bg-secondary hover:shadow-glow-purple transition-all">
-              Copy to Clipboard
+              {t('promptImprover.copy')}
             </button>
             <pre className="font-mono text-sm text-text-light/90 whitespace-pre-wrap overflow-x-auto">
               <code>

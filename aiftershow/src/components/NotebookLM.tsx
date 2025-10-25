@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const NotebookLM: React.FC = () => {
+  const { t } = useTranslation();
   // State to manage which tab is active. 1 = CFO
   const [activeTab, setActiveTab] = useState(1);
 
@@ -52,7 +54,7 @@ export const NotebookLM: React.FC = () => {
   return (
     <section className="py-24" id="notebooklm">
       <h2 className="font-display text-4xl font-bold text-text-light mb-12">
-        NotebookLM: Content First, Formatting Later.
+        {t('notebookLM.title')}
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -60,7 +62,7 @@ export const NotebookLM: React.FC = () => {
         {/* Column 1: Workflow & Demo */}
         <div className="flex flex-col gap-6">
           <p className="font-body text-text-light/80 leading-relaxed">
-            NotebookLM revolutionizes collaboration by shifting the focus. Stop worrying upfront about how the CFO wants data formatted versus the CEO. Focus on structure and input. Dump everything—transcripts, PDFs, decks, links—into a Notebook. NotebookLM becomes the central brain. You can then rapidly iterate and generate the exact presentation format needed for any stakeholder instantly.
+            {t('notebookLM.description')}
           </p>
           
           {/* Video Placeholder */}
@@ -74,7 +76,7 @@ export const NotebookLM: React.FC = () => {
             rel="noopener noreferrer"
             className="font-mono uppercase text-lg bg-primary text-background-dark font-bold py-3 px-6 text-center hover:shadow-glow-blue transition-shadow"
           >
-            Try NotebookLM
+            {t('notebookLM.cta')}
           </a>
         </div>
 
@@ -82,19 +84,19 @@ export const NotebookLM: React.FC = () => {
         <div className="flex flex-col">
           <div className="flex flex-wrap border-b border-secondary/20 -mt-3">
             <button className={getTabClass(1)} onClick={() => setActiveTab(1)}>
-              For the CFO
+              {t('notebookLM.tabCFO')}
             </button>
             <button className={getTabClass(2)} onClick={() => setActiveTab(2)}>
-              For the CMO
+              {t('notebookLM.tabCMO')}
             </button>
             <button className={getTabClass(3)} onClick={() => setActiveTab(3)}>
-              For the CEO
+              {t('notebookLM.tabCEO')}
             </button>
             <button className={getTabClass(4)} onClick={() => setActiveTab(4)}>
-              For your Manager
+              {t('notebookLM.tabManager')}
             </button>
             <button className={getTabClass(5)} onClick={() => setActiveTab(5)}>
-              For your Team
+              {t('notebookLM.tabTeam')}
             </button>
           </div>
           
