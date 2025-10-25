@@ -13,7 +13,7 @@ const SYSTEM_PROMPT = `You are Prompt Scribe, a patient, empathetic coach who he
 
 export const PromptImprover: React.FC = () => {
   const { t } = useTranslation();
-  
+
   // State for the chat
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState('');
@@ -54,24 +54,24 @@ export const PromptImprover: React.FC = () => {
     setMessages(updatedMessages);
 
     const apiHistory = [
-      { role: 'user', parts: [{ text: SYSTEM_PROMPT }] },
-      { role: 'model', parts: [{ text: "Got it. I'm Prompt Scribe, your friendly coach. What's your rough prompt idea?" }] },
+      { role: 'user' as const, parts: [{ text: SYSTEM_PROMPT }] },
+      { role: 'model' as const, parts: [{ text: "Got it. I'm Prompt Scribe, your friendly coach. What's your rough prompt idea?" }] },
       ...updatedMessages.map(msg => ({
-        role: msg.role,
+        role: msg.role as 'user' | 'model',
         parts: [{ text: msg.text }],
       })),
     ];
-    
+
     const aiResponseText = await getScribeResponse(apiHistory);
     let aiChatText = aiResponseText;
 
     // Check for our final prompt tags
     const promptMatch = aiResponseText.match(/\n?\[FINAL_PROMPT\]([\s\S]*)\[\/FINAL_PROMPT\]\n?/);
-    
+
     if (promptMatch && promptMatch[1]) {
       const extractedPrompt = promptMatch[1].trim();
       setFinalPrompt(extractedPrompt);
-      
+
       // The chat message should be *everything else*
       aiChatText = aiResponseText.replace(/\n?\[FINAL_PROMPT\][\s\S]*\[\/FINAL_PROMPT\]\n?/, '').trim();
     }
@@ -102,17 +102,18 @@ export const PromptImprover: React.FC = () => {
       <h2 className="font-display text-4xl font-bold text-text-light mb-4">
         {t('promptImprover.title')}
       </h2>
-      <p className="font-body text-text-light/80 leading-relaxed max-w-4xl mb-12">
-        {t('promptImprover.intro')}
-      </p>
-      
+      {/* Remove intro from above, move it inside chat box below */}
+
       {/* New Chat-based UI */}
       <div className="bg-card-dark border border-secondary/20">
-        
+        {/* Research improvement text inside chat box */}
+        <div className="bg-background-dark/80 text-text-light/80 font-body text-sm rounded-t p-4 border-b border-secondary/20">
+          Research shows that iterative, dialogue-based refinement yields 20-50% better AI outputs compared to one-shot prompts, as it uncovers hidden assumptions and builds specificity organically.
+        </div>
         {/* Chat Log */}
         <div
           ref={chatLogRef}
-          className="flex flex-col gap-4 p-6 min-h-[400px] max-h-[600px] overflow-y-auto"
+          className="flex flex-col gap-4 p-4 min-h-[250px] max-h-[400px] overflow-y-auto"
         >
           {messages.map((msg, index) => (
             <div
@@ -120,11 +121,10 @@ export const PromptImprover: React.FC = () => {
               className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`p-4 max-w-lg ${
-                  msg.role === 'user' 
-                    ? 'bg-secondary/20 text-text-light' 
+                className={`p-4 max-w-lg ${msg.role === 'user'
+                    ? 'bg-secondary/20 text-text-light'
                     : 'bg-background-dark text-text-light/90'
-                }`}
+                  }`}
               >
                 <p className="font-body whitespace-pre-wrap">{msg.text}</p>
               </div>
@@ -138,10 +138,10 @@ export const PromptImprover: React.FC = () => {
             </div>
           )}
         </div>
-        
+
         {/* Input Form */}
-        <form 
-          onSubmit={handleSubmit} 
+        <form
+          onSubmit={handleSubmit}
           className="flex gap-4 p-6 border-t border-secondary/20"
         >
           <textarea
@@ -177,7 +177,7 @@ export const PromptImprover: React.FC = () => {
             Copy the prompt below and paste it into your favorite LLM to see the results.
           </p>
           <div className="bg-card-dark p-4 border border-primary/20 relative m-6 mt-0">
-            <button 
+            <button
               onClick={handleCopy}
               className="absolute top-2 right-2 font-mono text-xs uppercase bg-secondary/70 text-text-light px-2 py-1 hover:bg-secondary hover:shadow-glow-purple transition-all"
             >
