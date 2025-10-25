@@ -6,6 +6,7 @@ import HeroGem from './components/HeroGem';
 import NotebookLM from './components/NotebookLM';
 import FlowVibe from './components/FlowVibe';
 import Toolkit from './components/Toolkit';
+import HowItWasMade from './components/HowItWasMade';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <NotebookLM />
         <FlowVibe />
         <Toolkit />
+        <HowItWasMade />
       </main>
     </div>
   );
