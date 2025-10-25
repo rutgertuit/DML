@@ -4,6 +4,8 @@ import HeroSection from './components/HeroSection';
 import PromptImprover from './components/PromptImprover';
 import HeroGem from './components/HeroGem';
 import NotebookLM from './components/NotebookLM';
+import FlowVibe from './components/FlowVibe';
+import Toolkit from './components/Toolkit';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <PromptImprover />
         <HeroGem />
         <NotebookLM />
+        <FlowVibe />
+        <Toolkit />
       </main>
     </div>
   );
