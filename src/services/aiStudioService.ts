@@ -15,7 +15,8 @@ const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-
  */
 export const getScribeResponse = async (history: ApiMessage[]): Promise<string> => {
   if (!API_KEY) {
-    throw new Error("VITE_GEMINI_API_KEY is not set. Please check your .env file.");
+    console.error('Missing VITE_GEMINI_API_KEY environment variable');
+    return "⚠️ API key not configured. Please set up your VITE_GEMINI_API_KEY environment variable to use the Gemini API features.";
   }
 
   try {
