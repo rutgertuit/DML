@@ -36,32 +36,39 @@ export const FlowVibe: React.FC = () => {
             </p>
 
             {/* Info Grid */}
-            <div className="grid grid-cols-2 gap-4 text-sm">
+            <div class="grid grid-cols-2 gap-4 text-sm">
               <div>
-                <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.workflow').split(':')[0]}:</p>
+                <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.workflowLabel')}</p>
                 <p className="text-text-light/80">{t('flowVibe.vibe.workflow')}</p>
               </div>
               <div>
-                <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.goal').split(':')[0]}:</p>
+                <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.goalLabel')}</p>
                 <p className="text-text-light/80">{t('flowVibe.vibe.goal')}</p>
               </div>
               <div>
-                <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.risk').split(':')[0]}:</p>
+                <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.riskLabel')}</p>
                 <p className="text-text-light/80">{t('flowVibe.vibe.risk')}</p>
               </div>
               <div>
-                <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.tools').split(':')[0]}:</p>
-                <p className="text-text-light/80">{t('flowVibe.vibe.tools')}</p>
+                <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.toolsLabel')}</p>
+                                <p className="text-text-light/80">
+                  <a href={t('flowVibe.vibe.tool1Url')} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{t('flowVibe.vibe.tool1Name')}</a>,
+                  <a href={t('flowVibe.vibe.tool2Url')} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{t('flowVibe.vibe.tool2Name')}</a>
+                </p>
               </div>
             </div>
           </div>
 
           {/* Right: Video Placeholder */}
-          <div className="w-full aspect-video bg-background-dark border border-primary/20 flex flex-col items-center justify-center">
-            <div className="text-5xl mb-4">🎬</div>
-            <span className="font-mono text-text-light/50 text-center px-4 text-sm">
-              {t('flowVibe.vibe.videoPlaceholder')}
-            </span>
+          <div className="w-full aspect-video bg-background-dark border border-primary/20">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/DePOMEBfvWQ"
+              title="Vibe Coding Demo"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
 
@@ -102,11 +109,13 @@ export const FlowVibe: React.FC = () => {
           </div>
 
           {/* Right: Video Placeholder */}
-          <div className="w-full aspect-video bg-background-dark border border-text-light/20 flex flex-col items-center justify-center">
-            <div className="text-5xl mb-4">❓</div>
-            <span className="font-mono text-text-light/50 text-center px-4 text-sm">
-              {t('flowVibe.flow.videoPlaceholder')}
-            </span>
+          <div className="w-full aspect-video bg-background-dark border border-text-light/20">
+            <video
+              className="w-full h-full"
+              src="https://storage.googleapis.com/heineken-hub-video-assets/A_cinematic_fastpaced_202510262230_46lbt.mp4"
+              title="Flow Coding Confusion Explained"
+              controls
+            ></video>
           </div>
         </div>
       </div>
@@ -129,28 +138,32 @@ export const FlowVibe: React.FC = () => {
             </p>
 
             {/* Info Grid */}
-            <div className="grid grid-cols-1 gap-4 text-sm">
+            <div class="grid grid-cols-1 gap-4 text-sm">
               <div>
-                <p className="font-bold text-secondary mb-1">{t('flowVibe.signal.workflow').split(':')[0]}:</p>
+                <p className="font-bold text-secondary mb-1">{t('flowVibe.signal.workflowLabel')}</p>
                 <p className="text-text-light/80">{t('flowVibe.signal.workflow')}</p>
               </div>
               <div>
-                <p className="font-bold text-secondary mb-1">{t('flowVibe.signal.goal').split(':')[0]}:</p>
+                <p className="font-bold text-secondary mb-1">{t('flowVibe.signal.goalLabel')}</p>
                 <p className="text-text-light/80">{t('flowVibe.signal.goal')}</p>
               </div>
               <div>
-                <p className="font-bold text-secondary mb-1">{t('flowVibe.signal.power').split(':')[0]}:</p>
+                <p className="font-bold text-secondary mb-1">{t('flowVibe.signal.powerLabel')}</p>
                 <p className="text-text-light/80">{t('flowVibe.signal.power')}</p>
               </div>
             </div>
           </div>
 
           {/* Right: Video Placeholder */}
-          <div className="w-full aspect-video bg-background-dark border border-secondary/20 flex flex-col items-center justify-center">
-            <div className="text-5xl mb-4">📐</div>
-            <span className="font-mono text-text-light/50 text-center px-4 text-sm">
-              {t('flowVibe.signal.videoPlaceholder')}
-            </span>
+          <div className="w-full aspect-video bg-background-dark border border-secondary/20">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/5fhcklZe-qE"
+              title="Signal Coding Demo"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
 

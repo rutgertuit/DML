@@ -20,7 +20,7 @@
     "placeholder": "Paste your draft prompt here...",
     "submit": "Submit",
     "howItWorksTitle": "How it Works: The System Instruction",
-    "howItWorksDesc": "This AI 'brain' powers the Prompt Improver. This System Instruction guides the AI to act as a helpful collaborator.",
+    "howItWorksDesc": "This AI 'brain' powers the Prompt Improver. This System Instruction guides the AI to as a helpful collaborator.",
     "copy": "Copy to Clipboard"
   },
   "heroGemWizard": {
@@ -55,39 +55,44 @@
   },
   "flowVibe": {
     "title": "Understanding Your New Powers: From 'Vibe' to 'Signal'",
-    "subtitle": "NL: Begrijp Je Nieuwe Krachten: Van 'Vibe' naar 'Signaal'",
-    "intro": "The way we interact with AI is evolving. We started with conversational 'Vibe Coding', and confused ourselves with the term 'Flow Coding'. Now, we're moving towards a more precise and powerful method: 'Signal Coding'. This site is designed to help you master this evolution.",
+    "subtitle": "A guide to mastering the evolution of AI interaction.",
+    "intro": "The way we interact with AI is evolving. We started with conversational 'Vibe Coding,' got confused by the term 'Flow Coding,' and are now moving towards a more precise and powerful method: 'Signal Coding.' This guide is designed to help you master this evolution.",
     "liveExample": "Live Example:",
     "vibe": {
       "title": "1. Vibe Coding (The \"Director\" 🎬)",
       "description": "Fast, creative, and conversational. This is about giving the AI a general direction and iterating based on its output. It's like directing an actor—you provide the 'vibe' and see what you get back.",
+      "workflowLabel": "Workflow:",
       "workflow": "Conversational back-and-forth.",
+      "goalLabel": "Goal:",
       "goal": "Explore ideas, quick prototypes.",
+      "riskLabel": "Risk:",
       "risk": "Inconsistent, not repeatable.",
-      "tools": "Google AI Studio, ChatGPT.",
+      "toolsLabel": "Tools:",
+      "tool1Name": "Google AI Studio",
+      "tool1Url": "https://aistudio.google.com/",
+      "tool2Name": "ChatGPT",
+      "tool2Url": "https://chat.openai.com/",
       "example": "The",
       "exampleLink": "Prompt Improver",
-      "exampleText": "on this page uses Vibe Coding. You give it a rough idea, and it directs the AI to refine it.",
-      "exampleNL": "NL Voorbeeld: De Prompt Improver op deze pagina is een voorbeeld.",
-      "videoPlaceholder": "[Video Placeholder: Vibe Coding Demo]"
+      "exampleText": "on this page uses Vibe Coding. You give it a rough idea, and it directs the AI to refine it."
     },
     "flow": {
       "title": "2. The \"Flow Coding\" Confusion",
-      "description": "The term 'Flow Coding' is ambiguous. It can mean being in 'the zone', using a Git Flow, building with visual tools like Google Agentspace, or just 'going with the flow.' Because it lacks a clear definition, it's not a useful concept for building reliable AI systems. We need something more precise.",
-      "conclusion": "Conclusion: 'Signal Coding' is a more useful concept.",
-      "videoPlaceholder": "[Video Placeholder: Flow Coding Confusion Explained]"
+      "description": "The term 'Flow Coding' is ambiguous. It can mean being in 'the zone,' using a Git Flow, building with visual tools like Google Agentspace, or just 'going with the flow.' Because it lacks a clear definition, it's not a useful concept for building reliable AI systems. We need something more precise.",
+      "conclusion": "Conclusion: 'Signal Coding' is a more useful concept.'"
     },
     "signal": {
       "title": "3. Signal Coding (The \"Architect\" 📐)",
-      "description": "This is the evolution. Instead of a 'vibe', you provide a clear, structured 'signal'. Signal Coding is about giving the AI precise, repeatable, and testable instructions to build reliable, production-ready systems. It's the language of AI architects.",
+      "description": "This is the evolution. Instead of a 'vibe,' you provide a clear, structured 'signal.' Signal Coding is about giving the AI precise, repeatable, and testable instructions to build reliable, production-ready systems. It's the language of AI architects.",
+      "workflowLabel": "Workflow:",
       "workflow": "Structured instructions, system prompts, defined inputs/outputs.",
+      "goalLabel": "Goal:",
       "goal": "Create predictable, scalable, and reliable AI applications.",
+      "powerLabel": "Power:",
       "power": "Enables agentic workflows and complex, multi-step tasks.",
       "example": "The",
       "exampleLink": "Hero Gem Builder",
-      "exampleText": "uses Signal Coding. Its two-step process with specific system instructions is a clear 'signal' for a predictable outcome.",
-      "exampleNL": "NL Voorbeeld: De Hero Gem Builder is een voorbeeld.",
-      "videoPlaceholder": "[Video Placeholder: Signal Coding Demo]"
+      "exampleText": "uses Signal Coding. Its two-step process with specific system instructions is a clear 'signal' for a predictable outcome."
     }
   },
   "promptImproverHeader": {

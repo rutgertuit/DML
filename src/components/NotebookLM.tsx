@@ -262,9 +262,15 @@ export const NotebookLM: React.FC = () => {
             </p>
 
             {/* Video Placeholder with Recommendation */}
-            <div className="w-full aspect-video bg-card-dark border border-primary/20 flex flex-col items-center justify-center">
-              <div className="text-5xl mb-4">🎬</div>
-              <span className="font-mono text-text-light/50 text-center px-4 text-sm">[Video Placeholder/Recommendation]: A short (60-90 second) video here is crucial—demonstrate dumping 5 different sources into one Notebook, then ask NotebookLM to "generate a one-page CFO brief." Show the result. This is the "proof moment."</span>
+            <div className="w-full aspect-video bg-card-dark border border-primary/20">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/6dHmu1GALmA"
+                title="NotebookLM Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
 
             <a

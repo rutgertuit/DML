@@ -55,39 +55,44 @@
   },
   "flowVibe": {
     "title": "Begrijp Je Nieuwe Krachten: Van 'Vibe' naar 'Signaal'",
-    "subtitle": "NL: Begrijp Je Nieuwe Krachten: Van 'Vibe' naar 'Signaal'",
-    "intro": "De manier waarop we met AI omgaan evolueert. We begonnen met conversationeel 'Vibe Coding', en verwarden onszelf met de term 'Flow Coding'. Nu gaan we naar een nauwkeurigere en krachtigere methode: 'Signal Coding'. Deze site is ontworpen om je te helpen deze evolutie onder de knie te krijgen.",
+    "subtitle": "Een gids om de evolutie van AI-interactie meester te worden.",
+    "intro": "De manier waarop we met AI omgaan, evolueert. We zijn begonnen met conversationeel 'Vibe Coding', raakten in de war door de term 'Flow Coding', en gaan nu over op een preciezere en krachtigere methode: 'Signal Coding'. Deze gids is ontworpen om je te helpen deze evolutie meester te worden.",
     "liveExample": "Live Voorbeeld:",
     "vibe": {
       "title": "1. Vibe Coding (De \"Regisseur\" 🎬)",
-      "description": "Snel, creatief en conversationeel. Dit gaat over het geven van een algemene richting aan de AI en itereren op basis van de output. Het is als het regisseren van een acteur—je geeft de 'vibe' en kijkt wat je terugkrijgt.",
-      "workflow": "Conversationele uitwisseling.",
+      "description": "Snel, creatief en conversationeel. Het gaat erom de AI een algemene richting te geven en te itereren op basis van de output. Het is als het regisseren van een acteur - je geeft de 'vibe' en kijkt wat je terugkrijgt.",
+      "workflowLabel": "Workflow:",
+      "workflow": "Conversationele heen-en-weer.",
+      "goalLabel": "Doel:",
       "goal": "Ideeën verkennen, snelle prototypes.",
+      "riskLabel": "Risico:",
       "risk": "Inconsistent, niet herhaalbaar.",
-      "tools": "Google AI Studio, ChatGPT.",
+      "toolsLabel": "Tools:",
+      "tool1Name": "Google AI Studio",
+      "tool1Url": "https://aistudio.google.com/",
+      "tool2Name": "ChatGPT",
+      "tool2Url": "https://chat.openai.com/",
       "example": "De",
       "exampleLink": "Prompt Verbeteraar",
-      "exampleText": "op deze pagina gebruikt Vibe Coding. Je geeft een ruw idee en het stuurt de AI om het te verfijnen.",
-      "exampleNL": "NL Voorbeeld: De Prompt Verbeteraar op deze pagina is een voorbeeld.",
-      "videoPlaceholder": "[Video Tijdelijke aanduiding: Vibe Coding Demo]"
+      "exampleText": "op deze pagina maakt gebruik van Vibe Coding. Je geeft een ruw idee, en het stuurt de AI aan om het te verfijnen."
     },
     "flow": {
       "title": "2. De \"Flow Coding\" Verwarring",
-      "description": "De term 'Flow Coding' is dubbelzinnig. Het kan betekenen 'in de zone zijn', een Git Flow gebruiken, bouwen met visuele tools zoals Google Agentspace, of gewoon 'met de flow meegaan.' Omdat het geen duidelijke definitie heeft, is het geen nuttig concept voor het bouwen van betrouwbare AI-systemen. We hebben iets nauwkeuriger nodig.",
-      "conclusion": "Conclusie: 'Signal Coding' is een nuttiger concept.",
-      "videoPlaceholder": "[Video Tijdelijke aanduiding: Flow Coding Verwarring Uitgelegd]"
+      "description": "De term 'Flow Coding' is dubbelzinnig. Het kan betekenen dat je in 'de zone' bent, een Git Flow gebruikt, bouwt met visuele tools zoals Google Agentspace, of gewoon 'met de stroom meegaat'. Omdat het een duidelijke definitie mist, is het geen bruikbaar concept voor het bouwen van betrouwbare AI-systemen. We hebben iets preciezers nodig.",
+      "conclusion": "Conclusie: 'Signal Coding' is een bruikbaarder concept.'"
     },
     "signal": {
       "title": "3. Signal Coding (De \"Architect\" 📐)",
-      "description": "Dit is de evolutie. In plaats van een 'vibe', geef je een duidelijk, gestructureerd 'signaal'. Signal Coding gaat over het geven van precieze, herhaalbare en testbare instructies aan de AI om betrouwbare, productie-ready systemen te bouwen. Het is de taal van AI-architecten.",
+      "description": "Dit is de evolutie. In plaats van een 'vibe', geef je een duidelijk, gestructureerd 'signaal'. Signal Coding gaat over het geven van precieze, herhaalbare en testbare instructies aan de AI om betrouwbare, productieklare systemen te bouwen. Het is de taal van AI-architecten.",
+      "workflowLabel": "Workflow:",
       "workflow": "Gestructureerde instructies, systeemprompts, gedefinieerde inputs/outputs.",
-      "goal": "Voorspelbare, schaalbare en betrouwbare AI-applicaties creëren.",
-      "power": "Maakt agentische workflows en complexe, multi-step taken mogelijk.",
+      "goalLabel": "Doel:",
+      "goal": "Creëer voorspelbare, schaalbare en betrouwbare AI-applicaties.",
+      "powerLabel": "Kracht:",
+      "power": "Maakt agentische workflows en complexe, meerstaps taken mogelijk.",
       "example": "De",
       "exampleLink": "Hero Gem Builder",
-      "exampleText": "gebruikt Signal Coding. Het twee-stappen proces met specifieke systeeminstructies is een duidelijk 'signaal' voor een voorspelbare uitkomst.",
-      "exampleNL": "NL Voorbeeld: De Hero Gem Builder is een voorbeeld.",
-      "videoPlaceholder": "[Video Tijdelijke aanduiding: Signal Coding Demo]"
+      "exampleText": "maakt gebruik van Signal Coding. Het twee-staps proces met specifieke systeeminstructies is een duidelijk 'signaal' voor een voorspelbaar resultaat."
     }
   },
   "promptImproverHeader": {
