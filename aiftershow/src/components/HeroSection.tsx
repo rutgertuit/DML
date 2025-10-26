@@ -6,7 +6,7 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section className="h-screen flex flex-col items-center justify-center text-center relative" id="hero">
-      {/* Background Video Placeholder */}
+      {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         autoPlay
@@ -15,7 +15,7 @@ export const HeroSection: React.FC = () => {
         playsInline
         poster="https://storage.googleapis.com/aiftershow-assets/hero-fallback.jpg"
       >
-        {/* We will add video sources here later */}
+        <source src="https://storage.googleapis.com/heineken-hub-video-assets/A_highcontrast_ultrasharp_202510262055_5.mp4" type="video/mp4" />
       </video>
       <div className="absolute top-0 left-0 w-full h-full bg-background-dark/70 z-10"></div>
 
