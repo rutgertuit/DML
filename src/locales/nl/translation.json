@@ -128,7 +128,7 @@
     "problemLabel": "Probleem:",
     "toolLabel": "Tool:",
     "actionLabel": "Actie:",
-    "outcomeLabel": "Resultaat:",
+    "outcomeLabel": "Uitkomst:",
     "step1": {
       "step": "Stap 1: Strategie & Onderzoek",
       "title": "(De \"Wat?\")",
@@ -171,8 +171,11 @@
     }
   },
   "footer": {
-    "title": "Word Lid van de AIftershow Community",
-    "description": "Klaar om AI-workflows naar het volgende niveau te tillen? Word lid van onze community voor exclusieve templates, tutorials en live Q&A met AI-experts.",
-    "cta": "Word Lid"
+    "title": "Laten We Verbinden & Het Gesprek Voortzetten",
+    "description": "Klaar om AI-workflows verder te verkennen? Verbind met me op LinkedIn om inzichten te delen, je projecten te bespreken, of gewoon het gesprek over de toekomst van AI-aangedreven ontwikkeling voort te zetten.",
+    "cta": "Verbinden op LinkedIn",
+    "videoTitle": "Achter de Schermen",
+    "videoPlaceholder": "[Video Komt Binnenkort] - Het verhaal achter deze site en de AI-workflows die het mogelijk maakten",
+    "disclaimer": "Disclaimer: Hoewel ik werkzaam ben bij Google, is dit project een persoonlijk initiatief en staat het volledig los van mijn werk bij Google. Alle meningen, standpunten en inhoud die op deze site worden geuit, zijn mijn eigen meningen en vertegenwoordigen niet de standpunten of posities van Google of een van haar gelieerde ondernemingen."
   }
 }

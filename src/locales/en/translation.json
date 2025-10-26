@@ -7,7 +7,7 @@
     "toolkit": "Toolkit"
   },
   "hero": {
-    "title": "Marketing & Effie Live - the AIftershow",
+    "title": "Marketing & Effie Live the AI-ftershow",
     "subtitle": "Level Up Your Stack. A Tactical Guide to Vibe Coding, Hero Gems, and NotebookLM.",
     "cta1": "I need to build a prototype fast.",
     "cta2": "I need AI grounded in my own data.",
@@ -171,8 +171,11 @@
     }
   },
   "footer": {
-    "title": "Join the AIftershow Community",
-    "description": "Ready to take AI workflows to the next level? Join our community for exclusive templates, tutorials, and live Q&A with AI experts.",
-    "cta": "Join Now"
+    "title": "Let's Connect & Continue the Conversation",
+    "description": "Ready to explore AI workflows further? Connect with me on LinkedIn to share insights, discuss your projects, or simply continue the conversation about the future of AI-powered development.",
+    "cta": "Connect on LinkedIn",
+    "videoTitle": "Behind the Scenes",
+    "videoPlaceholder": "[Video Coming Soon] - The story behind this site and the AI workflows that made it possible",
+    "disclaimer": "Disclaimer: While I am employed by Google, this project is a personal initiative and is entirely unrelated to my work at Google. All opinions, views, and content expressed on this site are my own and do not represent the views or positions of Google or any of its affiliates."
   }
 }

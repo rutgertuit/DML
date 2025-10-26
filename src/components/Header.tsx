@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap bg-background-dark/80 backdrop-blur-sm px-4 md:px-10 lg:px-20 py-4 border-b border-solid border-secondary/20">
       <a className="font-display text-2xl font-bold text-text-light text-glow-blue" href="#hero">
-        AIftershow
+        AI-ftershow
       </a>
       <nav className="hidden md:flex items-center gap-6">
         <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#prompt-improver">
