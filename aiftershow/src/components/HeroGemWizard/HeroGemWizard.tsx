@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import BlueprintSelector from './BlueprintSelector';
 import GemDesignAssistant from './GemDesignAssistant';
 import SourceMaterialGenerator from './SourceMaterialGenerator';
@@ -10,6 +10,17 @@ export const HeroGemWizard: React.FC = () => {
   const [selectedBlueprint, setSelectedBlueprint] = useState<string | null>(null);
   const [gemPlan, setGemPlan] = useState<{ goal: string, requiredDocuments: string[] } | null>(null);
   const [hasConfirmedFiles, setHasConfirmedFiles] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Scroll to section when step changes to prevent page jumping
+  useEffect(() => {
+    if (sectionRef.current && currentStep > 1) {
+      // Small delay to ensure content has rendered
+      setTimeout(() => {
+        sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, [currentStep]);
 
   const handleBlueprintSelected = (blueprintName: string) => {
     setSelectedBlueprint(blueprintName);
@@ -31,7 +42,7 @@ export const HeroGemWizard: React.FC = () => {
   };
 
   return (
-    <section id="hero-gem-builder" className="py-24 overflow-hidden break-words">
+    <section ref={sectionRef} id="hero-gem-builder" className="py-24 overflow-hidden break-words">
       <div className="bg-card-dark rounded-xl shadow-lg border border-secondary/30 p-8 mb-8">
         <h2 className="font-display text-4xl font-bold text-primary mb-6 text-center">
           Build Your "Hero Gem" V2 — RAG Preparation Studio
