@@ -15,7 +15,7 @@ export const HeroSection: React.FC = () => {
         playsInline
         poster="https://storage.googleapis.com/aiftershow-assets/hero-fallback.jpg"
       >
-        <source src="https://storage.googleapis.com/heineken-hub-video-assets/A_highcontrast_ultrasharp_202510262055_5.mp4" type="video/mp4" />
+        <source src="https://storage.googleapis.com/heineken-hub-video-assets/A_seamlessly_looped_202510262233_wjnxf.mp4" type="video/mp4" />
       </video>
       <div className="absolute top-0 left-0 w-full h-full bg-background-dark/70 z-10"></div>
 
