@@ -15,13 +15,16 @@ export const Header: React.FC = () => {
       </a>
       <nav className="hidden md:flex items-center gap-6">
         <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#prompt-improver">
-          {t('header.improvePrompts')}
+          {t('header.improvePrompt')}
         </a>
-        <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#hero-gem">
-          {t('header.buildExpert')}
+        <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#hero-gem-wizard">
+          {t('header.heroGem')}
         </a>
         <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#notebooklm">
-          {t('header.teamCollab')}
+          {t('header.notebookLM')}
+        </a>
+        <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#vibe-to-signal">
+          {t('header.newPowers')}
         </a>
         <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#toolkit">
           {t('header.toolkit')}

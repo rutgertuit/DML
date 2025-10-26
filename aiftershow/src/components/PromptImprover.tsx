@@ -1,6 +1,7 @@
 import React, { useState, useRef, useLayoutEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getScribeResponse } from '../services/aiStudioService';
+import { PromptImproverHeader } from './PromptImproverHeader';
 
 // Define the structure for a chat message
 interface Message {
@@ -102,6 +103,9 @@ export const PromptImprover: React.FC = () => {
       <h2 className="font-display text-4xl font-bold text-text-light mb-4">
         {t('promptImprover.title')}
       </h2>
+
+      <PromptImproverHeader />
+
       {/* Remove intro from above, move it inside chat box below */}
 
       {/* New Chat-based UI */}
