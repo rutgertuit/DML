@@ -1,34 +1,60 @@
 
 import React, { useState, useEffect } from 'react';
+import { callGeminiApi } from '../../services/aiStudioService';
 
 interface SourceMaterialGeneratorProps {
   gemPlan: { goal: string, requiredDocuments: string[] };
   onFilesConfirmed: () => void;
 }
 
-// Mock function for API call
-async function getGeminiFlashStream(prompt: string): Promise<string> {
-  console.log("API Call with prompt:", prompt);
-  return `A research prompt for ${prompt.split("'")[1]}`;
-}
-
 const SourceMaterialGenerator: React.FC<SourceMaterialGeneratorProps> = ({ gemPlan, onFilesConfirmed }) => {
-  const [prompts, setPrompts] = useState<{ documentName: string, prompt: string }[]>([]);
+  const [sourcePrompts, setSourcePrompts] = useState<{ name: string, prompt: string }[]>([]);
   const [copied, setCopied] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const generatePrompts = async () => {
-      const generatedPrompts = await Promise.all(
-        gemPlan.requiredDocuments.map(async (docName) => {
-          const metaPrompt = `Generate a research prompt for a user to create a source document titled: '${docName}'. The user's main goal is '${gemPlan.goal}'. The prompt should guide them to create a high-quality, focused document.`;
-          const prompt = await getGeminiFlashStream(metaPrompt);
-          return { documentName: docName, prompt };
-        })
-      );
-      setPrompts(generatedPrompts);
+    const fetchSourcePrompts = async () => {
+      if (!gemPlan || !gemPlan.requiredDocuments) return;
+
+      setIsLoading(true);
+      setError(null);
+      const generatedPrompts: { name: string, prompt: string }[] = [];
+
+      try {
+        for (const documentName of gemPlan.requiredDocuments) {
+          // THIS IS THE META-PROMPT TEMPLATE
+          const metaPrompt = `You are an expert "AI Research Assistant" helping a user create source files for a new AI Gem.
+The user's high-level goal is: "${gemPlan.goal}".
+The user needs to create a specific source document named: "${documentName}".
+
+Your task is to generate a detailed, copy-and-paste-ready prompt for the user to run in an LLM (like Gemini Advanced). This prompt *you generate* must guide them to create the *content* for that document.
+
+- DO NOT just output the document name.
+- DO NOT talk *to* me (the assistant).
+- Your entire output *is* the prompt for the user.
+- Start the prompt with "To create your source document titled '${documentName}', use the following prompt:..." or a similar clear instruction.
+
+Example Output:
+"To create your source document titled 'Family Dietary Restrictions.txt', use the following prompt:
+'Please list all known dietary restrictions, allergies (e.g., peanuts, gluten), and strong food preferences (e.g., 'hates mushrooms') for my family. Format this as a simple bulleted list...'"`;
+
+          // THIS IS THE FIX: AWAIT THE *RESULT* OF THE API CALL
+          const apiResult = await callGeminiApi(metaPrompt);
+          generatedPrompts.push({ name: documentName, prompt: apiResult });
+        }
+
+        setSourcePrompts(generatedPrompts);
+
+      } catch (e) {
+        console.error("Failed to fetch source prompts:", e);
+        setError("The AI failed to generate prompts. Please go back and try again.");
+      } finally {
+        setIsLoading(false);
+      }
     };
 
-    generatePrompts();
+    fetchSourcePrompts();
   }, [gemPlan]);
 
   const handleCopy = (prompt: string, documentName: string) => {
@@ -40,36 +66,52 @@ const SourceMaterialGenerator: React.FC<SourceMaterialGeneratorProps> = ({ gemPl
   return (
     <div>
       <h3 className="font-display text-2xl font-bold text-text-light mb-4">Step 3: Generate Source Material Prompts</h3>
-      <div className="prompts-list space-y-4 mb-6">
-        {prompts.map(({ documentName, prompt }) => (
-          <div key={documentName} className="code-block-container relative">
-            <h4 className="font-bold text-primary mb-2">{documentName}</h4>
-            <div className="bg-primary/10 rounded-lg p-2 pb-0 border border-primary/30">
-              <button
-                type="button"
-                className="copy-btn flex items-center gap-2 px-4 py-2 text-base font-bold bg-primary text-background-dark rounded-lg absolute top-2 right-2 shadow hover:bg-blue-500 transition-all"
-                onClick={() => handleCopy(prompt, documentName)}
-              >
-                {copied === documentName ? 'Copied!' : 'Copy Prompt'}
-              </button>
-              <pre className="code-block max-w-full whitespace-pre-wrap break-words overflow-x-auto bg-transparent p-2 pt-8">{prompt}</pre>
-            </div>
+
+      {isLoading ? (
+        <div className="flex flex-col items-center justify-center py-12">
+          <div className="mb-4 text-4xl">📚</div>
+          <p className="font-body text-text-light/80 text-lg">Generating your source material prompts...</p>
+          <p className="font-body text-text-light/60 text-sm mt-2">Creating custom prompts for each document. This may take a moment.</p>
+        </div>
+      ) : error ? (
+        <div className="flex flex-col items-center justify-center py-12 bg-red-900/20 border border-red-500/30 rounded-lg p-6">
+          <p className="font-body text-red-400 text-lg font-bold mb-2">{error}</p>
+          <p className="font-body text-text-light/60 text-sm">Please try going back and refining your Gem plan.</p>
+        </div>
+      ) : (
+        <>
+          <div className="prompts-list space-y-4 mb-6">
+            {sourcePrompts.map(({ name, prompt }) => (
+              <div key={name} className="code-block-container relative">
+                <h4 className="font-bold text-primary mb-2">{name}</h4>
+                <div className="bg-primary/10 rounded-lg p-2 pb-0 border border-primary/30">
+                  <button
+                    type="button"
+                    className="copy-btn flex items-center gap-2 px-4 py-2 text-base font-bold bg-primary text-background-dark rounded-lg absolute top-2 right-2 shadow hover:bg-blue-500 transition-all"
+                    onClick={() => handleCopy(prompt, name)}
+                  >
+                    {copied === name ? 'Copied!' : 'Copy Prompt'}
+                  </button>
+                  <pre className="code-block max-w-full whitespace-pre-wrap break-words overflow-x-auto bg-transparent p-2 pt-8">{prompt}</pre>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      <div className="confirmation">
-        <h4 className="font-bold text-text-light mb-2">Confirmation</h4>
-        <p className="text-text-light/80 mb-4">Please create the following files and paste the content generated by the prompts above:</p>
-        <ul className="list-disc list-inside text-text-light/80 space-y-2 mb-4">
-          {gemPlan.requiredDocuments.map(doc => <li key={doc}>{doc}</li>)}
-        </ul>
-        <button
-          onClick={onFilesConfirmed}
-          className="hero-gem-btn w-full font-mono uppercase text-lg bg-primary text-background-dark font-bold py-3 px-6 rounded hover:shadow-glow-blue transition-shadow"
-        >
-          I have created all my files
-        </button>
-      </div>
+          <div className="confirmation">
+            <h4 className="font-bold text-text-light mb-2">Confirmation</h4>
+            <p className="text-text-light/80 mb-4">Please create the following files and paste the content generated by the prompts above:</p>
+            <ul className="list-disc list-inside text-text-light/80 space-y-2 mb-4">
+              {gemPlan.requiredDocuments.map(doc => <li key={doc}>{doc}</li>)}
+            </ul>
+            <button
+              onClick={onFilesConfirmed}
+              className="hero-gem-btn w-full font-mono uppercase text-lg bg-primary text-background-dark font-bold py-3 px-6 rounded hover:shadow-glow-blue transition-shadow"
+            >
+              I have created all my files
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
 };

@@ -36,6 +36,44 @@ export const HeroGemWizard: React.FC = () => {
         <h2 className="font-display text-4xl font-bold text-primary mb-6 text-center">
           Build Your "Hero Gem" V2 — RAG Preparation Studio
         </h2>
+
+        {/* Fun Explainer with Character and Speech Bubble - ALWAYS VISIBLE */}
+        <div className="flex flex-col md:flex-row items-center gap-8 mb-12 p-8 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl border border-primary/20">
+          {/* Character Portrait Placeholder */}
+          <div className="flex-shrink-0 w-32 h-40 rounded-lg bg-gradient-to-br from-primary/30 to-secondary/30 border-2 border-primary/50 flex items-center justify-center overflow-hidden relative">
+            <div className="text-6xl">✨</div>
+            {/* Glow effect */}
+            <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-primary/20 to-transparent"></div>
+          </div>
+
+          {/* Speech Bubble */}
+          <div className="flex-1 relative">
+            <div className="bg-background-dark border-2 border-primary/40 rounded-2xl p-6 shadow-lg relative">
+              {/* Arrow pointing to character */}
+              <div className="absolute -left-3 top-8 w-0 h-0 border-l-0 border-r-8 border-t-6 border-b-6 border-r-primary/40 border-t-transparent border-b-transparent"></div>
+
+              <h3 className="font-display text-xl font-bold text-primary mb-3">Meet Your Personal AI Specialist</h3>
+
+              <div className="space-y-3 text-text-light/85 font-body">
+                <p>
+                  <span className="font-bold text-primary">Stop repeating yourself.</span> Your Gem remembers its job, personality, and your rules every time. No more re-explaining—just ask and get answers that fit <em>you</em>.
+                </p>
+                <p>
+                  <span className="font-bold text-secondary">Get expert results.</span> A generic AI knows a little about everything. Your Gem is a specialist using <em>your</em> files and knowledge to give truly expert advice.
+                </p>
+                <p>
+                  <span className="font-bold text-primary">Make AI practical.</span> Plan campaigns, draft emails in your style, organize projects—with an AI that actually understands <em>your</em> world.
+                </p>
+              </div>
+
+              <p className="mt-4 pt-4 border-t border-primary/20 text-sm text-text-light/70 font-mono">
+                Ready? Pick a blueprint below and let's build! 👇
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Dynamic Content Area - Only Blueprint Selector or Chat Interface */}
         {currentStep === 1 && (
           <BlueprintSelector onSelectBlueprint={handleBlueprintSelected} />
         )}

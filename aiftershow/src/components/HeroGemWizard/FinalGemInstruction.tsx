@@ -1,49 +1,88 @@
 
 import React, { useState, useEffect } from 'react';
+import { callGeminiApi } from '../../services/aiStudioService';
 
 interface FinalGemInstructionProps {
   gemPlan: { goal: string, requiredDocuments: string[] };
 }
 
-// Mock function for API call
-async function getGeminiFlashStream(prompt: string): Promise<string> {
-  console.log("API Call with prompt:", prompt);
-  return `## Persona\nYou are a helpful assistant.\n\n## Instructions\n- You must answer questions based on the provided documents: ${JSON.parse(prompt.split("Gem Plan:")[1].split("Instructions for the final prompt:")[0].trim()).requiredDocuments.join(', ')}\n- Always cite your sources.`;
-}
-
 const FinalGemInstruction: React.FC<FinalGemInstructionProps> = ({ gemPlan }) => {
-  const [instruction, setInstruction] = useState<string | null>(null);
+  const [finalInstruction, setFinalInstruction] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const generateInstruction = async () => {
-      const finalPrompt = `You are a 'Vibe Coding Prompt Engineer'. Based on the following Gem Plan, write a final, RAG-ready system instruction.
-        * **Gem Plan:** ${JSON.stringify(gemPlan)}
-        * **Instructions for the final prompt:**
-            * 1. Start with a clear persona definition.
-            * 2. Explicitly instruct the LLM to constrain its knowledge *exclusively* to the provided source documents: ${gemPlan.requiredDocuments.join(', ')}.
-            * 3. Instruct the LLM to *always* cite the specific source file it used for its information.
-            * 4. Include a structured workflow (Analyze, Quote, Strategize) similar to the V1 prompts.`;
+      setIsLoading(true);
+      setError(null);
 
-      const generatedInstruction = await getGeminiFlashStream(finalPrompt);
-      setInstruction(generatedInstruction);
+      try {
+        const finalInstructionMetaPrompt = `You are a 'Vibe Coding Prompt Engineer' and your job is to write a final, RAG-ready system instruction for a user.
+The user's 'Gem Plan' is: ${JSON.stringify(gemPlan)}
+
+Your task is to generate the complete, copy-paste-ready system instruction.
+- It MUST start with a persona definition based on the 'goal'.
+- It MUST explicitly instruct the AI to constrain its knowledge *exclusively* to the provided source documents: ${gemPlan.requiredDocuments.join(', ')}.
+- It MUST instruct the AI to *always* cite the specific source file it used.
+- It MUST include a structured 4-step workflow (e.g., 1. Analyze Request, 2. Cite Source, 3. Formulate Strategy, 4. Ask Question).
+- Your entire output must be the final system instruction, ready for the user to copy. DO NOT add any conversational preamble.`;
+
+        const generatedInstruction = await callGeminiApi(finalInstructionMetaPrompt);
+        setFinalInstruction(generatedInstruction);
+
+      } catch (e) {
+        console.error("Error generating final instruction:", e);
+        setError("The AI failed to generate the final instruction. Please try again.");
+        setFinalInstruction(null);
+      } finally {
+        setIsLoading(false);
+      }
     };
 
     generateInstruction();
   }, [gemPlan]);
 
   const handleCopy = () => {
-    if (instruction) {
-      navigator.clipboard.writeText(instruction);
+    if (finalInstruction) {
+      navigator.clipboard.writeText(finalInstruction);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
   };
 
-  return (
-    <div>
-      <h3 className="font-display text-2xl font-bold text-text-light mb-4">Step 4: Your Final Gem Instruction is Ready!</h3>
-      {instruction && (
+  // Handle loading state
+  if (isLoading) {
+    return (
+      <div>
+        <h3 className="font-display text-2xl font-bold text-text-light mb-4">Step 4: Your Final Gem Instruction is Ready!</h3>
+        <div className="flex flex-col items-center justify-center py-12">
+          <div className="mb-4 text-4xl">✨</div>
+          <p className="font-body text-text-light/80 text-lg">Building your Gem...</p>
+          <p className="font-body text-text-light/60 text-sm mt-2">Generating your final system instruction. This may take a moment.</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Handle error state (no instruction generated)
+  if (!isLoading && error) {
+    return (
+      <div>
+        <h3 className="font-display text-2xl font-bold text-text-light mb-4">Step 4: Your Final Gem Instruction is Ready!</h3>
+        <div className="flex flex-col items-center justify-center py-12 bg-red-900/20 border border-red-500/30 rounded-lg p-6">
+          <p className="font-body text-red-400 text-lg font-bold mb-2">{error}</p>
+          <p className="font-body text-text-light/60 text-sm">Please try again or contact support if the problem persists.</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Handle success state (instruction generated)
+  if (!isLoading && finalInstruction) {
+    return (
+      <div>
+        <h3 className="font-display text-2xl font-bold text-text-light mb-4">Step 4: Your Final Gem Instruction is Ready!</h3>
         <div className="code-block-container relative">
           <h4 className="font-bold text-primary mb-2">Final System Instruction</h4>
           <div className="bg-primary/10 rounded-lg p-2 pb-0 border border-primary/30">
@@ -54,19 +93,22 @@ const FinalGemInstruction: React.FC<FinalGemInstructionProps> = ({ gemPlan }) =>
             >
               {copied ? 'Copied!' : 'Copy Instruction'}
             </button>
-            <pre className="code-block max-w-full whitespace-pre-wrap break-words overflow-x-auto bg-transparent p-2 pt-8">{instruction}</pre>
+            <pre className="code-block max-w-full whitespace-pre-wrap break-words overflow-x-auto bg-transparent p-2 pt-8">{finalInstruction}</pre>
           </div>
         </div>
-      )}
-      <div className="reminder-checklist mt-6">
-        <h4 className="font-bold text-text-light mb-2">Reminder Checklist</h4>
-        <p className="text-text-light/80 mb-4">Remember to upload the following files to your LLM:</p>
-        <ul className="list-disc list-inside text-text-light/80 space-y-2">
-          {gemPlan.requiredDocuments.map(doc => <li key={doc}>{doc}</li>)}
-        </ul>
+        <div className="reminder-checklist mt-6">
+          <h4 className="font-bold text-text-light mb-2">Reminder Checklist</h4>
+          <p className="font-body text-text-light/80 mb-4">Remember to upload the following files to your LLM:</p>
+          <ul className="list-disc list-inside text-text-light/80 space-y-2">
+            {gemPlan.requiredDocuments.map(doc => <li key={doc}>{doc}</li>)}
+          </ul>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  // Fallback (should never reach here)
+  return null;
 };
 
 export default FinalGemInstruction;
