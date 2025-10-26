@@ -106,15 +106,20 @@ export const PromptImprover: React.FC = () => {
 
       {/* New Chat-based UI */}
       <div className="bg-card-dark border border-secondary/20">
-        {/* Research improvement text inside chat box */}
-        <div className="bg-background-dark/80 text-text-light/80 font-body text-sm rounded-t p-4 border-b border-secondary/20">
-          Research shows that iterative, dialogue-based refinement yields 20-50% better AI outputs compared to one-shot prompts, as it uncovers hidden assumptions and builds specificity organically.
-        </div>
         {/* Chat Log */}
         <div
           ref={chatLogRef}
           className="flex flex-col gap-4 p-4 min-h-[250px] max-h-[400px] overflow-y-auto"
         >
+          {/* Research improvement text as a system chat bubble */}
+          <div className="flex justify-start">
+            <div className="p-4 max-w-lg bg-primary/10 text-text-light/90 border border-primary/30 rounded-lg">
+              <p className="font-body text-sm">
+                💡 <span className="font-semibold">Pro Tip:</span> Research shows that iterative, dialogue-based refinement yields 20-50% better AI outputs compared to one-shot prompts, as it uncovers hidden assumptions and builds specificity organically.
+              </p>
+            </div>
+          </div>
+
           {messages.map((msg, index) => (
             <div
               key={index}
@@ -122,8 +127,8 @@ export const PromptImprover: React.FC = () => {
             >
               <div
                 className={`p-4 max-w-lg ${msg.role === 'user'
-                    ? 'bg-secondary/20 text-text-light'
-                    : 'bg-background-dark text-text-light/90'
+                  ? 'bg-secondary/20 text-text-light'
+                  : 'bg-background-dark text-text-light/90'
                   }`}
               >
                 <p className="font-body whitespace-pre-wrap">{msg.text}</p>
@@ -132,8 +137,32 @@ export const PromptImprover: React.FC = () => {
           ))}
           {isLoading && (
             <div className="flex justify-start">
-              <div className="p-4 max-w-lg bg-background-dark text-text-light/90">
-                <p className="font-mono animate-pulse">Gemini 2.5 Flash Scribe Helper...</p>
+              <div className="p-4 max-w-lg bg-background-dark text-text-light/90 flex items-start gap-3">
+                {/* Pulsating Gemini logo/icon with spinner */}
+                <div className="flex-shrink-0 relative">
+                  {/* Spinning ring */}
+                  <svg className="w-8 h-8 animate-spin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  {/* Inner pulsating icon */}
+                  <svg className="w-4 h-4 text-primary animate-pulse absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <p className="font-body text-sm">
+                    <span className="font-semibold text-primary">Gemini 2.5 Flash</span> is analyzing your prompt...
+                  </p>
+                  <p className="font-mono text-xs text-text-light/60 mt-1">
+                    Finding what additional information a perfect prompt is still missing
+                    <span className="inline-flex ml-1">
+                      <span className="animate-bounce delay-0">.</span>
+                      <span className="animate-bounce delay-100">.</span>
+                      <span className="animate-bounce delay-200">.</span>
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
           )}

@@ -1,38 +1,76 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #00FFFF;
-  --color-secondary: #D900FF;
-  --color-background-dark: #050505;
-  --color-card-dark: #10101A;
-  --color-light: #FFFFFF;
+    --color-primary: #00FFFF;
+    --color-secondary: #D900FF;
+    --color-background-dark: #050505;
+    --color-card-dark: #10101A;
+    --color-light: #FFFFFF;
 
-  --font-display: "Orbitron", "sans-serif";
-  --font-body: "Inter", "sans-serif";
-  --font-mono: "Roboto Mono", "monospace";
+    --font-display: "Orbitron", "sans-serif";
+    --font-body: "Inter", "sans-serif";
+    --font-mono: "Roboto Mono", "monospace";
 
-  --radius-DEFAULT: 0rem;
-  --radius-lg: 0rem;
-  --radius-xl: 0rem;
-  --radius-full: 0rem;
+    --radius-DEFAULT: 0rem;
+    --radius-lg: 0rem;
+    --radius-xl: 0rem;
+    --radius-full: 0rem;
 
-  --shadow-glow-blue: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF;
-  --shadow-glow-purple: 0 0 5px #D900FF, 0 0 10px #D900FF, 0 0 15px #D900FF;
+    --shadow-glow-blue: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF;
+    --shadow-glow-purple: 0 0 5px #D900FF, 0 0 10px #D900FF, 0 0 15px #D900FF;
 }
 
 :root {
     --glow-blue: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF;
     --glow-purple: 0 0 5px #D900FF, 0 0 10px #D900FF, 0 0 15px #D900FF;
 }
+
 html {
     scroll-behavior: smooth;
 }
-.text-glow-blue { text-shadow: var(--glow-blue); }
-.border-glow-blue:hover, .border-glow-blue:focus-within { box-shadow: 0 0 0 1px #00FFFF, var(--glow-blue); }
-.border-glow-purple:hover, .border-glow-purple:focus-within { box-shadow: 0 0 0 1px #D900FF, var(--glow-purple); }
-.button-glow-blue:hover, .button-glow-blue:focus { box-shadow: var(--glow-blue); }
-.button-glow-purple:hover, .button-glow-purple:focus { box-shadow: var(--glow-purple); }
-.tab-active { border-color: #00FFFF; text-shadow: var(--glow-blue); box-shadow: 0 2px 15px -3px #00FFFF; }
+
+.text-glow-blue {
+    text-shadow: var(--glow-blue);
+}
+
+.border-glow-blue:hover,
+.border-glow-blue:focus-within {
+    box-shadow: 0 0 0 1px #00FFFF, var(--glow-blue);
+}
+
+.border-glow-purple:hover,
+.border-glow-purple:focus-within {
+    box-shadow: 0 0 0 1px #D900FF, var(--glow-purple);
+}
+
+.button-glow-blue:hover,
+.button-glow-blue:focus {
+    box-shadow: var(--glow-blue);
+}
+
+.button-glow-purple:hover,
+.button-glow-purple:focus {
+    box-shadow: var(--glow-purple);
+}
+
+.tab-active {
+    border-color: #00FFFF;
+    text-shadow: var(--glow-blue);
+    box-shadow: 0 2px 15px -3px #00FFFF;
+}
+
+/* Loading animation delays for bouncing dots */
+.delay-0 {
+    animation-delay: 0ms;
+}
+
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
 
 body {
     @apply bg-background-dark text-light font-body;
