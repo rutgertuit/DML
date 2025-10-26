@@ -113,7 +113,7 @@ export const PromptImprover: React.FC = () => {
         >
           {/* Research improvement text as a system chat bubble */}
           <div className="flex justify-start">
-            <div className="p-4 max-w-lg bg-primary/10 text-text-light/90 border border-primary/30 rounded-lg">
+            <div className="p-4 max-w-[80%] bg-primary/10 text-text-light/90 border border-primary/30 rounded-lg">
               <p className="font-body text-sm">
                 💡 <span className="font-semibold">Pro Tip:</span> Research shows that iterative, dialogue-based refinement yields 20-50% better AI outputs compared to one-shot prompts, as it uncovers hidden assumptions and builds specificity organically.
               </p>
@@ -126,9 +126,9 @@ export const PromptImprover: React.FC = () => {
               className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`p-4 max-w-lg ${msg.role === 'user'
-                  ? 'bg-secondary/20 text-text-light'
-                  : 'bg-background-dark text-text-light/90'
+                className={`p-4 max-w-[80%] ${msg.role === 'user'
+                  ? 'bg-secondary/20 text-text-light rounded-lg'
+                  : 'bg-background-dark text-text-light/90 rounded-lg'
                   }`}
               >
                 <p className="font-body whitespace-pre-wrap">{msg.text}</p>
@@ -137,7 +137,7 @@ export const PromptImprover: React.FC = () => {
           ))}
           {isLoading && (
             <div className="flex justify-start">
-              <div className="p-4 max-w-lg bg-background-dark text-text-light/90 flex items-start gap-3">
+              <div className="p-4 max-w-[80%] bg-background-dark text-text-light/90 flex items-start gap-3 rounded-lg">
                 {/* Pulsating Gemini logo/icon with spinner */}
                 <div className="flex-shrink-0 relative">
                   {/* Spinning ring */}
