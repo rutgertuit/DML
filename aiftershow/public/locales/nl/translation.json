@@ -1,9 +1,10 @@
 {
   "header": {
-    "improvePrompts": "Verbeter Mijn Prompts",
-    "buildExpert": "Bouw een Expert AI",
-    "teamCollab": "Team Samenwerking",
-    "toolkit": "De Toolkit"
+    "improvePrompt": "Verbeter Prompt",
+    "heroGem": "Hero Gem",
+    "notebookLM": "NotebookLM",
+    "newPowers": "Nieuwe Krachten",
+    "toolkit": "Toolkit"
   },
   "hero": {
     "title": "Marketing & Effie Live - de AIftershow",
@@ -53,13 +54,50 @@
     "tabTeam": "Voor je Team"
   },
   "flowVibe": {
-    "title": "Begrijp Je Nieuwe Krachten: Flow Coding vs. Vibe Coding",
-    "vibeTitle": "Vibe Coding (De \"Regisseur\")",
-    "vibeDesc": "Prototype AI-gedrag met natuurlijke taal in minuten. Voor creatieven (geen codering nodig) en ontwikkelaars (sla boilerplate over).",
-    "vibeTools": "Tools: Google AI Studio, Gemini CLI.",
-    "flowTitle": "Flow Coding (De \"Architect\")",
-    "flowDesc": "Bouw visueel nauwkeurige, multi-step AI-workflows. Definieer logica, dataverwerking en sequenties voor complexe systemen die controle en schaalbaarheid vereisen.",
-    "flowTools": "Tool: Google Agentspace."
+    "title": "Begrijp Je Nieuwe Krachten: Van 'Vibe' naar 'Signaal'",
+    "subtitle": "NL: Begrijp Je Nieuwe Krachten: Van 'Vibe' naar 'Signaal'",
+    "intro": "De manier waarop we met AI omgaan evolueert. We begonnen met conversationeel 'Vibe Coding', en verwarden onszelf met de term 'Flow Coding'. Nu gaan we naar een nauwkeurigere en krachtigere methode: 'Signal Coding'. Deze site is ontworpen om je te helpen deze evolutie onder de knie te krijgen.",
+    "liveExample": "Live Voorbeeld:",
+    "vibe": {
+      "title": "1. Vibe Coding (De \"Regisseur\" 🎬)",
+      "description": "Snel, creatief en conversationeel. Dit gaat over het geven van een algemene richting aan de AI en itereren op basis van de output. Het is als het regisseren van een acteur—je geeft de 'vibe' en kijkt wat je terugkrijgt.",
+      "workflow": "Conversationele uitwisseling.",
+      "goal": "Ideeën verkennen, snelle prototypes.",
+      "risk": "Inconsistent, niet herhaalbaar.",
+      "tools": "Google AI Studio, ChatGPT.",
+      "example": "De",
+      "exampleLink": "Prompt Verbeteraar",
+      "exampleText": "op deze pagina gebruikt Vibe Coding. Je geeft een ruw idee en het stuurt de AI om het te verfijnen.",
+      "exampleNL": "NL Voorbeeld: De Prompt Verbeteraar op deze pagina is een voorbeeld.",
+      "videoPlaceholder": "[Video Tijdelijke aanduiding: Vibe Coding Demo]"
+    },
+    "flow": {
+      "title": "2. De \"Flow Coding\" Verwarring",
+      "description": "De term 'Flow Coding' is dubbelzinnig. Het kan betekenen 'in de zone zijn', een Git Flow gebruiken, bouwen met visuele tools zoals Google Agentspace, of gewoon 'met de flow meegaan.' Omdat het geen duidelijke definitie heeft, is het geen nuttig concept voor het bouwen van betrouwbare AI-systemen. We hebben iets nauwkeuriger nodig.",
+      "conclusion": "Conclusie: 'Signal Coding' is een nuttiger concept.",
+      "videoPlaceholder": "[Video Tijdelijke aanduiding: Flow Coding Verwarring Uitgelegd]"
+    },
+    "signal": {
+      "title": "3. Signal Coding (De \"Architect\" 📐)",
+      "description": "Dit is de evolutie. In plaats van een 'vibe', geef je een duidelijk, gestructureerd 'signaal'. Signal Coding gaat over het geven van precieze, herhaalbare en testbare instructies aan de AI om betrouwbare, productie-ready systemen te bouwen. Het is de taal van AI-architecten.",
+      "workflow": "Gestructureerde instructies, systeemprompts, gedefinieerde inputs/outputs.",
+      "goal": "Voorspelbare, schaalbare en betrouwbare AI-applicaties creëren.",
+      "power": "Maakt agentische workflows en complexe, multi-step taken mogelijk.",
+      "example": "De",
+      "exampleLink": "Hero Gem Builder",
+      "exampleText": "gebruikt Signal Coding. Het twee-stappen proces met specifieke systeeminstructies is een duidelijk 'signaal' voor een voorspelbare uitkomst.",
+      "exampleNL": "NL Voorbeeld: De Hero Gem Builder is een voorbeeld.",
+      "videoPlaceholder": "[Video Tijdelijke aanduiding: Signal Coding Demo]"
+    }
+  },
+  "promptImproverHeader": {
+    "title": "Ontgrendel de Magie: Hoe Meester Je Prompts 🚀",
+    "paragraph1": "LLM's zijn voorspellingsmachines. Ze genereren het meest waarschijnlijke volgende woord op basis van je input. Een vage prompt zoals \"Vertel me over AI\" geeft het model oneindige richtingen—resulterend in generieke, ongefocuste output. Maar een specifieke prompt zoals \"Schrijf een blogpost van 500 woorden voor ontwikkelaars die transformerarchitectuur uitlegt, met analogieën en zonder zware wiskunde\" geeft het model duidelijke grenzen.",
+    "magicPhrase": "Specificiteit = Magie ✨",
+    "paragraph2": "Deze tool gebruikt een \"ingebakken\" systeeminstructie die fungeert als je expert Prompt Coach. In plaats van theorie te onderwijzen, stelt het de juiste vragen om hiaten in je denken bloot te leggen—missende context, onduidelijke doelstellingen, formaateisen—en bouwt het gezamenlijk een betere prompt met je door middel van begeleide dialoog.",
+    "summaryText": "Klik om de 'Prompt Scribe' Systeeminstructie te kopiëren",
+    "copyButton": "Kopieer",
+    "copiedButton": "Gekopieerd!"
   },
   "toolkit": {
     "title": "Jouw AI Acceleratie Toolkit",

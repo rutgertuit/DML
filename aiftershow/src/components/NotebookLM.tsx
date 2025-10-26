@@ -348,31 +348,6 @@ export const NotebookLM: React.FC = () => {
           </li>
         </ul>
       </div>
-
-      {/* Conclusion Section */}
-      <div className="mt-12 bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/30 rounded-lg p-8">
-        <h3 className="font-display text-2xl font-bold text-primary mb-4">The AIftershow Philosophy</h3>
-
-        <p className="font-body text-text-light/80 mb-4">
-          The AIftershow teaches three principles for the AI era:
-        </p>
-
-        <ol className="space-y-3 text-text-light/80 font-body list-decimal list-inside">
-          <li>
-            <span className="font-bold text-primary">Prompt Improver:</span> Teach yourself to ask better questions. Refining your prompt is refining your thinking.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">Hero Gem Builder:</span> Create AI specialists grounded in <em>your</em> knowledge. Generic AI knows everything; specialized AI knows what matters to <em>you</em>.
-          </li>
-          <li>
-            <span className="font-bold text-primary">NotebookLM:</span> Stop reformatting. One knowledge base, infinite stakeholder perspectives. The real bottleneck isn't the AI—it's how you organize information so it can serve everyone.
-          </li>
-        </ol>
-
-        <p className="font-body text-text-light/80 mt-6">
-          Together, these three tools solve the complete workflow: <span className="text-primary font-bold">Ask Better → Know Better → Share Better.</span>
-        </p>
-      </div>
     </section>
   );
 };

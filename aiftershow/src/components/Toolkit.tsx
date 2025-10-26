@@ -13,12 +13,12 @@ export const Toolkit: React.FC = () => {
     {
       title: t('toolkit.card2Title'),
       description: t('toolkit.card2Desc'),
-      link: '[https://aistudio.google.com](https://aistudio.google.com)',
+      link: 'https://aistudio.google.com',
     },
     {
       title: t('toolkit.card3Title'),
       description: t('toolkit.card3Desc'),
-      link: '[https://notebooklm.google.com](https://notebooklm.google.com)',
+      link: 'https://notebooklm.google.com',
     },
     {
       title: t('toolkit.card4Title'),
@@ -33,7 +33,7 @@ export const Toolkit: React.FC = () => {
     {
       title: t('toolkit.card6Title'),
       description: t('toolkit.card6Desc'),
-      link: '[https://www.youtube.com/watch?v=yrdt0l00DEo](https://www.youtube.com/watch?v=yrdt0l00DEo)',
+      link: 'https://www.youtube.com/watch?v=yrdt0l00DEo',
     },
   ];
 
@@ -42,14 +42,14 @@ export const Toolkit: React.FC = () => {
       <h2 className="font-display text-4xl font-bold text-text-light mb-12">
         {t('toolkit.title')}
       </h2>
-      
+
       {/* Responsive Grid:
         - Mobile (default): 1 column (grid-cols-1)
         - Tablet (md): 2 columns (md:grid-cols-2)
         - Desktop (lg): 3 columns (lg:grid-cols-3)
       */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
+
         {toolkitItems.map((item) => (
           <a
             key={item.title}
@@ -66,7 +66,7 @@ export const Toolkit: React.FC = () => {
             </p>
           </a>
         ))}
-        
+
       </div>
     </section>
   );

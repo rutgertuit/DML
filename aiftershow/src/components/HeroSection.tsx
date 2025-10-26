@@ -30,7 +30,7 @@ export const HeroSection: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-4 mt-8">
           <a
             className="font-mono text-sm uppercase border border-solid border-secondary text-text-light/90 hover:text-primary hover:border-primary hover:shadow-glow-purple transition-all px-6 py-3 w-full md:w-auto"
-            href="#flow-vibe"
+            href="#vibe-to-signal"
           >
             {t('hero.cta1')}
           </a>

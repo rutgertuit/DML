@@ -42,7 +42,7 @@ export const HeroGemWizard: React.FC = () => {
   };
 
   return (
-    <section ref={sectionRef} id="hero-gem-builder" className="py-24 overflow-hidden break-words">
+    <section ref={sectionRef} id="hero-gem-wizard" className="py-24 overflow-hidden break-words">
       <div className="bg-card-dark rounded-xl shadow-lg border border-secondary/30 p-8 mb-8">
         <h2 className="font-display text-4xl font-bold text-primary mb-6 text-center">
           Build Your "Hero Gem" V2 — RAG Preparation Studio
