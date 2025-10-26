@@ -1,6 +1,8 @@
 
-import React, { useState, useEffect } from 'react';
-import { getScribeResponse } from '../../services/aiStudioService';
+import React, { useState, useEffect, useRef } from 'react';
+import { getScribeResponse, callGeminiApi } from '../../services/aiStudioService';
+import ChatBubble from '../ChatBubble';
+import LoadingIndicator from '../LoadingIndicator';
 
 interface GemDesignAssistantProps {
   selectedBlueprint: string;
@@ -13,12 +15,13 @@ const GemDesignAssistant: React.FC<GemDesignAssistantProps> = ({ selectedBluepri
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
   // System prompt for the Gem Design Assistant
   const SYSTEM_PROMPT = `
 You are a helpful and *proactive* "Gem Design Assistant".
 Your job is to have a conversation with the user to help them design their custom AI.
-The user's selected blueprint is: "${selectedBlueprint}".
+The user's chosen blueprint is: "${selectedBlueprint}". All your follow-up questions and document suggestions MUST be tailored to this context.
 
 Your workflow is two-part:
 1.  **REFINE GOAL:** First, ask 1-3 clarifying questions to help the user define a *specific, actionable goal*. (You did this well in the last chat, ending with "prevent defensiveness...").
@@ -41,24 +44,60 @@ Does this list look like a good starting point for you?"
 `;
 
   useEffect(() => {
-    const initChat = async () => {
-      try {
-        // Build initial conversation with system prompt
-        const apiHistory = [
-          { role: 'user' as const, parts: [{ text: SYSTEM_PROMPT }] },
-          { role: 'model' as const, parts: [{ text: "Got it. I'm your Gem Design Assistant." }] },
-          { role: 'user' as const, parts: [{ text: "Start a debate to help me define my Gem's goal and the source documents it will need." }] }
-        ];
+    const fetchKickoffMessage = async () => {
+      // Don't re-fetch if chat already started
+      if (!selectedBlueprint || messages.length > 0) return;
 
-        const response = await getScribeResponse(apiHistory);
-        setMessages([{ sender: 'ai', content: response }]);
-      } catch (error) {
-        console.error("Failed to initialize chat:", error);
+      setIsLoading(true);
+      setError(null);
+
+      // Define the meta-prompt to get the first question
+      const KICKOFF_PROMPT = `
+You are a helpful "Gem Design Assistant".
+The user has just selected the blueprint: "${selectedBlueprint}".
+Your *only* job is to generate the *perfect, single, engaging kick-off message* to start the conversation.
+
+- This message MUST be a *question*.
+- This question MUST be *specific* to the selected blueprint.
+- DO NOT be generic.
+- Your *entire output* is just this single message. No preamble.
+
+Example for "Knowledge Expert":
+"Great, a Knowledge Expert! To get started, what complex subject or set of documents do you want your Gem to master?"
+
+Example for "Style & Tone Guardian":
+"Excellent choice! To begin, can you describe the specific voice or brand tone you want your Gem to protect and enforce?"
+
+Example for "Strategic Advisor":
+"A Strategic Advisor it is. What is the high-level business goal or challenge you'd like your Gem to help you analyze?"
+`;
+
+      try {
+        // Call the API to get the first message
+        const firstAiMessage = await callGeminiApi(KICKOFF_PROMPT);
+
+        // Set the first message in state
+        setMessages([{ sender: 'ai', content: firstAiMessage }]);
+
+      } catch (e) {
+        console.error("Failed to fetch kickoff message:", e);
+        setError("Failed to start the chat. Please try again.");
+        // Fallback message
         setMessages([{ sender: 'ai', content: "Hello! I'm here to help you design your Gem. What's the main goal for this AI assistant?" }]);
+      } finally {
+        setIsLoading(false);
       }
     };
-    initChat();
-  }, [selectedBlueprint, SYSTEM_PROMPT]);
+
+    fetchKickoffMessage();
+  }, [selectedBlueprint, messages.length]);
+
+  // Auto-scroll to bottom when messages change or loading state changes
+  useEffect(() => {
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
+  }, [messages, isLoading]);
 
   const handleSend = async () => {
     if (!input.trim()) return;
@@ -106,6 +145,8 @@ Does this list look like a good starting point for you?"
           role: 'user' as const,
           parts: [{
             text: `You are a "Plan Summarizer". Parse the attached conversation.
+
+The final plan must be optimized for a "${selectedBlueprint}" Gem.
 
 Find the *refined goal* the user and AI agreed on, and the *last list of source documents* the AI suggested and the user agreed to.
 
@@ -157,12 +198,11 @@ Do not add *any* conversational text or markdown formatting around this JSON.` }
         </div>
       </div>
 
-      <div className="chat-history bg-background-dark/80 rounded-lg p-4 border border-secondary/20 h-64 overflow-y-auto mb-4">
+      <div ref={chatContainerRef} className="chat-history bg-background-dark/80 rounded-lg p-4 border border-secondary/20 h-[600px] overflow-y-auto mb-4 flex flex-col space-y-4">
         {messages.map((msg, index) => (
-          <div key={index} className={`message ${msg.sender} mb-3`}>
-            <p><strong>{msg.sender === 'user' ? "You" : "AI"}:</strong> {msg.content}</p>
-          </div>
+          <ChatBubble key={index} sender={msg.sender} content={msg.content} />
         ))}
+        {isLoading && <LoadingIndicator />}
       </div>
 
       <div className="chat-input flex gap-2 mb-4">
@@ -202,6 +242,11 @@ Do not add *any* conversational text or markdown formatting around this JSON.` }
         >
           {isLoading ? 'Finalizing Plan...' : 'Finalize Gem Plan & Continue'}
         </button>
+
+        {/* Branding */}
+        <p className="text-xs text-text-light/50 text-center mt-3">
+          Powered by Gemini 2.5 Flash ✨
+        </p>
       </div>
     </div>
   );
