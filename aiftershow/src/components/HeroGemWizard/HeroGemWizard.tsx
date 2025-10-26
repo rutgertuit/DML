@@ -16,6 +16,10 @@ export const HeroGemWizard: React.FC = () => {
     setCurrentStep(2);
   };
 
+  const handleGoBackToBlueprints = () => {
+    setCurrentStep(1);
+  };
+
   const handlePlanCreated = (plan: { goal: string, requiredDocuments: string[] }) => {
     setGemPlan(plan);
     setCurrentStep(3);
@@ -39,6 +43,7 @@ export const HeroGemWizard: React.FC = () => {
           <GemDesignAssistant
             selectedBlueprint={selectedBlueprint}
             onPlanCreated={handlePlanCreated}
+            onGoBack={handleGoBackToBlueprints}
           />
         )}
         {currentStep === 3 && gemPlan && (

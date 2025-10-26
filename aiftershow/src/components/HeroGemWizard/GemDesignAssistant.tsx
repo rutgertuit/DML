@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 interface GemDesignAssistantProps {
   selectedBlueprint: string;
   onPlanCreated: (plan: { goal: string, requiredDocuments: string[] }) => void;
+  onGoBack: () => void;
 }
 
 // Mock function for API call
@@ -18,7 +19,7 @@ async function getGeminiFlashStream(prompt: string): Promise<string> {
   }
 }
 
-const GemDesignAssistant: React.FC<GemDesignAssistantProps> = ({ selectedBlueprint, onPlanCreated }) => {
+const GemDesignAssistant: React.FC<GemDesignAssistantProps> = ({ selectedBlueprint, onPlanCreated, onGoBack }) => {
   const [messages, setMessages] = useState<{ sender: 'user' | 'ai', content: string }[]>([]);
   const [input, setInput] = useState("");
 
@@ -55,6 +56,23 @@ const GemDesignAssistant: React.FC<GemDesignAssistantProps> = ({ selectedBluepri
   return (
     <div>
       <h3 className="font-display text-2xl font-bold text-text-light mb-4">Step 2: Design Your Gem with an AI Assistant</h3>
+
+      {/* Header with Go Back button and Blueprint display */}
+      <div className="flex justify-between items-center pb-4 mb-4 border-b border-secondary/30">
+        <button
+          onClick={onGoBack}
+          className="flex items-center gap-2 px-4 py-2 bg-secondary/20 text-text-light hover:bg-secondary/40 transition-colors rounded border border-secondary/50"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+          Change Blueprint
+        </button>
+        <div className="px-4 py-2 bg-primary/10 text-primary border border-primary/30 rounded font-mono text-sm font-bold">
+          Designing Gem: {selectedBlueprint}
+        </div>
+      </div>
+
       <div className="chat-history bg-background-dark/80 rounded-lg p-4 border border-secondary/20 h-64 overflow-y-auto mb-4">
         {messages.map((msg, index) => (
           <div key={index} className={`message ${msg.sender}`}>
