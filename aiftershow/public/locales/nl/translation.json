@@ -22,13 +22,25 @@
     "howItWorksDesc": "Dit AI 'brein' drijft de Prompt Verbeteraar aan. Deze Systeeminstructie begeleidt de AI om als een behulpzame collaborator op te treden.",
     "copy": "Kopieer naar klembord"
   },
-  "heroGem": {
-    "title": "Hoe Bouw je een \"Hero Gem\" — Jouw Persoonlijke AI Specialist",
-    "description": "Een 'Hero Gem' is een gespecialiseerde AI-assistent gebaseerd op jouw specifieke expertise. De cruciale stap is 'Deep Research'. Waarom? Generieke AI geeft generieke antwoorden. Door de beste kennis te synthetiseren (Stap 1) en antwoorden ALLEEN tot die kennis te beperken (Stap 2), creëer je een gespecialiseerde expert die hallucinaties vermijdt en data-gedreven advies geeft.",
-    "step1Title": "Stap 1: Het Deep Research Prompt (Template 1)",
-    "step1Desc": "Gebruik dit in Gemini Advanced om de fundamentele kennis voor jouw Gem te synthetiseren.",
-    "step2Title": "Stap 2: Hero Gem Systeeminstructie (Template 2)",
-    "step2Desc": "Gebruik dit als de Systeeminstructie in Google AI Studio."
+  "heroGemWizard": {
+    "title": "Bouw Jouw \"Hero Gem\" — Je Persoonlijke AI Specialist",
+    "step1Title": "Stap 1: Definieer de Missie van je Expert",
+    "domainLabel": "Domein",
+    "domainPlaceholder": "bijv. 'early-stage SaaS marketing'",
+    "roleLabel": "Rol",
+    "rolePlaceholder": "bijv. 'CMO van een Series A startup'",
+    "taskLabel": "Kerntaak",
+    "taskPlaceholder": "bijv. 'verlagen van Customer Acquisition Cost'",
+    "step1Button": "Genereer Onderzoeks-Prompt",
+    "step2Title": "Stap 2: Voer het Diepteonderzoek uit",
+    "step2Instructions": "1. Kopieer de onderzoeks-prompt hieronder.\n2. Plak het in Gemini Advanced.\n3. Plak de complete Markdown-tabel die je terugkrijgt in het tekstvak.",
+    "copyPrompt": "Kopieer Prompt",
+    "pasteLabel": "Plak je Markdown-onderzoekstabel hier",
+    "step2Button": "Bouw Mijn Hero Gem",
+    "step3Title": "Stap 3: Je Hero Gem is Klaar!",
+    "step3Instructions": "Je expert AI is gereed. Kopieer de volledige systeem-prompt hieronder en plak deze in Google AI Studio (of je favoriete LLM) in het 'System Instruction'-veld om je expert te activeren.",
+    "copyFinalPrompt": "Kopieer Hero Gem Prompt",
+    "copied": "Gekopieerd!"
   },
   "notebookLM": {
     "title": "NotebookLM: Eerst de Inhoud, dan de Vormgeving.",

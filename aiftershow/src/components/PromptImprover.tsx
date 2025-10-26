@@ -13,7 +13,7 @@ const SYSTEM_PROMPT = `You are Prompt Scribe, a patient, empathetic coach who he
 
 export const PromptImprover: React.FC = () => {
   const { t } = useTranslation();
-  
+
   // State for the chat
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState('');
@@ -54,24 +54,24 @@ export const PromptImprover: React.FC = () => {
     setMessages(updatedMessages);
 
     const apiHistory = [
-      { role: 'user', parts: [{ text: SYSTEM_PROMPT }] },
-      { role: 'model', parts: [{ text: "Got it. I'm Prompt Scribe, your friendly coach. What's your rough prompt idea?" }] },
+      { role: 'user' as const, parts: [{ text: SYSTEM_PROMPT }] },
+      { role: 'model' as const, parts: [{ text: "Got it. I'm Prompt Scribe, your friendly coach. What's your rough prompt idea?" }] },
       ...updatedMessages.map(msg => ({
-        role: msg.role,
+        role: msg.role as 'user' | 'model',
         parts: [{ text: msg.text }],
       })),
     ];
-    
+
     const aiResponseText = await getScribeResponse(apiHistory);
     let aiChatText = aiResponseText;
 
     // Check for our final prompt tags
     const promptMatch = aiResponseText.match(/\n?\[FINAL_PROMPT\]([\s\S]*)\[\/FINAL_PROMPT\]\n?/);
-    
+
     if (promptMatch && promptMatch[1]) {
       const extractedPrompt = promptMatch[1].trim();
       setFinalPrompt(extractedPrompt);
-      
+
       // The chat message should be *everything else*
       aiChatText = aiResponseText.replace(/\n?\[FINAL_PROMPT\][\s\S]*\[\/FINAL_PROMPT\]\n?/, '').trim();
     }
@@ -102,29 +102,34 @@ export const PromptImprover: React.FC = () => {
       <h2 className="font-display text-4xl font-bold text-text-light mb-4">
         {t('promptImprover.title')}
       </h2>
-      <p className="font-body text-text-light/80 leading-relaxed max-w-4xl mb-12">
-        {t('promptImprover.intro')}
-      </p>
-      
+      {/* Remove intro from above, move it inside chat box below */}
+
       {/* New Chat-based UI */}
       <div className="bg-card-dark border border-secondary/20">
-        
         {/* Chat Log */}
         <div
           ref={chatLogRef}
-          className="flex flex-col gap-4 p-6 min-h-[400px] max-h-[600px] overflow-y-auto"
+          className="flex flex-col gap-4 p-4 min-h-[250px] max-h-[400px] overflow-y-auto"
         >
+          {/* Research improvement text as a system chat bubble */}
+          <div className="flex justify-start">
+            <div className="p-4 max-w-lg bg-primary/10 text-text-light/90 border border-primary/30 rounded-lg">
+              <p className="font-body text-sm">
+                💡 <span className="font-semibold">Pro Tip:</span> Research shows that iterative, dialogue-based refinement yields 20-50% better AI outputs compared to one-shot prompts, as it uncovers hidden assumptions and builds specificity organically.
+              </p>
+            </div>
+          </div>
+
           {messages.map((msg, index) => (
             <div
               key={index}
               className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`p-4 max-w-lg ${
-                  msg.role === 'user' 
-                    ? 'bg-secondary/20 text-text-light' 
-                    : 'bg-background-dark text-text-light/90'
-                }`}
+                className={`p-4 max-w-lg ${msg.role === 'user'
+                  ? 'bg-secondary/20 text-text-light'
+                  : 'bg-background-dark text-text-light/90'
+                  }`}
               >
                 <p className="font-body whitespace-pre-wrap">{msg.text}</p>
               </div>
@@ -132,16 +137,40 @@ export const PromptImprover: React.FC = () => {
           ))}
           {isLoading && (
             <div className="flex justify-start">
-              <div className="p-4 max-w-lg bg-background-dark text-text-light/90">
-                <p className="font-mono animate-pulse">Gemini 2.5 Flash Scribe Helper...</p>
+              <div className="p-4 max-w-lg bg-background-dark text-text-light/90 flex items-start gap-3">
+                {/* Pulsating Gemini logo/icon with spinner */}
+                <div className="flex-shrink-0 relative">
+                  {/* Spinning ring */}
+                  <svg className="w-8 h-8 animate-spin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  {/* Inner pulsating icon */}
+                  <svg className="w-4 h-4 text-primary animate-pulse absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <p className="font-body text-sm">
+                    <span className="font-semibold text-primary">Gemini 2.5 Flash</span> is analyzing your prompt...
+                  </p>
+                  <p className="font-mono text-xs text-text-light/60 mt-1">
+                    Finding what additional information a perfect prompt is still missing
+                    <span className="inline-flex ml-1">
+                      <span className="animate-bounce delay-0">.</span>
+                      <span className="animate-bounce delay-100">.</span>
+                      <span className="animate-bounce delay-200">.</span>
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
           )}
         </div>
-        
+
         {/* Input Form */}
-        <form 
-          onSubmit={handleSubmit} 
+        <form
+          onSubmit={handleSubmit}
           className="flex gap-4 p-6 border-t border-secondary/20"
         >
           <textarea
@@ -177,7 +206,7 @@ export const PromptImprover: React.FC = () => {
             Copy the prompt below and paste it into your favorite LLM to see the results.
           </p>
           <div className="bg-card-dark p-4 border border-primary/20 relative m-6 mt-0">
-            <button 
+            <button
               onClick={handleCopy}
               className="absolute top-2 right-2 font-mono text-xs uppercase bg-secondary/70 text-text-light px-2 py-1 hover:bg-secondary hover:shadow-glow-purple transition-all"
             >
