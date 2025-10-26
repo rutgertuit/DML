@@ -8,32 +8,32 @@ export const Toolkit: React.FC = () => {
     {
       title: t('toolkit.card1Title'),
       description: t('toolkit.card1Desc'),
-      link: '#', // Add correct link later
+      link: 'https://workspace.google.com/solutions/ai/',
     },
     {
       title: t('toolkit.card2Title'),
       description: t('toolkit.card2Desc'),
-      link: 'https://aistudio.google.com',
+      link: 'https://notebooklm.google/',
     },
     {
       title: t('toolkit.card3Title'),
       description: t('toolkit.card3Desc'),
-      link: 'https://notebooklm.google.com',
+      link: 'https://stitch.withgoogle.com/',
     },
     {
       title: t('toolkit.card4Title'),
       description: t('toolkit.card4Desc'),
-      link: '#', // Add correct link later
+      link: 'https://workspace.google.com/products/vids/',
     },
     {
       title: t('toolkit.card5Title'),
       description: t('toolkit.card5Desc'),
-      link: '#', // Add correct link later
+      link: 'https://cloud.google.com/gemini-enterprise',
     },
     {
       title: t('toolkit.card6Title'),
       description: t('toolkit.card6Desc'),
-      link: 'https://www.youtube.com/watch?v=yrdt0l00DEo',
+      link: 'https://codeassist.google/',
     },
   ];
 
