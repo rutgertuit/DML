@@ -32,20 +32,22 @@ const SourceMaterialGenerator: React.FC<SourceMaterialGeneratorProps> = ({ gemPl
           setCurrentlyGenerating(documentName);
 
           // THIS IS THE META-PROMPT TEMPLATE
-          const metaPrompt = `You are an expert "AI Research Assistant" helping a user create source files for a new AI Gem.
+          const metaPrompt = `You are an expert "AI Research Assistant" helping a user create research-based source files for a new AI Gem.
 The user's high-level goal is: "${gemPlan.goal}".
-The user needs to create a specific source document named: "${documentName}".
+The user needs to research and compile publicly available information for a document named: "${documentName}".
 
-Your task is to generate a detailed, copy-and-paste-ready prompt for the user to run in an LLM (like Gemini Advanced). This prompt *you generate* must guide them to create the *content* for that document.
+IMPORTANT: This document should contain PUBLICLY AVAILABLE, RESEARCHABLE information only. DO NOT ask for personal, private, or user-specific information.
 
-- DO NOT just output the document name.
-- DO NOT talk *to* me (the assistant).
-- Your entire output *is* the prompt for the user.
-- Start the prompt with "To create your source document titled '${documentName}', use the following prompt:..." or a similar clear instruction.
+Your task is to generate a detailed, copy-and-paste-ready research prompt for the user to run in an LLM (like Gemini Advanced). This prompt should guide the AI to research and compile publicly available information.
+
+- DO NOT ask for personal information, private documents, or user-specific data
+- DO focus on publicly available information, best practices, established methods, and industry standards
+- Your entire output *is* the research prompt for the user
+- Start with "To create your research document '${documentName}', use this prompt:"
 
 Example Output:
-"To create your source document titled 'Family Dietary Restrictions.txt', use the following prompt:
-'Please list all known dietary restrictions, allergies (e.g., peanuts, gluten), and strong food preferences (e.g., 'hates mushrooms') for my family. Format this as a simple bulleted list...'"`;
+"To create your research document 'React_Best_Practices.md', use this prompt:
+'Please research and compile current React development best practices. Include: 1) Modern React patterns and hooks usage, 2) Performance optimization techniques, 3) Common anti-patterns to avoid, 4) Industry-standard file organization, 5) Popular testing approaches. Format as a comprehensive guide with examples and explanations.'"`;
 
           // THIS IS THE FIX: AWAIT THE *RESULT* OF THE API CALL
           const apiResult = await callGeminiApi(metaPrompt);

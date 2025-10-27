@@ -1,54 +1,96 @@
-# Gemini Interaction Guide
+# AI-ftershow: Technical Documentation for AI Assistants
 
-This document provides instructions and guidelines for interacting with the Gemini agent in this project.
+This document provides comprehensive technical context for AI assistants working on the AI-ftershow project.
 
 ## Project Status
-* **State:** LIVE (Production / Working)
-* **Last Verified:** October 26, 2025
-* **Deployment:** Development build running locally via Vite dev server
-* **Branch:** Gem-Builder-first-deploy
+* **State:** ✅ PRODUCTION (Live on GitHub Pages)
+* **Last Updated:** October 27, 2025  
+* **Deployment:** Automated via GitHub Actions → GitHub Pages
+* **Live URL:** https://rutgertuit.github.io/DML/
+* **Repository:** https://github.com/rutgertuit/DML
 
 ## Project Overview
 
-This is a single-page, responsive, dual-language (EN/NL) mini-site for "Marketing & Effie Live" attendees. It's a high-tech "cyberpunk" themed tactical guide for implementing AI workflows using Google tools (Gemini, NotebookLM, AI Studio).
+**AI-ftershow** is a production-ready, single-page React application demonstrating practical AI workflow implementation. It serves as both a functional tool and educational resource, showcasing the evolution from "Vibe Coding" (conversational AI prototyping) to "Signal Coding" (structured, production-ready AI applications).
+
+### Core Purpose
+- **Demonstrate** practical AI implementation patterns
+- **Educate** on structured AI workflow development  
+- **Provide** interactive tools for AI prompt refinement
+- **Showcase** Google AI ecosystem integration
 
 ## Tech Stack
 
-* **Language:** TypeScript (strict mode enabled)
-* **Framework:** React 19.1.1
-* **Styling:** Tailwind CSS v4.1.16 (with custom cyberpunk theme)
-* **Build Tool:** Vite 7.1.7
+### Core Framework
+* **Language:** TypeScript 5.9.3 (strict mode)
+* **Framework:** React 19.1.1 with TypeScript JSX
+* **Build Tool:** Vite 7.1.12 with React plugin
+* **Styling:** Tailwind CSS v4.1.16 + custom cyberpunk theme
 * **Package Manager:** npm
-* **Internationalization:** i18next (v25.6.0) with react-i18next (v16.2.0)
-* **API Integration:** Google Gemini 2.5 Flash via REST API
-* **Linting:** ESLint 9.36.0 with TypeScript ESLint and React Hooks plugins
 
-### Key Dependencies
-* **Production:**
-  - react & react-dom: ^19.1.1
-  - i18next: ^25.6.0
-  - i18next-http-backend: ^3.0.2
-  - react-i18next: ^16.2.0
-* **Development:**
-  - typescript: ~5.9.3
-  - @vitejs/plugin-react: ^5.0.4
-  - tailwindcss: ^4.1.16
-  - eslint ecosystem (typescript-eslint, react-hooks, react-refresh plugins)
+### Features & Integration  
+* **Internationalization:** i18next v25.6.0 + react-i18next v16.2.0
+* **AI API:** Google Gemini 2.5 Flash via REST API
+* **Deployment:** GitHub Actions → GitHub Pages
+* **Code Quality:** ESLint 9.36.0 + TypeScript ESLint
 
-## Getting Started & Key Commands
+### Production Dependencies
+```json
+{
+  "i18next": "^25.6.0",
+  "react": "^19.1.1", 
+  "react-dom": "^19.1.1",
+  "react-i18next": "^16.2.0"
+}
+```
 
-* **Install Dependencies:**
-    ```bash
-    npm install
-    ```
-* **Run the development server:**
-    ```bash
-    npm run dev
-    ```
-* **Build for production:**
-    ```bash
-    npm run build
-    ```
+### Development Dependencies  
+```json
+{
+  "@vitejs/plugin-react": "^5.0.4",
+  "tailwindcss": "^4.1.16",
+  "typescript": "~5.9.3",
+  "eslint": "^9.36.0"
+}
+```
+
+## Development & Deployment
+
+### Local Development
+```bash
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env and add VITE_GEMINI_API_KEY=your_key_here
+
+# Start dev server
+npm run dev
+# Visit http://localhost:5173/DML/
+
+# Build for production  
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### Production Deployment
+* **Platform:** GitHub Pages
+* **Automation:** GitHub Actions (`.github/workflows/deploy.yml`)
+* **Trigger:** Push to `main` branch
+* **Build Process:** 
+  1. Install dependencies
+  2. Build with Vite (includes environment variables)
+  3. Deploy to GitHub Pages
+* **Live URL:** https://rutgertuit.github.io/DML/
+
+### Environment Configuration
+* **Required:** `VITE_GEMINI_API_KEY` - Google AI Studio API key
+* **Development:** Local `.env` file
+* **Production:** GitHub Secrets (`VITE_GEMINI_API_KEY`)
+* **API Source:** https://makersuite.google.com/app/apikey
 * **Run tests:**
     ```bash
     npm run test
@@ -60,20 +102,31 @@ This is a single-page, responsive, dual-language (EN/NL) mini-site for "Marketin
 
 ## Architectural Patterns & Conventions
 
-### Component Structure
-* **Main Components:** `src/components` contains one `.tsx` file per major site section:
-  - `Header.tsx` - Navigation and language switcher
-  - `HeroSection.tsx` - Landing/intro section
-  - `PromptImprover.tsx` - Interactive chat-based prompt refinement tool (integrated with Gemini API)
-  - `HeroGemWizard/` - Multi-step wizard for creating AI specialists:
-    - `HeroGemWizard.tsx` - Main wizard container
-    - `Step1DefineExpert.tsx` - Expert definition form
-    - `Step2DeepResearch.tsx` - Research prompt generation
-    - `Step3BuildGem.tsx` - Final system instruction builder
-    - `CopyButton.tsx` - Reusable copy-to-clipboard component
-  - `NotebookLM.tsx` - NotebookLM workflow guide with stakeholder prompts
-  - `FlowVibe.tsx` - Flow/Vibe section
-  - `Toolkit.tsx` - Tools overview
+### Component Architecture
+
+**Main Application:** `src/App.tsx` - Root component with section layout
+
+**Core Components:** (each in `src/components/`)
+
+1. **Header.tsx** - Sticky navigation with language switcher (EN/NL)
+2. **HeroSection.tsx** - Full-screen landing with video background  
+3. **PromptImprover.tsx** - Interactive AI chat tool (Gemini 2.5 Flash integration)
+4. **HeroGemWizard/** - Multi-step AI specialist builder:
+   - `HeroGemWizard.tsx` - Main wizard container
+   - `BlueprintSelector.tsx` - Domain selection interface
+   - `SourceMaterialGenerator.tsx` - Research prompt generation
+   - `GemDesignAssistant.tsx` - AI assistant configuration
+   - `FinalGemInstruction.tsx` - System prompt output
+   - `CopyButton.tsx` - Reusable clipboard utility
+5. **NotebookLM.tsx** - Document-grounded AI workflow guide
+6. **FlowVibe.tsx** - AI workflow philosophy (Vibe → Signal coding)
+7. **Toolkit.tsx** - Google AI tools showcase (6 curated tools)
+8. **Footer.tsx** - Contact, video placeholder, and legal disclaimer
+
+**Supporting Components:**
+- `ChatBubble.tsx` - Chat message display
+- `LoadingIndicator.tsx` - Loading states
+- `PromptImproverHeader.tsx` - Section introduction
   - `HowItWasMade.tsx` - Behind-the-scenes section
   - `Footer.tsx` - Site footer
 

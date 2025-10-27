@@ -1,12 +1,31 @@
-# AIFtershow
+# AI-ftershow
 
-A single-page, responsive, dual-language (EN/NL) mini-site for "Marketing & Effie Live" attendees. This high-tech "cyberpunk" themed tactical guide provides interactive workflows for implementing AI tools using Google's ecosystem (Gemini, NotebookLM, AI Studio).
+## About
+
+**AI-ftershow** is an interactive, single-page web application that demonstrates practical AI workflows using Google's AI ecosystem. Built as a tactical guide for AI implementation, it showcases "Signal Coding" techniques—moving beyond conversational AI to building reliable, production-ready AI applications.
+
+### Purpose & Audience
+
+This repository serves as both a functional demonstration and educational resource for:
+- **AI practitioners** looking to implement structured AI workflows
+- **Developers** interested in building AI-powered React applications  
+- **Product managers** exploring practical AI integration patterns
+- **Anyone** wanting to understand the evolution from "Vibe Coding" to "Signal Coding"
+
+### Key Features
+
+✅ **Interactive Prompt Improver** - Real-time AI-powered prompt refinement using Gemini 2.5 Flash API  
+✅ **Hero Gem Wizard** - Multi-step workflow for creating specialized AI assistants  
+✅ **NotebookLM Integration Guide** - Practical workflows for document-grounded AI  
+✅ **Dual Language Support** - Seamless English/Dutch localization  
+✅ **Cyberpunk Design System** - Custom Tailwind theme with neon aesthetics  
+✅ **Production-Ready Architecture** - TypeScript, React 19, and modern tooling  
 
 ## Current Status
-* **This site is live and working properly.**
-* **Last Verified:** October 26, 2025
-* **Branch:** Gem-Builder-first-deploy
-* **Deployment:** Development build running locally
+* **Status:** ✅ Live and Functional
+* **Last Updated:** October 27, 2025
+* **Deployment:** GitHub Pages with GitHub Actions CI/CD
+* **Environment:** Production-ready with environment variable configuration
 
 ## Tech Stack
 
@@ -30,22 +49,34 @@ A single-page, responsive, dual-language (EN/NL) mini-site for "Marketing & Effi
 1.  **Clone the repository:**
     ```bash
     git clone https://github.com/rutgertuit/DML.git
+    cd DML
     ```
 
-2.  **Navigate to the project directory:**
-    ```bash
-    cd DML/aiftershow
-    ```
-
-3.  **Install dependencies:**
+2.  **Install dependencies:**
     ```bash
     npm install
     ```
 
-4.  **Set up environment variables:**
-    Create a `.env` file in the project root and add your Gemini API key:
-    ```
+3.  **Set up environment variables:**
+    Create a `.env` file in the project root:
+    ```bash
+    # Copy the example file
+    cp .env.example .env
+    
+    # Add your Gemini API key
     VITE_GEMINI_API_KEY=your_api_key_here
+    ```
+    Get your API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+
+4.  **Start development server:**
+    ```bash
+    npm run dev
+    ```
+    Visit `http://localhost:5173/DML/` to view the application
+
+5.  **Build for production:**
+    ```bash
+    npm run build
     ```
 
 5.  **Run the development server:**
@@ -71,31 +102,62 @@ A single-page, responsive, dual-language (EN/NL) mini-site for "Marketing & Effi
   npm run preview
   ```
 
-## Project Features
+## Core Components
 
-✅ **Prompt Improver** - Interactive chat-based tool for refining AI prompts with Gemini 2.5 Flash  
-✅ **Hero Gem Wizard** - Multi-step wizard for creating custom AI specialists grounded in research  
-✅ **NotebookLM Guide** - Workflow guide with stakeholder-specific prompts  
-✅ **Dual Language Support** - Seamless switching between English and Dutch  
-✅ **Cyberpunk Theme** - Custom design system with neon glows and sharp aesthetics  
-✅ **Responsive Design** - Mobile-first approach for all screen sizes  
+### 🤖 Prompt Improver
+Interactive AI-powered tool that refines prompts through guided dialogue using Gemini 2.5 Flash API. Features real-time chat interface, automatic prompt extraction, and one-click testing across multiple LLM platforms.
+
+### 💎 Hero Gem Wizard  
+Three-step workflow for creating specialized AI assistants:
+1. **Define Mission** - Domain, role, and core task specification
+2. **Deep Research** - Automated research prompt generation
+3. **Build Your Gem** - Complete system instruction creation
+
+### 📚 NotebookLM Integration
+Comprehensive guide demonstrating document-grounded AI workflows with stakeholder-specific output generation (CFO, CMO, CEO perspectives).
+
+### 🎯 AI Workflow Philosophy
+Interactive explanation of the evolution from "Vibe Coding" (conversational prototyping) to "Signal Coding" (structured, production-ready AI applications).
+
+### 🛠️ Google AI Toolkit
+Curated collection of 6 Google AI tools with direct links:
+- Gemini in Google Workspace
+- NotebookLM  
+- Google Stitch
+- Google Vids
+- Gemini Enterprise
+- Gemini CLI  
 
 ## Project Structure
 
 ```
-aiftershow/
-├── public/
-│   └── locales/           # Translation files (EN/NL)
+DML/
+├── .github/workflows/     # GitHub Actions CI/CD
+│   └── deploy.yml        # Automated deployment to GitHub Pages
+├── public/               # Static assets
 ├── src/
-│   ├── components/        # React components (one per section)
-│   ├── services/          # API integration layer
-│   ├── App.tsx           # Main application component
-│   └── i18n.ts           # Internationalization setup
-├── eslint.config.js      # ESLint configuration
-├── tailwind.config.js    # Tailwind CSS theme
-├── tsconfig.json         # TypeScript configuration
-├── vite.config.ts        # Vite build configuration
-└── GEMINI.md             # AI assistant context & guidelines
+│   ├── components/       # React components
+│   │   ├── HeroGemWizard/# Multi-step wizard components
+│   │   ├── Header.tsx    # Navigation with language switcher
+│   │   ├── HeroSection.tsx# Landing section with video background
+│   │   ├── PromptImprover.tsx# Interactive AI chat tool
+│   │   ├── NotebookLM.tsx# Document-grounded AI guide
+│   │   ├── FlowVibe.tsx  # AI workflow philosophy
+│   │   ├── Toolkit.tsx   # Google AI tools showcase
+│   │   └── Footer.tsx    # Contact and disclaimer
+│   ├── locales/          # Translation files (EN/NL)
+│   ├── services/         # API integration layer
+│   │   └── aiStudioService.ts# Gemini API client
+│   ├── App.tsx          # Main application
+│   └── i18n.ts          # Internationalization config
+├── dist/                # Built application (GitHub Pages)
+├── .env.example         # Environment variables template
+├── index.html           # Entry point
+├── package.json         # Dependencies and scripts
+├── tailwind.config.js   # Custom cyberpunk theme
+├── vite.config.ts       # Build configuration
+├── README.md           # This file
+└── GEMINI.md           # AI assistant guidelines
 ```
 
 ## Contributing
