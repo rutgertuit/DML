@@ -14,9 +14,9 @@
     "cta3": "Ik moet 50 documenten synthetiseren."
   },
   "promptImprover": {
-    "intro": "Onderzoek toont aan dat iteratieve, op dialoog gebaseerde verfijning 20-50% betere AI-outputs oplevert in vergelijking met eenmalige prompts, omdat het verborgen aannames blootlegt en organisch specificiteit opbouwt.",
-    "title": "De Prompt Verbeteraar: Stop met Memoriseren, Start het Gesprek.",
-    "description": "AI beheersen gaat niet over het uit je hoofd leren van complexe promptstructuren. Gebaseerd op de laatste best practices, is dialoog de sleutel. Deze tool demonstreert dat principe: het helpt je jouw prompt te verfijnen door het te bespreken met het LLM (aangedreven door Google AI Studio), zodat jullie beiden het doel, de beperkingen en de context begrijpen vóór de uitvoering. Probeer het hieronder.",
+    "intro": "💡 Pro Tip: Een prompt aanscherpen met feedback (zoals je bij een junior creative zou doen) levert veel betere resultaten op dan een gok in één keer. Het is het verschil tussen een afgerond concept en terug naar de tekentafel.",
+    "title": "De Prompt Verbeteraar: Want \"Maak het vet\" is een Slechte Briefing (Ook voor AI).",
+    "description": "Een AI vragen om 'iets over AI' is als een klantbriefing krijgen waarop alleen staat: 'We willen dat het viral gaat.' Je krijgt iets, maar waarschijnlijk niet wat je wilde.\n\nDeze tool is je ingebouwde creative director. Hij laat je niet wegkomen met een slechte briefing. Hij stelt de vervelende-maar-noodzakelijke vragen: 'Voor wie is dit?' 'Wat is de tone-of-voice?' 'Wat is het ene dat ze moeten onthouden?' Het verandert je vage idee in een briefing die zo scherp is, dat de AI de plank niet kán misslaan.",
     "placeholder": "Plak hier je concept-prompt...",
     "submit": "Verstuur",
     "howItWorksTitle": "Hoe het Werkt: De Systeeminstructie",
@@ -44,8 +44,8 @@
     "copied": "Gekopieerd!"
   },
   "notebookLM": {
-    "title": "NotebookLM: Eerst de Inhoud, dan de Vormgeving.",
-    "description": "NotebookLM revolutioneert samenwerking door de focus te verleggen. Maak je niet vooraf zorgen over hoe de CFO data geformatteerd wil hebben versus de CEO. Focus op structuur en input. Dump alles—transcripties, PDF's, decks, links—in een Notebook. NotebookLM wordt het centrale brein. Je kunt dan snel itereren en het exacte presentatieformaat genereren dat nodig is voor elke stakeholder.",
+    "title": "NotebookLM: De \"Eén-Deck-voor-Alles\"-Tool",
+    "description": "Je kent het wel. Je rondt het grote onderzoeksrapport af. Dan vraagt de CEO om een samenvatting van één pagina. De CMO wil een deck van 10 slides. En het creatieve team wil alleen de belangrijkste inzichten voor een briefing.\n\nStop met die copy-paste-nachtmerrie.\n\nNotebookLM is je 'centrale brein'. Je dumpt alles er één keer in: de transcripten, de pdf's, de data. Daarna vraag je het gewoon om de output voor elke persoon te genereren. Eén bron van waarheid, oneindig veel formats. Krijg je week terug.",
     "cta": "Probeer NotebookLM",
     "tabCFO": "Voor de CFO",
     "tabCMO": "Voor de CMO",
@@ -54,8 +54,8 @@
     "tabTeam": "Voor je Team"
   },
   "flowVibe": {
-    "title": "Begrijp Je Nieuwe Krachten: Van 'Vibe' naar 'Signaal'",
-    "subtitle": "Een gids om de evolutie van AI-interactie meester te worden.",
+    "title": "Krijg grip op je Nieuwe Superkrachten: Van 'Vibe' naar 'Signal'",
+    "subtitle": "De manier waarop we met AI praten verandert. Hier is een no-nonsense gids.",
     "intro": "De manier waarop we met AI omgaan, evolueert. We zijn begonnen met conversationeel 'Vibe Coding', raakten in de war door de term 'Flow Coding', en gaan nu over op een preciezere en krachtigere methode: 'Signal Coding'. Deze gids is ontworpen om je te helpen deze evolutie meester te worden.",
     "liveExample": "Live Voorbeeld:",
     "vibe": {
@@ -100,7 +100,7 @@
     "paragraph1": "LLM's zijn voorspellingsmachines. Ze genereren het meest waarschijnlijke volgende woord op basis van je input. Een vage prompt zoals \"Vertel me over AI\" geeft het model oneindige richtingen—resulterend in generieke, ongefocuste output. Maar een specifieke prompt zoals \"Schrijf een blogpost van 500 woorden voor ontwikkelaars die transformerarchitectuur uitlegt, met analogieën en zonder zware wiskunde\" geeft het model duidelijke grenzen.",
     "magicPhrase": "Specificiteit = Magie ✨",
     "paragraph2": "Deze tool gebruikt een \"ingebakken\" systeeminstructie die fungeert als je expert Prompt Coach. In plaats van theorie te onderwijzen, stelt het de juiste vragen om hiaten in je denken bloot te leggen—missende context, onduidelijke doelstellingen, formaateisen—en bouwt het gezamenlijk een betere prompt met je door middel van begeleide dialoog.",
-    "summaryText": "Klik om de 'Prompt Scribe' Systeeminstructie te kopiëren",
+    "summaryText": "Klik om de 'Prompt Director' Systeeminstructie te kopiëren",
     "copyButton": "Kopieer",
     "copiedButton": "Gekopieerd!"
   },

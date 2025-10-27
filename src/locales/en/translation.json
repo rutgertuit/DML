@@ -14,9 +14,9 @@
     "cta3": "I need to synthesize 50 documents."
   },
   "promptImprover": {
-    "intro": "Research shows that iterative, dialogue-based refinement yields 20-50% better AI outputs compared to one-shot prompts, as it uncovers hidden assumptions and builds specificity organically.",
-    "title": "The Prompt Improver: Stop Memorizing, Start Discussing.",
-    "description": "Mastering AI isn't about learning complex prompt structures by heart. Based on the latest best practices, the key is dialogue. This tool demonstrates that principle: it helps you refine your prompt by discussing it with the LLM (powered by Google AI Studio), ensuring you both understand the goal, constraints, and context before execution. Try it below.",
+    "intro": "💡 Pro Tip: Iterating on a prompt with feedback (like you would with a junior creative) leads to way better results than a one-shot guess. It's the difference between a finished concept and a trip back to the drawing board.",
+    "title": "The Prompt Improver: Because \"Make it cool\" is a Bad Brief (for AI, Too).",
+    "description": "Asking an AI for 'something about AI' is like getting a client brief that just says, 'We want it to go viral.' You'll get something, but it's probably not what you wanted.\n\nThis tool is your built-in creative director. It won't let you start with a bad brief. It asks you the annoying-but-necessary questions first: 'Who is this for?' 'What's the tone?' 'What's the one thing you want them to remember?' It turns your vague idea into a brief so sharp, the AI can't help but nail it.",
     "placeholder": "Paste your draft prompt here...",
     "submit": "Submit",
     "howItWorksTitle": "How it Works: The System Instruction",
@@ -44,8 +44,8 @@
     "copied": "Copied!"
   },
   "notebookLM": {
-    "title": "NotebookLM: Content First, Formatting Later.",
-    "description": "NotebookLM revolutionizes collaboration by shifting the focus. Stop worrying upfront about how the CFO wants data formatted versus the CEO. Focus on structure and input. Dump everything—transcripts, PDFs, decks, links—into a Notebook. NotebookLM becomes the central brain. You can then rapidly iterate and generate the exact presentation format needed for any stakeholder instantly.",
+    "title": "NotebookLM: The \"One-Deck-to-Rule-Them-All\" Tool",
+    "description": "You know the drill. You finish the big research report. Then the CEO asks for a one-page summary. The CMO wants a 10-slide deck. And the creative team just wants the key insights for a brief.\n\nStop the copy-paste nightmare.\n\nNotebookLM is your 'central brain.' You dump everything in once—the transcripts, the PDFs, the data. Then, you just ask it to generate the output for each person. One source of truth, infinite formats. Get your week back.",
     "cta": "Try NotebookLM",
     "tabCFO": "For the CFO",
     "tabCMO": "For the CMO",
@@ -55,7 +55,7 @@
   },
   "flowVibe": {
     "title": "Understanding Your New Powers: From 'Vibe' to 'Signal'",
-    "subtitle": "A guide to mastering the evolution of AI interaction.",
+    "subtitle": "The way we talk to AI is changing. Here's a no-nonsense guide.",
     "intro": "The way we interact with AI is evolving. We started with conversational 'Vibe Coding,' got confused by the term 'Flow Coding,' and are now moving towards a more precise and powerful method: 'Signal Coding.' This guide is designed to help you master this evolution.",
     "liveExample": "Live Example:",
     "vibe": {
@@ -100,7 +100,7 @@
     "paragraph1": "LLMs are prediction engines. They generate the most likely next word based on your input. A vague prompt like \"Tell me about AI\" gives the model infinite directions to go—resulting in generic, unfocused output. But a specific prompt like \"Write a 500-word blog post for developers explaining transformer architecture, using analogies and avoiding heavy math\" gives the model clear guardrails.",
     "magicPhrase": "Specificity = Magic ✨",
     "paragraph2": "This tool uses a \"baked-in\" system instruction that acts as your expert Prompt Coach. Instead of teaching you theory, it asks the right questions to uncover gaps in your thinking—missing context, unclear objectives, format requirements—and collaboratively builds a better prompt with you through guided dialogue.",
-    "summaryText": "Click to copy the 'Prompt Scribe' System Instruction",
+    "summaryText": "Click to copy the 'Prompt Director' System Instruction",
     "copyButton": "Copy",
     "copiedButton": "Copied!"
   },
