@@ -1,11 +1,13 @@
 
 import React, { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import BlueprintSelector from './BlueprintSelector';
 import GemDesignAssistant from './GemDesignAssistant';
 import SourceMaterialGenerator from './SourceMaterialGenerator';
 import FinalGemInstruction from './FinalGemInstruction';
 
 export const HeroGemWizard: React.FC = () => {
+  const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedBlueprint, setSelectedBlueprint] = useState<string | null>(null);
   const [gemPlan, setGemPlan] = useState<{ goal: string, requiredDocuments: string[] } | null>(null);
@@ -45,7 +47,7 @@ export const HeroGemWizard: React.FC = () => {
     <section ref={sectionRef} id="hero-gem-wizard" className="py-24 overflow-hidden break-words">
       <div className="bg-card-dark rounded-xl shadow-lg border border-secondary/30 p-8 mb-8">
         <h2 className="font-display text-4xl font-bold text-primary mb-6 text-center">
-          Build Your "Hero Gem" V2 — RAG Preparation Studio
+          {t('heroGemWizard.title')}
         </h2>
 
         {/* Fun Explainer with Character and Speech Bubble - ALWAYS VISIBLE */}

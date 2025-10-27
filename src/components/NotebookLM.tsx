@@ -89,7 +89,7 @@ export const NotebookLM: React.FC = () => {
   return (
     <section className="py-24" id="notebooklm">
       <h2 className="font-display text-4xl font-bold text-text-light mb-6">
-        NotebookLM: End Stakeholder Paralysis
+        {t('notebookLM.title')}
       </h2>
 
       {/* New Introductory Section */}
