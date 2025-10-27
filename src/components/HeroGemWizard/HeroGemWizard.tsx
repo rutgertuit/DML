@@ -65,22 +65,22 @@ export const HeroGemWizard: React.FC = () => {
               {/* Arrow pointing to character */}
               <div className="absolute -left-3 top-8 w-0 h-0 border-l-0 border-r-8 border-t-6 border-b-6 border-r-primary/40 border-t-transparent border-b-transparent"></div>
 
-              <h3 className="font-display text-xl font-bold text-primary mb-3">Meet Your Personal AI Specialist</h3>
+              <h3 className="font-display text-xl font-bold text-primary mb-3">{t('heroGemWizard.introTitle')}</h3>
 
               <div className="space-y-3 text-text-light/85 font-body">
                 <p>
-                  <span className="font-bold text-primary">Stop repeating yourself.</span> Your Gem remembers its job, personality, and your rules every time. No more re-explaining—just ask and get answers that fit <em>you</em>.
+                  <span className="font-bold text-primary">{t('heroGemWizard.introPara1').split('.')[0]}.</span> {t('heroGemWizard.introPara1').split('.').slice(1).join('.')}
                 </p>
                 <p>
-                  <span className="font-bold text-secondary">Get expert results.</span> A generic AI knows a little about everything. Your Gem is a specialist using <em>your</em> files and knowledge to give truly expert advice.
+                  <span className="font-bold text-secondary">{t('heroGemWizard.introPara2').split('.')[0]}.</span> {t('heroGemWizard.introPara2').split('.').slice(1).join('.')}
                 </p>
                 <p>
-                  <span className="font-bold text-primary">Make AI practical.</span> Plan campaigns, draft emails in your style, organize projects—with an AI that actually understands <em>your</em> world.
+                  <span className="font-bold text-primary">{t('heroGemWizard.introPara3').split('.')[0]}.</span> {t('heroGemWizard.introPara3').split('.').slice(1).join('.')}
                 </p>
               </div>
 
               <p className="mt-4 pt-4 border-t border-primary/20 text-sm text-text-light/70 font-mono">
-                Ready? Pick a blueprint below and let's build! 👇
+                {t('heroGemWizard.readyCTA')}
               </p>
             </div>
           </div>

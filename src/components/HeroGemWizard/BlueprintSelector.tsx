@@ -1,46 +1,44 @@
 
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface BlueprintSelectorProps {
   onSelectBlueprint: (blueprintName: string) => void;
 }
 
-interface Blueprint {
-  title: string;
-  description: string;
-}
-
-const blueprints: Blueprint[] = [
-  {
-    title: "Knowledge Expert",
-    description: "A specialist AI that has mastered a specific topic. Upload your research, notes, or product manuals, and it will answer complex questions based *only* on that knowledge."
-  },
-  {
-    title: "Style & Tone Guardian",
-    description: "Your personal brand-voice editor. Upload your style guide, past emails, or writing examples, and it will rewrite any text to perfectly match your desired tone and messaging."
-  },
-  {
-    title: "Creative Partner",
-    description: "An AI brainstorming assistant. Feed it your creative briefs, past campaigns, or topic ideas, and it will help you generate new blog posts, ad copy, or social media updates."
-  },
-  {
-    title: "Home & Hobby Helper",
-    description: "Your personal life assistant. Upload your family's dietary needs, favorite recipes, travel plans, or gardening notes, and it will help you organize, plan, and manage your home life."
-  },
-  {
-    title: "Technical Assistant",
-    description: "A developer's sidekick. Feed it your project's API documentation, codebase, or data schemas to get quick, context-aware help with coding, debugging, or data analysis."
-  },
-  {
-    title: "Strategic Advisor",
-    description: "Your on-demand business consultant. Upload market research, competitor reports, or your business plan, and it will help you identify new opportunities, spot risks, and build strategies."
-  }
-];
-
 const BlueprintSelector: React.FC<BlueprintSelectorProps> = ({ onSelectBlueprint }) => {
+  const { t } = useTranslation();
+
+  const blueprints = [
+    {
+      title: t('heroGemWizard.blueprint1Title'),
+      description: t('heroGemWizard.blueprint1Desc')
+    },
+    {
+      title: t('heroGemWizard.blueprint2Title'),
+      description: t('heroGemWizard.blueprint2Desc')
+    },
+    {
+      title: t('heroGemWizard.blueprint3Title'),
+      description: t('heroGemWizard.blueprint3Desc')
+    },
+    {
+      title: t('heroGemWizard.blueprint4Title'),
+      description: t('heroGemWizard.blueprint4Desc')
+    },
+    {
+      title: t('heroGemWizard.blueprint5Title'),
+      description: t('heroGemWizard.blueprint5Desc')
+    },
+    {
+      title: t('heroGemWizard.blueprint6Title'),
+      description: t('heroGemWizard.blueprint6Desc')
+    }
+  ];
+
   return (
     <div>
-      <h3 className="font-display text-2xl font-bold text-text-light mb-4">Step 1: Select a Blueprint</h3>
+      <h3 className="font-display text-2xl font-bold text-text-light mb-4">{t('heroGemWizard.step1Title')}</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {blueprints.map((blueprint) => (
           <div
