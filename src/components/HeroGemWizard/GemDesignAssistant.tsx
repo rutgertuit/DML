@@ -16,6 +16,7 @@ const GemDesignAssistant: React.FC<GemDesignAssistantProps> = ({ selectedBluepri
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
+  const finalizeButtonRef = useRef<HTMLButtonElement>(null);
 
   // System prompt for the Gem Design Assistant
   const SYSTEM_PROMPT = `
@@ -114,6 +115,15 @@ Example for "Strategic Advisor":
       chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
     }
   }, [messages, isLoading]);
+
+  // Scroll finalize button into view when conversation is substantive (4+ messages)
+  useEffect(() => {
+    if (messages.length >= 4 && !isLoading && finalizeButtonRef.current) {
+      setTimeout(() => {
+        finalizeButtonRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }, 300);
+    }
+  }, [messages.length, isLoading]);
 
   const handleSend = async () => {
     if (!input.trim()) return;
@@ -252,6 +262,7 @@ Do not add *any* conversational text or markdown formatting around this JSON.` }
           Once you've discussed your Gem's goals and needed documents with the AI, click below to finalize your plan and move to the next step.
         </p>
         <button
+          ref={finalizeButtonRef}
           onClick={handleFinalizePlan}
           disabled={isLoading || messages.length < 2}
           className="hero-gem-btn w-full font-mono uppercase text-lg bg-secondary text-background-dark font-bold py-3 px-6 rounded hover:shadow-glow-purple transition-shadow disabled:opacity-50 disabled:cursor-not-allowed"

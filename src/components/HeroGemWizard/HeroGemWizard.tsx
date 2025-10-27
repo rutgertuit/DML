@@ -13,13 +13,13 @@ export const HeroGemWizard: React.FC = () => {
   const [gemPlan, setGemPlan] = useState<{ goal: string, requiredDocuments: string[] } | null>(null);
   const [hasConfirmedFiles, setHasConfirmedFiles] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const step2Ref = useRef<HTMLDivElement>(null);
 
-  // Scroll to section when step changes to prevent page jumping
+  // Scroll to step 2 content when blueprint is selected
   useEffect(() => {
-    if (sectionRef.current && currentStep > 1) {
-      // Small delay to ensure content has rendered
+    if (currentStep === 2 && step2Ref.current) {
       setTimeout(() => {
-        sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        step2Ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 100);
     }
   }, [currentStep]);
@@ -91,11 +91,13 @@ export const HeroGemWizard: React.FC = () => {
           <BlueprintSelector onSelectBlueprint={handleBlueprintSelected} />
         )}
         {currentStep === 2 && selectedBlueprint && (
-          <GemDesignAssistant
-            selectedBlueprint={selectedBlueprint}
-            onPlanCreated={handlePlanCreated}
-            onGoBack={handleGoBackToBlueprints}
-          />
+          <div ref={step2Ref}>
+            <GemDesignAssistant
+              selectedBlueprint={selectedBlueprint}
+              onPlanCreated={handlePlanCreated}
+              onGoBack={handleGoBackToBlueprints}
+            />
+          </div>
         )}
         {currentStep === 3 && gemPlan && (
           <SourceMaterialGenerator

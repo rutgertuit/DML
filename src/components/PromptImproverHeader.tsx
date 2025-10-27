@@ -28,6 +28,23 @@ export const PromptImproverHeader: React.FC = () => {
                 {t('promptImproverHeader.paragraph2')}
             </p>
 
+            {/* Two Options Section */}
+            <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-4">
+                <h3 className="font-display text-lg font-bold text-primary mb-2">
+                    {t('promptImproverHeader.optionsTitle')}
+                </h3>
+                <ul className="space-y-2 text-text-light/85 font-body">
+                    <li className="flex items-start gap-2">
+                        <span className="text-primary font-bold">1.</span>
+                        <span>{t('promptImproverHeader.option1')}</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                        <span className="text-secondary font-bold">2.</span>
+                        <span>{t('promptImproverHeader.option2')}</span>
+                    </li>
+                </ul>
+            </div>
+
             <details className="group">
                 <summary className="font-mono text-sm uppercase cursor-pointer text-secondary hover:text-primary transition-colors list-none flex items-center gap-2">
                     <span className="group-open:rotate-90 transition-transform inline-block">▶</span>

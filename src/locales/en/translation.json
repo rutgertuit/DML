@@ -142,7 +142,10 @@
     "paragraph1": "LLMs are prediction engines. They generate the most likely next word based on your input. A vague prompt like \"Tell me about AI\" gives the model infinite directions to go—resulting in generic, unfocused output. But a specific prompt like \"Write a 500-word blog post for developers explaining transformer architecture, using analogies and avoiding heavy math\" gives the model clear guardrails.",
     "magicPhrase": "Specificity = Magic ✨",
     "paragraph2": "This tool uses a \"baked-in\" system instruction that acts as your expert Prompt Coach. Instead of teaching you theory, it asks the right questions to uncover gaps in your thinking—missing context, unclear objectives, format requirements—and collaboratively builds a better prompt with you through guided dialogue.",
-    "summaryText": "Click to copy the 'Prompt Director' System Instruction",
+    "optionsTitle": "Two Ways to Use the Prompt Director:",
+    "option1": "Use the tool below (it already has the system instruction built-in), OR",
+    "option2": "Copy the system instruction below and paste it into your own LLM (ChatGPT, Claude, Gemini, etc.)",
+    "summaryText": "Show/Copy the 'Prompt Director' System Instruction",
     "copyButton": "Copy",
     "copiedButton": "Copied!"
   },

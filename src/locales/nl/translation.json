@@ -142,7 +142,10 @@
     "paragraph1": "LLM's zijn voorspellingsmachines. Ze genereren het meest waarschijnlijke volgende woord op basis van je input. Een vage prompt zoals \"Vertel me over AI\" geeft het model oneindige richtingen—resulterend in generieke, ongefocuste output. Maar een specifieke prompt zoals \"Schrijf een blogpost van 500 woorden voor ontwikkelaars die transformerarchitectuur uitlegt, met analogieën en zonder zware wiskunde\" geeft het model duidelijke grenzen.",
     "magicPhrase": "Specificiteit = Magie ✨",
     "paragraph2": "Deze tool gebruikt een \"ingebakken\" systeeminstructie die fungeert als je expert Prompt Coach. In plaats van theorie te onderwijzen, stelt het de juiste vragen om hiaten in je denken bloot te leggen—missende context, onduidelijke doelstellingen, formaateisen—en bouwt het gezamenlijk een betere prompt met je door middel van begeleide dialoog.",
-    "summaryText": "Klik om de 'Prompt Director' Systeeminstructie te kopiëren",
+    "optionsTitle": "Twee Manieren om de Prompt Director te Gebruiken:",
+    "option1": "Gebruik de tool hieronder (de systeeminstructie zit al ingebouwd), OF",
+    "option2": "Kopieer de onderstaande systeeminstructie en plak hem in je eigen LLM (ChatGPT, Claude, Gemini, etc.)",
+    "summaryText": "Toon/Kopieer de 'Prompt Director' Systeeminstructie",
     "copyButton": "Kopieer",
     "copiedButton": "Gekopieerd!"
   },

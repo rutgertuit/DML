@@ -10,6 +10,7 @@ interface SourceMaterialGeneratorProps {
 const SourceMaterialGenerator: React.FC<SourceMaterialGeneratorProps> = ({ gemPlan, onFilesConfirmed }) => {
   const [sourcePrompts, setSourcePrompts] = useState<{ name: string, prompt: string }[]>([]);
   const [copied, setCopied] = useState<string | null>(null);
+  const [hasCopiedCurrent, setHasCopiedCurrent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [currentlyGenerating, setCurrentlyGenerating] = useState<string | null>(null);
@@ -75,8 +76,14 @@ Example Output:
   const handleCopy = (prompt: string, documentName: string) => {
     navigator.clipboard.writeText(prompt);
     setCopied(documentName);
+    setHasCopiedCurrent(true);
     setTimeout(() => setCopied(null), 2000);
   };
+
+  // Reset hasCopiedCurrent when moving to a new prompt
+  useEffect(() => {
+    setHasCopiedCurrent(false);
+  }, [currentPromptIndex]);
 
   // Mark a prompt as confirmed by user (they've created the document in Gemini)
   const handlePromptCompleted = (documentName: string) => {
@@ -191,42 +198,61 @@ Example Output:
                       📄 {sourcePrompts[currentPromptIndex]?.name}
                     </h4>
                     <p className="text-sm text-text-light/80">
-                      This is the prompt template for your source document. Copy it, paste it into Gemini, and let the AI generate the content.
+                      Copy the prompt below, then open Gemini to generate your research document.
                     </p>
                   </div>
-                  <button
-                    onClick={() => handleCopy(sourcePrompts[currentPromptIndex]?.prompt || '', sourcePrompts[currentPromptIndex]?.name || '')}
-                    className="flex-shrink-0 flex items-center gap-2 px-4 py-2 bg-primary text-background-dark font-bold rounded-lg hover:shadow-glow-blue transition-all shadow-md whitespace-nowrap"
-                  >
-                    <span>{copied === sourcePrompts[currentPromptIndex]?.name ? '✓' : '📋'}</span>
-                    <span>{copied === sourcePrompts[currentPromptIndex]?.name ? 'Copied!' : 'Copy Prompt'}</span>
-                  </button>
+                </div>
+
+                {/* Action Buttons - Copy and Open Gemini side by side */}
+                <div className="mt-4 pt-4 border-t border-primary/20">
+                  <p className="text-sm font-bold text-text-light mb-3">Quick Actions:</p>
+                  <div className="flex gap-3">
+                    {/* Copy Button - Highlighted first, grey after copied */}
+                    <button
+                      onClick={() => handleCopy(sourcePrompts[currentPromptIndex]?.prompt || '', sourcePrompts[currentPromptIndex]?.name || '')}
+                      className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 font-bold rounded-lg transition-all ${!hasCopiedCurrent
+                          ? 'bg-primary text-background-dark hover:shadow-glow-blue shadow-md animate-pulse'
+                          : 'bg-secondary/20 text-text-light/70 border border-secondary/30'
+                        }`}
+                    >
+                      <span>{copied === sourcePrompts[currentPromptIndex]?.name ? '✓' : '📋'}</span>
+                      <span>{copied === sourcePrompts[currentPromptIndex]?.name ? 'Copied!' : 'Copy Prompt'}</span>
+                    </button>
+
+                    {/* Open Gemini Button - Grey first, highlighted after copy */}
+                    <a
+                      href="https://gemini.google.com/app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 font-bold rounded-lg transition-all ${hasCopiedCurrent
+                          ? 'bg-secondary text-background-dark hover:shadow-glow-purple shadow-md'
+                          : 'bg-secondary/20 text-text-light/50 border border-secondary/30 cursor-not-allowed'
+                        }`}
+                      onClick={(e) => {
+                        if (!hasCopiedCurrent) {
+                          e.preventDefault();
+                        }
+                      }}
+                    >
+                      <span>🚀</span>
+                      <span>Open Gemini</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
 
                 {/* Next Steps Instructions */}
                 <div className="mt-4 pt-4 border-t border-primary/20">
                   <p className="text-sm font-bold text-text-light mb-3">Next Steps:</p>
                   <ol className="text-sm text-text-light/80 space-y-2 list-decimal list-inside">
-                    <li>Copy the prompt using the button above</li>
-                    <li>Click "🚀 Open Gemini" below to open Gemini in a new tab</li>
-                    <li>Paste the prompt into Gemini's chat</li>
+                    <li>Click "Copy Prompt" above to copy the research prompt</li>
+                    <li>Click "Open Gemini" to open Gemini in a new tab</li>
+                    <li>Paste the prompt into Gemini's chat and let it generate the content</li>
                     <li>Save the generated content as <span className="font-mono text-primary font-bold">{sourcePrompts[currentPromptIndex]?.name}</span></li>
-                    <li>Return here and click "I've Created This Document" to move to the next one</li>
+                    <li>Return here and click "I've Created This Document" below to continue</li>
                   </ol>
-                  <div className="mt-4 flex gap-3">
-                    <a
-                      href="https://gemini.google.com/app"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-background-dark font-bold rounded-lg hover:bg-purple-600 transition-all shadow-md"
-                    >
-                      <span>🚀</span>
-                      <span>Open Gemini (New Tab)</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                      </svg>
-                    </a>
-                  </div>
                 </div>
               </div>
 
