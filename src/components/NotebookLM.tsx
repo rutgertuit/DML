@@ -94,7 +94,7 @@ export const NotebookLM: React.FC = () => {
 
       {/* New Introductory Section */}
       <div className="mb-12 space-y-6">
-        <p className="font-body text-lg text-text-light/85 leading-relaxed">
+        <p className="font-body text-lg text-text-light/85 leading-relaxed whitespace-pre-line">
           {t('notebookLM.intro')}
         </p>
 
@@ -103,11 +103,7 @@ export const NotebookLM: React.FC = () => {
           <h3 className="font-display text-2xl font-bold text-primary mb-4">{t('notebookLM.centralBrainTitle')}</h3>
 
           <p className="font-body text-text-light/80 mb-6">
-            {t('notebookLM.centralBrainDesc').split('centralize your knowledge, then generate outputs on demand.')[0]}
-            <span className="text-primary font-bold">
-              {t('notebookLM.centralBrainDesc').match(/centralize your knowledge, then generate outputs on demand\./)?.[0] || 'centralize your knowledge, then generate outputs on demand.'}
-            </span>
-            {t('notebookLM.centralBrainDesc').split('centralize your knowledge, then generate outputs on demand.')[1]}
+            {t('notebookLM.centralBrainDesc')}
           </p>
 
           {/* 3-Step Workflow */}
@@ -135,14 +131,6 @@ export const NotebookLM: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Wall Street Journal Quote */}
-        <blockquote className="border-l-4 border-primary/50 pl-6 py-4 bg-primary/5 rounded-r-lg">
-          <p className="font-body text-text-light/90 italic mb-2">
-            {t('notebookLM.quote')}
-          </p>
-          <p className="text-sm text-text-light/60 font-mono">{t('notebookLM.quoteAttribution')}</p>
-        </blockquote>
       </div>
 
       {/* Workflow Visualization Section */}
@@ -250,15 +238,16 @@ export const NotebookLM: React.FC = () => {
         <h3 className="font-display text-2xl font-bold text-primary mb-4">{t('notebookLM.trustTitle')}</h3>
 
         <p className="font-body text-text-light/80 leading-relaxed">
-          {t('notebookLM.trustDesc').split('grounded in source material')[0]}
-          <span className="text-primary font-bold">grounded in source material</span>
-          {t('notebookLM.trustDesc').split('grounded in source material')[1]}
+          {t('notebookLM.trustDesc')}
         </p>
       </div>
 
       {/* Two-Column Layout Section */}
       <div className="mb-12">
         <h3 className="font-display text-2xl font-bold text-primary mb-6">{t('notebookLM.tryItTitle')}</h3>
+        <p className="font-body text-text-light/80 leading-relaxed mb-6">
+          {t('notebookLM.tryItDesc')}
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Column 1: Workflow & Demo */}
@@ -327,35 +316,35 @@ export const NotebookLM: React.FC = () => {
 
       {/* Bonus Usecase Section */}
       <div className="mt-12 bg-card-dark/80 border border-secondary/30 rounded-lg p-8">
-        <h3 className="font-display text-2xl font-bold text-secondary mb-4">Bonus Usecase: The 'Studio' Features</h3>
+        <h3 className="font-display text-2xl font-bold text-secondary mb-4">{t('notebookLM.bonusTitle')}</h3>
 
         <p className="font-body text-text-light/80 mb-4">
-          Beyond text summaries, NotebookLM includes "studio" features that take your knowledge base even further:
+          {t('notebookLM.bonusIntro')}
         </p>
 
         <ul className="space-y-3 text-text-light/80 font-body">
           <li className="flex gap-3">
             <span className="text-primary flex-shrink-0">🎙️</span>
             <div>
-              <span className="font-bold">Audio Overviews:</span> Transform your notebook into a podcast-style deep dive—perfect for CEOs and executives who consume information while traveling.
+              <span className="font-bold">{t('notebookLM.bonusAudioTitle')}</span> {t('notebookLM.bonusAudioDesc')}
             </div>
           </li>
           <li className="flex gap-3">
             <span className="text-secondary flex-shrink-0">🗣️</span>
             <div>
-              <span className="font-bold">Interactive Q&A:</span> Ask follow-up questions and get instant answers grounded in your source material—no hallucinations, only citations.
+              <span className="font-bold">{t('notebookLM.bonusQATitle')}</span> {t('notebookLM.bonusQADesc')}
             </div>
           </li>
           <li className="flex gap-3">
             <span className="text-primary flex-shrink-0">🎯</span>
             <div>
-              <span className="font-bold">Comparative Analysis:</span> Ask NotebookLM to compare your product vs. competitor—it pulls from your uploaded competitive research.
+              <span className="font-bold">{t('notebookLM.bonusCompareTitle')}</span> {t('notebookLM.bonusCompareDesc')}
             </div>
           </li>
           <li className="flex gap-3">
             <span className="text-secondary flex-shrink-0">📈</span>
             <div>
-              <span className="font-bold">Trend Detection:</span> NotebookLM identifies patterns across all sources you wouldn't see alone—"Here are the 3 strongest unmet customer needs."
+              <span className="font-bold">{t('notebookLM.bonusTrendTitle')}</span> {t('notebookLM.bonusTrendDesc')}
             </div>
           </li>
         </ul>
