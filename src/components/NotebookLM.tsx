@@ -95,15 +95,19 @@ export const NotebookLM: React.FC = () => {
       {/* New Introductory Section */}
       <div className="mb-12 space-y-6">
         <p className="font-body text-lg text-text-light/85 leading-relaxed">
-          Is your organization paralyzed by endless requests for "the data in a different format"? You have one source of truth—market research, customer interviews, competitive analysis, internal data—but stakeholders keep asking for it reshaped: a one-pager for the CEO, a deck for the CMO, an action plan for the manager, a summary for the team.
+          {t('notebookLM.intro')}
         </p>
 
         {/* The Central Brain Section */}
         <div className="bg-card-dark/80 border border-secondary/30 rounded-lg p-8">
-          <h3 className="font-display text-2xl font-bold text-primary mb-4">The Central Brain for Your Knowledge</h3>
+          <h3 className="font-display text-2xl font-bold text-primary mb-4">{t('notebookLM.centralBrainTitle')}</h3>
 
           <p className="font-body text-text-light/80 mb-6">
-            NotebookLM transforms how organizations handle collaboration by introducing a radical idea: <span className="text-primary font-bold">centralize your knowledge, then generate outputs on demand.</span> Instead of reformatting the same data five times, you maintain one intelligent notebook and ask it to serve each stakeholder's unique perspective.
+            {t('notebookLM.centralBrainDesc').split('centralize your knowledge, then generate outputs on demand.')[0]}
+            <span className="text-primary font-bold">
+              {t('notebookLM.centralBrainDesc').match(/centralize your knowledge, then generate outputs on demand\./)?.[0] || 'centralize your knowledge, then generate outputs on demand.'}
+            </span>
+            {t('notebookLM.centralBrainDesc').split('centralize your knowledge, then generate outputs on demand.')[1]}
           </p>
 
           {/* 3-Step Workflow */}
@@ -111,22 +115,22 @@ export const NotebookLM: React.FC = () => {
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center font-bold text-primary">1</div>
               <div>
-                <h4 className="font-bold text-text-light mb-1">Input: Dump Everything</h4>
-                <p className="text-sm text-text-light/70">Transcripts, PDFs, decks, links, spreadsheets—every data source goes into one Notebook. Stop organizing upfront.</p>
+                <h4 className="font-bold text-text-light mb-1">{t('notebookLM.step1Title')}</h4>
+                <p className="text-sm text-text-light/70">{t('notebookLM.step1Desc')}</p>
               </div>
             </div>
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center font-bold text-secondary">2</div>
               <div>
-                <h4 className="font-bold text-text-light mb-1">Synthesis: NotebookLM Understands</h4>
-                <p className="text-sm text-text-light/70">NotebookLM ingests all sources and becomes your knowledge base—aware of relationships, contradictions, and insights across everything.</p>
+                <h4 className="font-bold text-text-light mb-1">{t('notebookLM.step2Title')}</h4>
+                <p className="text-sm text-text-light/70">{t('notebookLM.step2Desc')}</p>
               </div>
             </div>
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center font-bold text-primary">3</div>
               <div>
-                <h4 className="font-bold text-text-light mb-1">Generation: Output on Demand</h4>
-                <p className="text-sm text-text-light/70">Ask it to generate a CFO brief, a CMO deck, or an action plan—each stakeholder gets the exact format they need, instantly.</p>
+                <h4 className="font-bold text-text-light mb-1">{t('notebookLM.step3Title')}</h4>
+                <p className="text-sm text-text-light/70">{t('notebookLM.step3Desc')}</p>
               </div>
             </div>
           </div>
@@ -135,15 +139,15 @@ export const NotebookLM: React.FC = () => {
         {/* Wall Street Journal Quote */}
         <blockquote className="border-l-4 border-primary/50 pl-6 py-4 bg-primary/5 rounded-r-lg">
           <p className="font-body text-text-light/90 italic mb-2">
-            "The bottleneck isn't data anymore. It's how fast you can turn data into *actionable* decisions for different audiences. NotebookLM solves that by letting teams collaborate on one source and generate infinite perspectives."
+            {t('notebookLM.quote')}
           </p>
-          <p className="text-sm text-text-light/60 font-mono">— Concept aligned with industry best practices</p>
+          <p className="text-sm text-text-light/60 font-mono">{t('notebookLM.quoteAttribution')}</p>
         </blockquote>
       </div>
 
       {/* Workflow Visualization Section */}
       <div className="mb-12">
-        <h3 className="font-display text-2xl font-bold text-primary mb-6">The Workflow Visualized: From Rework to Results</h3>
+        <h3 className="font-display text-2xl font-bold text-primary mb-6">{t('notebookLM.workflowTitle')}</h3>
 
         <svg className="w-full max-w-4xl mx-auto" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
           {/* Define gradients */}
@@ -243,16 +247,18 @@ export const NotebookLM: React.FC = () => {
 
       {/* Trust Factor Section */}
       <div className="mb-12 bg-background-dark/80 border border-primary/20 rounded-lg p-8">
-        <h3 className="font-display text-2xl font-bold text-primary mb-4">The Trust Factor: Why Executives Rely on It</h3>
+        <h3 className="font-display text-2xl font-bold text-primary mb-4">{t('notebookLM.trustTitle')}</h3>
 
         <p className="font-body text-text-light/80 leading-relaxed">
-          A critical differentiator for high-stakes decision-making is trust. NotebookLM solves this by ensuring every generated insight is <span className="text-primary font-bold">grounded in source material</span>. When your CFO asks, "Where does the ROI projection come from?", NotebookLM cites the exact document. When your CEO questions a strategic recommendation, you can point to the research it's based on. This source-grounding eliminates the "black box" problem and transforms NotebookLM from a convenience tool into a credible strategic advisor.
+          {t('notebookLM.trustDesc').split('grounded in source material')[0]}
+          <span className="text-primary font-bold">grounded in source material</span>
+          {t('notebookLM.trustDesc').split('grounded in source material')[1]}
         </p>
       </div>
 
       {/* Two-Column Layout Section */}
       <div className="mb-12">
-        <h3 className="font-display text-2xl font-bold text-primary mb-6">Try It: The Stakeholder Perspective Generator</h3>
+        <h3 className="font-display text-2xl font-bold text-primary mb-6">{t('notebookLM.tryItTitle')}</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Column 1: Workflow & Demo */}
