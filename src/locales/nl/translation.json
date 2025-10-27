@@ -8,19 +8,19 @@
   },
   "hero": {
     "title": "Marketing & Effie Live - de AIftershow",
-    "subtitle": "Upgrade Je Stack. Een Tactische Gids voor Vibe Coding, Hero Gems, en NotebookLM.",
+    "subtitle": "Beheers Je Vak. Een Tactische Gids voor Vibe Coding, Hero Gems, en NotebookLM.",
     "cta1": "Ik moet snel een prototype bouwen.",
     "cta2": "Ik heb AI nodig gebaseerd op mijn eigen data.",
     "cta3": "Ik moet 50 documenten synthetiseren."
   },
   "promptImprover": {
     "intro": "Onderzoek toont aan dat iteratieve, op dialoog gebaseerde verfijning 20-50% betere AI-outputs oplevert in vergelijking met eenmalige prompts, omdat het verborgen aannames blootlegt en organisch specificiteit opbouwt.",
-    "title": "De Prompt Verbeteraar: Stop met Memoriseren, Begin met Discussiëren.",
-    "description": "AI beheersen gaat niet over het uit je hoofd leren van complexe promptstructuren. Gebaseerd op de laatste best practices, is de sleutel *dialoog*. Deze tool demonstreert dat principe: het helpt je jouw prompt te verfijnen door het te bespreken met het LLM (aangedreven door Google AI Studio), zodat jullie beiden het doel, de beperkingen en de context begrijpen voor uitvoering. Probeer het hieronder.",
+    "title": "De Prompt Verbeteraar: Stop met Memoriseren, Start het Gesprek.",
+    "description": "AI beheersen gaat niet over het uit je hoofd leren van complexe promptstructuren. Gebaseerd op de laatste best practices, is dialoog de sleutel. Deze tool demonstreert dat principe: het helpt je jouw prompt te verfijnen door het te bespreken met het LLM (aangedreven door Google AI Studio), zodat jullie beiden het doel, de beperkingen en de context begrijpen vóór de uitvoering. Probeer het hieronder.",
     "placeholder": "Plak hier je concept-prompt...",
     "submit": "Verstuur",
     "howItWorksTitle": "Hoe het Werkt: De Systeeminstructie",
-    "howItWorksDesc": "Dit AI 'brein' drijft de Prompt Verbeteraar aan. Deze Systeeminstructie begeleidt de AI om als een behulpzame collaborator op te treden.",
+    "howItWorksDesc": "Dit AI 'brein' drijft de Prompt Verbeteraar aan. Deze Systeeminstructie begeleidt de AI om als een behulpzame partner op te treden.",
     "copy": "Kopieer naar klembord"
   },
   "heroGemWizard": {
