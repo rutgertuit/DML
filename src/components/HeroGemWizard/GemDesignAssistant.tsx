@@ -6,7 +6,11 @@ import LoadingIndicator from '../LoadingIndicator';
 
 interface GemDesignAssistantProps {
   selectedBlueprint: string;
-  onPlanCreated: (plan: { goal: string, requiredDocuments: string[] }) => void;
+  onPlanCreated: (plan: {
+    goal: string,
+    researchDocuments: string[],
+    userDocuments: string[]
+  }) => void;
   onGoBack: () => void;
 }
 
@@ -24,40 +28,52 @@ You are a helpful and *proactive* "Gem Design Assistant".
 Your job is to have a conversation with the user to help them design their custom AI.
 The user's chosen blueprint is: "${selectedBlueprint}". All your follow-up questions and document suggestions MUST be tailored to this context.
 
-CRITICAL: When suggesting documents, you must distinguish between two types:
+CRITICAL: You will work with TWO types of documents:
 
-**RESEARCH DOCUMENTS** (publicly available information that can be researched):
+**RESEARCH DOCUMENTS** (publicly available - you will help generate these):
 - Industry best practices, market trends, academic research
 - Public company information, case studies, published methodologies
 - Programming languages, frameworks, technical standards
 - Historical data, scientific principles, established theories
+Example: "Swedish_Communication_Norms.md", "React_Best_Practices.md"
 
-**PERSONAL DOCUMENTS** (user must create/provide themselves):
-- Personal preferences, internal processes, private data
-- Company-specific workflows, internal policies, proprietary methods  
-- Personal writing samples, individual communication styles
-- Private project details, confidential strategies, personal experiences
+**USER DOCUMENTS** (personal/private - user will provide themselves):
+- Personal preferences, writing samples, internal processes
+- Company-specific workflows, internal policies, proprietary methods
+- Personal communication examples, brand voice samples
+- Private project details, confidential strategies
+Example: "My_Past_Emails.txt", "Company_Style_Guide.pdf", "Brand_Voice_Examples.md"
 
-Your workflow is two-part:
+Your workflow is THREE-part:
 1.  **REFINE GOAL:** First, ask 1-3 clarifying questions to help the user define a *specific, actionable goal*.
-2.  **SUGGEST DOCUMENTS:** As *soon* as you have a clear goal, you MUST *proactively suggest* a list of 2-4 specific source documents.
-    -   **ONLY suggest RESEARCH DOCUMENTS** (publicly available information)
-    -   Explain *why* each document is needed
-    -   Frame this as an expert recommendation
-    -   Ask the user for *confirmation* or *modifications*
 
--   DO NOT ask the user "what documents do you think you need?". You are the expert.
--   DO NOT suggest documents that require private/personal information from the user.
+2.  **ASK ABOUT USER DOCUMENTS:** Once you understand the goal, EXPLICITLY ask: 
+    "Do you have any personal documents you'd like to add to this Gem? These could be things like your company's style guide, past emails, internal processes, etc. 
+    
+    🔒 IMPORTANT: Don't share the actual content here - just give me the filenames (e.g., 'Company_Style_Guide.pdf', 'My_Past_Emails.txt'). These will be referenced in your final Gem instruction, and you'll upload them yourself when using the Gem."
+    
+    -   If user says NO or provides no documents: Set userDocuments to empty array []
+    -   If user provides filenames: Record them exactly as provided
+
+3.  **SUGGEST RESEARCH DOCUMENTS:** After getting user documents (or confirmation they have none), suggest 2-3 research documents you'll help them generate. Explain why each is needed for their specific goal.
+
+-   DO NOT ask the user "what documents do you think you need?" for research documents. You are the expert.
+-   DO NOT suggest user documents. ASK what they have, don't tell them.
 -   DO NOT output "FINAL PLAN" or JSON. Just chat and make suggestions.
 
 **Example of the correct flow:**
-User: "I want a coding assistant for React development."
-AI: "Perfect! Based on that goal, I recommend researching these 3 areas for your Gem:
-    1.  **'React_Best_Practices.md'**: Current React patterns, hooks best practices, and performance optimization techniques.
-    2.  **'Modern_JavaScript_Standards.md'**: ES6+ features, TypeScript integration, and current JavaScript ecosystem trends.
-    3.  **'React_Ecosystem_Tools.md'**: Popular libraries, testing frameworks, and build tools used in React development.
+User: "I want to enforce our company's brand voice in all communications."
+AI: "Perfect! Let me ask a few questions first. What's the biggest challenge right now - is it inconsistent tone across team members, or adapting your voice for different channels?"
+User: "Inconsistent tone across the team."
+AI: "Got it. Do you have any personal documents you'd like to add to this Gem? These could be things like your company's style guide, past emails that are perfectly on-brand, or examples of your messaging.
 
-These will give your Gem a solid foundation in current React development practices. Does this research focus look good to you?"
+🔒 IMPORTANT: Don't share the actual content here - just give me the filenames (e.g., 'Company_Style_Guide.pdf', 'Approved_Emails.txt'). These will be referenced in your final Gem instruction, and you'll upload them yourself when using the Gem."
+User: "Yes, I have Company_Brand_Guidelines.pdf and Good_Email_Examples.txt"
+AI: "Excellent! I'll make sure those are referenced. Now for research documents I'll help you generate:
+1. **'Brand_Voice_Best_Practices.md'**: Industry standards for maintaining consistent brand communication
+2. **'Common_Tone_Mistakes.md'**: Typical brand voice violations to avoid
+
+These research documents combined with your personal files will give your Gem everything it needs. Ready to finalize?"
 `;
 
   useEffect(() => {
@@ -174,13 +190,17 @@ Example for "Strategic Advisor":
 
 The final plan must be optimized for a "${selectedBlueprint}" Gem.
 
-Find the *refined goal* the user and AI agreed on, and the *last list of source documents* the AI suggested and the user agreed to.
+Find the *refined goal* the user and AI agreed on, and extract TWO lists of documents:
+1. **researchDocuments**: Publicly available documents the AI will help generate
+2. **userDocuments**: Personal/private documents the user will provide themselves
 
 Your *entire response* MUST be *only* a minified JSON object based on this final plan.
 DO NOT use placeholders. Use the *actual* goal and document names from the chat.
 
 Example format:
-{ "goal": "Rewrite communications to prevent Swedish readers from becoming defensive.", "requiredDocuments": ["Swedish_Communication_Norms.txt", "Dutch_vs_Swedish_Styles.txt", "Approved_Humor_Examples.md"] }
+{ "goal": "Enforce company brand voice in all communications", "researchDocuments": ["Brand_Voice_Best_Practices.md", "Common_Tone_Mistakes.md"], "userDocuments": ["Company_Style_Guide.pdf", "Approved_Communication_Examples.txt"] }
+
+If no user documents were suggested, use an empty array: "userDocuments": []
 
 Do not add *any* conversational text or markdown formatting around this JSON.` }]
         }

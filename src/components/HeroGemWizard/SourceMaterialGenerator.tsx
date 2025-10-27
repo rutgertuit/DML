@@ -3,7 +3,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { callGeminiApi } from '../../services/aiStudioService';
 
 interface SourceMaterialGeneratorProps {
-  gemPlan: { goal: string, requiredDocuments: string[] };
+  gemPlan: {
+    goal: string,
+    researchDocuments: string[],
+    userDocuments: string[]
+  };
   onFilesConfirmed: () => void;
 }
 
@@ -20,7 +24,7 @@ const SourceMaterialGenerator: React.FC<SourceMaterialGeneratorProps> = ({ gemPl
 
   useEffect(() => {
     const fetchSourcePrompts = async () => {
-      if (!gemPlan || !gemPlan.requiredDocuments) return;
+      if (!gemPlan || !gemPlan.researchDocuments) return;
 
       setIsLoading(true);
       setError(null);
@@ -28,7 +32,8 @@ const SourceMaterialGenerator: React.FC<SourceMaterialGeneratorProps> = ({ gemPl
       const generatedPrompts: { name: string, prompt: string }[] = [];
 
       try {
-        for (const documentName of gemPlan.requiredDocuments) {
+        // Only generate prompts for research documents
+        for (const documentName of gemPlan.researchDocuments) {
           // Set currently generating document
           setCurrentlyGenerating(documentName);
 
@@ -43,12 +48,12 @@ Your task is to generate a detailed, copy-and-paste-ready research prompt for th
 
 - DO NOT ask for personal information, private documents, or user-specific data
 - DO focus on publicly available information, best practices, established methods, and industry standards
-- Your entire output *is* the research prompt for the user
-- Start with "To create your research document '${documentName}', use this prompt:"
+- Your *entire output* is ONLY the research prompt itself - ready to copy and paste
+- DO NOT include any introductory text like "To create your research document..." or "Use this prompt:"
+- Start directly with the research instruction
 
-Example Output:
-"To create your research document 'React_Best_Practices.md', use this prompt:
-'Please research and compile current React development best practices. Include: 1) Modern React patterns and hooks usage, 2) Performance optimization techniques, 3) Common anti-patterns to avoid, 4) Industry-standard file organization, 5) Popular testing approaches. Format as a comprehensive guide with examples and explanations.'"`;
+Example Output (for a document named 'React_Best_Practices.md'):
+"Please research and compile current React development best practices. Include: 1) Modern React patterns and hooks usage, 2) Performance optimization techniques, 3) Common anti-patterns to avoid, 4) Industry-standard file organization, 5) Popular testing approaches. Format as a comprehensive guide with examples and explanations."`;
 
           // THIS IS THE FIX: AWAIT THE *RESULT* OF THE API CALL
           const apiResult = await callGeminiApi(metaPrompt);
@@ -108,6 +113,52 @@ Example Output:
     <div>
       <h3 className="font-display text-2xl font-bold text-text-light mb-4">Step 3: Generate Source Material Prompts</h3>
 
+      {/* Document Overview Section */}
+      {!isLoading && !error && (
+        <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Research Documents */}
+          {gemPlan.researchDocuments.length > 0 && (
+            <div className="bg-primary/10 border border-primary/30 rounded-lg p-4">
+              <h4 className="font-bold text-primary mb-2 flex items-center gap-2">
+                <span>📚</span>
+                <span>Research Documents</span>
+              </h4>
+              <p className="text-xs text-text-light/70 mb-3">We'll help you generate these:</p>
+              <ul className="space-y-1 text-sm text-text-light/80">
+                {gemPlan.researchDocuments.map((doc: string) => (
+                  <li key={doc} className="flex items-start gap-2">
+                    <span className="text-primary">•</span>
+                    <span>{doc}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* User Documents */}
+          {gemPlan.userDocuments.length > 0 && (
+            <div className="bg-secondary/10 border border-secondary/30 rounded-lg p-4">
+              <h4 className="font-bold text-secondary mb-2 flex items-center gap-2">
+                <span>👤</span>
+                <span>Your Personal Documents</span>
+              </h4>
+              <p className="text-xs text-text-light/70 mb-3">You'll add these yourself later:</p>
+              <ul className="space-y-1 text-sm text-text-light/80">
+                {gemPlan.userDocuments.map((doc: string) => (
+                  <li key={doc} className="flex items-start gap-2">
+                    <span className="text-secondary">•</span>
+                    <span>{doc}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-text-light/60 mt-3 italic">
+                ℹ️ These will be referenced in your final Gem instruction
+              </p>
+            </div>
+          )}
+        </div>
+      )}
+
       {isLoading ? (
         <div className="flex flex-col py-8">
           <div className="mb-6 text-center">
@@ -118,7 +169,7 @@ Example Output:
 
           {/* Document-by-document progress */}
           <div className="space-y-3 max-w-2xl mx-auto w-full">
-            {gemPlan.requiredDocuments.map((doc) => {
+            {gemPlan.researchDocuments.map((doc: string) => {
               const isCompleted = completedDocuments.includes(doc);
               const isGenerating = currentlyGenerating === doc;
 
@@ -211,8 +262,8 @@ Example Output:
                     <button
                       onClick={() => handleCopy(sourcePrompts[currentPromptIndex]?.prompt || '', sourcePrompts[currentPromptIndex]?.name || '')}
                       className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 font-bold rounded-lg transition-all ${!hasCopiedCurrent
-                          ? 'bg-primary text-background-dark hover:shadow-glow-blue shadow-md animate-pulse'
-                          : 'bg-secondary/20 text-text-light/70 border border-secondary/30'
+                        ? 'bg-primary text-background-dark hover:shadow-glow-blue shadow-md animate-pulse'
+                        : 'bg-secondary/20 text-text-light/70 border border-secondary/30'
                         }`}
                     >
                       <span>{copied === sourcePrompts[currentPromptIndex]?.name ? '✓' : '📋'}</span>
@@ -225,8 +276,8 @@ Example Output:
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 font-bold rounded-lg transition-all ${hasCopiedCurrent
-                          ? 'bg-secondary text-background-dark hover:shadow-glow-purple shadow-md'
-                          : 'bg-secondary/20 text-text-light/50 border border-secondary/30 cursor-not-allowed'
+                        ? 'bg-secondary text-background-dark hover:shadow-glow-purple shadow-md'
+                        : 'bg-secondary/20 text-text-light/50 border border-secondary/30 cursor-not-allowed'
                         }`}
                       onClick={(e) => {
                         if (!hasCopiedCurrent) {

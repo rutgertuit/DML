@@ -10,7 +10,11 @@ export const HeroGemWizard: React.FC = () => {
   const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedBlueprint, setSelectedBlueprint] = useState<string | null>(null);
-  const [gemPlan, setGemPlan] = useState<{ goal: string, requiredDocuments: string[] } | null>(null);
+  const [gemPlan, setGemPlan] = useState<{
+    goal: string,
+    researchDocuments: string[],
+    userDocuments: string[]
+  } | null>(null);
   const [hasConfirmedFiles, setHasConfirmedFiles] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const step2Ref = useRef<HTMLDivElement>(null);
@@ -33,7 +37,11 @@ export const HeroGemWizard: React.FC = () => {
     setCurrentStep(1);
   };
 
-  const handlePlanCreated = (plan: { goal: string, requiredDocuments: string[] }) => {
+  const handlePlanCreated = (plan: {
+    goal: string,
+    researchDocuments: string[],
+    userDocuments: string[]
+  }) => {
     setGemPlan(plan);
     setCurrentStep(3);
   };

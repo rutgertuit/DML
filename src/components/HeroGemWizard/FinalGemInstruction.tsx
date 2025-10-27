@@ -3,7 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { callGeminiApi } from '../../services/aiStudioService';
 
 interface FinalGemInstructionProps {
-  gemPlan: { goal: string, requiredDocuments: string[] };
+  gemPlan: {
+    goal: string,
+    researchDocuments: string[],
+    userDocuments: string[]
+  };
 }
 
 const FinalGemInstruction: React.FC<FinalGemInstructionProps> = ({ gemPlan }) => {
@@ -18,14 +22,16 @@ const FinalGemInstruction: React.FC<FinalGemInstructionProps> = ({ gemPlan }) =>
       setError(null);
 
       try {
+        const allDocuments = [...gemPlan.researchDocuments, ...gemPlan.userDocuments];
         const finalInstructionMetaPrompt = `You are a 'Vibe Coding Prompt Engineer' and your job is to write a final, RAG-ready system instruction for a user.
 The user's 'Gem Plan' is: ${JSON.stringify(gemPlan)}
 
 Your task is to generate the complete, copy-paste-ready system instruction.
 - It MUST start with a persona definition based on the 'goal'.
-- It MUST explicitly instruct the AI to constrain its knowledge *exclusively* to the provided source documents: ${gemPlan.requiredDocuments.join(', ')}.
+- It MUST explicitly instruct the AI to constrain its knowledge *exclusively* to the provided source documents: ${allDocuments.join(', ')}.
 - It MUST instruct the AI to *always* cite the specific source file it used.
 - It MUST include a structured 4-step workflow (e.g., 1. Analyze Request, 2. Cite Source, 3. Formulate Strategy, 4. Ask Question).
+- If there are userDocuments, remind the user they must upload these files themselves when using the Gem.
 - Your entire output must be the final system instruction, ready for the user to copy. DO NOT add any conversational preamble.`;
 
         const generatedInstruction = await callGeminiApi(finalInstructionMetaPrompt);
@@ -97,11 +103,29 @@ Your task is to generate the complete, copy-paste-ready system instruction.
           </div>
         </div>
         <div className="reminder-checklist mt-6">
-          <h4 className="font-bold text-text-light mb-2">Reminder Checklist</h4>
-          <p className="font-body text-text-light/80 mb-4">Remember to upload the following files to your LLM:</p>
-          <ul className="list-disc list-inside text-text-light/80 space-y-2">
-            {gemPlan.requiredDocuments.map(doc => <li key={doc}>{doc}</li>)}
-          </ul>
+          <h4 className="font-bold text-text-light mb-2">📋 Reminder: Upload These Files to Your Gem</h4>
+          <p className="font-body text-text-light/80 mb-4">When using this Gem, make sure to upload these documents:</p>
+
+          {gemPlan.researchDocuments.length > 0 && (
+            <div className="mb-4">
+              <p className="text-sm font-bold text-primary mb-2">✅ Research Documents (Generated):</p>
+              <ul className="list-disc list-inside text-text-light/80 space-y-1 ml-4">
+                {gemPlan.researchDocuments.map((doc: string) => <li key={doc}>{doc}</li>)}
+              </ul>
+            </div>
+          )}
+
+          {gemPlan.userDocuments.length > 0 && (
+            <div className="p-4 bg-secondary/10 border border-secondary/30 rounded-lg">
+              <p className="text-sm font-bold text-secondary mb-2">⚠️ User Documents (You Must Add):</p>
+              <ul className="list-disc list-inside text-text-light/80 space-y-1 ml-4">
+                {gemPlan.userDocuments.map((doc: string) => <li key={doc}>{doc}</li>)}
+              </ul>
+              <p className="text-xs text-text-light/60 mt-2 italic">
+                These are your personal files. Upload them to Google AI Studio or your LLM when using this Gem.
+              </p>
+            </div>
+          )}
         </div>
       </div>
     );
