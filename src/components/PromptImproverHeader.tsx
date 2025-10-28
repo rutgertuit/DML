@@ -20,12 +20,23 @@ export const PromptImproverHeader: React.FC = () => {
             </h2>
 
             <p className="font-body text-text-light/85 mb-4 leading-relaxed">
-                {t('promptImproverHeader.paragraph1')}{' '}
-                <span className="text-secondary font-bold">{t('promptImproverHeader.magicPhrase')}</span>
+                {t('promptImproverHeader.paragraph1')}
             </p>
 
             <p className="font-body text-text-light/85 mb-4 leading-relaxed">
                 {t('promptImproverHeader.paragraph2')}
+            </p>
+
+            <p className="font-body text-text-light/85 mb-4 leading-relaxed">
+                {t('promptImproverHeader.paragraph3')}
+            </p>
+
+            <p className="font-body text-text-light/85 mb-4 leading-relaxed">
+                {t('promptImproverHeader.paragraph4')}
+            </p>
+
+            <p className="font-body text-text-light/85 mb-6 leading-relaxed">
+                {t('promptImproverHeader.paragraph5')}
             </p>
 
             {/* Two Options Section */}
@@ -33,7 +44,7 @@ export const PromptImproverHeader: React.FC = () => {
                 <h3 className="font-display text-lg font-bold text-primary mb-2">
                     {t('promptImproverHeader.optionsTitle')}
                 </h3>
-                <ul className="space-y-2 text-text-light/85 font-body">
+                <ul className="space-y-2 text-text-light/85 font-body mb-3">
                     <li className="flex items-start gap-2">
                         <span className="text-primary font-bold">1.</span>
                         <span>{t('promptImproverHeader.option1')}</span>
@@ -43,6 +54,9 @@ export const PromptImproverHeader: React.FC = () => {
                         <span>{t('promptImproverHeader.option2')}</span>
                     </li>
                 </ul>
+                <p className="text-text-light font-semibold italic mt-3">
+                    {t('promptImproverHeader.optionsClosing')}
+                </p>
             </div>
 
             <details className="group">

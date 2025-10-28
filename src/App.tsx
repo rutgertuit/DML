@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
+import IntroSection from './components/IntroSection';
 import PromptImprover from './components/PromptImprover';
 import HeroGemWizard from './components/HeroGemWizard/HeroGemWizard';
 import NotebookLM from './components/NotebookLM';
@@ -126,6 +127,11 @@ function App() {
 
         {/* Section Divider */}
         <div className="my-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+
+        <IntroSection />
+
+        {/* Section Divider */}
+        <div className="my-16 h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-30"></div>
 
         <PromptImprover />
 

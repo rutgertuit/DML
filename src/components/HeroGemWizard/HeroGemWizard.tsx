@@ -54,9 +54,12 @@ export const HeroGemWizard: React.FC = () => {
   return (
     <section ref={sectionRef} id="hero-gem-wizard" className="py-24 overflow-hidden break-words">
       <div className="bg-card-dark rounded-xl shadow-lg border border-secondary/30 p-8 mb-8">
-        <h2 className="font-display text-4xl font-bold text-primary mb-6 text-center">
+        <h2 className="font-display text-4xl font-bold text-primary mb-2 text-center">
           {t('heroGemWizard.title')}
         </h2>
+        <p className="font-display text-xl text-text-light/70 mb-6 text-center">
+          {t('heroGemWizard.subtitle')}
+        </p>
 
         {/* Fun Explainer with Character and Speech Bubble - ALWAYS VISIBLE */}
         <div className="flex flex-col md:flex-row items-center gap-8 mb-12 p-8 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl border border-primary/20">
@@ -73,7 +76,8 @@ export const HeroGemWizard: React.FC = () => {
               {/* Arrow pointing to character */}
               <div className="absolute -left-3 top-8 w-0 h-0 border-l-0 border-r-8 border-t-6 border-b-6 border-r-primary/40 border-t-transparent border-b-transparent"></div>
 
-              <h3 className="font-display text-xl font-bold text-primary mb-3">{t('heroGemWizard.introTitle')}</h3>
+              <h3 className="font-display text-xl font-bold text-primary mb-2">{t('heroGemWizard.introTitle')}</h3>
+              <p className="text-text-light/85 font-body mb-4">{t('heroGemWizard.introTitle2')}</p>
 
               <div className="space-y-3 text-text-light/85 font-body">
                 <p>
@@ -84,6 +88,9 @@ export const HeroGemWizard: React.FC = () => {
                 </p>
                 <p>
                   <span className="font-bold text-primary">{t('heroGemWizard.introPara3').split('.')[0]}.</span> {t('heroGemWizard.introPara3').split('.').slice(1).join('.')}
+                </p>
+                <p className="italic text-text-light/90">
+                  {t('heroGemWizard.introPara4')}
                 </p>
               </div>
 
