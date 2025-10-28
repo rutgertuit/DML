@@ -51,7 +51,7 @@ export const FlowVibe: React.FC = () => {
               </div>
               <div>
                 <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.toolsLabel')}</p>
-                                <p className="text-text-light/80">
+                <p className="text-text-light/80">
                   <a href={t('flowVibe.vibe.tool1Url')} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{t('flowVibe.vibe.tool1Name')}</a>,
                   <a href={t('flowVibe.vibe.tool2Url')} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{t('flowVibe.vibe.tool2Name')}</a>
                 </p>
@@ -83,9 +83,6 @@ export const FlowVibe: React.FC = () => {
               {t('flowVibe.vibe.exampleLink')}
             </a>
             {' '}{t('flowVibe.vibe.exampleText')}
-          </p>
-          <p className="font-mono text-xs text-text-light/60 mt-1">
-            {t('flowVibe.vibe.exampleNL')}
           </p>
         </div>
       </div>
