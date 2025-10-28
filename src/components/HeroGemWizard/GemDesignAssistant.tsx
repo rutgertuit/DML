@@ -21,6 +21,7 @@ const GemDesignAssistant: React.FC<GemDesignAssistantProps> = ({ selectedBluepri
   const [error, setError] = useState<string | null>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
   const finalizeButtonRef = useRef<HTMLButtonElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
 
   // System prompt for the Gem Design Assistant
   const SYSTEM_PROMPT = `
@@ -142,6 +143,13 @@ Example for "Strategic Advisor":
     }
   }, [messages.length, isLoading]);
 
+  // Scroll to Step 2 title when component mounts
+  useEffect(() => {
+    if (titleRef.current) {
+      titleRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []); // Run once on mount
+
   const handleSend = async () => {
     if (!input.trim()) return;
 
@@ -245,7 +253,7 @@ Do not add *any* conversational text or markdown formatting around this JSON.` }
 
   return (
     <div>
-      <h3 className="font-display text-2xl font-bold text-text-light mb-4">Step 2: Design Your Gem with an AI Assistant</h3>
+      <h3 ref={titleRef} className="font-display text-2xl font-bold text-text-light mb-4">Step 2: Design Your Gem with an AI Assistant</h3>
 
       {/* Header with Go Back button and Blueprint display */}
       <div className="flex justify-between items-center pb-4 mb-4 border-b border-secondary/30">

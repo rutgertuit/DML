@@ -165,11 +165,11 @@
     "card6Desc": "The Power-User's Command Center"
   },
   "howItWasMade": {
-    "title": "The Meta-Workflow: How This Site Was Built",
+    "title": "A Workflow That Built This Website",
     "intro1": "It started with a problem. I was brainstorming a presentation in my car (using Gemini Live) and had a thought: How many times have you seen a great demo, only to forget it seconds later?",
     "intro2": "It's annoying. You see a practical tool, but the workflow—the how and why—is lost.",
     "intro3": "I decided the presentation shouldn't just show my favorite AI workflows; it should be the workflow. This website is the result. It's a 'Gem' built using the very tools it demonstrates.",
-    "intro4": "Here is the 5-step process I used, evolving from a 'vibe' to a 'signal' to build this production-ready site.",
+    "intro4": "Here is the 6-step process I used, evolving from a 'vibe' to a 'signal' to build this production-ready site.",
     "problemLabel": "Problem:",
     "toolLabel": "Tool:",
     "actionLabel": "Action:",
@@ -213,6 +213,14 @@
       "tool": "GitHub & Google Cloud Run",
       "action": "I pushed the final application code to a GitHub repository. That repository is connected to Google Cloud Run, which automatically builds and deploys the site, making it live and scalable with a single command.",
       "outcome": "You're looking at it."
+    },
+    "step6": {
+      "step": "Step 6: Polishing",
+      "title": "(The \"Refinement\")",
+      "problem": "The content was functional, but did it resonate with a Dutch audience? Were the tone, style, and cultural references on point?",
+      "tool": "Custom Gem (Dutch Communication Preferences)",
+      "action": "I created a custom Gem trained on Dutch communication preferences and audience expectations. I fed it all the website copy and asked it to refine the language, tone, and messaging to better connect with this specific audience.",
+      "outcome": "Culturally-tuned copy that speaks directly to the Dutch market, making the site feel more personal and relevant."
     }
   },
   "footer": {

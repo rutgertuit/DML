@@ -165,11 +165,11 @@
     "card6Desc": "Het Command Center voor Power-Users"
   },
   "howItWasMade": {
-    "title": "De Meta-Workflow: Hoe Deze Site Werd Gebouwd",
+    "title": "Een Workflow Die Deze Website Bouwde",
     "intro1": "Het begon met een probleem. Ik was aan het brainstormen voor een presentatie in mijn auto (met Gemini Live) en had een gedachte: Hoe vaak heb je een geweldige demo gezien, om die seconden later weer te vergeten?",
     "intro2": "Het is vervelend. Je ziet een praktisch hulpmiddel, maar de workflow - het hoe en waarom - gaat verloren.",
     "intro3": "Ik besloot dat de presentatie niet alleen mijn favoriete AI-workflows moest laten zien; het moest de workflow zijn. Deze website is het resultaat. Het is een 'Gem' gebouwd met de tools die het demonstreert.",
-    "intro4": "Hier is het 5-stappenproces dat ik heb gebruikt, evoluerend van een 'vibe' naar een 'signaal' om deze productieklare site te bouwen.",
+    "intro4": "Hier is het 6-stappenproces dat ik heb gebruikt, evoluerend van een 'vibe' naar een 'signaal' om deze productieklare site te bouwen.",
     "problemLabel": "Probleem:",
     "toolLabel": "Tool:",
     "actionLabel": "Actie:",
@@ -213,6 +213,14 @@
       "tool": "GitHub & Google Cloud Run",
       "action": "Ik heb de uiteindelijke applicatiecode naar een GitHub-repository gepusht. Die repository is verbonden met Google Cloud Run, die de site automatisch bouwt en implementeert, waardoor deze met één commando live en schaalbaar wordt.",
       "outcome": "Je kijkt ernaar."
+    },
+    "step6": {
+      "step": "Stap 6: Verfijning",
+      "title": "(De \"Polijsting\")",
+      "problem": "De inhoud was functioneel, maar resoneerde het met een Nederlands publiek? Waren de toon, stijl en culturele verwijzingen op punt?",
+      "tool": "Custom Gem (Nederlandse Communicatievoorkeuren)",
+      "action": "Ik creëerde een op maat gemaakte Gem getraind op Nederlandse communicatievoorkeuren en publieksverwachtingen. Ik voedde het alle website-teksten en vroeg het om de taal, toon en boodschap te verfijnen om beter te connecteren met dit specifieke publiek.",
+      "outcome": "Cultureel afgestemde teksten die direct spreken tot de Nederlandse markt, waardoor de site persoonlijker en relevanter aanvoelt."
     }
   },
   "footer": {

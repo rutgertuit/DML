@@ -52,6 +52,14 @@ const HowItWasMade = () => {
       action: t('howItWasMade.step5.action'),
       outcome: t('howItWasMade.step5.outcome'),
     },
+    {
+      step: t('howItWasMade.step6.step'),
+      title: t('howItWasMade.step6.title'),
+      problem: t('howItWasMade.step6.problem'),
+      tool: t('howItWasMade.step6.tool'),
+      action: t('howItWasMade.step6.action'),
+      outcome: t('howItWasMade.step6.outcome'),
+    },
   ];
 
   return (
@@ -139,12 +147,12 @@ function App() {
         {/* Section Divider */}
         <div className="my-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
 
-        <Toolkit />
+        <HowItWasMade />
 
         {/* Section Divider */}
         <div className="my-16 h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-30"></div>
 
-        <HowItWasMade />
+        <Toolkit />
       </main>
       <Footer />
     </div>
