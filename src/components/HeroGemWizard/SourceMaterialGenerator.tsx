@@ -24,7 +24,21 @@ const SourceMaterialGenerator: React.FC<SourceMaterialGeneratorProps> = ({ gemPl
 
   useEffect(() => {
     const fetchSourcePrompts = async () => {
-      if (!gemPlan || !gemPlan.researchDocuments) return;
+      // Debug logging
+      console.log('SourceMaterialGenerator - gemPlan:', gemPlan);
+      console.log('SourceMaterialGenerator - researchDocuments:', gemPlan?.researchDocuments);
+      console.log('SourceMaterialGenerator - userDocuments:', gemPlan?.userDocuments);
+
+      if (!gemPlan || !gemPlan.researchDocuments) {
+        console.warn('SourceMaterialGenerator - No gemPlan or researchDocuments found');
+        return;
+      }
+
+      if (gemPlan.researchDocuments.length === 0) {
+        console.error('SourceMaterialGenerator - researchDocuments array is EMPTY! This should not happen.');
+        setError('No research documents found. Please restart the wizard and ensure research documents are suggested.');
+        return;
+      }
 
       setIsLoading(true);
       setError(null);
@@ -33,6 +47,7 @@ const SourceMaterialGenerator: React.FC<SourceMaterialGeneratorProps> = ({ gemPl
 
       try {
         // Only generate prompts for research documents
+        console.log(`SourceMaterialGenerator - Generating ${gemPlan.researchDocuments.length} research prompts`);
         for (const documentName of gemPlan.researchDocuments) {
           // Set currently generating document
           setCurrentlyGenerating(documentName);

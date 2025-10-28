@@ -55,8 +55,9 @@ Your workflow is THREE-part:
     -   If user says NO or provides no documents: Set userDocuments to empty array []
     -   If user provides filenames: Record them exactly as provided
 
-3.  **SUGGEST RESEARCH DOCUMENTS:** After getting user documents (or confirmation they have none), suggest 2-3 research documents you'll help them generate. Explain why each is needed for their specific goal.
+3.  **SUGGEST RESEARCH DOCUMENTS (MANDATORY):** After getting user documents (or confirmation they have none), you MUST suggest 1-3 research documents you'll help them generate. This step is REQUIRED - every Gem needs research documents. Explain why each is needed for their specific goal.
 
+-   CRITICAL: You MUST ALWAYS suggest at least 1-3 research documents. This is not optional.
 -   DO NOT ask the user "what documents do you think you need?" for research documents. You are the expert.
 -   DO NOT suggest user documents. ASK what they have, don't tell them.
 -   DO NOT output "FINAL PLAN" or JSON. Just chat and make suggestions.
@@ -191,8 +192,10 @@ Example for "Strategic Advisor":
 The final plan must be optimized for a "${selectedBlueprint}" Gem.
 
 Find the *refined goal* the user and AI agreed on, and extract TWO lists of documents:
-1. **researchDocuments**: Publicly available documents the AI will help generate
-2. **userDocuments**: Personal/private documents the user will provide themselves
+1. **researchDocuments**: Publicly available documents the AI will help generate (MUST have at least 1-3 documents)
+2. **userDocuments**: Personal/private documents the user will provide themselves (can be empty if none mentioned)
+
+CRITICAL: There MUST be at least ONE research document. If the conversation didn't explicitly mention research documents, you must infer appropriate ones based on the goal and blueprint type.
 
 Your *entire response* MUST be *only* a minified JSON object based on this final plan.
 DO NOT use placeholders. Use the *actual* goal and document names from the chat.
@@ -200,7 +203,8 @@ DO NOT use placeholders. Use the *actual* goal and document names from the chat.
 Example format:
 { "goal": "Enforce company brand voice in all communications", "researchDocuments": ["Brand_Voice_Best_Practices.md", "Common_Tone_Mistakes.md"], "userDocuments": ["Company_Style_Guide.pdf", "Approved_Communication_Examples.txt"] }
 
-If no user documents were suggested, use an empty array: "userDocuments": []
+If no user documents were mentioned, use an empty array: "userDocuments": []
+If research documents weren't explicitly mentioned, infer them based on the goal.
 
 Do not add *any* conversational text or markdown formatting around this JSON.` }]
         }
@@ -208,8 +212,23 @@ Do not add *any* conversational text or markdown formatting around this JSON.` }
 
       const jsonStringResponse = await getScribeResponse(apiHistory);
 
+      // Debug logging
+      console.log('GemDesignAssistant - Raw JSON response:', jsonStringResponse);
+
       // Try to parse the JSON response
       const parsedPlan = JSON.parse(jsonStringResponse.trim());
+
+      // Debug logging
+      console.log('GemDesignAssistant - Parsed plan:', parsedPlan);
+      console.log('GemDesignAssistant - researchDocuments count:', parsedPlan.researchDocuments?.length || 0);
+      console.log('GemDesignAssistant - userDocuments count:', parsedPlan.userDocuments?.length || 0);
+
+      // Validate that we have at least 1 research document
+      if (!parsedPlan.researchDocuments || parsedPlan.researchDocuments.length === 0) {
+        console.error('GemDesignAssistant - CRITICAL: Plan has ZERO research documents! This should not happen.');
+        throw new Error('Plan must have at least 1 research document');
+      }
+
       onPlanCreated(parsedPlan);
 
     } catch (e) {
