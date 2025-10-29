@@ -39,12 +39,9 @@ export const Toolkit: React.FC = () => {
 
   return (
     <section className="py-24" id="toolkit">
-      <h2 className="font-display text-4xl font-bold text-text-light mb-4">
+      <h2 className="font-display text-4xl font-bold text-text-light mb-12">
         {t('toolkit.title')}
       </h2>
-      <p className="font-body text-lg text-text-light/70 mb-12 text-center">
-        {t('toolkit.subtitle')}
-      </p>
 
       {/* Responsive Grid:
         - Mobile (default): 1 column (grid-cols-1)

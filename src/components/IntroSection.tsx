@@ -16,7 +16,9 @@ const IntroSection = () => {
                     {/* Paragraphs */}
                     <div className="space-y-6 text-text-light/90 leading-relaxed">
                         <p className="text-lg md:text-xl">
-                            {t('intro.paragraph1')}
+                            {t('intro.paragraph1.part1')}{' '}
+                            <em className="text-primary font-semibold">{t('intro.paragraph1.emphasis')}</em>{' '}
+                            {t('intro.paragraph1.part2')}
                         </p>
 
                         <p className="text-lg md:text-xl font-semibold text-text-light">
@@ -24,8 +26,20 @@ const IntroSection = () => {
                         </p>
 
                         <p className="text-lg md:text-xl">
-                            {t('intro.paragraph3')}
+                            {t('intro.paragraph3.part1')}{' '}
+                            <strong className="text-secondary font-bold">{t('intro.paragraph3.emphasis')}</strong>
                         </p>
+
+                        <p className="text-lg md:text-xl">
+                            {t('intro.paragraph4')}
+                        </p>
+
+                        {/* CTA */}
+                        <div className="mt-8 pt-6 border-t border-primary/20">
+                            <p className="text-xl md:text-2xl font-bold text-center text-primary animate-pulse">
+                                {t('intro.cta')} 👇
+                            </p>
+                        </div>
                     </div>
                 </div>
 
