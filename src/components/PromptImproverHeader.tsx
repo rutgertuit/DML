@@ -53,39 +53,11 @@ export const PromptImproverHeader: React.FC = () => {
                 {t('promptImproverHeader.paragraph2')}
             </p>
 
-            <p className="font-body text-text-light/85 mb-4 leading-relaxed">
+            <p className="font-body text-text-light/85 mb-6 leading-relaxed">
                 {t('promptImproverHeader.paragraph3')}
             </p>
 
-            <p className="font-body text-text-light/85 mb-4 leading-relaxed">
-                {t('promptImproverHeader.paragraph4')}
-            </p>
-
-            <p className="font-body text-text-light/85 mb-6 leading-relaxed">
-                {t('promptImproverHeader.paragraph5')}
-            </p>
-
-            {/* Two Options Section */}
-            <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-4">
-                <h3 className="font-display text-lg font-bold text-primary mb-2">
-                    {t('promptImproverHeader.optionsTitle')}
-                </h3>
-                <ul className="space-y-2 text-text-light/85 font-body mb-3">
-                    <li className="flex items-start gap-2">
-                        <span className="text-primary font-bold">1.</span>
-                        <span>{t('promptImproverHeader.option1')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                        <span className="text-secondary font-bold">2.</span>
-                        <span>{t('promptImproverHeader.option2')}</span>
-                    </li>
-                </ul>
-                <p className="text-text-light font-semibold italic mt-3">
-                    {t('promptImproverHeader.optionsClosing')}
-                </p>
-            </div>
-
-            <details className="group">
+            <details className="group">{/* Copy button and details content... */}
                 <summary className="font-mono text-sm uppercase cursor-pointer text-secondary hover:text-primary transition-colors list-none flex items-center gap-2">
                     <span className="group-open:rotate-90 transition-transform inline-block">▶</span>
                     {t('promptImproverHeader.summaryText')}

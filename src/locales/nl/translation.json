@@ -7,26 +7,16 @@
     "toolkit": "Toolkit"
   },
   "hero": {
-    "title": "Marketing & Effie Live - de AI-ftershow",
-    "subtitle": "Upgrade Je Stack. Een Tactische Gids voor Vibe Coding, Hero Gems, en NotebookLM.",
-    "cta1": "Ik moet snel een prototype bouwen.",
-    "cta2": "Ik heb AI nodig gebaseerd op mijn eigen data.",
-    "cta3": "Ik moet 50 documenten synthetiseren."
+    "title": "Marketing & Effie Live: de AI-ftershow",
+    "subtitle": "Bedankt voor het bijwonen van de presentatie! In plaats van je aantekeningen te laten maken, heb ik deze site gebouwd zodat je de tools die ik net heb laten zien ook echt kunt uitproberen.",
+    "cta1": "Alles hier is live en interactief. De prompts zijn niet alleen gedeeld—ze zijn ingebed zodat je ze zelf kunt testen. Zie dit als je post-presentatie handout, maar dan veel nuttiger.",
+    "cta2": "Kies wat je eerst wilt proberen:"
   },
   "intro": {
-    "title": "Van Speelgoed naar Gereedschap: Waarom Deze Site Bestaat",
-    "paragraph1": {
-      "part1": "We hebben het allemaal wel eens meegemaakt. Je ziet een demo van AI die iets ongelooflijks doet, en je denkt,",
-      "emphasis": "\"Dat moet ik gebruiken.\"",
-      "part2": "Maar dan... doe je het niet. Of je probeert het één keer, en het voelt als speelgoed, niet als gereedschap."
-    },
-    "paragraph2": "Deze site is anders. Het is geen verzameling tips—het is een systeem om AI onmisbaar te maken.",
-    "paragraph3": {
-      "part1": "Elke tool hier is ontworpen om één vraag te beantwoorden:",
-      "emphasis": "Hoe maak ik AI mijn nieuwe voorsprong?"
-    },
-    "paragraph4": "Of je nu snel een prototype moet bouwen, AI moet baseren op je eigen data, of 50 documenten moet synthetiseren, je vindt hieronder precies de workflow die je nodig hebt. Geen theorie. Alleen tools die je echt gaat gebruiken.",
-    "cta": "Klaar? Kies je uitdaging hieronder."
+    "title": "Waarom een website in plaats van slides?",
+    "paragraph1": "Je kent het wel: je ziet een geweldige demo in een presentatie, maakt aantekeningen en dan... gebruik je het nooit? Ik wilde dat oplossen.",
+    "paragraph2": "Deze site is eigenlijk mijn presentatie-notities—maar in plaats van alleen de prompts te delen die ik gebruik, heb ik ze ingebed zodat je ze live kunt proberen. Het is een beetje meta, maar het is veel nuttiger dan een PDF-handout.",
+    "paragraph3": "Alles hier is iets dat ik in de presentatie heb laten zien. Nu kun je het zelf testen."
   },
   "promptImprover": {
     "intro": "💡 Pro Tip: Een prompt aanscherpen met feedback (zoals je bij een junior creative zou doen) levert veel betere resultaten op dan een gok in één keer. Het is het verschil tussen een afgerond concept en terug naar de tekentafel.",
@@ -39,15 +29,9 @@
     "copy": "Kopieer naar klembord"
   },
   "heroGemWizard": {
-    "title": "Bouw je Eigen Expert",
-    "subtitle": "(En krijg nooit meer \"Als een groot taalmodel...\" als antwoord)",
-    "introTitle": "We kennen het allemaal. Je vraagt een generieke AI om de specifieke tone-of-voice van je klant, en je krijgt een lezing over \"het belang van branding.\" Of erger: \"Als een groot taalmodel, kan ik niet...\"",
-    "introTitle2": "Tijd om dat te fixen.",
-    "introPara1": "Stop met de briefing te herhalen. Train je AI één keer op zijn taak, persoonlijkheid en regels. Nooit meer opnieuw uitleggen—gewoon vragen en werk terugkrijgen dat on-brief is.",
-    "introPara2": "Krijg expertise, geen gokwerk. Een generieke AI is een manusje-van-alles. Dit is een meester in één ding: jouw merk, jouw data, jouw wereld. Hij gebruikt jouw bestanden voor deskundig advies, niet een samenvatting van het internet.",
-    "introPara3": "Maak het écht praktisch. Plan campagnes, schrijf e-mails in jouw stijl, analyseer concurrentie-onderzoek—met een AI die eindelijk jouw wereld snapt.",
-    "introPara4": "Zie het als het inhuren van een specialist die jouw brief nooit vergeet.",
-    "readyCTA": "Klaar? Kies je nieuwe expert hieronder en laten we bouwen. 👇",
+    "title": "Power Tip 2: Bouw Je Eigen Expert",
+    "subtitle": "Dit is de 'Hero Gem' die ik in de presentatie liet zien. In plaats van elke keer je context opnieuw uit te leggen, train je een custom AI één keer met je specifieke kennis, toon en regels.",
+    "introPara1": "Hieronder staan een paar voorbeelden die ik heb gebouwd. Kies er een om te zien hoe het werkt, of gebruik de builder om je eigen expert te maken.",
     "step1Title": "Stap 1: Kies je Expert",
     "blueprint1Title": "De Strategie-Expert",
     "blueprint1Desc": "Jouw on-demand researcher. Upload marktonderzoek, notities of producthandleidingen, en hij beantwoordt complexe vragen alleen op basis van die kennis.",
@@ -80,10 +64,10 @@
     "copied": "Gekopieerd!"
   },
   "notebookLM": {
-    "title": "NotebookLM: De \"Eén-Deck-om-Alles-te-Regeren\"-Tool",
-    "intro": "Je kent het wel. Je rondt het grote onderzoeksrapport af. Dan vraagt de CEO om een 'one-pager'. De CMO wil een deck van 10 slides. En het creatieve team wil alleen de belangrijkste inzichten voor een briefing.\n\nJe besteedt meer tijd aan herformatteren dan aan het eigenlijke onderzoek.\n\nStop met die copy-paste-nachtmerrie.",
-    "centralBrainTitle": "Het Centrale Brein voor je Kennis",
-    "centralBrainDesc": "NotebookLM verandert hoe je kennis deelt. Dump al je bronnen—transcripten, PDF's, decks, links—in één centraal 'brein' en vraag het om precies te genereren wat iedereen nodig heeft.\n\nEén bron van waarheid, oneindig veel formats. Krijg je week terug.",
+    "title": "Power Tip 3: Ontsnap aan de 'Format Val'",
+    "intro": "Dit is de NotebookLM-workflow die ik liet zien: upload al je bronnen één keer (PDF's, transcripten, onderzoek), en vraag het vervolgens om verschillende outputs te genereren voor verschillende doelgroepen.",
+    "centralBrainTitle": "Eén Bron van Waarheid, Oneindige Formats",
+    "centralBrainDesc": "De video hieronder laat precies zien hoe ik het gebruik.",
     "step1Title": "Input: Dump Alles",
     "step1Desc": "Transcripten, PDF's, links, spreadsheets—elke databron gaat in één Notebook. Stop met vooraf organiseren.",
     "step2Title": "Synthese: NotebookLM Begrijpt",
@@ -114,9 +98,9 @@
     "bonusTrendDesc": "Vraag het om patronen te vinden in al je klantinterviews, zoals \"Wat zijn de 3 sterkste onvervulde klantbehoeften?\""
   },
   "flowVibe": {
-    "title": "Krijg grip op je Nieuwe Superkrachten: Van 'Vibe' naar 'Signal'",
-    "subtitle": "De manier waarop we met AI praten verandert. Hier is een no-nonsense gids.",
-    "intro": "De manier waarop we met AI omgaan, evolueert. We zijn begonnen met conversationeel 'Vibe Coding', raakten in de war door de term 'Flow Coding', en gaan nu over op een preciezere en krachtigere methode: 'Signal Coding'. Deze gids is ontworpen om je te helpen deze evolutie meester te worden.",
+    "title": "Bonus: Vibe, Flow, Signal Coding",
+    "subtitle": "Dit zat niet in de hoofdpresentatie, maar als je nieuwsgierig bent naar de verschillende manieren om AI-prompts te structureren, hier is een korte uitleg van de drie benaderingen die ik gebruik.",
+    "intro": "Zie het als extra leesmateriaal als je dieper wilt duiken.",
     "liveExample": "Live Voorbeeld:",
     "vibe": {
       "title": "1. Vibe Coding (De \"Regisseur\" 🎬)",
@@ -154,22 +138,17 @@
     }
   },
   "promptImproverHeader": {
-    "title": "Ontgrendel de Magie: Hoe Meester Je Prompts 🚀",
-    "paragraph1": "Ken je dat gevoel als je AI om hulp vraagt en... niets bruikbaars krijgt? Dat komt niet omdat AI slecht is. Het komt omdat je prompt te vaag was.",
-    "paragraph2": "Dit is het ding: AI is een voorspellingsmachine. Als je zegt \"Vertel me over AI,\" heeft het oneindige richtingen om naartoe te gaan—dus krijg je generieke, ongefocuste output. Maar als je zegt \"Schrijf een blogpost van 500 woorden voor ontwikkelaars die transformerarchitectuur uitlegt, met analogieën en zonder zware wiskunde,\" geef je het duidelijke grenzen.",
-    "paragraph3": "Het verschil? Specificiteit. En specificiteit = magie. ✨",
-    "paragraph4": "Maar hier is het geheim: je hoeft niet te leren hoe je perfecte prompts schrijft. Je hoeft AI alleen maar te vragen om je te helpen ze te schrijven.",
-    "paragraph5": "Deze tool gebruikt een \"ingebakken\" systeeminstructie die fungeert als je expert Prompt Coach. In plaats van theorie te onderwijzen, stelt het de juiste vragen om hiaten in je denken bloot te leggen—missende context, onduidelijke doelstellingen, formaateisen—en bouwt het gezamenlijk een betere prompt met je door middel van begeleide dialoog.",
-    "optionsTitle": "Twee Manieren om de Prompt Improver te Gebruiken:",
-    "option1": "Gebruik de interactieve tool hieronder (de systeeminstructie zit al ingebouwd), OF",
-    "option2": "Kopieer de systeeminstructie en plak hem in je eigen LLM (ChatGPT, Claude, Gemini, etc.)",
-    "optionsClosing": "Hoe dan ook, je schrijft nooit meer een slechte prompt.",
+    "title": "Power Tip 1: Stop met Prompten. Begin met Debatteren.",
+    "paragraph1": "Weet je nog die hack uit de presentatie? In plaats van te proberen perfecte prompts te schrijven, vraag je AI gewoon om je te helpen ze te schrijven.",
+    "paragraph2": "Deze tool heeft de systeeminstructie al ingebouwd. Hij stelt je vragen om je prompt te verfijnen totdat 'ie echt goed is. Probeer het hieronder—plak het in ChatGPT, Claude of Gemini en kijk hoe het werkt.",
+    "paragraph3": "De prompt staat hier, klaar om te kopiëren:",
     "summaryText": "Toon/Kopieer de 'Prompt Director' Systeeminstructie",
     "copyButton": "Kopieer",
     "copiedButton": "Gekopieerd!"
   },
   "toolkit": {
-    "title": "Jouw AI Acceleratie Toolkit",
+    "title": "Extra Resources",
+    "subtitle": "Nog een paar tools en links die niet in de presentatie zaten, maar misschien nuttig zijn.",
     "card1Title": "Gemini in Google Workspace",
     "card1Desc": "Geïntegreerde Productiviteitssuite",
     "card2Title": "NotebookLM",
