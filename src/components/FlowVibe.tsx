@@ -52,8 +52,7 @@ export const FlowVibe: React.FC = () => {
               <div>
                 <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.toolsLabel')}</p>
                 <p className="text-text-light/80">
-                  <a href={t('flowVibe.vibe.tool1Url')} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{t('flowVibe.vibe.tool1Name')}</a>,
-                  <a href={t('flowVibe.vibe.tool2Url')} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{t('flowVibe.vibe.tool2Name')}</a>
+                  <a href={t('flowVibe.vibe.tool1Url')} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{t('flowVibe.vibe.tool1Name')}</a>
                 </p>
               </div>
             </div>

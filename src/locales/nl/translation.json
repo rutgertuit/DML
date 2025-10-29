@@ -130,8 +130,6 @@
       "toolsLabel": "Tools:",
       "tool1Name": "Google AI Studio",
       "tool1Url": "https://aistudio.google.com/",
-      "tool2Name": "ChatGPT",
-      "tool2Url": "https://chat.openai.com/",
       "example": "De",
       "exampleLink": "Prompt Verbeteraar",
       "exampleText": "op deze pagina maakt gebruik van Vibe Coding. Je geeft een ruw idee, en het stuurt de AI aan om het te verfijnen."

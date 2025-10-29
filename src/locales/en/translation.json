@@ -130,8 +130,6 @@
       "toolsLabel": "Tools:",
       "tool1Name": "Google AI Studio",
       "tool1Url": "https://aistudio.google.com/",
-      "tool2Name": "ChatGPT",
-      "tool2Url": "https://chat.openai.com/",
       "example": "The",
       "exampleLink": "Prompt Improver",
       "exampleText": "on this page uses Vibe Coding. You give it a rough idea, and it directs the AI to refine it."
