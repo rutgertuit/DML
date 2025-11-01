@@ -2,7 +2,7 @@
 
 ## About
 
-**AI-ftershow** is an interactive, single-page web application that demonstrates practical AI workflows using Google's AI ecosystem. Built as a tactical guide for AI implementation, it showcases "Signal Coding" techniques—moving beyond conversational AI to building reliable, production-ready AI applications.
+**AI-ftershow** is an interactive, single-page web application that demonstrates practical AI workflows using Google's Gemini ecosystem. Built as a tactical guide for AI implementation, it showcases "Vibe Coding" techniques—fast, conversational AI development for rapid prototyping and creative exploration.
 
 ### Purpose & Audience
 
@@ -10,22 +10,24 @@ This repository serves as both a functional demonstration and educational resour
 - **AI practitioners** looking to implement structured AI workflows
 - **Developers** interested in building AI-powered React applications  
 - **Product managers** exploring practical AI integration patterns
-- **Anyone** wanting to understand the evolution from "Vibe Coding" to "Signal Coding"
+- **Anyone** wanting to master Vibe Coding with Google's AI tools
 
 ### Key Features
 
-✅ **Interactive Prompt Improver** - Real-time AI-powered prompt refinement using Gemini 2.5 Flash API  
-✅ **Hero Gem Wizard** - Multi-step workflow for creating specialized AI assistants  
-✅ **NotebookLM Integration Guide** - Practical workflows for document-grounded AI  
-✅ **Dual Language Support** - Seamless English/Dutch localization  
+✅ **Interactive Prompt Improver** - Multi-modal AI prompt refinement (text/image/video) using Gemini 2.5 Flash API  
+✅ **Hero Gem Wizard** - 4-step workflow for creating custom AI experts (Gems) with research automation  
+✅ **NotebookLM Integration Guide** - Document-grounded AI workflows with multi-stakeholder perspectives  
+✅ **Vibe Coding Demonstration** - Real-world example of how this site was built  
+✅ **Dual Language Support** - Seamless English/Dutch localization via i18next  
 ✅ **Cyberpunk Design System** - Custom Tailwind theme with neon aesthetics  
 ✅ **Production-Ready Architecture** - TypeScript, React 19, and modern tooling  
 
 ## Current Status
 * **Status:** ✅ Live and Functional
-* **Last Updated:** October 27, 2025
+* **Last Updated:** November 1, 2025
 * **Deployment:** GitHub Pages with GitHub Actions CI/CD
-* **Environment:** Production-ready with environment variable configuration
+* **Environment:** Production-ready with secure environment variable configuration
+* **Live URL:** https://rutgertuit.github.io/DML/
 
 ## Tech Stack
 
@@ -66,7 +68,7 @@ This repository serves as both a functional demonstration and educational resour
     # Add your Gemini API key
     VITE_GEMINI_API_KEY=your_api_key_here
     ```
-    Get your API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+    Get your API key from [Google AI Studio](https://aistudio.google.com/apikey)
 
 4.  **Start development server:**
     ```bash
@@ -78,12 +80,6 @@ This repository serves as both a functional demonstration and educational resour
     ```bash
     npm run build
     ```
-
-5.  **Run the development server:**
-    ```bash
-    npm run dev
-    ```
-    The site will be available at `http://localhost:5173`
 
 ### Other Useful Commands
 
@@ -105,19 +101,40 @@ This repository serves as both a functional demonstration and educational resour
 ## Core Components
 
 ### 🤖 Prompt Improver
-Interactive AI-powered tool that refines prompts through guided dialogue using Gemini 2.5 Flash API. Features real-time chat interface, automatic prompt extraction, and one-click testing across multiple LLM platforms.
+Interactive AI-powered tool that refines prompts through guided dialogue using Gemini 2.5 Flash API. Features:
+- Multi-modal support (text, image, and video prompts)
+- Real-time chat interface with conversational refinement
+- Automatic prompt extraction and formatting
+- One-click testing across multiple LLM platforms
+- Modality-specific analysis criteria
 
 ### 💎 Hero Gem Wizard  
-Three-step workflow for creating specialized AI assistants:
-1. **Define Mission** - Domain, role, and core task specification
-2. **Deep Research** - Automated research prompt generation
-3. **Build Your Gem** - Complete system instruction creation
+Four-step workflow for creating custom AI experts (Gems):
+1. **Select Blueprint** - Choose from 6 pre-configured expert types
+2. **Design with AI** - Conversational assistant helps define your Gem's mission and documents
+3. **Generate Research Prompts** - Automated creation of research document prompts
+4. **Build Your Gem** - Complete system instruction with upload guide
 
 ### 📚 NotebookLM Integration
-Comprehensive guide demonstrating document-grounded AI workflows with stakeholder-specific output generation (CFO, CMO, CEO perspectives).
+Comprehensive guide demonstrating document-grounded AI workflows:
+- Multi-stakeholder output generation (CFO, CMO, CEO, CTO perspectives)
+- Pain point identification and solutions
+- 7 different output format examples from a single data source
 
-### 🎯 AI Workflow Philosophy
-Interactive explanation of the evolution from "Vibe Coding" (conversational prototyping) to "Signal Coding" (structured, production-ready AI applications).
+### 🎬 Vibe Coding
+Focused section explaining fast, conversational AI development:
+- What makes Vibe Coding great (Speed, Flexibility, Creativity)
+- Integrated tools showcase (Gemini, AI Studio, Google Stitch, Gemini CLI, GitHub)
+- Demo video placeholder for real-world example
+
+### 🔧 How It Was Made
+Behind-the-scenes 6-step workflow showing how this site was built using Vibe Coding:
+1. Blueprint (NotebookLM for research)
+2. Structure (AI Studio for scaffolding)
+3. Development (Gemini + Stitch for coding)
+4. Integration (Gemini CLI for testing)
+5. Deployment (GitHub for CI/CD)
+6. Polishing (Custom Gem for Dutch communication)
 
 ### 🛠️ Google AI Toolkit
 Curated collection of 6 Google AI tools with direct links:
@@ -135,29 +152,45 @@ DML/
 ├── .github/workflows/     # GitHub Actions CI/CD
 │   └── deploy.yml        # Automated deployment to GitHub Pages
 ├── public/               # Static assets
+│   └── locales/          # Translation files
+│       ├── en/translation.json  # English translations
+│       └── nl/translation.json  # Dutch translations
 ├── src/
 │   ├── components/       # React components
-│   │   ├── HeroGemWizard/# Multi-step wizard components
+│   │   ├── HeroGemWizard/# 4-step wizard components
+│   │   │   ├── HeroGemWizard.tsx        # Main wizard container
+│   │   │   ├── BlueprintSelector.tsx    # Step 1: Choose expert type
+│   │   │   ├── GemDesignAssistant.tsx   # Step 2: AI-assisted design
+│   │   │   ├── SourceMaterialGenerator.tsx # Step 3: Research prompts
+│   │   │   ├── FinalGemInstruction.tsx  # Step 4: Final output
+│   │   │   └── CopyButton.tsx           # Reusable copy utility
 │   │   ├── Header.tsx    # Navigation with language switcher
 │   │   ├── HeroSection.tsx# Landing section with video background
+│   │   ├── IntroSection.tsx# "From Toy to Tool" intro
 │   │   ├── PromptImprover.tsx# Interactive AI chat tool
+│   │   ├── PromptImproverHeader.tsx# Multi-modal prompt guide
 │   │   ├── NotebookLM.tsx# Document-grounded AI guide
-│   │   ├── FlowVibe.tsx  # AI workflow philosophy
+│   │   ├── FlowVibe.tsx  # Vibe Coding section
 │   │   ├── Toolkit.tsx   # Google AI tools showcase
+│   │   ├── ChatBubble.tsx# Chat message component
+│   │   ├── LoadingIndicator.tsx# Loading state component
 │   │   └── Footer.tsx    # Contact and disclaimer
-│   ├── locales/          # Translation files (EN/NL)
+│   ├── locales/          # (Deprecated - moved to public/)
 │   ├── services/         # API integration layer
 │   │   └── aiStudioService.ts# Gemini API client
-│   ├── App.tsx          # Main application
-│   └── i18n.ts          # Internationalization config
+│   ├── App.tsx          # Main application with section layout
+│   ├── i18n.ts          # Internationalization config
+│   ├── main.tsx         # React entry point
+│   └── index.css        # Global styles
 ├── dist/                # Built application (GitHub Pages)
 ├── .env.example         # Environment variables template
-├── index.html           # Entry point
+├── index.html           # HTML entry point
 ├── package.json         # Dependencies and scripts
 ├── tailwind.config.js   # Custom cyberpunk theme
 ├── vite.config.ts       # Build configuration
 ├── README.md           # This file
-└── GEMINI.md           # AI assistant guidelines
+├── GEMINI.md           # AI assistant guidelines
+└── PROMPT_IMPROVER_EXPLANATION.md  # Detailed component docs
 ```
 
 ## Contributing

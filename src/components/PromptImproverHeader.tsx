@@ -53,16 +53,8 @@ export const PromptImproverHeader: React.FC = () => {
                 {t('promptImproverHeader.paragraph2')}
             </p>
 
-            <p className="font-body text-text-light/85 mb-4 leading-relaxed">
-                {t('promptImproverHeader.paragraph3')}
-            </p>
-
-            <p className="font-body text-text-light/85 mb-4 leading-relaxed">
-                {t('promptImproverHeader.paragraph4')}
-            </p>
-
             <p className="font-body text-text-light/85 mb-6 leading-relaxed">
-                {t('promptImproverHeader.paragraph5')}
+                {t('promptImproverHeader.paragraph3')}
             </p>
 
             {/* Two Options Section */}

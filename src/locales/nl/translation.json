@@ -1,10 +1,21 @@
 {
   "header": {
-    "improvePrompt": "Verbeter Prompt",
-    "heroGem": "Hero Gem",
-    "notebookLM": "NotebookLM",
-    "newPowers": "Nieuwe Krachten",
-    "toolkit": "Toolkit"
+    "theVibe": "De Vibe",
+    "tools": "Tools",
+    "deepDive": "Diepgang",
+    "roadmap": "Begin Hier"
+  },
+  "quickJump": {
+    "title": "Snel Navigeren",
+    "toolsSection": "🛠️ Tools",
+    "sectionsLabel": "📍 Secties",
+    "promptImprover": "Prompt Verbeteraar",
+    "heroGem": "Hero Gem Wizard",
+    "notebookLM": "NotebookLM Gids",
+    "theVibe": "De Vibe",
+    "vibeCoding": "Vibe Coding",
+    "roadmap": "30-Dagen Plan",
+    "toolkit": "Volledige Toolkit"
   },
   "hero": {
     "title": "Marketing & Effie Live - de AI-ftershow",
@@ -16,22 +27,49 @@
   "intro": {
     "title": "Van Speelgoed naar Gereedschap: Waarom Deze Site Bestaat",
     "paragraph1": {
-      "part1": "We hebben het allemaal wel eens meegemaakt. Je ziet een demo van AI die iets ongelooflijks doet, en je denkt,",
-      "emphasis": "\"Dat moet ik gebruiken.\"",
-      "part2": "Maar dan... doe je het niet. Of je probeert het één keer, en het voelt als speelgoed, niet als gereedschap."
+      "part1": "We hebben het allemaal meegemaakt. Je ziet een demo van AI die iets ongelooflijks doet, en je denkt,",
+      "emphasis": "\"Dat zou ik moeten gebruiken.\"",
+      "part2": "Maar dan... doe je het niet. Of je probeert het één keer, en het voelt als speelgoed, geen gereedschap."
     },
     "paragraph2": "Deze site is anders. Het is geen verzameling tips—het is een systeem om AI onmisbaar te maken.",
     "paragraph3": {
-      "part1": "Elke tool hier is ontworpen om één vraag te beantwoorden:",
-      "emphasis": "Hoe maak ik AI mijn nieuwe voorsprong?"
+      "part1": "Het geheim? Het gaat niet om de AI. Het gaat om",
+      "emphasis": "hoe je ermee praat."
     },
-    "paragraph4": "Of je nu snel een prototype moet bouwen, AI moet baseren op je eigen data, of 50 documenten moet synthetiseren, je vindt hieronder precies de workflow die je nodig hebt. Geen theorie. Alleen tools die je echt gaat gebruiken.",
-    "cta": "Klaar? Kies je uitdaging hieronder."
+    "paragraph4": "Hieronder leer je een eenvoudige mindset shift, zie je het bewijs dat het werkt, en krijg je de exacte tools die je nodig hebt—of je nu snel een prototype bouwt, AI grondt in je eigen data, of 50 documenten synthetiseert.",
+    "cta": "Laten we beginnen met de mindset die het allemaal laat werken"
+  },
+  "theVibe": {
+    "title": "Het Geheim: Het Gaat Om de Vibe",
+    "subtitle": "AI is geen magie. Het is een spiegel. Hoe beter je communiceert, hoe beter het reageert.",
+    "paragraph1": "Denk aan de laatste keer dat je een junior collega briefde. Als je zei \"maak iets cools,\" kreeg je... iets. Waarschijnlijk niet wat je wilde. Maar als je zei \"maak een LinkedIn post voor B2B oprichters, converserende toon, begin met een pijnpunt, max 150 woorden\"—kreeg je precies wat je nodig had.",
+    "paragraph2": "AI is hetzelfde. Het leest je gedachten niet. Het leest je instructies. Hoe duidelijker je 'vibe'—je toon, je context, je beperkingen—hoe beter de output.",
+    "paragraph3": "Dit gaat niet over het leren van prompt engineering. Het gaat over leren communiceren met helderheid en intentie.",
+    "point1": {
+      "title": "Wees Specifiek",
+      "desc": "Vage input geeft vage output. \"Schrijf een blog\" vs \"Schrijf een blog van 500 woorden voor marketeers over AI prompts, casual toon, inclusief 3 voorbeelden.\""
+    },
+    "point2": {
+      "title": "Schets de Scène",
+      "desc": "Geef AI context. Wie is het publiek? Wat is het doel? Wat is de toon? Zie het als een acteur regisseren—schets eerst de scène."
+    },
+    "point3": {
+      "title": "Itereer Zonder Angst",
+      "desc": "Je eerste prompt zal niet perfect zijn. Dat is prima. Verfijn het. Stel vervolgvragen. AI wordt beter naarmate jij duidelijker wordt."
+    },
+    "cta": "Klaar om dit in actie te zien?",
+    "hint": "De volgende sectie toont echte voor/na voorbeelden. Spoiler: specificiteit wint elke keer."
   },
   "promptImprover": {
-    "intro": "💡 Pro Tip: Een prompt aanscherpen met feedback (zoals je bij een junior creative zou doen) levert veel betere resultaten op dan een gok in één keer. Het is het verschil tussen een afgerond concept en terug naar de tekentafel.",
-    "title": "De Prompt Verbeteraar: Want \"Maak het vet\" is een Slechte Briefing (Ook voor AI).",
-    "description": "Een AI vragen om 'iets over AI' is als een klantbriefing krijgen waarop alleen staat: 'We willen dat het viral gaat.' Je krijgt iets, maar waarschijnlijk niet wat je wilde.\n\nDeze tool is je ingebouwde creative director. Hij laat je niet wegkomen met een slechte briefing. Hij stelt de vervelende-maar-noodzakelijke vragen: 'Voor wie is dit?' 'Wat is de tone-of-voice?' 'Wat is het ene dat ze moeten onthouden?' Het verandert je vage idee in een briefing die zo scherp is, dat de AI de plank niet kán misslaan.",
+    "systemPrompt": "Je bent Prompt Scribe, een geduldige, empathische coach die gebruikers helpt killer prompts te maken door middel van vriendelijke dialoog. Je doel: Begeleid ze naar specificiteit zonder te overweldigen – denk aan medewerker, niet criticus. Voer of beantwoord nooit hun originele prompt; verfijn het alleen collaboratief.\n\nKern Regels:\n- Analyseer de draft op hiaten in: Doelgroep, Doel/Objectief, Toon/Stijl, Format/Lengte, Beperkingen (bijv. bronnen, ethiek), Voorbeelden/Context.\n- Reageer eerst met empathie: Erken hun idee positief (bijv. \"Top, het AI blog idee – laten we het knallen!\").\n- Stel precies 3-5 gerichte, open vragen om hiaten te vullen. Nummer ze voor duidelijkheid. Houd het beknopt (onder 150 woorden totaal).\n- Na hun antwoord, synthetiseer: Update de draft prompt, toon verschillen (bijv. \"Toegevoegd: doelgroep=beginners\"), en stel 1-2 vervolgvragen indien nodig. Maximaal 2 rondes.\n- Eindig met het genereren van de finale prompt. Je MOET deze finale, complete prompt verpakken in één enkel, niet-genest codeblok, beginnend *exact* met `[FINAL_PROMPT]` en eindigend *exact* met `[/FINAL_PROMPT]`.\n- Na de `[/FINAL_PROMPT]` tag, MOET je een afsluitende groet toevoegen (bijv. 'Hier is de verfijnde prompt, klaar voor gebruik in Gemini!' ).\n- **Cruciaal, nadat je de `[FINAL_PROMPT]` tags gebruikt, is je beurt voorbij. Je MAG GEEN vervolgvragen meer stellen.**\n- Als ze \"stop\" of \"finaliseer\" zeggen, output dan direct de prompt.\n- Blijf leuk en bemoedigend: Eindig reacties met een micro-tip (bijv. \"Pro tip: Specificiteit = magie!\").",
+    "initialResponse": "Begrepen. Ik ben Prompt Scribe, je vriendelijke coach. Wat is je ruwe prompt idee?",
+    "sectionTitle": "De Tools: Beheers Dit Eerst",
+    "sectionIntro": "Deze drie tools werken samen, maar begin hier: leer hoe je AI in 'gespreksmodus' krijgt om je te helpen betere prompts te bouwen. Beheers deze vaardigheid, en al het andere wordt gemakkelijker.",
+    "intro": "💡 Het Geheim: Als je gewoon een vage prompt in een LLM plakt, krijg je vage output. Maar als je het vooraf laat gaan met \"Draft prompt:\" weet de AI dat je hulp wilt bij verfijnen—niet bij uitvoeren. Dit verschuift het gesprek van \"doe de taak\" naar \"help me de taak beter te doen.\"",
+    "tryItTitle": "🎯 Probeer Het Nu - Interactieve Tool",
+    "tryItDesc": "Type je ruwe idee hieronder en laat AI je coachen naar een perfecte prompt. Gratis, geen login vereist.",
+    "title": "De Prompt Verbeteraar: Laat AI Je Helpen Betere Prompts Te Schrijven",
+    "description": "Hier is de workflow: In plaats van zelf de perfecte prompt te schrijven, laat je AI je erdoorheen coachen. Deze tool heeft een ingebouwde 'Prompt Coach' die de juiste vragen stelt om te ontdekken wat ontbreekt—publiek, toon, format, beperkingen. Jij antwoordt, het verfijnt, je itereert.\n\nDe magische truc? Als je dit buiten deze tool gebruikt (in ChatGPT, Claude, Gemini, etc.), begin dan je bericht met \"Draft prompt:\" voor je je vage idee plakt. Dat signaleert aan de AI: \"Voer dit niet uit—help me het beter te maken.\" Laat dan het gesprek vloeien.",
     "placeholder": "Plak hier je concept-prompt...",
     "submit": "Verstuur",
     "howItWorksTitle": "Hoe het Werkt: De Systeeminstructie",
@@ -39,28 +77,37 @@
     "copy": "Kopieer naar klembord"
   },
   "heroGemWizard": {
+    "privacyWarning": "⚠️ Privacy Eerst: Upload alleen documenten waarvoor je toestemming hebt. Bekijk het gegevensverwerkingsbeleid van je AI-tool voordat je gevoelige of eigendomsinformatie uploadt.",
+    "tryItTitle": "🎯 Probeer Het Nu - Interactieve Wizard",
+    "tryItDesc": "Bouw je aangepaste AI-expert in 3 stappen. Kies een template, beschrijf je behoeften, krijg een klaar-voor-gebruik Hero Gem.",
     "title": "Bouw je Eigen Expert",
-    "subtitle": "(En krijg nooit meer \"Als een groot taalmodel...\" als antwoord)",
-    "introTitle": "We kennen het allemaal. Je vraagt een generieke AI om de specifieke tone-of-voice van je klant, en je krijgt een lezing over \"het belang van branding.\" Of erger: \"Als een groot taalmodel, kan ik niet...\"",
-    "introTitle2": "Tijd om dat te fixen.",
-    "introPara1": "Stop met de briefing te herhalen. Train je AI één keer op zijn taak, persoonlijkheid en regels. Nooit meer opnieuw uitleggen—gewoon vragen en werk terugkrijgen dat on-brief is.",
-    "introPara2": "Krijg expertise, geen gokwerk. Een generieke AI is een manusje-van-alles. Dit is een meester in één ding: jouw merk, jouw data, jouw wereld. Hij gebruikt jouw bestanden voor deskundig advies, niet een samenvatting van het internet.",
-    "introPara3": "Maak het écht praktisch. Plan campagnes, schrijf e-mails in jouw stijl, analyseer concurrentie-onderzoek—met een AI die eindelijk jouw wereld snapt.",
-    "introPara4": "Zie het als het inhuren van een specialist die jouw brief nooit vergeet.",
-    "readyCTA": "Klaar? Kies je nieuwe expert hieronder en laten we bouwen. 👇",
+    "subtitle": "(Geen \"Als een groot taalmodel...\" antwoorden meer)",
+    "introTitle": "Generieke AI geeft generieke antwoorden. Tijd om dat te fixen.",
+    "introTitle2": "",
+    "introPara1": "Train eenmalig, gebruik voor altijd. Je AI leert z'n taak, persoonlijkheid en regels. Geen briefing meer herhalen.",
+    "introPara2": "Expert resultaten, geen gokwerk. Hij gebruikt jouw bestanden voor advies dat écht on-brief is.",
+    "introPara3": "",
+    "introPara4": "",
+    "readyCTA": "Kies je expert hieronder en laten we bouwen. 👇",
     "step1Title": "Stap 1: Kies je Expert",
-    "blueprint1Title": "De Strategie-Expert",
-    "blueprint1Desc": "Jouw on-demand researcher. Upload marktonderzoek, notities of producthandleidingen, en hij beantwoordt complexe vragen alleen op basis van die kennis.",
-    "blueprint2Title": "De Huisstijl-Expert",
-    "blueprint2Desc": "Je persoonlijke brand guardian. Upload je style guide, oude e-mails of tekstvoorbeelden, en hij herschrijft elke tekst zodat 'ie perfect on-brand is.",
-    "blueprint3Title": "De Brainstorm-Buddy",
-    "blueprint3Desc": "Je creatieve sparringpartner. Voer 'm je creatieve briefings, halfbakken ideeën of oude campagnes, en hij helpt je nieuwe blogposts, advertentieteksten of social-media-insteeks te genereren.",
-    "blueprint4Title": "De Huis & Hobby Helper",
-    "blueprint4Desc": "Je persoonlijke assistent. (Want zelfs creatieven moeten soms boodschappen plannen). Upload recepten, reisplannen of notities, en hij helpt je je leven buiten het werk te organiseren.",
-    "blueprint5Title": "De Tech-Expert",
-    "blueprint5Desc": "Een ontwikkelaar z'n beste vriend. Voer 'm API-documentatie, codebases of data-schema's voor snelle, context-bewuste hulp bij coderen, debuggen of data-analyse.",
-    "blueprint6Title": "De On-Demand Consultant",
-    "blueprint6Desc": "Jouw geheime wapen. Upload marktonderzoek, concurrentierapporten of je businessplan, en hij helpt je nieuwe kansen te zien, risico's te spotten en strategieën te bouwen.",
+    "blueprint1Title": "💎 De Kennis-Expert",
+    "blueprint1Desc": "Jouw interne Subject Matter Expert die alles weet over één specifiek, afgebakend onderwerp. Hij fantaseert niet; hij vindt en citeert de feiten uitsluitend op basis van jouw documenten.",
+    "blueprint2Title": "💎 De Huisstijl-Expert",
+    "blueprint2Desc": "Je persoonlijke merk- en toonbewaker. Hij zorgt dat alles wat je schrijft (van e-mail tot social post) perfect klinkt alsof het van één (merk)persoon komt.",
+    "blueprint3Title": "💎 De Coder's Sidekick",
+    "blueprint3Desc": "De ontwikkelaar die jouw specifieke codebase of API van binnen en buiten kent. Geen algemeen codeeradvies, maar hulp op maat voor jouw project.",
+    "blueprint4Title": "💎 De Ideeënmachine",
+    "blueprint4Desc": "Je creatieve sparringpartner die getraind is op wat eerder werkte. Hij helpt je vastzittende ideeën vlot te trekken en genereert nieuwe invalshoeken.",
+    "blueprint5Title": "💎 De Personal Assistant",
+    "blueprint5Desc": "Je persoonlijke assistent voor alles buiten het werk, getraind op jouw persoonlijke smaak, bezittingen en voorkeuren.",
+    "blueprint6Title": "💎 De Generatie Vertaler",
+    "blueprint6Desc": "Jouw on-demand vertaler voor de generatiekloof. Herschrijft jouw boodschap zodat deze landt bij een Boomer, Millennial of Gen Z, en vice versa.",
+    "blueprint7Title": "💎 De Advocaat van de Duivel",
+    "blueprint7Desc": "Je bijdehante sidekick die je plannen onderuithaalt om ze sterker te maken. Getraind om overal gaten in te schieten en zwakke plekken te vinden.",
+    "blueprint8Title": "💎 Het Moeilijke Mens",
+    "blueprint8Desc": "Een simulatie-Gem om te oefenen voor dat ene lastige gesprek. Getraind om één specifiek (lastig) persoon na te doen.",
+    "blueprint9Title": "💎 De Ego Booster",
+    "blueprint9Desc": "Jouw persoonlijke cheerleader die je vult met complimenten, gebaseerd op feiten. Hij kan niets negatiefs zeggen.",
     "step1TitleOld": "Stap 1: Definieer de Missie van je Expert",
     "domainLabel": "Domein",
     "domainPlaceholder": "bijv. 'early-stage SaaS marketing'",
@@ -80,6 +127,9 @@
     "copied": "Gekopieerd!"
   },
   "notebookLM": {
+    "privacyWarning": "⚠️ Privacy Eerst: Upload nooit vertrouwelijke documenten zonder expliciete toestemming. Controleer altijd de privacy-instellingen en gegevensverwerkingsbeleid van je AI-tool voordat je gevoelige informatie uploadt.",
+    "tryItTitle": "📚 Interactieve Voorbeelden Hieronder",
+    "tryItDesc": "Klik door de stakeholder tabs om te zien hoe één bron 7 verschillende outputs direct kan genereren. Probeer het daarna zelf in NotebookLM.",
     "title": "NotebookLM: De \"Eén-Deck-om-Alles-te-Regeren\"-Tool",
     "intro": "Je kent het wel. Je rondt het grote onderzoeksrapport af. Dan vraagt de CEO om een 'one-pager'. De CMO wil een deck van 10 slides. En het creatieve team wil alleen de belangrijkste inzichten voor een briefing.\n\nJe besteedt meer tijd aan herformatteren dan aan het eigenlijke onderzoek.\n\nStop met die copy-paste-nachtmerrie.",
     "centralBrainTitle": "Het Centrale Brein voor je Kennis",
@@ -93,8 +143,8 @@
     "workflowTitle": "De Workflow Gevisualiseerd: Van Herwerk naar Resultaten",
     "trustTitle": "De Vertrouwensfactor (Oftewel: \"Waar komt dat cijfer vandaan?\")",
     "trustDesc": "Dit is de feature die je redt in een klantmeeting. Wanneer je CEO vraagt: \"Waar komt die projectie vandaan?\" citeert NotebookLM het exacte document. Wanneer je klant een aanbeveling in twijfel trekt, kun je het onderzoek aanwijzen. Het is geen 'black box'-gok; het is je eigen onderzoek, maar dan slimmer.",
-    "tryItTitle": "Probeer het: De Stakeholder-Perspectief Generator",
-    "tryItDesc": "Gebruik de prompts hieronder om te zien hoe hetzelfde 'centrale brein' totaal verschillende behoeften kan invullen. Dezelfde data, zeven verschillende outputs—direct.",
+    "stakeholderTitle": "Probeer het: De Stakeholder-Perspectief Generator",
+    "stakeholderDesc": "Gebruik de prompts hieronder om te zien hoe hetzelfde 'centrale brein' totaal verschillende behoeften kan invullen. Dezelfde data, zeven verschillende outputs—direct.",
     "description": "Je kent het wel. Je rondt het grote onderzoeksrapport af. Dan vraagt de CEO om een samenvatting van één pagina. De CMO wil een deck van 10 slides. En het creatieve team wil alleen de belangrijkste inzichten voor een briefing.\n\nStop met die copy-paste-nachtmerrie.\n\nNotebookLM is je 'centrale brein'. Je dumpt alles er één keer in: de transcripten, de pdf's, de data. Daarna vraag je het gewoon om de output voor elke persoon te genereren. Eén bron van waarheid, oneindig veel formats. Krijg je week terug.",
     "cta": "Probeer NotebookLM",
     "tabCFO": "Voor de CFO",
@@ -114,57 +164,79 @@
     "bonusTrendDesc": "Vraag het om patronen te vinden in al je klantinterviews, zoals \"Wat zijn de 3 sterkste onvervulde klantbehoeften?\""
   },
   "flowVibe": {
-    "title": "Krijg grip op je Nieuwe Superkrachten: Van 'Vibe' naar 'Signal'",
-    "subtitle": "De manier waarop we met AI praten verandert. Hier is een no-nonsense gids.",
-    "intro": "De manier waarop we met AI omgaan, evolueert. We zijn begonnen met conversationeel 'Vibe Coding', raakten in de war door de term 'Flow Coding', en gaan nu over op een preciezere en krachtigere methode: 'Signal Coding'. Deze gids is ontworpen om je te helpen deze evolutie meester te worden.",
-    "liveExample": "Live Voorbeeld:",
+    "title": "De Aanpak: Vibe Coding",
+    "subtitle": "Hoe je AI laat begrijpen wat je wilt",
+    "intro": "Dit is waar de meeste mensen de fout in gaan: ze behandelen AI als Google Search—typ een paar woorden, hoop op het beste. Maar AI is geen zoekmachine. Het lijkt meer op het regisseren van een acteur. Je vertelt ze niet alleen de tekst; je geeft ze de scène, de motivatie, de toon. Dat is Vibe Coding.",
     "vibe": {
-      "title": "1. Vibe Coding (De \"Regisseur\" 🎬)",
-      "description": "Snel, creatief en conversationeel. Het gaat erom de AI een algemene richting te geven en te itereren op basis van de output. Het is als het regisseren van een acteur - je geeft de 'vibe' en kijkt wat je terugkrijgt.",
-      "workflowLabel": "Workflow:",
-      "workflow": "Conversationele heen-en-weer.",
-      "goalLabel": "Doel:",
-      "goal": "Ideeën verkennen, snelle prototypes.",
-      "riskLabel": "Risico:",
-      "risk": "Inconsistent, niet herhaalbaar.",
-      "toolsLabel": "Tools:",
-      "tool1Name": "Google AI Studio",
-      "tool1Url": "https://aistudio.google.com/",
-      "example": "De",
-      "exampleLink": "Prompt Verbeteraar",
-      "exampleText": "op deze pagina maakt gebruik van Vibe Coding. Je geeft een ruw idee, en het stuurt de AI aan om het te verfijnen."
-    },
-    "flow": {
-      "title": "2. De \"Flow Coding\" Verwarring",
-      "description": "De term 'Flow Coding' is dubbelzinnig. Het kan betekenen dat je in 'de zone' bent, een Git Flow gebruikt, bouwt met visuele tools zoals Google Agentspace, of gewoon 'met de stroom meegaat'. Omdat het een duidelijke definitie mist, is het geen bruikbaar concept voor het bouwen van betrouwbare AI-systemen. We hebben iets preciezers nodig.",
-      "conclusion": "Conclusie: 'Signal Coding' is een bruikbaarder concept.'"
-    },
-    "signal": {
-      "title": "3. Signal Coding (De \"Architect\" 📐)",
-      "description": "Dit is de evolutie. In plaats van een 'vibe', geef je een duidelijk, gestructureerd 'signaal'. Signal Coding gaat over het geven van precieze, herhaalbare en testbare instructies aan de AI om betrouwbare, productieklare systemen te bouwen. Het is de taal van AI-architecten.",
-      "workflowLabel": "Workflow:",
-      "workflow": "Gestructureerde instructies, systeemprompts, gedefinieerde inputs/outputs.",
-      "goalLabel": "Doel:",
-      "goal": "Creëer voorspelbare, schaalbare en betrouwbare AI-applicaties.",
-      "powerLabel": "Kracht:",
-      "power": "Maakt agentische workflows en complexe, meerstaps taken mogelijk.",
-      "example": "De",
-      "exampleLink": "Hero Gem Builder",
-      "exampleText": "maakt gebruik van Signal Coding. Het twee-staps proces met specifieke systeeminstructies is een duidelijk 'signaal' voor een voorspelbaar resultaat."
+      "title": "Wat is Vibe Coding?",
+      "description": "Vibe Coding is een conversationele, iteratieve benadering van werken met AI. In plaats van vooraf de perfecte prompt te schrijven (dat lukt niet), voer je een dialoog—verfijnen, aanpassen en bouwen terwijl je verdergaat. Zie het als schetsen: snel, rommelig, verkennend. Je bouwt geen productiecode op dag één; je test ideeën, prototype snel, en leert wat werkt.",
+      "whyGreatTitle": "Waarom Het Werkt:",
+      "benefit1": "Snelheid: Van idee naar prototype in minuten, niet uren. Test 5 ideeën voor de lunch.",
+      "benefit2": "Flexibiliteit: Geen rigide plan nodig. Draai bij wanneer je ziet wat werkt (of niet).",
+      "benefit3": "Creativiteit: Ontdek onverwachte richtingen. De beste ideeën komen vaak uit iteratie.",
+      "realityCheck": "Realiteitscheck: Dit is geen magie. Je moet nog steeds weten hoe goede output eruitziet. AI versterkt je oordeel—het vervangt het niet.",
+      "videoPlaceholder": "Demo: Vibe Coding in Actie",
+      "toolsTitle": "De Vibe Coding Toolkit:",
+      "toolsIntro": "Dit zijn de tools die Vibe Coding laten werken. Bookmark ze. Je gebruikt ze dagelijks."
     }
   },
+  "vibeCoding": {
+    "title": "Hoe Vibe Coding Werkt",
+    "subtitle": "Je hebt de tools gebruikt. Nu kijken we onder de motorkap naar de methodologie.",
+    "intro": "\"Vibe Coding\" is de naam die we geven aan deze converserende, iteratieve aanpak. Het is niet alleen voor het bouwen van websites—het is hoe je met AI werkt aan alles. Hier is het framework.",
+    "whatIsTitle": "Wat is Vibe Coding?",
+    "description": "Vibe Coding is een converserende, iteratieve benadering van werken met AI. In plaats van vooraf de perfecte prompt te schrijven (dat lukt niet), voer je een dialoog—verfijnen, aanpassen en bouwen terwijl je verdergaat. Zie het als schetsen: snel, rommelig, verkennend. Je bouwt geen productiecode op dag één; je test ideeën, prototype snel, en leert wat werkt.",
+    "whyTitle": "Waarom Het Werkt:",
+    "benefit1": "Snelheid: Van idee naar prototype in minuten, niet uren. Test 5 ideeën voor de lunch.",
+    "benefit2": "Flexibiliteit: Geen rigide plan nodig. Draai bij wanneer je ziet wat werkt (of niet).",
+    "benefit3": "Creativiteit: Ontdek onverwachte richtingen. De beste ideeën komen vaak uit iteratie.",
+    "realityCheck": "Realiteitscheck: Dit is geen magie. Je moet nog steeds weten hoe goede output eruitziet. AI versterkt je oordeel—het vervangt het niet.",
+    "videoPlaceholder": "Demo: Vibe Coding in Actie",
+    "videoDescription": "Bekijk hoe deze hele site is gebouwd met Vibe Coding—van initiële brainstorm tot productie deployment.",
+    "toolsTitle": "De Vibe Coding Toolkit:",
+    "toolsIntro": "Dit zijn de tools die Vibe Coding laten werken. Bookmark ze. Je gebruikt ze dagelijks.",
+    "exampleTitle": "Echt Voorbeeld: Hoe Deze Site Is Gebouwd",
+    "exampleIntro": "Deze website is proof of concept. Elke sectie, elke tool, elk stukje copy—gebouwd met Vibe Coding. Hier is het 6-stappen proces:",
+    "example": {
+      "step1": {
+        "title": "Strategie & Onderzoek",
+        "desc": "Gebruikte Gemini Deep Research om presentatienotities, eerdere feedback en AI-ontwikkelingsartikelen te analyseren. Resultaat: Duidelijke contentstrategie."
+      },
+      "step2": {
+        "title": "Prototype de Logica",
+        "desc": "Gebruikte Google AI Studio om systeemprompts te testen voor elke tool (Prompt Improver, Hero Gem). Snelle iteratie, geen coderen."
+      },
+      "step3": {
+        "title": "Genereer de UI",
+        "desc": "Gebruikte Google Stitch om de hele front-end te maken vanuit één gedetailleerde design prompt. 90% van de uiteindelijke code in minuten."
+      },
+      "step4": {
+        "title": "Integreer Alles",
+        "desc": "Gebruikte Gemini CLI in VS Code om AI-logica te koppelen aan UI-componenten. Bouwde production-ready React app."
+      },
+      "step5": {
+        "title": "Deploy naar Productie",
+        "desc": "Gepusht naar GitHub, automatisch gedeployed via GitHub Actions naar GitHub Pages. Live site met één commando."
+      },
+      "step6": {
+        "title": "Verfijn voor Publiek",
+        "desc": "Maakte custom Gem getraind op Nederlandse communicatievoorkeuren om alle copy te verfijnen voor lokale markt."
+      }
+    },
+    "exampleNote": "Van brainstorm naar live site in dagen, niet weken. Dat is Vibe Coding."
+  },
   "promptImproverHeader": {
-    "title": "Ontgrendel de Magie: Hoe Meester Je Prompts 🚀",
-    "paragraph1": "Ken je dat gevoel als je AI om hulp vraagt en... niets bruikbaars krijgt? Dat komt niet omdat AI slecht is. Het komt omdat je prompt te vaag was.",
-    "paragraph2": "Dit is het ding: AI is een voorspellingsmachine. Als je zegt \"Vertel me over AI,\" heeft het oneindige richtingen om naartoe te gaan—dus krijg je generieke, ongefocuste output. Maar als je zegt \"Schrijf een blogpost van 500 woorden voor ontwikkelaars die transformerarchitectuur uitlegt, met analogieën en zonder zware wiskunde,\" geef je het duidelijke grenzen.",
-    "paragraph3": "Het verschil? Specificiteit. En specificiteit = magie. ✨",
-    "paragraph4": "Maar hier is het geheim: je hoeft niet te leren hoe je perfecte prompts schrijft. Je hoeft AI alleen maar te vragen om je te helpen ze te schrijven.",
-    "paragraph5": "Deze tool gebruikt een \"ingebakken\" systeeminstructie die fungeert als je expert Prompt Coach. In plaats van theorie te onderwijzen, stelt het de juiste vragen om hiaten in je denken bloot te leggen—missende context, onduidelijke doelstellingen, formaateisen—en bouwt het gezamenlijk een betere prompt met je door middel van begeleide dialoog.",
-    "optionsTitle": "Twee Manieren om de Prompt Improver te Gebruiken:",
-    "option1": "Gebruik de interactieve tool hieronder (de systeeminstructie zit al ingebouwd), OF",
-    "option2": "Kopieer de systeeminstructie en plak hem in je eigen LLM (ChatGPT, Claude, Gemini, etc.)",
-    "optionsClosing": "Hoe dan ook, je schrijft nooit meer een slechte prompt.",
-    "summaryText": "Toon/Kopieer de 'Prompt Director' Systeeminstructie",
+    "title": "De \"Draft Prompt:\" Techniek 🎯",
+    "paragraph1": "Nutteloze AI-antwoorden? Het ligt niet aan de AI—het dacht dat je uitvoering wilde, geen coaching.",
+    "paragraph2": "De oplossing: Begin met \"Draft prompt:\" voor je idee. Dit kleine prefix verschuift AI van taak uitvoeren naar helpen verfijnen.",
+    "paragraph3": "Voorbeeld: In plaats van \"Schrijf een blog over AI,\" probeer \"Draft prompt: Schrijf een blog over AI.\" De AI stelt nu de juiste vragen.",
+    "paragraph4": "",
+    "paragraph5": "",
+    "optionsTitle": "Twee Manieren om Dit Te Gebruiken:",
+    "option1": "Gebruik de tool hieronder (coach ingebouwd), OF",
+    "option2": "Kopieer de systeeminstructie voor elke LLM—begin prompts met \"Draft prompt:\"",
+    "optionsClosing": "Hoe dan ook, geen slechte prompts meer.",
+    "summaryText": "Toon/Kopieer de 'Prompt Coach' Systeeminstructie",
     "copyButton": "Kopieer",
     "copiedButton": "Gekopieerd!"
   },
@@ -242,12 +314,260 @@
       "outcome": "Cultureel afgestemde teksten die direct spreken tot de Nederlandse markt, waardoor de site persoonlijker en relevanter aanvoelt."
     }
   },
+  "beforeAfter": {
+    "title": "Zie het Verschil",
+    "subtitle": "De 'vibe' werkt—maar alleen als je weet hoe 'goed' eruitziet. Hier is het bewijs.",
+    "intro": "Je hebt net het concept geleerd. Nu gaan we het in actie zien. Hieronder twee echte voorbeelden: dezelfde taak, twee verschillende prompts. Eén vaag (en nutteloos). Eén specifiek (en krachtig). Zie je het verschil?",
+    "badLabel": "Vage Prompt",
+    "goodLabel": "Verbeterde Prompt",
+    "promptLabel": "Prompt:",
+    "outputLabel": "AI Output:",
+    "example1": {
+      "title": "Voorbeeld 1: Social Media Post",
+      "badPrompt": "Schrijf een social media post over ons nieuwe product",
+      "badOutput": "Spannend nieuws! We zijn verheugd om ons nieuwe product aan te kondigen. Het is innovatief, gebruiksvriendelijk en ontworpen om aan uw behoeften te voldoen. Bekijk het vandaag en ervaar het verschil. #Innovatie #NieuwProduct #TechNieuws",
+      "badWhy": "Generiek, vergeetbaar, klinkt als elke andere productaankondiging",
+      "goodPrompt": "Schrijf een LinkedIn post voor B2B SaaS oprichters die onze nieuwe functie 'Auto-Sync' aankondigt. Toon: Conversationeel maar gezaghebbend. Hook: Begin met een herkenbaar pijnpunt over data silo's. Inclusief: 1 statistiek (teams verspillen 4 uur/week aan handmatig synchroniseren), 1 klantquote, 1 CTA om een demo te boeken. Max 150 woorden.",
+      "goodOutput": "Nog steeds data kopiëren tussen tools zoals het 2015 is? 📊➡️📈\n\nJe team verspilt gemiddeld 4 uur per week aan handmatig synchroniseren. Dat is 200 uur per jaar. Per persoon.\n\nWe hebben Auto-Sync gebouwd om dat op te lossen. Het is vandaag live.\n\n\"We gingen van vrijdagmiddagen besteden aan het afstemmen van spreadsheets naar real-time dashboards. Game changer.\" - Sarah K., Head of Ops bij Streamline\n\nReal-time sync. Geen handmatig werk. Één bron van waarheid.\n\n→ Boek een 15-min demo: [link]",
+      "goodWhy": "Specifiek, begint met pijnpunt, bevat bewijs, duidelijke CTA"
+    },
+    "example2": {
+      "title": "Voorbeeld 2: Email Herschrijven",
+      "badPrompt": "Maak deze email professioneler",
+      "badOutput": "Geachte [Ontvanger],\n\nIk hoop dat dit bericht u goed bereikt. Ik schrijf om ons eerdere gesprek over de projecttijdlijn op te volgen. Laat het me alstublieft zo spoedig mogelijk weten.\n\nMet vriendelijke groet",
+      "badWhy": "Stijf, onpersoonlijk, geen context over de oorspronkelijke toon of doel",
+      "goodPrompt": "Herschrijf deze email om professioneel maar warm te zijn. Oorspronkelijke toon: Te informeel ('Hey! Gewoon even checken...'). Doelgroep: C-level executive. Doel: Opvolgen van voorstel zonder opdringerig te lijken. Hou het onder 100 woorden. Eindig met een zachte CTA (niet eisend).",
+      "goodOutput": "Hi [Naam],\n\nIk wilde even terugkomen op het voorstel dat we vorige week bespraken. Ik weet dat je opties evalueert, dus geen druk—wilde alleen zeker weten dat je alles hebt wat je nodig hebt van onze kant.\n\nAls het nuttig zou zijn om specifieke secties samen door te nemen, spring ik graag deze week in een kort gesprek.\n\nIk kijk uit naar je gedachten.\n\nGroet,\n[Je Naam]",
+      "goodWhy": "Professioneel maar menselijk, erkent hun proces, niet-opdringerige CTA"
+    },
+    "cta": "Klaar om je prompts te transformeren?",
+    "ctaButton": "Probeer de Prompt Verbeteraar"
+  },
+  "aiFAQs": {
+    "title": "Laten We Eerlijk Zijn: AI FAQs voor Sceptici",
+    "subtitle": "Je hebt de tools gezien. Misschien denk je: 'Dit ziet er goed uit, maar...' Laten we die twijfels aanpakken.",
+    "faq1": {
+      "myth": "AI zal mijn baan vervangen",
+      "truth": "AI versterkt je werk, het vervangt je oordeel niet",
+      "explanation": "Denk aan AI als Excel. Hebben spreadsheets financiële analisten vervangen? Nee—ze maakten ze krachtiger. AI is hetzelfde. Het handelt het repetitieve af (eerste concepten, onderzoekssamenvattingen, data formattering) zodat jij je kunt richten op strategie, creativiteit en beslissingen die echt een mens nodig hebben. De mensen die vervangen worden zijn degenen die weigeren het nieuwe gereedschap te leren."
+    },
+    "faq2": {
+      "myth": "Je moet 'technisch' zijn om AI te gebruiken",
+      "truth": "Als je een Google Zoekopdracht kunt schrijven, kun je AI gebruiken",
+      "explanation": "Er is geen codering vereist. Je doet het moeilijke deel al—je kent je werk, je publiek en hoe goed werk eruitziet. AI heeft alleen nodig dat je het duidelijk uitlegt. De Prompt Verbeteraar op deze site leidt je er letterlijk doorheen, vraag voor vraag. Als je 'Voor wie is dit?' en 'Wat is het doel?' kunt beantwoorden—ben je er voor 90%."
+    },
+    "faq3": {
+      "myth": "AI hallucinneert gewoon onzin",
+      "truth": "AI geeft je wat je vraagt. Slechte input = slechte output.",
+      "explanation": "Ja, AI kan dingen verzinnen—als je het laat. Maar dat is alsof je een junior medewerker de schuld geeft voor het exact doen wat je hen (slecht) vertelde. De tools op deze site leren je hoe je AI de juiste context, beperkingen en voorbeelden geeft zodat het niet kan ontsporen. Met de juiste prompt is AI verrassend nauwkeurig. Met een vage? Je krijgt onzin."
+    },
+    "faq4": {
+      "myth": "AI is gewoon een gril / zal snel vervangen worden",
+      "truth": "AI is nu infrastructuur, geen trend",
+      "explanation": "Dit is niet zoals NFTs of de metaverse. AI zit al ingebakken in Gmail (Smart Compose), Google Docs (grammaticasuggesties) en de autocorrect van je telefoon. De vraag is niet 'Blijft AI bestaan?'—het is 'Leer je het te gebruiken voordat je concurrentie dat doet?' Over 5 jaar zal AI gebruiken net zo basic zijn als email gebruiken."
+    },
+    "faq5": {
+      "myth": "Ik heb ChatGPT een keer geprobeerd, het werkte niet voor mij",
+      "truth": "Je probeerde een schroevendraaier om een spijker te slaan. Verkeerde tool, verkeerde techniek.",
+      "explanation": "ChatGPT is één tool. Het is geweldig voor sommige dingen (brainstormen, concepten), verschrikkelijk voor andere (citaties, gegrond onderzoek). Deze site toont je de volledige toolkit: Prompt Verbeteraar voor betere instructies, NotebookLM voor onderzoek, Hero Gems voor gespecialiseerde taken. Zeggen 'AI werkt niet' na één slechte ChatGPT-ervaring is alsof je zegt 'Google werkt niet' omdat je een keer een zoekopdracht verkeerd typte."
+    },
+    "bottomCTA": "Nog steeds sceptisch? Goed. Dat is slim. Begin klein en zie het zelf.",
+    "bottomButton": "Zie Je 30-Dagen Plan"
+  },
+  "roadmap": {
+    "title": "Wat Nu? Je 30-Dagen Plannen",
+    "subtitle": "Kies je pad op basis van waar je nu bent. Beide plannen brengen je naar dezelfde bestemming—zelfverzekerd AI-gebruik—maar starten vanaf verschillende punten.",
+    "intro": "Kies je reis:",
+    "privacyReminder": "🔒 Privacy Herinnering: Upload nooit vertrouwelijke of gevoelige documenten naar een AI-tool zonder de juiste autorisatie en begrip van het gegevensprivacybeleid van de tool.",
+    "exportCalendar": "📅 Toevoegen aan Agenda",
+    "exportCalendarDesc": "Exporteer dit plan naar je agenda met directe links naar elke tool op deze site.",
+    "planBeginner": "Voor Beginners",
+    "planBeginnerDesc": "Je bent nieuw met AI of gebruikt het af en toe. Dit plan bouwt de basis.",
+    "planAdvanced": "Voor Vibe Coders",
+    "planAdvancedDesc": "Je gebruikt ChatGPT/Gemini dagelijks. Klaar om AI Studio, Stitch, en de CLI te leren.",
+    "goalLabel": "Doel:",
+    "successLabel": "Succes Ziet Er Zo Uit:",
+    "beginner": {
+      "week1": {
+        "tab": "Week 1",
+        "icon": "🚀",
+        "title": "Eerste Stappen met AI",
+        "timeframe": "Dag 1-7",
+        "goal": "Voel je comfortabel met AI praten. Bouw vertrouwen met simpele, directe wins.",
+        "task1": {
+          "title": "Dag 1-2: Probeer de Prompt Verbeteraar",
+          "desc": "Gebruik de tool op deze site om één werkgerelateerde taak te verfijnen (email, social post, brief). Zie het verschil dat specificiteit maakt.",
+          "link": "Gebruik de Tool"
+        },
+        "task2": {
+          "title": "Dag 3-4: Beheers \"Draft Prompt:\"",
+          "desc": "Open ChatGPT of Gemini. Type \"Draft prompt: [je vage idee]\" en laat het je coachen. Oefen dit 3 keer.",
+          "link": "Leer de Techniek"
+        },
+        "task3": {
+          "title": "Dag 5-7: Dagelijkse AI Gewoonte",
+          "desc": "Gebruik AI één keer per dag deze week. Ideeën: vat vergadernotities samen, bedenk email onderwerpregels, herschrijf onduidelijke tekst."
+        },
+        "success": "Je hebt AI 5+ keer gebruikt. Je begrijpt de \"Draft prompt:\" truc. AI voelt nuttig, niet intimiderend."
+      },
+      "week2": {
+        "tab": "Week 2",
+        "icon": "🎯",
+        "title": "Bouw Betere Prompts",
+        "timeframe": "Dag 8-14",
+        "goal": "Stop met generieke AI-output krijgen. Leer communiceren met helderheid.",
+        "task1": {
+          "title": "Dag 8-10: Bestudeer Voor/Na Voorbeelden",
+          "desc": "Bekijk de voorbeelden op deze site. Merk het patroon: vage prompts krijgen vage output. Specifieke prompts winnen.",
+          "link": "Zie Voorbeelden"
+        },
+        "task2": {
+          "title": "Dag 11-12: Probeer Verschillende Taken",
+          "desc": "Gebruik de Prompt Verbeteraar voor 3 verschillende soorten werk: creatief (social post), analytisch (data samenvatting), operationeel (proces doc)."
+        },
+        "task3": {
+          "title": "Dag 13-14: Test Zonder Hulpwielen",
+          "desc": "Schrijf een prompt vanaf nul (zonder de tool). Vergelijk resultaten met Week 1. Merk de verbetering."
+        },
+        "success": "Je kunt solide prompts schrijven zonder begeleiding. AI-output is consistent nuttig."
+      },
+      "week3": {
+        "tab": "Week 3",
+        "icon": "💎",
+        "title": "Je Eerste Aangepaste Expert",
+        "timeframe": "Dag 15-21",
+        "goal": "Creëer een Hero Gem voor één repetitieve taak die je wekelijks doet.",
+        "task1": {
+          "title": "Dag 15-17: Bouw Je Gem",
+          "desc": "Kies ÉÉN taak die je vaak doet (bijv. 'Herschrijf emails in onze merkstem'). Gebruik de Hero Gem Wizard om een aangepaste expert te maken.",
+          "link": "Bouw een Gem"
+        },
+        "task2": {
+          "title": "Dag 18-19: Test & Verfijn",
+          "desc": "Gebruik je Gem 3-5 keer. Merk wat werkt, wat niet. Pas de systeem instructie aan op basis van echte resultaten."
+        },
+        "task3": {
+          "title": "Dag 20-21: Maak Het een Gewoonte",
+          "desc": "Stel een herinnering in om je Gem te gebruiken elke keer als die taak opkomt. Vervang je oude workflow."
+        },
+        "success": "Je hebt één AI-tool die je 2+ uur per week bespaart. Het is nu onmisbaar."
+      },
+      "week4": {
+        "tab": "Week 4",
+        "icon": "🔥",
+        "title": "Breid Je Toolkit Uit",
+        "timeframe": "Dag 22-30",
+        "goal": "Voeg NotebookLM toe aan je workflow. Beheers multi-document synthese.",
+        "task1": {
+          "title": "Dag 22-24: Probeer NotebookLM",
+          "desc": "Upload 5+ documenten over één onderwerp (vergadernotities, onderzoek, rapporten). Vraag het om verschillende outputs te genereren voor verschillende stakeholders.",
+          "link": "Probeer NotebookLM"
+        },
+        "task2": {
+          "title": "Dag 25-27: Dagelijkse Gebruik Uitdaging",
+          "desc": "Gebruik alle 3 tools (Prompt Verbeteraar, Hero Gem, NotebookLM) minstens één keer deze week. Vind je favorieten."
+        },
+        "task3": {
+          "title": "Dag 28-30: Deel Je Successen",
+          "desc": "Laat een collega één ding zien waar AI je deze maand mee geholpen heeft. Leer hen de \"Draft prompt:\" techniek."
+        },
+        "success": "AI is deel van je dagelijkse workflow. Je kunt je niet voorstellen zonder te werken. Je leert anderen."
+      }
+    },
+    "advanced": {
+      "week1": {
+        "tab": "Week 1",
+        "icon": "🛠️",
+        "title": "AI Studio Fundamenten",
+        "timeframe": "Dag 1-7",
+        "goal": "Beheers Google AI Studio. Leer bouwen, testen, en verfijnen van systeem prompts met real-time feedback.",
+        "task1": {
+          "title": "Dag 1-2: Stel AI Studio In",
+          "desc": "Maak een gratis account op aistudio.google.com. Verken de interface. Creëer je eerste prompt en test verschillende modellen (Gemini 1.5 Flash vs Pro).",
+          "link": "Open AI Studio"
+        },
+        "task2": {
+          "title": "Dag 3-5: Bouw een Systeem Prompt",
+          "desc": "Kies één taak die je wekelijks doet. Schrijf een systeem instructie ervoor. Test met 5 verschillende inputs. Merk wat werkt, wat niet. Itereer."
+        },
+        "task3": {
+          "title": "Dag 6-7: Vergelijk Chat vs Code",
+          "desc": "Gebruik AI Studio's chat modus voor één taak, exporteer dan naar code. Draai het lokaal. Zie het verschil tussen prototyping en productie."
+        },
+        "success": "Je kunt een aangepaste AI-expert bouwen in AI Studio en testen met echte data. Je begrijpt systeem instructies."
+      },
+      "week2": {
+        "tab": "Week 2",
+        "icon": "🎨",
+        "title": "Stitch voor UI",
+        "timeframe": "Dag 8-14",
+        "goal": "Leer Google Stitch. Genereer functionele UI-componenten met één prompt.",
+        "task1": {
+          "title": "Dag 8-10: Eerste Stitch Prototype",
+          "desc": "Ga naar google.com/stitch. Beschrijf een simpele UI (formulier, dashboard, kaart). Kijk hoe het HTML/CSS/JS genereert. Bewerk de prompt en regenereer.",
+          "link": "Probeer Stitch"
+        },
+        "task2": {
+          "title": "Dag 11-12: Itereer Snel",
+          "desc": "Neem één UI van Dag 8. Verfijn het 3-5 keer met specifieke prompts. Voeg interactiviteit toe, wijzig styling, fix bugs—allemaal met natuurlijke taal."
+        },
+        "task3": {
+          "title": "Dag 13-14: Exporteer & Personaliseer",
+          "desc": "Download de code van Stitch. Draai het lokaal. Maak handmatige aanpassingen. Merk wat AI goed doet (structuur) vs wat jij beter doet (edge cases)."
+        },
+        "success": "Je kunt een functionele UI prototypen in minuten. Je weet wanneer AI te gebruiken en wanneer handmatig te coderen."
+      },
+      "week3": {
+        "tab": "Week 3",
+        "icon": "⚡",
+        "title": "Gemini CLI Integratie",
+        "timeframe": "Dag 15-21",
+        "goal": "Installeer de Gemini CLI. Integreer AI in je terminal en code editor workflows.",
+        "task1": {
+          "title": "Dag 15-17: Installeer & Configureer CLI",
+          "desc": "Installeer de Gemini API CLI. Stel authenticatie in. Voer je eerste terminal commando uit. Test basis prompts.",
+          "link": "CLI Docs"
+        },
+        "task2": {
+          "title": "Dag 18-19: Script een Workflow",
+          "desc": "Kies één repetitieve taak (bijv. 'Genereer commit berichten van diffs'). Schrijf een shell script dat de Gemini API aanroept. Test het 5 keer."
+        },
+        "task3": {
+          "title": "Dag 20-21: VS Code Integratie",
+          "desc": "Stel een toetsenbordsnelkoppeling of extensie in om je CLI script vanuit VS Code aan te roepen. Nu heb je AI in je editor."
+        },
+        "success": "Je hebt AI draaien in je terminal. Je hebt één workflow geautomatiseerd met de CLI. Je denkt in API-aanroepen."
+      },
+      "week4": {
+        "tab": "Week 4",
+        "icon": "🚀",
+        "title": "Volledige Vibe Coding Workflow",
+        "timeframe": "Dag 22-30",
+        "goal": "Breng alles samen. Bouw een echt project vanaf nul met Vibe Coding principes.",
+        "task1": {
+          "title": "Dag 22-24: Strategie & Prototype",
+          "desc": "Kies een klein project (bijv. persoonlijk dashboard, tool, landingspagina). Gebruik AI Studio om de structuur te plannen. Gebruik Stitch om de UI te prototypen."
+        },
+        "task2": {
+          "title": "Dag 25-27: Integreer & Deploy",
+          "desc": "Exporteer de code. Verbind met APIs of databronnen. Gebruik de CLI om boilerplate te genereren. Deploy naar GitHub Pages, Vercel, of Netlify."
+        },
+        "task3": {
+          "title": "Dag 28-30: Verfijn & Deel",
+          "desc": "Gebruik AI om documentatie te schrijven. Genereer een README. Creëer een demo video. Deel je project op LinkedIn of Twitter. Leer iemand anders."
+        },
+        "success": "Je hebt een echt project gebouwd en gedeployed met Vibe Coding. Je kunt prototypen in uren, niet dagen. Je bent onstuitbaar."
+      }
+    },
+    "encouragement": "Onthoud: Je hoeft dit niet perfect te doen. Begin gewoon.",
+    "reminder": "Elke expert was ooit een beginner die weigerde op te geven."
+  },
   "footer": {
-    "title": "Laten We Verbinden & Het Gesprek Voortzetten",
-    "description": "Klaar om AI-workflows verder te verkennen? Verbind met me op LinkedIn om inzichten te delen, je projecten te bespreken, of gewoon het gesprek over de toekomst van AI-aangedreven ontwikkeling voort te zetten.",
-    "cta": "Verbinden op LinkedIn",
+    "title": "Laten We Connecten & Het Gesprek Voortzetten",
+    "description": "Klaar om AI-workflows verder te verkennen? Maak contact met me op LinkedIn om inzichten te delen, je projecten te bespreken, of gewoon het gesprek over de toekomst van AI-aangedreven ontwikkeling voort te zetten.",
+    "cta": "Verbind op LinkedIn",
     "videoTitle": "Achter de Schermen",
     "videoPlaceholder": "[Video Komt Binnenkort] - Het verhaal achter deze site en de AI-workflows die het mogelijk maakten",
-    "disclaimer": "Disclaimer: Hoewel ik werkzaam ben bij Google, is dit project een persoonlijk initiatief en staat het volledig los van mijn werk bij Google. Alle meningen, standpunten en inhoud die op deze site worden geuit, zijn mijn eigen meningen en vertegenwoordigen niet de standpunten of posities van Google of een van haar gelieerde ondernemingen."
+    "disclaimer": "Disclaimer: Hoewel ik in dienst ben bij Google, is dit project een persoonlijk initiatief en is het volledig losstaat van mijn werk bij Google. Alle meningen, standpunten en inhoud die op deze site worden uitgedrukt zijn van mij en vertegenwoordigen niet de standpunten of posities van Google of een van haar dochterondernemingen."
   }
 }

@@ -6,7 +6,7 @@ interface ApiMessage {
 
 // Our API key from the .env file
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
+const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
 
 /**
  * Sends a conversation history to the Gemini API and gets a response.
@@ -15,20 +15,29 @@ const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-
  */
 export const getScribeResponse = async (history: ApiMessage[]): Promise<string> => {
   if (!API_KEY) {
-    console.error('Missing VITE_GEMINI_API_KEY environment variable');
+    // Only log errors in development mode
+    if (import.meta.env.DEV) {
+      console.error('Missing VITE_GEMINI_API_KEY environment variable');
+    }
     return "⚠️ API key not configured. Please set up your VITE_GEMINI_API_KEY environment variable to use the Gemini API features.";
   }
 
   try {
     const response = await fetch(API_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'x-goog-api-key': API_KEY // Secure: API key in header instead of URL
+      },
       body: JSON.stringify({ contents: history }),
     });
 
     if (!response.ok) {
       const errorData = await response.json();
-      throw new Error(`API Error ${response.status}: ${errorData.error.message}`);
+      if (import.meta.env.DEV) {
+        console.error(`API Error ${response.status}:`, errorData.error?.message);
+      }
+      throw new Error(`API Error ${response.status}: ${errorData.error?.message || 'Unknown error'}`);
     }
 
     const data = await response.json();
@@ -40,7 +49,9 @@ export const getScribeResponse = async (history: ApiMessage[]): Promise<string> 
     return data.candidates[0].content.parts[0].text;
 
   } catch (error) {
-    console.error("Error calling Gemini API:", error);
+    if (import.meta.env.DEV) {
+      console.error("Error calling Gemini API:", error);
+    }
     return "Sorry, I ran into an error. Please try again.";
   }
 };

@@ -5,25 +5,25 @@ export const FlowVibe: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-24" id="vibe-to-signal">
+    <section className="py-24" id="vibe-coding">
       {/* Main Header */}
       <h2 className="text-3xl font-display font-bold uppercase mb-4 text-center text-text-light">
         {t('flowVibe.title')}
       </h2>
 
-      {/* NL Sub-Header */}
-      <p className="font-mono text-sm text-text-light/70 mb-12 text-center">
+      {/* Subtitle */}
+      <p className="font-mono text-sm text-text-light/70 mb-6 text-center">
         {t('flowVibe.subtitle')}
       </p>
 
       {/* Intro Paragraph */}
-      <p className="font-body text-text-light/85 text-center max-w-4xl mx-auto mb-16 leading-relaxed">
+      <p className="font-body text-text-light/85 text-center max-w-4xl mx-auto mb-16 leading-relaxed text-lg">
         {t('flowVibe.intro')}
       </p>
 
-      {/* Card 1: Vibe Coding */}
+      {/* Main Vibe Coding Card */}
       <div className="bg-card-dark border border-primary/20 p-8 mb-8">
-        <h3 className="font-display text-2xl font-bold text-primary mb-4">
+        <h3 className="font-display text-2xl font-bold text-primary mb-6">
           {t('flowVibe.vibe.title')}
         </h3>
 
@@ -35,149 +35,92 @@ export const FlowVibe: React.FC = () => {
               {t('flowVibe.vibe.description')}
             </p>
 
-            {/* Info Grid */}
-            <div class="grid grid-cols-2 gap-4 text-sm">
-              <div>
-                <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.workflowLabel')}</p>
-                <p className="text-text-light/80">{t('flowVibe.vibe.workflow')}</p>
-              </div>
-              <div>
-                <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.goalLabel')}</p>
-                <p className="text-text-light/80">{t('flowVibe.vibe.goal')}</p>
-              </div>
-              <div>
-                <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.riskLabel')}</p>
-                <p className="text-text-light/80">{t('flowVibe.vibe.risk')}</p>
-              </div>
-              <div>
-                <p className="font-bold text-primary mb-1">{t('flowVibe.vibe.toolsLabel')}</p>
-                <p className="text-text-light/80">
-                  <a href={t('flowVibe.vibe.tool1Url')} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{t('flowVibe.vibe.tool1Name')}</a>
-                </p>
-              </div>
+            {/* Why It Works */}
+            <div className="mb-6">
+              <h4 className="font-bold text-primary mb-3">{t('flowVibe.vibe.whyGreatTitle')}</h4>
+              <ul className="space-y-2 text-sm text-text-light/80">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">✨</span>
+                  <span>{t('flowVibe.vibe.benefit1')}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">⚡</span>
+                  <span>{t('flowVibe.vibe.benefit2')}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">🎨</span>
+                  <span>{t('flowVibe.vibe.benefit3')}</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Reality Check */}
+            <div className="bg-secondary/10 border border-secondary/30 rounded p-4 text-sm text-text-light/80">
+              <span className="text-secondary font-bold">⚠️ </span>
+              {t('flowVibe.vibe.realityCheck')}
             </div>
           </div>
 
           {/* Right: Video Placeholder */}
-          <div className="w-full aspect-video bg-background-dark border border-primary/20">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/DePOMEBfvWQ"
-              title="Vibe Coding Demo"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-
-        {/* Footer - Live Example */}
-        <div className="mt-6 border-t border-primary/20 pt-4">
-          <p className="font-body text-text-light/85 text-sm">
-            <span className="font-bold">{t('flowVibe.liveExample')}</span> {t('flowVibe.vibe.example')}{' '}
-            <a
-              href="#prompt-improver"
-              className="text-primary hover:text-primary/80 underline transition-colors"
-            >
-              {t('flowVibe.vibe.exampleLink')}
-            </a>
-            {' '}{t('flowVibe.vibe.exampleText')}
-          </p>
-        </div>
-      </div>
-
-      {/* Card 2: The "Flow Coding" Confusion */}
-      <div className="bg-card-dark border border-text-light/20 p-8 mb-8">
-        <h3 className="font-display text-2xl font-bold text-text-light mb-4">
-          {t('flowVibe.flow.title')}
-        </h3>
-
-        {/* Two-column layout: Content + Video */}
-        <div className="grid md:grid-cols-2 gap-8 mb-6">
-          {/* Left: Content */}
-          <div>
-            <p className="font-body text-text-light/85 mb-6 leading-relaxed">
-              {t('flowVibe.flow.description')}
-            </p>
-            <p className="font-display uppercase text-secondary">
-              {t('flowVibe.flow.conclusion')}
-            </p>
-          </div>
-
-          {/* Right: Video Placeholder */}
-          <div className="w-full aspect-video bg-background-dark border border-text-light/20">
-            <video
-              className="w-full h-full"
-              src="https://storage.googleapis.com/heineken-hub-video-assets/A_cinematic_fastpaced_202510262230_46lbt.mp4"
-              title="Flow Coding Confusion Explained"
-              controls
-            ></video>
-          </div>
-        </div>
-      </div>
-
-      {/* Card 3: Signal Coding */}
-      <div
-        className="bg-card-dark border border-secondary/20 p-8"
-        style={{ boxShadow: 'var(--glow-purple)' }}
-      >
-        <h3 className="font-display text-2xl font-bold text-secondary mb-4">
-          {t('flowVibe.signal.title')}
-        </h3>
-
-        {/* Two-column layout: Content + Video */}
-        <div className="grid md:grid-cols-2 gap-8 mb-6">
-          {/* Left: Content */}
-          <div>
-            <p className="font-body text-text-light/85 mb-6 leading-relaxed">
-              {t('flowVibe.signal.description')}
-            </p>
-
-            {/* Info Grid */}
-            <div class="grid grid-cols-1 gap-4 text-sm">
-              <div>
-                <p className="font-bold text-secondary mb-1">{t('flowVibe.signal.workflowLabel')}</p>
-                <p className="text-text-light/80">{t('flowVibe.signal.workflow')}</p>
-              </div>
-              <div>
-                <p className="font-bold text-secondary mb-1">{t('flowVibe.signal.goalLabel')}</p>
-                <p className="text-text-light/80">{t('flowVibe.signal.goal')}</p>
-              </div>
-              <div>
-                <p className="font-bold text-secondary mb-1">{t('flowVibe.signal.powerLabel')}</p>
-                <p className="text-text-light/80">{t('flowVibe.signal.power')}</p>
-              </div>
+          <div className="w-full aspect-video bg-background-dark border border-primary/20 flex items-center justify-center rounded">
+            <div className="text-center text-text-light/50">
+              <div className="text-4xl mb-2">🎬</div>
+              <p className="text-sm font-mono">{t('flowVibe.vibe.videoPlaceholder')}</p>
             </div>
           </div>
-
-          {/* Right: Video Placeholder */}
-          <div className="w-full aspect-video bg-background-dark border border-secondary/20">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/5fhcklZe-qE"
-              title="Signal Coding Demo"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
         </div>
 
-        {/* Footer - Live Example */}
-        <div className="mt-6 border-t border-secondary/20 pt-4">
-          <p className="font-body text-text-light/85 text-sm">
-            <span className="font-bold">{t('flowVibe.liveExample')}</span> {t('flowVibe.signal.example')}{' '}
+        {/* Tools Section */}
+        <div className="mt-6 pt-6 border-t border-primary/20">
+          <h4 className="font-bold text-primary mb-2">{t('flowVibe.vibe.toolsTitle')}</h4>
+          <p className="text-text-light/70 text-sm mb-4">{t('flowVibe.vibe.toolsIntro')}</p>
+          <div className="flex flex-wrap gap-3">
             <a
-              href="#hero-gem"
-              className="text-secondary hover:text-secondary/80 underline transition-colors"
+              href="https://gemini.google.com/app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-primary hover:bg-primary/20 transition-all"
             >
-              {t('flowVibe.signal.exampleLink')}
+              <span>💎</span>
+              <span className="font-mono text-sm">Gemini</span>
             </a>
-            {' '}{t('flowVibe.signal.exampleText')}
-          </p>
-          <p className="font-mono text-xs text-text-light/60 mt-1">
-            {t('flowVibe.signal.exampleNL')}
-          </p>
+            <a
+              href="https://aistudio.google.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-primary hover:bg-primary/20 transition-all"
+            >
+              <span>🎨</span>
+              <span className="font-mono text-sm">AI Studio</span>
+            </a>
+            <a
+              href="https://stitch.new"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-primary hover:bg-primary/20 transition-all"
+            >
+              <span>🧵</span>
+              <span className="font-mono text-sm">Google Stitch</span>
+            </a>
+            <a
+              href="https://github.com/google-gemini/gemini-cli"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-primary hover:bg-primary/20 transition-all"
+            >
+              <span>⌨️</span>
+              <span className="font-mono text-sm">Gemini CLI</span>
+            </a>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-primary hover:bg-primary/20 transition-all"
+            >
+              <span>🐙</span>
+              <span className="font-mono text-sm">GitHub</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

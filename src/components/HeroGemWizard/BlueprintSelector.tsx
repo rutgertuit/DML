@@ -33,6 +33,18 @@ const BlueprintSelector: React.FC<BlueprintSelectorProps> = ({ onSelectBlueprint
     {
       title: t('heroGemWizard.blueprint6Title'),
       description: t('heroGemWizard.blueprint6Desc')
+    },
+    {
+      title: t('heroGemWizard.blueprint7Title'),
+      description: t('heroGemWizard.blueprint7Desc')
+    },
+    {
+      title: t('heroGemWizard.blueprint8Title'),
+      description: t('heroGemWizard.blueprint8Desc')
+    },
+    {
+      title: t('heroGemWizard.blueprint9Title'),
+      description: t('heroGemWizard.blueprint9Desc')
     }
   ];
 

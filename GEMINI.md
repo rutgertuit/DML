@@ -4,20 +4,21 @@ This document provides comprehensive technical context for AI assistants working
 
 ## Project Status
 * **State:** ✅ PRODUCTION (Live on GitHub Pages)
-* **Last Updated:** October 27, 2025  
+* **Last Updated:** November 1, 2025  
 * **Deployment:** Automated via GitHub Actions → GitHub Pages
 * **Live URL:** https://rutgertuit.github.io/DML/
 * **Repository:** https://github.com/rutgertuit/DML
 
 ## Project Overview
 
-**AI-ftershow** is a production-ready, single-page React application demonstrating practical AI workflow implementation. It serves as both a functional tool and educational resource, showcasing the evolution from "Vibe Coding" (conversational AI prototyping) to "Signal Coding" (structured, production-ready AI applications).
+**AI-ftershow** is a production-ready, single-page React application demonstrating practical AI workflow implementation using Google's Gemini ecosystem. It serves as both a functional tool and educational resource, showcasing "Vibe Coding"—fast, conversational AI development for rapid prototyping and creative exploration.
 
 ### Core Purpose
-- **Demonstrate** practical AI implementation patterns
-- **Educate** on structured AI workflow development  
-- **Provide** interactive tools for AI prompt refinement
-- **Showcase** Google AI ecosystem integration
+- **Demonstrate** practical Vibe Coding implementation patterns
+- **Educate** on rapid AI-powered prototyping workflows  
+- **Provide** interactive tools for multi-modal AI prompt refinement
+- **Showcase** Google AI ecosystem integration (Gemini, AI Studio, Stitch, CLI)
+- **Guide** users in creating custom AI experts (Gems) with automated research
 
 ## Tech Stack
 
@@ -81,24 +82,17 @@ npm run preview
 * **Automation:** GitHub Actions (`.github/workflows/deploy.yml`)
 * **Trigger:** Push to `main` branch
 * **Build Process:** 
-  1. Install dependencies
-  2. Build with Vite (includes environment variables)
+  1. Install dependencies (`npm ci`)
+  2. Build with Vite (injects `VITE_GEMINI_API_KEY` from GitHub Secrets)
   3. Deploy to GitHub Pages
 * **Live URL:** https://rutgertuit.github.io/DML/
 
 ### Environment Configuration
 * **Required:** `VITE_GEMINI_API_KEY` - Google AI Studio API key
-* **Development:** Local `.env` file
-* **Production:** GitHub Secrets (`VITE_GEMINI_API_KEY`)
-* **API Source:** https://makersuite.google.com/app/apikey
-* **Run tests:**
-    ```bash
-    npm run test
-    ```
-* **Lint and format:**
-    ```bash
-    npm run lint
-    ```
+* **Development:** Local `.env` file (not committed to git)
+* **Production:** GitHub Secrets → `VITE_GEMINI_API_KEY`
+* **API Key Source:** https://aistudio.google.com/apikey
+* **Security:** API key exposed in `.env.example` has been revoked and replaced
 
 ## Architectural Patterns & Conventions
 
@@ -108,27 +102,29 @@ npm run preview
 
 **Core Components:** (each in `src/components/`)
 
-1. **Header.tsx** - Sticky navigation with language switcher (EN/NL)
-2. **HeroSection.tsx** - Full-screen landing with video background  
-3. **PromptImprover.tsx** - Interactive AI chat tool (Gemini 2.5 Flash integration)
-4. **HeroGemWizard/** - Multi-step AI specialist builder:
-   - `HeroGemWizard.tsx` - Main wizard container
-   - `BlueprintSelector.tsx` - Domain selection interface
-   - `SourceMaterialGenerator.tsx` - Research prompt generation
-   - `GemDesignAssistant.tsx` - AI assistant configuration
-   - `FinalGemInstruction.tsx` - System prompt output
-   - `CopyButton.tsx` - Reusable clipboard utility
-5. **NotebookLM.tsx** - Document-grounded AI workflow guide
-6. **FlowVibe.tsx** - AI workflow philosophy (Vibe → Signal coding)
-7. **Toolkit.tsx** - Google AI tools showcase (6 curated tools)
-8. **Footer.tsx** - Contact, video placeholder, and legal disclaimer
+1. **Header.tsx** - Sticky navigation with language switcher (EN/NL), links to all sections
+2. **HeroSection.tsx** - Full-screen landing with video background, 3 CTA buttons to sections
+3. **IntroSection.tsx** - "From Toy to Tool" introduction explaining the site's purpose
+4. **PromptImprover.tsx** - Interactive AI chat tool with Gemini 2.5 Flash integration
+5. **PromptImproverHeader.tsx** - Multi-modal prompt engineering guide (text/image/video support)
+6. **HeroGemWizard/** - 4-step AI expert builder:
+   - `HeroGemWizard.tsx` - Main wizard container with step management
+   - `BlueprintSelector.tsx` - Step 1: Choose from 6 expert blueprints
+   - `GemDesignAssistant.tsx` - Step 2: AI-assisted conversational design
+   - `SourceMaterialGenerator.tsx` - Step 3: Automated research prompt generation
+   - `FinalGemInstruction.tsx` - Step 4: Complete system instruction output with upload guide
+   - `CopyButton.tsx` - Reusable clipboard utility component
+7. **NotebookLM.tsx** - Document-grounded AI workflow guide with multi-stakeholder examples
+8. **FlowVibe.tsx** - Vibe Coding section with benefits, tools showcase, and video placeholder
+9. **Toolkit.tsx** - Google AI tools showcase (6 curated tools with direct links)
+10. **Footer.tsx** - LinkedIn CTA and legal disclaimer
 
 **Supporting Components:**
-- `ChatBubble.tsx` - Chat message display
-- `LoadingIndicator.tsx` - Loading states
-- `PromptImproverHeader.tsx` - Section introduction
-  - `HowItWasMade.tsx` - Behind-the-scenes section
-  - `Footer.tsx` - Site footer
+- `ChatBubble.tsx` - Chat message display for AI conversations
+- `LoadingIndicator.tsx` - Loading states for API calls
+
+**Inline Components in App.tsx:**
+- `HowItWasMade` - 6-step workflow showing how this site was built
 
 ### State Management
 * Simple React state management using `useState` and `useRef` hooks
@@ -138,8 +134,11 @@ npm run preview
 ### API Communication
 * **Service Layer:** All API calls centralized in `src/services/aiStudioService.ts`
 * **API Endpoint:** Google Gemini 2.5 Flash (`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent`)
-* **Authentication:** API key stored in environment variable `VITE_GEMINI_API_KEY`
+* **Authentication:** API key passed as URL parameter from `VITE_GEMINI_API_KEY`
 * **Error Handling:** Try-catch blocks with user-friendly error messages
+* **Key Functions:**
+  - `getScribeResponse(history)` - Conversational API calls with message history
+  - `callGeminiApi(prompt)` - One-shot API calls for single prompts
 
 ### Naming Conventions
 * **Components:** PascalCase (e.g., `HeroGemWizard`, `PromptImprover`)
@@ -180,32 +179,50 @@ npm run preview
 * **Backend:** i18next-http-backend loads translations dynamically
 * **Default Language:** English
 * **Fallback:** English for missing translations
+* **Translation Structure:** Nested objects with dot notation (e.g., `t('heroGemWizard.title')`)
+* **Key Sections:** 
+  - `header` - Navigation labels
+  - `hero` - Landing section
+  - `intro` - Introduction section
+  - `promptImproverHeader` - Multi-modal guide
+  - `promptImprover` - Chat tool
+  - `heroGemWizard` - 4-step wizard with blueprints
+  - `notebookLM` - NotebookLM guide
+  - `flowVibe` - Vibe Coding section
+  - `howItWasMade` - 6-step workflow
+  - `toolkit` - Tools showcase
+  - `footer` - Footer content
 
 ## Project Goals & Roadmap
 
 ### Completed Features ✅
 * ✅ Core i18n (EN/NL) language switching functionality
-* ✅ Interactive "Prompt Improver" component with Gemini 2.5 Flash API integration
-* ✅ Multi-step "Hero Gem Wizard" for creating custom AI specialists
+* ✅ Interactive "Prompt Improver" with multi-modal support (text/image/video prompts)
+* ✅ 4-step "Hero Gem Wizard" for creating custom AI experts
+* ✅ Automated research prompt generation with improved meta-prompts
 * ✅ Responsive, cyberpunk-themed design system
-* ✅ All major site sections (Header, Hero, PromptImprover, HeroGemWizard, NotebookLM, FlowVibe, Toolkit, HowItWasMade, Footer)
-* ✅ Copy-to-clipboard functionality for generated prompts
-* ✅ Dynamic prompt generation based on user inputs
+* ✅ All major site sections (8 sections total)
+* ✅ Copy-to-clipboard functionality with visual feedback
+* ✅ Dynamic prompt generation based on conversational AI design
 * ✅ Chat-based UI for prompt refinement
 * ✅ ESLint configuration with React hooks and TypeScript rules
+* ✅ Vibe Coding section with tools showcase
+* ✅ "How It Was Made" 6-step workflow
+* ✅ Secure environment variable handling (GitHub Secrets)
+* ✅ Multi-stakeholder NotebookLM examples (CFO/CMO/CEO/CTO)
 
 ### Current Focus 🔄
-* Final polish on HeroGemWizard UI/UX
-* Testing prompt generation accuracy
-* Validation of all translation keys
+* Video content for "How It Was Made" demo
+* Performance optimization and accessibility audit
+* Enhanced error handling and loading states
 
 ### Future Goals 🎯
-* Deploy the site to Google Cloud (Cloud Run or Firebase Hosting)
-* Ensure full WCAG 2.1 AA accessibility compliance
 * Add analytics tracking for user interactions
-* Performance optimization (lazy loading, code splitting)
+* Implement lazy loading for sections
 * Add unit tests for critical components
-* Implement error boundaries for robust error handling
+* Enhance mobile navigation experience
+* Create video tutorials for each tool
+* Add more Gem blueprints based on user feedback
 
 ## Development Workflow
 
@@ -225,23 +242,27 @@ npm run preview
 aiftershow/
 ├── public/
 │   └── locales/
-│       ├── en/translation.json
-│       └── nl/translation.json
+│       ├── en/translation.json    # English translations
+│       └── nl/translation.json    # Dutch translations
 ├── src/
 │   ├── components/
 │   │   ├── Header.tsx
 │   │   ├── HeroSection.tsx
+│   │   ├── IntroSection.tsx
 │   │   ├── PromptImprover.tsx
+│   │   ├── PromptImproverHeader.tsx
 │   │   ├── HeroGemWizard/
 │   │   │   ├── HeroGemWizard.tsx
-│   │   │   ├── Step1DefineExpert.tsx
-│   │   │   ├── Step2DeepResearch.tsx
-│   │   │   ├── Step3BuildGem.tsx
+│   │   │   ├── BlueprintSelector.tsx
+│   │   │   ├── GemDesignAssistant.tsx
+│   │   │   ├── SourceMaterialGenerator.tsx
+│   │   │   ├── FinalGemInstruction.tsx
 │   │   │   └── CopyButton.tsx
 │   │   ├── NotebookLM.tsx
 │   │   ├── FlowVibe.tsx
 │   │   ├── Toolkit.tsx
-│   │   ├── HowItWasMade.tsx
+│   │   ├── ChatBubble.tsx
+│   │   ├── LoadingIndicator.tsx
 │   │   └── Footer.tsx
 │   ├── services/
 │   │   └── aiStudioService.ts
@@ -251,6 +272,9 @@ aiftershow/
 │   ├── main.tsx
 │   ├── i18n.ts
 │   └── index.css
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
 ├── eslint.config.js
 ├── tailwind.config.js
 ├── tsconfig.json
@@ -258,7 +282,10 @@ aiftershow/
 ├── tsconfig.node.json
 ├── vite.config.ts
 ├── package.json
-└── GEMINI.md (this file)
+├── .env.example
+├── README.md
+├── GEMINI.md (this file)
+└── PROMPT_IMPROVER_EXPLANATION.md
 ```
 
 ## AI Assistant Guidelines
@@ -280,9 +307,16 @@ When working with this codebase:
 ### Manual Testing Checklist
 - [ ] Language switching works (EN ↔ NL)
 - [ ] Prompt Improver chat interaction flows correctly
+- [ ] Multi-modal prompt support works (text/image/video detection)
 - [ ] Gemini API responses are properly formatted
-- [ ] Hero Gem Wizard steps progress smoothly
-- [ ] Copy-to-clipboard buttons provide feedback
+- [ ] Hero Gem Wizard 4-step progression works smoothly
+- [ ] Blueprint selection navigates to design assistant
+- [ ] Research prompt generation creates clean prompts (no meta-commentary)
+- [ ] Copy-to-clipboard buttons provide visual feedback
 - [ ] All sections render on desktop and mobile
 - [ ] Custom Tailwind theme applied consistently
 - [ ] No console errors in development mode
+- [ ] Hero section CTAs link to correct sections (#prompt-improver, #hero-gem, #notebooklm)
+- [ ] Header navigation links work for all sections
+- [ ] Video placeholder displays correctly in FlowVibe section
+- [ ] Tool links in FlowVibe open in new tabs
