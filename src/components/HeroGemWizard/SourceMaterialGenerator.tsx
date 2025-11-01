@@ -24,18 +24,17 @@ const SourceMaterialGenerator: React.FC<SourceMaterialGeneratorProps> = ({ gemPl
 
   useEffect(() => {
     const fetchSourcePrompts = async () => {
-      // Debug logging
-      console.log('SourceMaterialGenerator - gemPlan:', gemPlan);
-      console.log('SourceMaterialGenerator - researchDocuments:', gemPlan?.researchDocuments);
-      console.log('SourceMaterialGenerator - userDocuments:', gemPlan?.userDocuments);
-
       if (!gemPlan || !gemPlan.researchDocuments) {
-        console.warn('SourceMaterialGenerator - No gemPlan or researchDocuments found');
+        if (import.meta.env.DEV) {
+          console.warn('SourceMaterialGenerator - No gemPlan or researchDocuments found');
+        }
         return;
       }
 
       if (gemPlan.researchDocuments.length === 0) {
-        console.error('SourceMaterialGenerator - researchDocuments array is EMPTY! This should not happen.');
+        if (import.meta.env.DEV) {
+          console.error('SourceMaterialGenerator - researchDocuments array is EMPTY!');
+        }
         setError('No research documents found. Please restart the wizard and ensure research documents are suggested.');
         return;
       }
@@ -47,7 +46,6 @@ const SourceMaterialGenerator: React.FC<SourceMaterialGeneratorProps> = ({ gemPl
 
       try {
         // Only generate prompts for research documents
-        console.log(`SourceMaterialGenerator - Generating ${gemPlan.researchDocuments.length} research prompts`);
         for (const documentName of gemPlan.researchDocuments) {
           // Set currently generating document
           setCurrentlyGenerating(documentName);
@@ -89,7 +87,9 @@ Now generate the research prompt for "${documentName}" (remember: output ONLY th
         setCurrentlyGenerating(null);
 
       } catch (e) {
-        console.error("Failed to fetch source prompts:", e);
+        if (import.meta.env.DEV) {
+          console.error("Failed to fetch source prompts:", e);
+        }
         setError("The AI failed to generate prompts. Please go back and try again.");
         setCurrentlyGenerating(null);
       } finally {

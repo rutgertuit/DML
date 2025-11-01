@@ -38,7 +38,9 @@ Your task is to generate the complete, copy-paste-ready system instruction.
         setFinalInstruction(generatedInstruction);
 
       } catch (e) {
-        console.error("Error generating final instruction:", e);
+        if (import.meta.env.DEV) {
+          console.error("Error generating final instruction:", e);
+        }
         setError("The AI failed to generate the final instruction. Please try again.");
         setFinalInstruction(null);
       } finally {

@@ -205,7 +205,9 @@ Now generate the perfect kickoff message for "${selectedBlueprint}".
         setMessages([{ sender: 'ai', content: firstAiMessage }]);
 
       } catch (e) {
-        console.error("Failed to fetch kickoff message:", e);
+        if (import.meta.env.DEV) {
+          console.error("Failed to fetch kickoff message:", e);
+        }
         setError("Failed to start the chat. Please try again.");
         // Fallback message
         setMessages([{ sender: 'ai', content: "Hello! I'm here to help you design your Gem. What's the main goal for this AI assistant?" }]);
@@ -262,7 +264,9 @@ Now generate the perfect kickoff message for "${selectedBlueprint}".
       const response = await getScribeResponse(apiHistory);
       setMessages([...newMessages, { sender: 'ai', content: response }]);
     } catch (error) {
-      console.error("Failed to get AI response:", error);
+      if (import.meta.env.DEV) {
+        console.error("Failed to get AI response:", error);
+      }
       setMessages([...newMessages, { sender: 'ai', content: "I'm having trouble responding. Could you try rephrasing that?" }]);
     } finally {
       setIsLoading(false);
@@ -310,27 +314,23 @@ Do not add *any* conversational text or markdown formatting around this JSON.` }
 
       const jsonStringResponse = await getScribeResponse(apiHistory);
 
-      // Debug logging
-      console.log('GemDesignAssistant - Raw JSON response:', jsonStringResponse);
-
       // Try to parse the JSON response
       const parsedPlan = JSON.parse(jsonStringResponse.trim());
 
-      // Debug logging
-      console.log('GemDesignAssistant - Parsed plan:', parsedPlan);
-      console.log('GemDesignAssistant - researchDocuments count:', parsedPlan.researchDocuments?.length || 0);
-      console.log('GemDesignAssistant - userDocuments count:', parsedPlan.userDocuments?.length || 0);
-
       // Validate that we have at least 1 research document
       if (!parsedPlan.researchDocuments || parsedPlan.researchDocuments.length === 0) {
-        console.error('GemDesignAssistant - CRITICAL: Plan has ZERO research documents! This should not happen.');
+        if (import.meta.env.DEV) {
+          console.error('GemDesignAssistant - CRITICAL: Plan has ZERO research documents!');
+        }
         throw new Error('Plan must have at least 1 research document');
       }
 
       onPlanCreated(parsedPlan);
 
     } catch (e) {
-      console.error("Failed to finalize plan:", e);
+      if (import.meta.env.DEV) {
+        console.error("Failed to finalize plan:", e);
+      }
       setError("The AI failed to create a plan. Please try again or manually summarize your Gem's goal and needed files.");
       setMessages([...messages, {
         sender: 'ai',
