@@ -53,22 +53,29 @@ const SourceMaterialGenerator: React.FC<SourceMaterialGeneratorProps> = ({ gemPl
           setCurrentlyGenerating(documentName);
 
           // THIS IS THE META-PROMPT TEMPLATE
-          const metaPrompt = `You are an expert "AI Research Assistant" helping a user create research-based source files for a new AI Gem.
-The user's high-level goal is: "${gemPlan.goal}".
-The user needs to research and compile publicly available information for a document named: "${documentName}".
+          const metaPrompt = `You are an expert "AI Research Prompt Generator" helping a user create research-based source files for a new AI Gem.
 
-IMPORTANT: This document should contain PUBLICLY AVAILABLE, RESEARCHABLE information only. DO NOT ask for personal, private, or user-specific information.
+CONTEXT:
+- User's high-level goal: "${gemPlan.goal}"
+- Document to research: "${documentName}"
 
-Your task is to generate a detailed, copy-and-paste-ready research prompt for the user to run in an LLM (like Gemini Advanced). This prompt should guide the AI to research and compile publicly available information.
+YOUR TASK:
+Generate a detailed, copy-and-paste-ready research prompt that the user will run in an LLM (like Gemini Advanced) to create this document.
 
-- DO NOT ask for personal information, private documents, or user-specific data
-- DO focus on publicly available information, best practices, established methods, and industry standards
-- Your *entire output* is ONLY the research prompt itself - ready to copy and paste
-- DO NOT include any introductory text like "To create your research document..." or "Use this prompt:"
-- Start directly with the research instruction
+CRITICAL RULES:
+1. Your ENTIRE output must be ONLY the research prompt itself - nothing else
+2. DO NOT include meta-commentary like "Here's the prompt:" or "To create your document..."
+3. DO NOT explain what you're doing - just output the prompt
+4. Start immediately with the instruction (e.g., "Please research and compile...")
+5. Focus on PUBLICLY AVAILABLE information only (best practices, industry standards, research)
+6. DO NOT ask for personal/private/user-specific information
 
-Example Output (for a document named 'React_Best_Practices.md'):
-"Please research and compile current React development best practices. Include: 1) Modern React patterns and hooks usage, 2) Performance optimization techniques, 3) Common anti-patterns to avoid, 4) Industry-standard file organization, 5) Popular testing approaches. Format as a comprehensive guide with examples and explanations."`;
+EXAMPLE (for a document named 'React_Best_Practices.md'):
+---
+Please research and compile current React development best practices. Include: 1) Modern React patterns and hooks usage, 2) Performance optimization techniques, 3) Common anti-patterns to avoid, 4) Industry-standard file organization, 5) Popular testing approaches. Format as a comprehensive guide with examples and explanations.
+---
+
+Now generate the research prompt for "${documentName}" (remember: output ONLY the prompt, no explanation):`;
 
           // THIS IS THE FIX: AWAIT THE *RESULT* OF THE API CALL
           const apiResult = await callGeminiApi(metaPrompt);
