@@ -11,10 +11,13 @@ import HowVibeCodingWorks from './components/HowVibeCodingWorks';
 import AIRoadmap from './components/AIRoadmap';
 import Toolkit from './components/Toolkit';
 import Footer from './components/Footer';
+import QuickJumpMenu from './components/QuickJumpMenu';
+
 function App() {
   return (
     <div className="relative w-full flex flex-col">
       <Header />
+      <QuickJumpMenu />
       <main className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <HeroSection />
 

@@ -9,9 +9,6 @@ interface Message {
   text: string;
 }
 
-// The new system prompt, as specified
-const SYSTEM_PROMPT = `You are Prompt Scribe, a patient, empathetic coach who helps users craft killer prompts through friendly dialogue. Your goal: Guide them to specificity without overwhelming – think collaborator, not critic. Never execute or answer their original prompt; only refine it collaboratively.\n\nCore Rules:\n- Analyze the draft for gaps in: Audience, Goal/Objective, Tone/Style, Format/Length, Constraints (e.g., sources, ethics), Examples/Context.\n- Respond with empathy first: Acknowledge their idea positively (e.g., "Love the AI blog angle – let's make it pop!").\n- Ask exactly 3-5 targeted, open-ended questions to fill gaps. Number them for clarity. Keep it concise (under 150 words total).\n- After their reply, synthesize: Update the draft prompt, show diffs (e.g., "Added: target=beginners"), and ask 1-2 follow-ups if needed. Cap at 2 rounds.\n- End by generating the final prompt. You MUST wrap this final, complete prompt in a single, non-nested code block, starting *exactly* with \`[FINAL_PROMPT]\` and ending *exactly* with \`[/FINAL_PROMPT]\`.\n- After the \`[/FINAL_PROMPT]\` tag, you MUST add a concluding sign-off (e.g., 'Here's the refined prompt, ready to use in Gemini!' ).\n- **Crucially, after you use the \`[FINAL_PROMPT]\` tags, your turn is over. You MUST NOT ask any more follow-up questions.**\n- If they say "stop" or "finalize," output the prompt immediately.\n- Stay fun and encouraging: End responses with a micro-tip (e.g., "Pro tip: Specificity = magic!").`;
-
 export const PromptImprover: React.FC = () => {
   const { t } = useTranslation();
 
@@ -54,9 +51,13 @@ export const PromptImprover: React.FC = () => {
     const updatedMessages = [...messages, newUserMessage];
     setMessages(updatedMessages);
 
+    // Get system prompt and initial response from translations
+    const systemPrompt = t('promptImprover.systemPrompt');
+    const initialResponse = t('promptImprover.initialResponse');
+
     const apiHistory = [
-      { role: 'user' as const, parts: [{ text: SYSTEM_PROMPT }] },
-      { role: 'model' as const, parts: [{ text: "Got it. I'm Prompt Scribe, your friendly coach. What's your rough prompt idea?" }] },
+      { role: 'user' as const, parts: [{ text: systemPrompt }] },
+      { role: 'model' as const, parts: [{ text: initialResponse }] },
       ...updatedMessages.map(msg => ({
         role: msg.role as 'user' | 'model',
         parts: [{ text: msg.text }],
@@ -106,95 +107,106 @@ export const PromptImprover: React.FC = () => {
 
       <PromptImproverHeader />
 
-      {/* Remove intro from above, move it inside chat box below */}
+      {/* Try It Now Banner - RIGHT ABOVE INTERACTIVE CHAT */}
+      <div className="mb-6 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 border-2 border-primary rounded-lg p-6 text-center animate-pulse-slow">
+        <h3 className="font-display text-2xl font-bold text-primary mb-2">
+          {t('promptImprover.tryItTitle')}
+        </h3>
+        <p className="text-text-light/80 font-body">
+          {t('promptImprover.tryItDesc')}
+        </p>
+      </div>
 
-      {/* New Chat-based UI */}
-      <div className="bg-card-dark border border-secondary/20">
-        {/* Chat Log */}
-        <div
-          ref={chatLogRef}
-          className="flex flex-col gap-4 p-4 min-h-[250px] max-h-[400px] overflow-y-auto"
-        >
-          {/* Research improvement text as a system chat bubble */}
-          <div className="flex justify-start">
-            <div className="p-4 max-w-[80%] bg-primary/10 text-text-light/90 border border-primary/30 rounded-lg">
-              <p className="font-body text-sm">
-                💡 <span className="font-semibold">Pro Tip:</span> Research shows that iterative, dialogue-based refinement yields 20-50% better AI outputs compared to one-shot prompts, as it uncovers hidden assumptions and builds specificity organically.
-              </p>
+      {/* Interactive Chat Interface - Wrapped in Try It Now Border */}
+      <div className="border-2 border-primary rounded-lg p-6 bg-gradient-to-br from-primary/5 to-secondary/5">
+        {/* Chat-based UI */}
+        <div className="bg-card-dark border border-secondary/20">
+          {/* Chat Log */}
+          <div
+            ref={chatLogRef}
+            className="flex flex-col gap-4 p-4 min-h-[250px] max-h-[400px] overflow-y-auto"
+          >
+            {/* Research improvement text as a system chat bubble */}
+            <div className="flex justify-start">
+              <div className="p-4 max-w-[80%] bg-primary/10 text-text-light/90 border border-primary/30 rounded-lg">
+                <p className="font-body text-sm">
+                  💡 <span className="font-semibold">Pro Tip:</span> Research shows that iterative, dialogue-based refinement yields 20-50% better AI outputs compared to one-shot prompts, as it uncovers hidden assumptions and builds specificity organically.
+                </p>
+              </div>
             </div>
+
+            {messages.map((msg, index) => (
+              <div
+                key={index}
+                className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+              >
+                <div
+                  className={`p-4 max-w-[80%] ${msg.role === 'user'
+                    ? 'bg-secondary/20 text-text-light rounded-lg'
+                    : 'bg-background-dark text-text-light/90 rounded-lg'
+                    }`}
+                >
+                  <p className="font-body whitespace-pre-wrap">{msg.text}</p>
+                </div>
+              </div>
+            ))}
+            {isLoading && (
+              <div className="flex justify-start">
+                <div className="p-4 max-w-[80%] bg-background-dark text-text-light/90 flex items-start gap-3 rounded-lg">
+                  {/* Pulsating Gemini logo/icon with spinner */}
+                  <div className="flex-shrink-0 relative">
+                    {/* Spinning ring */}
+                    <svg className="w-8 h-8 animate-spin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    {/* Inner pulsating icon */}
+                    <svg className="w-4 h-4 text-primary animate-pulse absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-body text-sm">
+                      <span className="font-semibold text-primary">Gemini 2.5 Flash</span> is analyzing your prompt...
+                    </p>
+                    <p className="font-mono text-xs text-text-light/60 mt-1">
+                      Finding what additional information a perfect prompt is still missing
+                      <span className="inline-flex ml-1">
+                        <span className="animate-bounce delay-0">.</span>
+                        <span className="animate-bounce delay-100">.</span>
+                        <span className="animate-bounce delay-200">.</span>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
-          {messages.map((msg, index) => (
-            <div
-              key={index}
-              className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-            >
-              <div
-                className={`p-4 max-w-[80%] ${msg.role === 'user'
-                  ? 'bg-secondary/20 text-text-light rounded-lg'
-                  : 'bg-background-dark text-text-light/90 rounded-lg'
-                  }`}
-              >
-                <p className="font-body whitespace-pre-wrap">{msg.text}</p>
-              </div>
-            </div>
-          ))}
-          {isLoading && (
-            <div className="flex justify-start">
-              <div className="p-4 max-w-[80%] bg-background-dark text-text-light/90 flex items-start gap-3 rounded-lg">
-                {/* Pulsating Gemini logo/icon with spinner */}
-                <div className="flex-shrink-0 relative">
-                  {/* Spinning ring */}
-                  <svg className="w-8 h-8 animate-spin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  {/* Inner pulsating icon */}
-                  <svg className="w-4 h-4 text-primary animate-pulse absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <p className="font-body text-sm">
-                    <span className="font-semibold text-primary">Gemini 2.5 Flash</span> is analyzing your prompt...
-                  </p>
-                  <p className="font-mono text-xs text-text-light/60 mt-1">
-                    Finding what additional information a perfect prompt is still missing
-                    <span className="inline-flex ml-1">
-                      <span className="animate-bounce delay-0">.</span>
-                      <span className="animate-bounce delay-100">.</span>
-                      <span className="animate-bounce delay-200">.</span>
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Input Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="flex gap-4 p-6 border-t border-secondary/20"
-        >
-          <textarea
-            id="prompt-input"
-            rows={2}
-            className="flex-1 bg-background-dark text-text-light font-mono text-sm p-4 border border-secondary/50 focus:border-primary focus:ring-0 focus:shadow-glow-blue transition-all"
-            placeholder={t('promptImprover.placeholder')}
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            disabled={isLoading}
-            onKeyDown={handleKeyDown}
-          />
-          <button
-            type="submit"
-            className="font-mono uppercase text-lg bg-primary text-background-dark font-bold py-3 px-6 hover:shadow-glow-blue transition-shadow disabled:opacity-50 disabled:shadow-none"
-            disabled={isLoading}
+          {/* Input Form */}
+          <form
+            onSubmit={handleSubmit}
+            className="flex gap-4 p-6 border-t border-secondary/20"
           >
-            {isLoading ? '...' : t('promptImprover.submit')}
-          </button>
-        </form>
+            <textarea
+              id="prompt-input"
+              rows={2}
+              className="flex-1 bg-background-dark text-text-light font-mono text-sm p-4 border border-secondary/50 focus:border-primary focus:ring-0 focus:shadow-glow-blue transition-all"
+              placeholder={t('promptImprover.placeholder')}
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              disabled={isLoading}
+              onKeyDown={handleKeyDown}
+            />
+            <button
+              type="submit"
+              className="font-mono uppercase text-lg bg-primary text-background-dark font-bold py-3 px-6 hover:shadow-glow-blue transition-shadow disabled:opacity-50 disabled:shadow-none"
+              disabled={isLoading}
+            >
+              {isLoading ? '...' : t('promptImprover.submit')}
+            </button>
+          </form>
+        </div>
       </div>
 
       {/* Final Prompt Output Box */}
