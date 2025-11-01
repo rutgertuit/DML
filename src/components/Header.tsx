@@ -23,7 +23,7 @@ export const Header: React.FC = () => {
         <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#notebooklm">
           {t('header.notebookLM')}
         </a>
-        <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#vibe-to-signal">
+        <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#vibe-coding">
           {t('header.newPowers')}
         </a>
         <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#toolkit">

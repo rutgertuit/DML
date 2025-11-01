@@ -114,43 +114,18 @@
     "bonusTrendDesc": "Ask it to find patterns across all your customer interviews, like \"What are the 3 strongest unmet customer needs?\""
   },
   "flowVibe": {
-    "title": "Understanding Your New Powers: From 'Vibe' to 'Signal'",
-    "subtitle": "The way we talk to AI is changing. Here's a no-nonsense guide.",
-    "intro": "The way we interact with AI is evolving. We started with conversational 'Vibe Coding,' got confused by the term 'Flow Coding,' and are now moving towards a more precise and powerful method: 'Signal Coding.' This guide is designed to help you master this evolution.",
-    "liveExample": "Live Example:",
+    "title": "Vibe Coding",
+    "subtitle": "Fast, creative, and conversational AI development",
+    "intro": "Vibe Coding is about giving AI a general direction and iterating based on its output. It's like directing an actor—you provide the 'vibe' and see what you get back. This is how most people interact with AI today, and when done right, it's incredibly powerful for rapid prototyping and creative exploration.",
     "vibe": {
-      "title": "1. Vibe Coding (The \"Director\" 🎬)",
-      "description": "Fast, creative, and conversational. This is about giving the AI a general direction and iterating based on its output. It's like directing an actor—you provide the 'vibe' and see what you get back.",
-      "workflowLabel": "Workflow:",
-      "workflow": "Conversational back-and-forth.",
-      "goalLabel": "Goal:",
-      "goal": "Explore ideas, quick prototypes.",
-      "riskLabel": "Risk:",
-      "risk": "Inconsistent, not repeatable.",
-      "toolsLabel": "Tools:",
-      "tool1Name": "Google AI Studio",
-      "tool1Url": "https://aistudio.google.com/",
-      "example": "The",
-      "exampleLink": "Prompt Improver",
-      "exampleText": "on this page uses Vibe Coding. You give it a rough idea, and it directs the AI to refine it."
-    },
-    "flow": {
-      "title": "2. The \"Flow Coding\" Confusion",
-      "description": "The term 'Flow Coding' is ambiguous. It can mean being in 'the zone,' using a Git Flow, building with visual tools like Google Agentspace, or just 'going with the flow.' Because it lacks a clear definition, it's not a useful concept for building reliable AI systems. We need something more precise.",
-      "conclusion": "Conclusion: 'Signal Coding' is a more useful concept.'"
-    },
-    "signal": {
-      "title": "3. Signal Coding (The \"Architect\" 📐)",
-      "description": "This is the evolution. Instead of a 'vibe,' you provide a clear, structured 'signal.' Signal Coding is about giving the AI precise, repeatable, and testable instructions to build reliable, production-ready systems. It's the language of AI architects.",
-      "workflowLabel": "Workflow:",
-      "workflow": "Structured instructions, system prompts, defined inputs/outputs.",
-      "goalLabel": "Goal:",
-      "goal": "Create predictable, scalable, and reliable AI applications.",
-      "powerLabel": "Power:",
-      "power": "Enables agentic workflows and complex, multi-step tasks.",
-      "example": "The",
-      "exampleLink": "Hero Gem Builder",
-      "exampleText": "uses Signal Coding. Its two-step process with specific system instructions is a clear 'signal' for a predictable outcome."
+      "title": "What is Vibe Coding?",
+      "description": "Vibe Coding is a conversational, iterative approach to working with AI. Instead of writing perfect instructions upfront, you have a dialogue with the AI—refining, adjusting, and building as you go. It's fast, flexible, and perfect for exploration.",
+      "whyGreatTitle": "What Makes It Great:",
+      "benefit1": "Speed: Get from idea to prototype in minutes, not hours",
+      "benefit2": "Flexibility: Adapt and pivot as you learn what works",
+      "benefit3": "Creativity: Explore unexpected directions and happy accidents",
+      "videoPlaceholder": "Demo: How This Site Was Made",
+      "toolsTitle": "Tools for Vibe Coding:"
     }
   },
   "promptImproverHeader": {

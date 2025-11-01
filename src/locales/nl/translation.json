@@ -114,43 +114,18 @@
     "bonusTrendDesc": "Vraag het om patronen te vinden in al je klantinterviews, zoals \"Wat zijn de 3 sterkste onvervulde klantbehoeften?\""
   },
   "flowVibe": {
-    "title": "Krijg grip op je Nieuwe Superkrachten: Van 'Vibe' naar 'Signal'",
-    "subtitle": "De manier waarop we met AI praten verandert. Hier is een no-nonsense gids.",
-    "intro": "De manier waarop we met AI omgaan, evolueert. We zijn begonnen met conversationeel 'Vibe Coding', raakten in de war door de term 'Flow Coding', en gaan nu over op een preciezere en krachtigere methode: 'Signal Coding'. Deze gids is ontworpen om je te helpen deze evolutie meester te worden.",
-    "liveExample": "Live Voorbeeld:",
+    "title": "Vibe Coding",
+    "subtitle": "Snelle, creatieve en conversationele AI-ontwikkeling",
+    "intro": "Vibe Coding gaat over het geven van een algemene richting aan AI en itereren op basis van de output. Het is als het regisseren van een acteur - je geeft de 'vibe' en kijkt wat je terugkrijgt. Dit is hoe de meeste mensen vandaag met AI omgaan, en als het goed wordt gedaan, is het ongelooflijk krachtig voor snelle prototyping en creatieve verkenning.",
     "vibe": {
-      "title": "1. Vibe Coding (De \"Regisseur\" 🎬)",
-      "description": "Snel, creatief en conversationeel. Het gaat erom de AI een algemene richting te geven en te itereren op basis van de output. Het is als het regisseren van een acteur - je geeft de 'vibe' en kijkt wat je terugkrijgt.",
-      "workflowLabel": "Workflow:",
-      "workflow": "Conversationele heen-en-weer.",
-      "goalLabel": "Doel:",
-      "goal": "Ideeën verkennen, snelle prototypes.",
-      "riskLabel": "Risico:",
-      "risk": "Inconsistent, niet herhaalbaar.",
-      "toolsLabel": "Tools:",
-      "tool1Name": "Google AI Studio",
-      "tool1Url": "https://aistudio.google.com/",
-      "example": "De",
-      "exampleLink": "Prompt Verbeteraar",
-      "exampleText": "op deze pagina maakt gebruik van Vibe Coding. Je geeft een ruw idee, en het stuurt de AI aan om het te verfijnen."
-    },
-    "flow": {
-      "title": "2. De \"Flow Coding\" Verwarring",
-      "description": "De term 'Flow Coding' is dubbelzinnig. Het kan betekenen dat je in 'de zone' bent, een Git Flow gebruikt, bouwt met visuele tools zoals Google Agentspace, of gewoon 'met de stroom meegaat'. Omdat het een duidelijke definitie mist, is het geen bruikbaar concept voor het bouwen van betrouwbare AI-systemen. We hebben iets preciezers nodig.",
-      "conclusion": "Conclusie: 'Signal Coding' is een bruikbaarder concept.'"
-    },
-    "signal": {
-      "title": "3. Signal Coding (De \"Architect\" 📐)",
-      "description": "Dit is de evolutie. In plaats van een 'vibe', geef je een duidelijk, gestructureerd 'signaal'. Signal Coding gaat over het geven van precieze, herhaalbare en testbare instructies aan de AI om betrouwbare, productieklare systemen te bouwen. Het is de taal van AI-architecten.",
-      "workflowLabel": "Workflow:",
-      "workflow": "Gestructureerde instructies, systeemprompts, gedefinieerde inputs/outputs.",
-      "goalLabel": "Doel:",
-      "goal": "Creëer voorspelbare, schaalbare en betrouwbare AI-applicaties.",
-      "powerLabel": "Kracht:",
-      "power": "Maakt agentische workflows en complexe, meerstaps taken mogelijk.",
-      "example": "De",
-      "exampleLink": "Hero Gem Builder",
-      "exampleText": "maakt gebruik van Signal Coding. Het twee-staps proces met specifieke systeeminstructies is een duidelijk 'signaal' voor een voorspelbaar resultaat."
+      "title": "Wat is Vibe Coding?",
+      "description": "Vibe Coding is een conversationele, iteratieve benadering van werken met AI. In plaats van perfecte instructies vooraf te schrijven, voer je een dialoog met de AI - verfijnen, aanpassen en bouwen terwijl je bezig bent. Het is snel, flexibel en perfect voor verkenning.",
+      "whyGreatTitle": "Wat maakt het zo goed:",
+      "benefit1": "Snelheid: Van idee naar prototype in minuten, niet uren",
+      "benefit2": "Flexibiliteit: Aanpassen en draaien terwijl je leert wat werkt",
+      "benefit3": "Creativiteit: Verken onverwachte richtingen en gelukkige toevalligheden",
+      "videoPlaceholder": "Demo: Hoe deze site is gemaakt",
+      "toolsTitle": "Tools voor Vibe Coding:"
     }
   },
   "promptImproverHeader": {
