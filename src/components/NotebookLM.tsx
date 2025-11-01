@@ -92,6 +92,13 @@ export const NotebookLM: React.FC = () => {
         {t('notebookLM.title')}
       </h2>
 
+      {/* Privacy Warning */}
+      <div className="mb-8 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/30 rounded-lg p-6">
+        <p className="font-body text-text-light/90 leading-relaxed">
+          {t('notebookLM.privacyWarning')}
+        </p>
+      </div>
+
       {/* New Introductory Section */}
       <div className="mb-12 space-y-6">
         <p className="font-body text-lg text-text-light/85 leading-relaxed whitespace-pre-line">

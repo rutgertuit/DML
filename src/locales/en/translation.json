@@ -1,10 +1,9 @@
 {
   "header": {
-    "improvePrompt": "Improve Prompt",
-    "heroGem": "Hero Gem",
-    "notebookLM": "NotebookLM",
-    "newPowers": "New Powers",
-    "toolkit": "Toolkit"
+    "theVibe": "The Vibe",
+    "tools": "Tools",
+    "deepDive": "Deep Dive",
+    "roadmap": "Get Started"
   },
   "hero": {
     "title": "Marketing & Effie Live the AI-ftershow",
@@ -22,16 +21,50 @@
     },
     "paragraph2": "This site is different. It's not a collection of tips—it's a system for making AI indispensable.",
     "paragraph3": {
-      "part1": "Every tool here is designed to answer one question:",
-      "emphasis": "How do I make AI my new edge?"
+      "part1": "The secret? It's not about the AI. It's about",
+      "emphasis": "how you talk to it."
     },
-    "paragraph4": "Whether you need to build a prototype fast, ground AI in your own data, or synthesize 50 documents, you'll find the exact workflow you need below. No theory. Just tools you'll actually use.",
-    "cta": "Ready? Pick your challenge below."
+    "paragraph4": "Below, you'll learn a simple mindset shift, see the proof it works, and get the exact tools you need—whether you're building a prototype fast, grounding AI in your own data, or synthesizing 50 documents.",
+    "cta": "Let's start with the mindset that makes it all work"
+  },
+  "theVibe": {
+    "title": "The Secret: It's About the Vibe",
+    "subtitle": "AI isn't magic. It's a mirror. The better you communicate, the better it responds.",
+    "paragraph1": "Think about the last time you briefed a junior colleague. If you said \"make something cool,\" you got... something. Probably not what you wanted. But if you said \"create a LinkedIn post for B2B founders, conversational tone, start with a pain point, 150 words max\"—you got exactly what you needed.",
+    "paragraph2": "AI is the same. It doesn't read your mind. It reads your instructions. The clearer your 'vibe'—your tone, your context, your constraints—the better the output.",
+    "paragraph3": "This isn't about learning prompt engineering. It's about learning to communicate with clarity and intent.",
+    "point1": {
+      "title": "Be Specific",
+      "desc": "Vague inputs get vague outputs. \"Write a blog post\" vs \"Write a 500-word blog post for marketers about AI prompts, casual tone, include 3 examples.\""
+    },
+    "point2": {
+      "title": "Set the Scene",
+      "desc": "Give AI context. Who's the audience? What's the goal? What's the tone? Think of it like directing an actor—set the scene first."
+    },
+    "point3": {
+      "title": "Iterate Fearlessly",
+      "desc": "Your first prompt won't be perfect. That's fine. Refine it. Ask follow-ups. AI gets better as you get clearer."
+    },
+    "cta": "Ready to see this in action?",
+    "hint": "The next section shows you real before/after examples. Spoiler: specificity wins every time."
   },
   "promptImprover": {
-    "intro": "💡 Pro Tip: Iterating on a prompt with feedback (like you would with a junior creative) leads to way better results than a one-shot guess. It's the difference between a finished concept and a trip back to the drawing board.",
-    "title": "The Prompt Improver: Because \"Make it cool\" is a Bad Brief (for AI, Too).",
-    "description": "Asking an AI for 'something about AI' is like getting a client brief that just says, 'We want it to go viral.' You'll get something, but it's probably not what you wanted.\n\nThis tool is your built-in creative director. It won't let you start with a bad brief. It asks you the annoying-but-necessary questions first: 'Who is this for?' 'What's the tone?' 'What's the one thing you want them to remember?' It turns your vague idea into a brief so sharp, the AI can't help but nail it.",
+    "sectionTitle": "The 3 Core Tools",
+    "sectionIntro": "These three tools work together, but start here: learning how to get AI into 'conversation mode' to help you build better prompts. Master this skill, and everything else becomes easier.",
+    "toolsHeader": {
+      "title": "Master These 3 Tools",
+      "subtitle": "Each tool solves a specific challenge. Work through all three to build your AI toolkit.",
+      "tool1": "Tool 1: Prompt Improver",
+      "tool1desc": "Learn to get AI into conversation mode",
+      "tool2": "Tool 2: Hero Gem Wizard",
+      "tool2desc": "Build your own custom AI expert",
+      "tool3": "Tool 3: NotebookLM Guide",
+      "tool3desc": "Turn research into multi-format outputs",
+      "endMessage": "You've mastered the 3 core tools! Ready to go deeper?"
+    },
+    "intro": "💡 The Secret: If you just paste a vague prompt into any LLM, you get vague output. But if you prefix it with \"Draft prompt:\" the AI knows you want help refining it—not executing it. This shifts the conversation from \"do the task\" to \"help me do the task better.\"",
+    "title": "The Prompt Improver: Get AI to Help You Write Better Prompts",
+    "description": "Here's the workflow: Instead of trying to write the perfect prompt yourself, get AI to coach you through it. This tool has a built-in 'Prompt Coach' that asks the right questions to uncover what's missing—audience, tone, format, constraints. You answer, it refines, you iterate.\n\nThe magic trick? If you're using this outside of this tool (in ChatGPT, Claude, Gemini, etc.), just start your message with \"Draft prompt:\" before pasting your vague idea. That signals to the AI: \"Don't execute this—help me make it better.\" Then let the conversation flow.",
     "placeholder": "Paste your draft prompt here...",
     "submit": "Submit",
     "howItWorksTitle": "How it Works: The System Instruction",
@@ -39,6 +72,7 @@
     "copy": "Copy to Clipboard"
   },
   "heroGemWizard": {
+    "privacyWarning": "⚠️ Privacy First: Only upload documents you have permission to share. Review your AI tool's data handling policies before uploading any sensitive or proprietary information.",
     "title": "Build Your Own Expert",
     "subtitle": "(And stop getting \"As a large language model...\" answers)",
     "introTitle": "We've all been there. You ask a generic AI for your client's specific tone-of-voice, and it gives you a lecture on \"the importance of branding.\" Or worse: \"As a large language model, I cannot...\"",
@@ -80,6 +114,7 @@
     "copied": "Copied!"
   },
   "notebookLM": {
+    "privacyWarning": "⚠️ Privacy First: Never upload confidential documents without explicit permission. Always check your AI tool's privacy settings and data handling policies before uploading sensitive information.",
     "title": "NotebookLM: The \"One-Deck-to-Rule-Them-All\" Tool",
     "intro": "You know the drill. You finish the big research report. Then the CEO asks for a one-page summary. The CMO wants a 10-slide deck. And the creative team just wants the key insights for a brief.\n\nYou spend more time reformatting than you did on the actual research.\n\nStop the copy-paste nightmare.",
     "centralBrainTitle": "The Central Brain for Your Knowledge",
@@ -114,30 +149,77 @@
     "bonusTrendDesc": "Ask it to find patterns across all your customer interviews, like \"What are the 3 strongest unmet customer needs?\""
   },
   "flowVibe": {
-    "title": "Vibe Coding",
-    "subtitle": "Fast, creative, and conversational AI development",
-    "intro": "Vibe Coding is about giving AI a general direction and iterating based on its output. It's like directing an actor—you provide the 'vibe' and see what you get back. This is how most people interact with AI today, and when done right, it's incredibly powerful for rapid prototyping and creative exploration.",
+    "title": "The Approach: Vibe Coding",
+    "subtitle": "How to get AI to actually understand what you want",
+    "intro": "Here's the thing most people get wrong: they treat AI like Google Search—type a few words, hope for the best. But AI isn't a search engine. It's more like directing an actor. You don't just tell them the line; you give them the scene, the motivation, the tone. That's Vibe Coding.",
     "vibe": {
       "title": "What is Vibe Coding?",
-      "description": "Vibe Coding is a conversational, iterative approach to working with AI. Instead of writing perfect instructions upfront, you have a dialogue with the AI—refining, adjusting, and building as you go. It's fast, flexible, and perfect for exploration.",
-      "whyGreatTitle": "What Makes It Great:",
-      "benefit1": "Speed: Get from idea to prototype in minutes, not hours",
-      "benefit2": "Flexibility: Adapt and pivot as you learn what works",
-      "benefit3": "Creativity: Explore unexpected directions and happy accidents",
-      "videoPlaceholder": "Demo: How This Site Was Made",
-      "toolsTitle": "Tools for Vibe Coding:"
+      "description": "Vibe Coding is a conversational, iterative approach to working with AI. Instead of trying to write the perfect prompt upfront (you won't), you have a dialogue—refining, adjusting, and building as you go. Think of it like sketching: quick, messy, exploratory. You're not building production code on day one; you're testing ideas, prototyping fast, and learning what works.",
+      "whyGreatTitle": "Why It Works:",
+      "benefit1": "Speed: Get from idea to prototype in minutes, not hours. Test 5 ideas before lunch.",
+      "benefit2": "Flexibility: No rigid plan needed. Pivot when you see what's working (or not).",
+      "benefit3": "Creativity: Explore unexpected directions. The best ideas often come from iteration.",
+      "realityCheck": "Reality check: This isn't magic. You still need to know what good output looks like. AI amplifies your judgment—it doesn't replace it.",
+      "videoPlaceholder": "Demo: Vibe Coding in Action",
+      "toolsTitle": "The Vibe Coding Toolkit:",
+      "toolsIntro": "These are the tools that make Vibe Coding work. Bookmark them. You'll use them daily."
     }
   },
+  "vibeCoding": {
+    "title": "How Vibe Coding Works",
+    "subtitle": "You've used the tools. Now let's peek under the hood at the methodology.",
+    "intro": "\"Vibe Coding\" is the name we give to this conversational, iterative approach. It's not just for building websites—it's how you work with AI on anything. Here's the framework.",
+    "whatIsTitle": "What is Vibe Coding?",
+    "description": "Vibe Coding is a conversational, iterative approach to working with AI. Instead of trying to write the perfect prompt upfront (you won't), you have a dialogue—refining, adjusting, and building as you go. Think of it like sketching: quick, messy, exploratory. You're not building production code on day one; you're testing ideas, prototyping fast, and learning what works.",
+    "whyTitle": "Why It Works:",
+    "benefit1": "Speed: Get from idea to prototype in minutes, not hours. Test 5 ideas before lunch.",
+    "benefit2": "Flexibility: No rigid plan needed. Pivot when you see what's working (or not).",
+    "benefit3": "Creativity: Explore unexpected directions. The best ideas often come from iteration.",
+    "realityCheck": "Reality check: This isn't magic. You still need to know what good output looks like. AI amplifies your judgment—it doesn't replace it.",
+    "videoPlaceholder": "Demo: Vibe Coding in Action",
+    "videoDescription": "Watch how this entire site was built using Vibe Coding—from initial brainstorm to production deployment.",
+    "toolsTitle": "The Vibe Coding Toolkit:",
+    "toolsIntro": "These are the tools that make Vibe Coding work. Bookmark them. You'll use them daily.",
+    "exampleTitle": "Real Example: How This Site Was Built",
+    "exampleIntro": "This website is proof of concept. Every section, every tool, every piece of copy—built using Vibe Coding. Here's the 6-step process:",
+    "example": {
+      "step1": {
+        "title": "Strategy & Research",
+        "desc": "Used Gemini Deep Research to analyze presentation notes, past feedback, and AI development articles. Result: Clear content strategy."
+      },
+      "step2": {
+        "title": "Prototype the Logic",
+        "desc": "Used Google AI Studio to test system prompts for each tool (Prompt Improver, Hero Gem). Fast iteration, no coding."
+      },
+      "step3": {
+        "title": "Generate the UI",
+        "desc": "Used Google Stitch to create the entire front-end from a single detailed design prompt. 90% of final code in minutes."
+      },
+      "step4": {
+        "title": "Integrate Everything",
+        "desc": "Used Gemini CLI in VS Code to connect AI logic to UI components. Built production-ready React app."
+      },
+      "step5": {
+        "title": "Deploy to Production",
+        "desc": "Pushed to GitHub, auto-deployed via GitHub Actions to GitHub Pages. Live site with one command."
+      },
+      "step6": {
+        "title": "Refine for Audience",
+        "desc": "Created custom Gem trained on Dutch communication preferences to refine all copy for local market."
+      }
+    },
+    "exampleNote": "From brainstorm to live site in days, not weeks. That's Vibe Coding."
+  },
   "promptImproverHeader": {
-    "title": "Unlock the Magic: How to Master Your Prompts 🚀",
-    "paragraph1": "You know that feeling when you ask AI for help and get... nothing useful? That's not because AI is bad. It's because your prompt was too vague.",
-    "paragraph2": "Here's the thing: AI is a prediction engine. When you say \"Tell me about AI,\" it has infinite directions to go—so you get generic, unfocused output. But when you say \"Write a 500-word blog post for developers explaining transformer architecture, using analogies and avoiding heavy math,\" you give it clear guardrails.",
-    "paragraph3": "The difference? Specificity. And specificity = magic. ✨",
-    "paragraph4": "But here's the secret: you don't need to learn how to write perfect prompts. You just need to ask AI to help you write them.",
-    "paragraph5": "This tool uses a \"baked-in\" system instruction that acts as your expert Prompt Coach. Instead of teaching you theory, it asks the right questions to uncover gaps in your thinking—missing context, unclear objectives, format requirements—and collaboratively builds a better prompt with you through guided dialogue.",
-    "optionsTitle": "Two Ways to Use the Prompt Improver:",
-    "option1": "Use the interactive tool below (it already has the system instruction built-in), OR",
-    "option2": "Copy the system instruction and paste it into your own LLM (ChatGPT, Claude, Gemini, etc.)",
+    "title": "The \"Draft Prompt:\" Technique 🎯",
+    "paragraph1": "You know that feeling when you ask AI for help and get... nothing useful? That's not because AI is bad. It's because it thought you wanted it to execute your vague prompt, not help you improve it.",
+    "paragraph2": "Here's the shift: Instead of asking AI to \"do the thing,\" ask it to \"help you ask better.\" The simplest way? Start with \"Draft prompt:\" before your idea.",
+    "paragraph3": "Example: Don't say \"Write a blog post about AI.\" Say \"Draft prompt: Write a blog post about AI.\" That tiny prefix changes everything—the AI now knows you want coaching, not execution.",
+    "paragraph4": "Even better: Use the tool below, which has a built-in Prompt Coach. It asks the right questions—audience, tone, format, constraints—so you don't have to guess what's missing.",
+    "paragraph5": "The tool does this automatically, but if you're using ChatGPT, Claude, or Gemini directly, remember: \"Draft prompt:\" is your magic phrase to shift from execution mode to collaboration mode.",
+    "optionsTitle": "Two Ways to Use This:",
+    "option1": "Use the interactive tool below (Prompt Coach is already built-in), OR",
+    "option2": "Copy the system instruction and use it in any LLM—just remember to prefix your prompts with \"Draft prompt:\"",
     "optionsClosing": "Either way, you'll never write a bad prompt again.",
     "summaryText": "Show/Copy the 'Prompt Director' System Instruction",
     "copyButton": "Copy",
@@ -216,6 +298,254 @@
       "action": "I created a custom Gem trained on Dutch communication preferences and audience expectations. I fed it all the website copy and asked it to refine the language, tone, and messaging to better connect with this specific audience.",
       "outcome": "Culturally-tuned copy that speaks directly to the Dutch market, making the site feel more personal and relevant."
     }
+  },
+  "beforeAfter": {
+    "title": "See the Difference",
+    "subtitle": "The 'vibe' works—but only if you know what 'good' looks like. Here's the proof.",
+    "intro": "You just learned the concept. Now let's see it in action. Below are two real examples: the same task, two different prompts. One vague (and useless). One specific (and powerful). Spot the difference?",
+    "badLabel": "Vague Prompt",
+    "goodLabel": "Improved Prompt",
+    "promptLabel": "Prompt:",
+    "outputLabel": "AI Output:",
+    "example1": {
+      "title": "Example 1: Social Media Post",
+      "badPrompt": "Write a social media post about our new product",
+      "badOutput": "Exciting news! We're thrilled to announce our new product. It's innovative, user-friendly, and designed to meet your needs. Check it out today and experience the difference. #Innovation #NewProduct #TechNews",
+      "badWhy": "Generic, forgettable, sounds like every other product announcement",
+      "goodPrompt": "Write a LinkedIn post for B2B SaaS founders announcing our new feature 'Auto-Sync'. Tone: Conversational but authoritative. Hook: Start with a relatable pain point about data silos. Include: 1 stat (teams waste 4hrs/week on manual syncing), 1 customer quote, 1 CTA to book a demo. Max 150 words.",
+      "goodOutput": "Still copying data between tools like it's 2015? 📊➡️📈\n\nYour team wastes an average of 4 hours per week on manual syncing. That's 200 hours a year. Per person.\n\nWe built Auto-Sync to fix that. It's live today.\n\n\"We went from spending Friday afternoons reconciling spreadsheets to having real-time dashboards. Game changer.\" - Sarah K., Head of Ops at Streamline\n\nReal-time sync. Zero manual work. One source of truth.\n\n→ Book a 15-min demo: [link]",
+      "goodWhy": "Specific, starts with pain point, includes proof, clear CTA"
+    },
+    "example2": {
+      "title": "Example 2: Email Rewrite",
+      "badPrompt": "Make this email more professional",
+      "badOutput": "Dear [Recipient],\n\nI hope this message finds you well. I am writing to follow up on our previous conversation regarding the project timeline. Please advise at your earliest convenience.\n\nBest regards",
+      "badWhy": "Stiff, impersonal, no context about the original tone or purpose",
+      "goodPrompt": "Rewrite this email to be professional but warm. Original tone: Too casual ('Hey! Just checking in...'). Target audience: C-level executive. Goal: Follow up on proposal without seeming pushy. Keep it under 100 words. End with a soft CTA (not demanding).",
+      "goodOutput": "Hi [Name],\n\nI wanted to circle back on the proposal we discussed last week. I know you're evaluating options, so no pressure—just wanted to make sure you have everything you need from our side.\n\nIf it would be helpful to walk through any specific sections together, I'm happy to jump on a quick call this week.\n\nLooking forward to hearing your thoughts.\n\nBest,\n[Your Name]",
+      "goodWhy": "Professional but human, acknowledges their process, non-pushy CTA"
+    },
+    "cta": "Ready to transform your prompts?",
+    "ctaButton": "Try the Prompt Improver"
+  },
+  "aiFAQs": {
+    "title": "Let's Get Real: AI FAQs for Skeptics",
+    "subtitle": "You've seen the tools. Maybe you're thinking, 'This looks great, but...' Let's address those doubts.",
+    "faq1": {
+      "myth": "AI will replace my job",
+      "truth": "AI amplifies your work, it doesn't replace your judgment",
+      "explanation": "Think of AI like Excel. Did spreadsheets replace financial analysts? No—they made them more powerful. AI is the same. It handles the repetitive stuff (first drafts, research summaries, data formatting) so you can focus on strategy, creativity, and decisions that actually need a human. The people who get replaced are the ones who refuse to learn the new tool."
+    },
+    "faq2": {
+      "myth": "You need to be 'technical' to use AI",
+      "truth": "If you can write a Google Search, you can use AI",
+      "explanation": "There's no coding required. You're already doing the hard part—you know your job, your audience, and what good work looks like. AI just needs you to explain it clearly. The Prompt Improver on this site literally walks you through it, question by question. If you can answer 'Who is this for?' and 'What's the goal?'—you're 90% there."
+    },
+    "faq3": {
+      "myth": "AI just hallucinates nonsense",
+      "truth": "AI gives you what you ask for. Bad input = bad output.",
+      "explanation": "Yes, AI can make stuff up—if you let it. But that's like blaming a junior employee for doing exactly what you told them (poorly). The tools on this site teach you how to give AI the right context, constraints, and examples so it can't go off the rails. With the right prompt, AI is shockingly accurate. With a vague one? You get nonsense."
+    },
+    "faq4": {
+      "myth": "AI is just a fad / will be replaced soon",
+      "truth": "AI is infrastructure now, not a trend",
+      "explanation": "This isn't like NFTs or the metaverse. AI is already baked into Gmail (Smart Compose), Google Docs (grammar suggestions), and your phone's autocorrect. The question isn't 'Will AI stick around?'—it's 'Will you learn to use it before your competition does?' In 5 years, using AI will be as basic as using email."
+    },
+    "faq5": {
+      "myth": "I tried ChatGPT once, it didn't work for me",
+      "truth": "You tried a screwdriver to hammer a nail. Wrong tool, wrong technique.",
+      "explanation": "ChatGPT is one tool. It's great for some things (brainstorming, drafting), terrible for others (citations, grounded research). This site shows you the full toolkit: Prompt Improver for better instructions, NotebookLM for research, Hero Gems for specialized tasks. Saying 'AI doesn't work' after one bad ChatGPT experience is like saying 'Google doesn't work' because you mistyped a search once."
+    },
+    "bottomCTA": "Still skeptical? Good. That's smart. Start small and see for yourself.",
+    "bottomButton": "See Your 30-Day Plan"
+  },
+  "roadmap": {
+    "title": "What's Next? Your 30-Day Plans",
+    "subtitle": "Pick your path based on where you are now. Both plans get you to the same destination—confident AI use—but start from different points.",
+    "intro": "Choose your journey:",
+    "privacyReminder": "🔒 Privacy Reminder: Never upload confidential or sensitive documents to any AI tool without proper authorization and understanding of the tool's data privacy policies.",
+    "exportCalendar": "📅 Add to Calendar",
+    "exportCalendarDesc": "Export this plan to your calendar with direct links to each tool on this site.",
+    "planBeginner": "For Beginners",
+    "planBeginnerDesc": "You're new to AI or use it occasionally. This plan builds the foundation.",
+    "planAdvanced": "For Vibe Coders",
+    "planAdvancedDesc": "You use ChatGPT/Gemini daily. Ready to learn AI Studio, Stitch, and the CLI.",
+    "goalLabel": "Goal:",
+    "successLabel": "Success Looks Like:",
+    "beginner": {
+      "week1": {
+        "tab": "Week 1",
+        "icon": "🚀",
+        "title": "First Steps with AI",
+        "timeframe": "Days 1-7",
+        "goal": "Get comfortable talking to AI. Build confidence with simple, immediate wins.",
+        "task1": {
+          "title": "Day 1-2: Try the Prompt Improver",
+          "desc": "Use the tool on this site to refine one work-related task (email, social post, brief). See the difference specificity makes.",
+          "link": "Use the Tool"
+        },
+        "task2": {
+          "title": "Day 3-4: Master \"Draft Prompt:\"",
+          "desc": "Open ChatGPT or Gemini. Type \"Draft prompt: [your vague idea]\" and let it coach you. Practice this 3 times.",
+          "link": "Learn the Technique"
+        },
+        "task3": {
+          "title": "Day 5-7: Daily AI Habit",
+          "desc": "Use AI once per day this week. Ideas: summarize meeting notes, brainstorm email subject lines, rewrite unclear text."
+        },
+        "success": "You've used AI 5+ times. You understand the \"Draft prompt:\" trick. AI feels useful, not intimidating."
+      },
+      "week2": {
+        "tab": "Week 2",
+        "icon": "🎯",
+        "title": "Build Better Prompts",
+        "timeframe": "Days 8-14",
+        "goal": "Stop getting generic AI output. Learn to communicate with clarity.",
+        "task1": {
+          "title": "Day 8-10: Study Before/After Examples",
+          "desc": "Review the examples on this site. Notice the pattern: vague prompts get vague output. Specific prompts win.",
+          "link": "See Examples"
+        },
+        "task2": {
+          "title": "Day 11-12: Try Different Tasks",
+          "desc": "Use the Prompt Improver for 3 different types of work: creative (social post), analytical (data summary), operational (process doc)."
+        },
+        "task3": {
+          "title": "Day 13-14: Test Without Training Wheels",
+          "desc": "Write a prompt from scratch (without the tool). Compare results to Week 1. Notice the improvement."
+        },
+        "success": "You can write solid prompts without hand-holding. AI output is consistently useful."
+      },
+      "week3": {
+        "tab": "Week 3",
+        "icon": "💎",
+        "title": "Your First Custom Expert",
+        "timeframe": "Days 15-21",
+        "goal": "Create a Hero Gem for one repetitive task you do weekly.",
+        "task1": {
+          "title": "Day 15-17: Build Your Gem",
+          "desc": "Pick ONE task you do often (e.g., 'Rewrite emails in our brand voice'). Use the Hero Gem Wizard to create a custom expert.",
+          "link": "Build a Gem"
+        },
+        "task2": {
+          "title": "Day 18-19: Test & Refine",
+          "desc": "Use your Gem 3-5 times. Notice what works, what doesn't. Tweak the system instruction based on real results."
+        },
+        "task3": {
+          "title": "Day 20-21: Make It a Habit",
+          "desc": "Set a reminder to use your Gem every time that task comes up. Replace your old workflow."
+        },
+        "success": "You have one AI tool that saves you 2+ hours per week. It's now indispensable."
+      },
+      "week4": {
+        "tab": "Week 4",
+        "icon": "🔥",
+        "title": "Expand Your Toolkit",
+        "timeframe": "Days 22-30",
+        "goal": "Add NotebookLM to your workflow. Master multi-document synthesis.",
+        "task1": {
+          "title": "Day 22-24: Try NotebookLM",
+          "desc": "Upload 5+ documents about one topic (meeting notes, research, reports). Ask it to generate different outputs for different stakeholders.",
+          "link": "Try NotebookLM"
+        },
+        "task2": {
+          "title": "Day 25-27: Daily Use Challenge",
+          "desc": "Use all 3 tools (Prompt Improver, Hero Gem, NotebookLM) at least once this week. Find your favorites."
+        },
+        "task3": {
+          "title": "Day 28-30: Share Your Wins",
+          "desc": "Show a colleague one thing AI helped you with this month. Teach them the \"Draft prompt:\" technique."
+        },
+        "success": "AI is part of your daily workflow. You can't imagine working without it. You're teaching others."
+      }
+    },
+    "advanced": {
+      "week1": {
+        "tab": "Week 1",
+        "icon": "�️",
+        "title": "AI Studio Foundations",
+        "timeframe": "Days 1-7",
+        "goal": "Master Google AI Studio. Learn to build, test, and refine system prompts with real-time feedback.",
+        "task1": {
+          "title": "Day 1-2: Set Up AI Studio",
+          "desc": "Create a free account at aistudio.google.com. Explore the interface. Create your first prompt and test different models (Gemini 1.5 Flash vs Pro).",
+          "link": "Open AI Studio"
+        },
+        "task2": {
+          "title": "Day 3-5: Build a System Prompt",
+          "desc": "Pick one task you do weekly. Write a system instruction for it. Test with 5 different inputs. Notice what works, what doesn't. Iterate."
+        },
+        "task3": {
+          "title": "Day 6-7: Compare Chat vs Code",
+          "desc": "Use AI Studio's chat mode for one task, then export to code. Run it locally. See the difference between prototyping and production."
+        },
+        "success": "You can build a custom AI expert in AI Studio and test it with real data. You understand system instructions."
+      },
+      "week2": {
+        "tab": "Week 2",
+        "icon": "�",
+        "title": "Stitch for UI",
+        "timeframe": "Days 8-14",
+        "goal": "Learn Google Stitch. Generate functional UI components with a single prompt.",
+        "task1": {
+          "title": "Day 8-10: First Stitch Prototype",
+          "desc": "Go to google.com/stitch. Describe a simple UI (form, dashboard, card). Watch it generate HTML/CSS/JS. Edit the prompt and regenerate.",
+          "link": "Try Stitch"
+        },
+        "task2": {
+          "title": "Day 11-12: Iterate Fast",
+          "desc": "Take one UI from Day 8. Refine it 3-5 times with specific prompts. Add interactivity, change styling, fix bugs—all with natural language."
+        },
+        "task3": {
+          "title": "Day 13-14: Export & Customize",
+          "desc": "Download the code from Stitch. Run it locally. Make manual tweaks. Notice what AI does well (structure) vs what you do better (edge cases)."
+        },
+        "success": "You can prototype a functional UI in minutes. You know when to use AI and when to code manually."
+      },
+      "week3": {
+        "tab": "Week 3",
+        "icon": "⚡",
+        "title": "Gemini CLI Integration",
+        "timeframe": "Days 15-21",
+        "goal": "Install the Gemini CLI. Integrate AI into your terminal and code editor workflows.",
+        "task1": {
+          "title": "Day 15-17: Install & Configure CLI",
+          "desc": "Install the Gemini API CLI. Set up authentication. Run your first terminal command. Test basic prompts.",
+          "link": "CLI Docs"
+        },
+        "task2": {
+          "title": "Day 18-19: Script a Workflow",
+          "desc": "Pick one repetitive task (e.g., 'Generate commit messages from diffs'). Write a shell script that calls the Gemini API. Test it 5 times."
+        },
+        "task3": {
+          "title": "Day 20-21: VS Code Integration",
+          "desc": "Set up a keyboard shortcut or extension to call your CLI script from VS Code. Now you have AI in your editor."
+        },
+        "success": "You have AI running in your terminal. You've automated one workflow with the CLI. You're thinking in API calls."
+      },
+      "week4": {
+        "tab": "Week 4",
+        "icon": "�",
+        "title": "Full Vibe Coding Workflow",
+        "timeframe": "Days 22-30",
+        "goal": "Put it all together. Build a real project from scratch using Vibe Coding principles.",
+        "task1": {
+          "title": "Day 22-24: Strategy & Prototype",
+          "desc": "Pick a small project (e.g., personal dashboard, tool, landing page). Use AI Studio to plan the structure. Use Stitch to prototype the UI."
+        },
+        "task2": {
+          "title": "Day 25-27: Integrate & Deploy",
+          "desc": "Export the code. Connect to APIs or data sources. Use the CLI to generate boilerplate. Deploy to GitHub Pages, Vercel, or Netlify."
+        },
+        "task3": {
+          "title": "Day 28-30: Refine & Share",
+          "desc": "Use AI to write documentation. Generate a README. Create a demo video. Share your project on LinkedIn or Twitter. Teach someone else."
+        },
+        "success": "You've built and deployed a real project using Vibe Coding. You can prototype in hours, not days. You're unstoppable."
+      }
+    },
+    "encouragement": "Remember: You don't need to do this perfectly. Just start.",
+    "reminder": "Every expert was once a beginner who refused to quit."
   },
   "footer": {
     "title": "Let's Connect & Continue the Conversation",

@@ -61,6 +61,13 @@ export const HeroGemWizard: React.FC = () => {
           {t('heroGemWizard.subtitle')}
         </p>
 
+        {/* Privacy Warning */}
+        <div className="mb-8 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/30 rounded-lg p-6">
+          <p className="font-body text-text-light/90 leading-relaxed text-center">
+            {t('heroGemWizard.privacyWarning')}
+          </p>
+        </div>
+
         {/* Fun Explainer with Character and Speech Bubble - ALWAYS VISIBLE */}
         <div className="flex flex-col md:flex-row items-center gap-8 mb-12 p-8 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl border border-primary/20">
           {/* Character Portrait Placeholder */}

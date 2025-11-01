@@ -17,7 +17,7 @@ export const FlowVibe: React.FC = () => {
       </p>
 
       {/* Intro Paragraph */}
-      <p className="font-body text-text-light/85 text-center max-w-4xl mx-auto mb-16 leading-relaxed">
+      <p className="font-body text-text-light/85 text-center max-w-4xl mx-auto mb-16 leading-relaxed text-lg">
         {t('flowVibe.intro')}
       </p>
 
@@ -35,7 +35,7 @@ export const FlowVibe: React.FC = () => {
               {t('flowVibe.vibe.description')}
             </p>
 
-            {/* What Makes It Great */}
+            {/* Why It Works */}
             <div className="mb-6">
               <h4 className="font-bold text-primary mb-3">{t('flowVibe.vibe.whyGreatTitle')}</h4>
               <ul className="space-y-2 text-sm text-text-light/80">
@@ -53,10 +53,16 @@ export const FlowVibe: React.FC = () => {
                 </li>
               </ul>
             </div>
+
+            {/* Reality Check */}
+            <div className="bg-secondary/10 border border-secondary/30 rounded p-4 text-sm text-text-light/80">
+              <span className="text-secondary font-bold">⚠️ </span>
+              {t('flowVibe.vibe.realityCheck')}
+            </div>
           </div>
 
           {/* Right: Video Placeholder */}
-          <div className="w-full aspect-video bg-background-dark border border-primary/20 flex items-center justify-center">
+          <div className="w-full aspect-video bg-background-dark border border-primary/20 flex items-center justify-center rounded">
             <div className="text-center text-text-light/50">
               <div className="text-4xl mb-2">🎬</div>
               <p className="text-sm font-mono">{t('flowVibe.vibe.videoPlaceholder')}</p>
@@ -66,7 +72,8 @@ export const FlowVibe: React.FC = () => {
 
         {/* Tools Section */}
         <div className="mt-6 pt-6 border-t border-primary/20">
-          <h4 className="font-bold text-primary mb-4">{t('flowVibe.vibe.toolsTitle')}</h4>
+          <h4 className="font-bold text-primary mb-2">{t('flowVibe.vibe.toolsTitle')}</h4>
+          <p className="text-text-light/70 text-sm mb-4">{t('flowVibe.vibe.toolsIntro')}</p>
           <div className="flex flex-wrap gap-3">
             <a
               href="https://gemini.google.com/app"

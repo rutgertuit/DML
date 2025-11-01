@@ -14,20 +14,17 @@ export const Header: React.FC = () => {
         AI-ftershow
       </a>
       <nav className="hidden md:flex items-center gap-6">
+        <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#the-vibe">
+          {t('header.theVibe')}
+        </a>
         <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#prompt-improver">
-          {t('header.improvePrompt')}
-        </a>
-        <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#hero-gem-wizard">
-          {t('header.heroGem')}
-        </a>
-        <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#notebooklm">
-          {t('header.notebookLM')}
+          {t('header.tools')}
         </a>
         <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#vibe-coding">
-          {t('header.newPowers')}
+          {t('header.deepDive')}
         </a>
-        <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#toolkit">
-          {t('header.toolkit')}
+        <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#roadmap">
+          {t('header.roadmap')}
         </a>
       </nav>
       <div className="flex items-center gap-2">

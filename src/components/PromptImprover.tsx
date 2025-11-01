@@ -99,7 +99,7 @@ export const PromptImprover: React.FC = () => {
   };
 
   return (
-    <section className="py-24" id="prompt-improver">
+    <section className="py-12" id="prompt-improver">
       <h2 className="font-display text-4xl font-bold text-text-light mb-4">
         {t('promptImprover.title')}
       </h2>
