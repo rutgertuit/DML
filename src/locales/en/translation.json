@@ -605,5 +605,56 @@
     "learnMore": "Learn more about Google's privacy policy",
     "accept": "Accept Analytics",
     "decline": "Decline"
+  },
+  "presentationContext": {
+    "title": "Welcome to the AI-ftershow",
+    "subtitle": "This interactive site is an extension of Rutger's presentation at Marketing Live & the Effies on November 13, 2024",
+    "videoPlaceholder": "Presentation Recording Coming Soon",
+    "videoDescription": "Watch the original Marketing Live & Effies presentation that inspired this interactive experience",
+    "whatTitle": "What is this?",
+    "whatDesc": "This isn't just a presentation recap—it's a living, hands-on demonstration of AI workflows. Every tool you see here works. Every technique is actionable. This is the presentation you can actually use.",
+    "whoTitle": "Who is this for?",
+    "whoDesc": "Whether you attended the presentation or discovered this site organically, you're in the right place. If you want to understand how to actually build with AI (not just talk about it), you're exactly who this is for.",
+    "keyTakeaway": "The Key Takeaway",
+    "keyTakeawayDesc": "AI isn't magic—it's a workflow. This site demonstrates how to turn vague ideas into production-ready tools using Google's AI ecosystem. Everything here was built using the exact methods it teaches."
+  },
+  "aboutAuthor": {
+    "title": "About the Author",
+    "role": "Business Leader & AI Explorer",
+    "bio": "This site is one of many playgrounds and experiments by Rutger—a business leader who loves learning by doing. He's not a coder, not a designer, not a musician, but someone who sees AI as a bridge to work better with designers, engineers, and artists.",
+    "notA": {
+      "title": "Not a Technical Expert",
+      "desc": "No formal training in coding, design, or engineering. Just curiosity and AI tools."
+    },
+    "butA": {
+      "title": "But a Business Leader",
+      "desc": "Who understands that the best work happens when you collaborate across disciplines."
+    },
+    "aiRole": {
+      "title": "How AI Helps",
+      "desc": "AI helps bridge the gap—turning rough ideas into working prototypes that real experts can refine."
+    },
+    "playground": {
+      "title": "This is a Playground",
+      "desc": "This site, like many of Rutger's projects, is an experiment. It's not perfect. It's learning by doing, in public. The goal isn't to replace experts—it's to better communicate with them."
+    },
+    "linkedinCTA": "Connect on LinkedIn"
+  },
+  "search": {
+    "placeholder": "Search site content...",
+    "hint": "Type at least 2 characters to search",
+    "noResults": "No results found. Try different keywords.",
+    "footer": "Press ESC to close",
+    "sections": {
+      "intro": "Introduction",
+      "tools": "Tools & Workflows",
+      "promptImprover": "Prompt Improver",
+      "heroGem": "Hero Gem Wizard",
+      "notebookLM": "NotebookLM Guide",
+      "vibeCoding": "Vibe Coding",
+      "toolkit": "Google AI Toolkit",
+      "about": "About the Author",
+      "footer": "Contact & Connect"
+    }
   }
 }

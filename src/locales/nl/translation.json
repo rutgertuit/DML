@@ -594,5 +594,56 @@
     "learnMore": "Meer leren over Google's privacybeleid",
     "accept": "Accepteer Analytics",
     "decline": "Weigeren"
+  },
+  "presentationContext": {
+    "title": "Welkom bij de AI-ftershow",
+    "subtitle": "Deze interactieve site is een uitbreiding van Rutger's presentatie tijdens Marketing Live & de Effies op 13 november 2024",
+    "videoPlaceholder": "Presentatie-Opname Komt Binnenkort",
+    "videoDescription": "Bekijk de originele Marketing Live & Effies presentatie die deze interactieve ervaring inspireerde",
+    "whatTitle": "Wat is dit?",
+    "whatDesc": "Dit is niet zomaar een presentatie-samenvatting—het is een levende, hands-on demonstratie van AI-workflows. Elke tool die je hier ziet werkt echt. Elke techniek is direct toepasbaar. Dit is de presentatie die je écht kunt gebruiken.",
+    "whoTitle": "Voor wie is dit?",
+    "whoDesc": "Of je nu de presentatie hebt bijgewoond of deze site organisch hebt ontdekt, je bent op de juiste plek. Als je wilt begrijpen hoe je écht met AI kunt bouwen (niet alleen erover praten), dan is dit precies voor jou.",
+    "keyTakeaway": "De Kern",
+    "keyTakeawayDesc": "AI is geen magie—het is een workflow. Deze site demonstreert hoe je vage ideeën omzet in production-ready tools met Google's AI-ecosysteem. Alles hier is gebouwd met exact dezelfde methodes die het onderwijst."
+  },
+  "aboutAuthor": {
+    "title": "Over de Auteur",
+    "role": "Zakenleider & AI Verkenner",
+    "bio": "Deze site is een van de vele speeltuinen en experimenten van Rutger—een zakenleider die houdt van leren door te doen. Hij is geen coder, geen designer, geen muzikant, maar iemand die AI ziet als een brug om beter samen te werken met designers, engineers en artiesten.",
+    "notA": {
+      "title": "Geen Technische Expert",
+      "desc": "Geen formele training in programmeren, design of engineering. Alleen nieuwsgierigheid en AI-tools."
+    },
+    "butA": {
+      "title": "Maar Wel Zakenleider",
+      "desc": "Die begrijpt dat het beste werk ontstaat wanneer je samenwerkt over disciplines heen."
+    },
+    "aiRole": {
+      "title": "Hoe AI Helpt",
+      "desc": "AI helpt de kloof te overbruggen—het zet ruwe ideeën om in werkende prototypes die echte experts kunnen verfijnen."
+    },
+    "playground": {
+      "title": "Dit is een Speeltuin",
+      "desc": "Deze site is, net als veel van Rutger's projecten, een experiment. Het is niet perfect. Het is leren door te doen, in het openbaar. Het doel is niet om experts te vervangen—het is om beter met ze te communiceren."
+    },
+    "linkedinCTA": "Verbind op LinkedIn"
+  },
+  "search": {
+    "placeholder": "Doorzoek site-inhoud...",
+    "hint": "Type minimaal 2 karakters om te zoeken",
+    "noResults": "Geen resultaten gevonden. Probeer andere zoekwoorden.",
+    "footer": "Druk op ESC om te sluiten",
+    "sections": {
+      "intro": "Introductie",
+      "tools": "Tools & Workflows",
+      "promptImprover": "Prompt Verbeteraar",
+      "heroGem": "Hero Gem Wizard",
+      "notebookLM": "NotebookLM Gids",
+      "vibeCoding": "Vibe Coding",
+      "toolkit": "Google AI Toolkit",
+      "about": "Over de Auteur",
+      "footer": "Contact & Verbinding"
+    }
   }
 }

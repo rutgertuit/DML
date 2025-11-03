@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import SearchBar from './SearchBar';
 
 export const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -39,6 +41,15 @@ export const Header: React.FC = () => {
 
         {/* Right side controls */}
         <div className="flex items-center gap-4">
+          {/* Search Button */}
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center text-text-light/80 hover:text-primary transition-colors"
+            aria-label="Search"
+          >
+            <span className="text-xl">🔍</span>
+          </button>
+
           {/* Language Switcher - Improved touch targets */}
           <div className="flex items-center gap-2">
             <button
@@ -104,6 +115,9 @@ export const Header: React.FC = () => {
           </div>
         </nav>
       )}
+
+      {/* Search Modal */}
+      <SearchBar isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </header>
   );
 };
