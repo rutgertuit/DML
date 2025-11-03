@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
 
         {/* Disclaimer */}
         <div className="mt-12 pt-8 border-t border-secondary/20">
-          <p className="text-text-light/60 text-sm leading-relaxed max-w-3xl">
+          <p className="text-text-light/60 text-sm md:text-base leading-relaxed max-w-3xl">
             {t('footer.disclaimer')}
           </p>
         </div>

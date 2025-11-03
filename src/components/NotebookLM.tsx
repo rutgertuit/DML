@@ -80,7 +80,7 @@ export const NotebookLM: React.FC = () => {
   };
 
   const getTabClass = (tabIndex: number) => {
-    return `font-mono text-sm uppercase py-3 px-4 border-b-2 transition-all ${activeTab === tabIndex
+    return `font-mono text-sm uppercase py-4 px-4 md:px-6 min-h-[48px] flex items-center justify-center border-b-2 transition-all ${activeTab === tabIndex
       ? 'border-primary text-primary text-glow-blue' // Use text-glow-blue from our Tailwind v4 @theme
       : 'border-transparent text-text-light/50 hover:border-secondary/50 hover:text-text-light'
       }`;

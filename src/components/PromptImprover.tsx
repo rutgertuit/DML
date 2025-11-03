@@ -129,7 +129,7 @@ export const PromptImprover: React.FC = () => {
             {/* Research improvement text as a system chat bubble */}
             <div className="flex justify-start">
               <div className="p-4 max-w-[80%] bg-primary/10 text-text-light/90 border border-primary/30 rounded-lg">
-                <p className="font-body text-sm">
+                <p className="font-body text-sm md:text-base">
                   💡 <span className="font-semibold">Pro Tip:</span> Research shows that iterative, dialogue-based refinement yields 20-50% better AI outputs compared to one-shot prompts, as it uncovers hidden assumptions and builds specificity organically.
                 </p>
               </div>
@@ -166,10 +166,10 @@ export const PromptImprover: React.FC = () => {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <p className="font-body text-sm">
+                    <p className="font-body text-sm md:text-base">
                       <span className="font-semibold text-primary">Gemini 2.5 Flash</span> is analyzing your prompt...
                     </p>
-                    <p className="font-mono text-xs text-text-light/60 mt-1">
+                    <p className="font-mono text-sm text-text-light/60 mt-1">
                       Finding what additional information a perfect prompt is still missing
                       <span className="inline-flex ml-1">
                         <span className="animate-bounce delay-0">.</span>
@@ -186,12 +186,12 @@ export const PromptImprover: React.FC = () => {
           {/* Input Form */}
           <form
             onSubmit={handleSubmit}
-            className="flex gap-4 p-6 border-t border-secondary/20"
+            className="flex flex-col sm:flex-row gap-4 p-6 border-t border-secondary/20"
           >
             <textarea
               id="prompt-input"
-              rows={2}
-              className="flex-1 bg-background-dark text-text-light font-mono text-sm p-4 border border-secondary/50 focus:border-primary focus:ring-0 focus:shadow-glow-blue transition-all"
+              rows={3}
+              className="flex-1 bg-background-dark text-text-light font-mono text-sm md:text-base p-4 border border-secondary/50 focus:border-primary focus:ring-0 focus:shadow-glow-blue transition-all min-h-[80px] resize-y"
               placeholder={t('promptImprover.placeholder')}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
@@ -200,7 +200,7 @@ export const PromptImprover: React.FC = () => {
             />
             <button
               type="submit"
-              className="font-mono uppercase text-lg bg-primary text-background-dark font-bold py-3 px-6 hover:shadow-glow-blue transition-shadow disabled:opacity-50 disabled:shadow-none"
+              className="font-mono uppercase text-base md:text-lg bg-primary text-background-dark font-bold py-4 px-6 min-h-[48px] hover:shadow-glow-blue transition-shadow disabled:opacity-50 disabled:shadow-none"
               disabled={isLoading}
             >
               {isLoading ? '...' : t('promptImprover.submit')}
