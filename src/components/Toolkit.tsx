@@ -38,7 +38,7 @@ export const Toolkit: React.FC = () => {
   ];
 
   return (
-    <section className="py-24" id="toolkit">
+    <section className="py-12 md:py-16" id="toolkit">
       <h2 className="font-display text-4xl font-bold text-text-light mb-12">
         {t('toolkit.title')}
       </h2>

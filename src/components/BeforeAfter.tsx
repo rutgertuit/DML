@@ -5,7 +5,7 @@ export const BeforeAfter: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="py-24" id="before-after">
+        <section className="py-12 md:py-16" id="before-after">
             {/* Main Header */}
             <h2 className="text-3xl font-display font-bold uppercase mb-4 text-center text-text-light">
                 {t('beforeAfter.title')}

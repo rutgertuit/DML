@@ -87,7 +87,7 @@ export const NotebookLM: React.FC = () => {
   };
 
   return (
-    <section className="py-24" id="notebooklm">
+    <section className="py-12 md:py-16" id="notebooklm">
       <h2 className="font-display text-4xl font-bold text-text-light mb-6">
         {t('notebookLM.title')}
       </h2>

@@ -21,51 +21,78 @@ function App() {
       <main className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <HeroSection />
 
-        {/* Section Divider */}
-        <div className="my-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+        {/* Section Divider with enhanced visual connection */}
+        <div className="my-8 md:my-12 relative">
+          <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-glow-blue"></div>
+        </div>
 
         <IntroSection />
 
-        {/* Section Divider */}
-        <div className="my-16 h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-30"></div>
+        {/* Section Divider with enhanced visual connection */}
+        <div className="my-8 md:my-12 relative">
+          <div className="h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-30"></div>
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-secondary shadow-glow-purple"></div>
+        </div>
 
         <TheVibe />
 
-        {/* Section Divider */}
-        <div className="my-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+        {/* Section Divider with enhanced visual connection */}
+        <div className="my-8 md:my-12 relative">
+          <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-glow-blue"></div>
+        </div>
 
         <BeforeAfter />
 
-        {/* Section Divider */}
-        <div className="my-16 h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-30"></div>
+        {/* Section Divider with enhanced visual connection */}
+        <div className="my-8 md:my-12 relative">
+          <div className="h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-30"></div>
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-secondary shadow-glow-purple"></div>
+        </div>
 
         {/* The 3 Core Tools Section */}
         <ToolsSection>
           <PromptImprover />
 
-          {/* Section Divider */}
-          <div className="my-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+          {/* Tool Divider - smaller spacing within tool section */}
+          <div className="my-6 md:my-10 relative">
+            <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-glow-blue"></div>
+          </div>
 
           <HeroGemWizard />
 
-          {/* Section Divider */}
-          <div className="my-16 h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-30"></div>
+          {/* Tool Divider - smaller spacing within tool section */}
+          <div className="my-6 md:my-10 relative">
+            <div className="h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-30"></div>
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-secondary shadow-glow-purple"></div>
+          </div>
 
           <NotebookLM />
         </ToolsSection>
 
-        {/* Section Divider */}
-        <div className="my-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+        {/* Section Divider with enhanced visual connection */}
+        <div className="my-8 md:my-12 relative">
+          <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-glow-blue"></div>
+        </div>
 
         <HowVibeCodingWorks />
 
-        {/* Section Divider */}
-        <div className="my-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+        {/* Section Divider with enhanced visual connection */}
+        <div className="my-8 md:my-12 relative">
+          <div className="h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-30"></div>
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-secondary shadow-glow-purple"></div>
+        </div>
 
         <AIRoadmap />
 
-        {/* Section Divider */}
-        <div className="my-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+        {/* Section Divider with enhanced visual connection */}
+        <div className="my-8 md:my-12 relative">
+          <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-glow-blue"></div>
+        </div>
 
         <Toolkit />
       </main>

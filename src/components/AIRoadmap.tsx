@@ -158,7 +158,7 @@ export const AIRoadmap: React.FC = () => {
     };
 
     return (
-        <section className="py-24" id="roadmap">
+        <section className="py-12 md:py-16" id="roadmap">
             {/* Main Header */}
             <h2 className="text-3xl font-display font-bold uppercase mb-4 text-center text-text-light">
                 {t('roadmap.title')}
