@@ -74,10 +74,12 @@ export const AIRoadmap: React.FC = () => {
                     task2: {
                         title: t('roadmap.beginner.week4.task2.title'),
                         desc: t('roadmap.beginner.week4.task2.desc'),
+                        link: undefined,
                     },
                     task3: {
                         title: t('roadmap.beginner.week4.task3.title'),
                         desc: t('roadmap.beginner.week4.task3.desc'),
+                        link: undefined,
                     },
                 },
             },
@@ -426,12 +428,7 @@ export const AIRoadmap: React.FC = () => {
 
                                 <div className={`bg-background-dark/50 border ${activePlan === 'beginner' ? 'border-secondary/20' : 'border-primary/20'} rounded p-4`}>
                                     <h4 className={`font-bold ${activePlan === 'beginner' ? 'text-secondary' : 'text-primary'} mb-2`}>{t(`roadmap.${activePlan}.week4.task2.title`)}</h4>
-                                    <p className="text-text-light/80 text-sm mb-2">{t(`roadmap.${activePlan}.week4.task2.desc`)}</p>
-                                    {activePlan === 'beginner' && (
-                                        <a href="#vibe-coding" className="text-secondary text-sm hover:underline">
-                                            → {t(`roadmap.${activePlan}.week4.task2.link`)}
-                                        </a>
-                                    )}
+                                    <p className="text-text-light/80 text-sm">{t(`roadmap.${activePlan}.week4.task2.desc`)}</p>
                                 </div>
 
                                 <div className={`bg-background-dark/50 border ${activePlan === 'beginner' ? 'border-secondary/20' : 'border-primary/20'} rounded p-4`}>
