@@ -1,0 +1,22 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .background { fill: #1A1A1A; }
+      .primary-text { font-family: 'Inter', 'Arial Black', sans-serif; font-weight: 900; fill: #FAFAFA; font-size: 20px; letter-spacing: -1px;}
+      .glitch-text { font-family: 'Inter', 'Arial Black', sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -1px;}
+    </style>
+  </defs>
+
+  <rect width="32" height="32" class="background" rx="4" ry="4"/>
+
+  <text x="5" y="23" class="glitch-text" fill="#00FFFF" opacity="0.8">RT</text>
+  <text x="7" y="23" class="glitch-text" fill="#FF00FF" opacity="0.8">RT</text>
+
+  <clipPath id="clip-main">
+        <rect x="0" y="0" width="32" height="14"/>
+        <rect x="0" y="16" width="32" height="5"/>
+        <rect x="0" y="23" width="32" height="9"/>
+   </clipPath>
+  <text x="6" y="23" class="primary-text" clip-path="url(#clip-main)">RT</text>
+
+</svg>
