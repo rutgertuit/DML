@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface ChatBubbleProps {
     sender: 'user' | 'ai';
@@ -6,6 +7,7 @@ interface ChatBubbleProps {
 }
 
 const ChatBubble: React.FC<ChatBubbleProps> = ({ sender, content }) => {
+    const { t } = useTranslation();
     const isUser = sender === 'user';
 
     return (
@@ -33,7 +35,7 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ sender, content }) => {
                 {/* User Icon */}
                 {isUser && (
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-background-dark font-bold text-sm">
-                        You
+                        {t('common.you')}
                     </div>
                 )}
             </div>

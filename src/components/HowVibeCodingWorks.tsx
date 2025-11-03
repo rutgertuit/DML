@@ -99,7 +99,7 @@ export const HowVibeCodingWorks: React.FC = () => {
                             <span className="font-mono text-sm">AI Studio</span>
                         </a>
                         <a
-                            href="https://stitch.new"
+                            href="https://stitch.withgoogle.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-primary hover:bg-primary/20 transition-all"
@@ -108,7 +108,7 @@ export const HowVibeCodingWorks: React.FC = () => {
                             <span className="font-mono text-sm">Google Stitch</span>
                         </a>
                         <a
-                            href="https://github.com/google-gemini/gemini-cli"
+                            href="https://gemini-cli.xyz/docs/en"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-primary hover:bg-primary/20 transition-all"

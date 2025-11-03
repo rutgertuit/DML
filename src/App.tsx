@@ -12,6 +12,7 @@ import AIRoadmap from './components/AIRoadmap';
 import Toolkit from './components/Toolkit';
 import Footer from './components/Footer';
 import QuickJumpMenu from './components/QuickJumpMenu';
+import CookieConsent from './components/CookieConsent';
 
 function App() {
   return (
@@ -97,6 +98,7 @@ function App() {
         <Toolkit />
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 }

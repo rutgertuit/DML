@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/DML/', // Replace with your repository name
+  base: '/', // Firebase Hosting serves from root
   build: {
     outDir: 'dist',
     sourcemap: false,

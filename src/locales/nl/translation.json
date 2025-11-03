@@ -63,6 +63,17 @@
   "promptImprover": {
     "systemPrompt": "Je bent Prompt Scribe, een geduldige, empathische coach die gebruikers helpt killer prompts te maken door middel van vriendelijke dialoog. Je doel: Begeleid ze naar specificiteit zonder te overweldigen – denk aan medewerker, niet criticus. Voer of beantwoord nooit hun originele prompt; verfijn het alleen collaboratief.\n\nKern Regels:\n- Analyseer de draft op hiaten in: Doelgroep, Doel/Objectief, Toon/Stijl, Format/Lengte, Beperkingen (bijv. bronnen, ethiek), Voorbeelden/Context.\n- Reageer eerst met empathie: Erken hun idee positief (bijv. \"Top, het AI blog idee – laten we het knallen!\").\n- Stel precies 3-5 gerichte, open vragen om hiaten te vullen. Nummer ze voor duidelijkheid. Houd het beknopt (onder 150 woorden totaal).\n- Na hun antwoord, synthetiseer: Update de draft prompt, toon verschillen (bijv. \"Toegevoegd: doelgroep=beginners\"), en stel 1-2 vervolgvragen indien nodig. Maximaal 2 rondes.\n- Eindig met het genereren van de finale prompt. Je MOET deze finale, complete prompt verpakken in één enkel, niet-genest codeblok, beginnend *exact* met `[FINAL_PROMPT]` en eindigend *exact* met `[/FINAL_PROMPT]`.\n- Na de `[/FINAL_PROMPT]` tag, MOET je een afsluitende groet toevoegen (bijv. 'Hier is de verfijnde prompt, klaar voor gebruik in Gemini!' ).\n- **Cruciaal, nadat je de `[FINAL_PROMPT]` tags gebruikt, is je beurt voorbij. Je MAG GEEN vervolgvragen meer stellen.**\n- Als ze \"stop\" of \"finaliseer\" zeggen, output dan direct de prompt.\n- Blijf leuk en bemoedigend: Eindig reacties met een micro-tip (bijv. \"Pro tip: Specificiteit = magie!\").",
     "initialResponse": "Begrepen. Ik ben Prompt Scribe, je vriendelijke coach. Wat is je ruwe prompt idee?",
+    "proTip": "Pro Tip:",
+    "proTipText": "Onderzoek toont aan dat iteratieve, dialoog-gebaseerde verfijning 20-50% betere AI-outputs oplevert vergeleken met eenmalige prompts, omdat het verborgen aannames ontdekt en specificiteit organisch opbouwt.",
+    "poweredBy": "Aangedreven door",
+    "findingInfo": "Zoeken naar welke aanvullende informatie een perfecte prompt nog mist",
+    "promptReady": "Je Verfijnde Prompt is Klaar",
+    "promptReadyDesc": "Kopieer de prompt hieronder en plak deze in je favoriete LLM om de resultaten te zien.",
+    "testInGemini": "Test in Gemini",
+    "testInChatGPT": "Test in ChatGPT",
+    "testInLeChat": "Test in LeChat",
+    "testInGrok": "Test in Grok",
+    "testInClaude": "Test in Claude",
     "sectionTitle": "De Tools: Beheers Dit Eerst",
     "sectionIntro": "Deze drie tools werken samen, maar begin hier: leer hoe je AI in 'gespreksmodus' krijgt om je te helpen betere prompts te bouwen. Beheers deze vaardigheid, en al het andere wordt gemakkelijker.",
     "intro": "💡 Het Geheim: Als je gewoon een vage prompt in een LLM plakt, krijg je vage output. Maar als je het vooraf laat gaan met \"Draft prompt:\" weet de AI dat je hulp wilt bij verfijnen—niet bij uitvoeren. Dit verschuift het gesprek van \"doe de taak\" naar \"help me de taak beter te doen.\"",
@@ -147,11 +158,13 @@
     "stakeholderDesc": "Gebruik de prompts hieronder om te zien hoe hetzelfde 'centrale brein' totaal verschillende behoeften kan invullen. Dezelfde data, zeven verschillende outputs—direct.",
     "description": "Je kent het wel. Je rondt het grote onderzoeksrapport af. Dan vraagt de CEO om een samenvatting van één pagina. De CMO wil een deck van 10 slides. En het creatieve team wil alleen de belangrijkste inzichten voor een briefing.\n\nStop met die copy-paste-nachtmerrie.\n\nNotebookLM is je 'centrale brein'. Je dumpt alles er één keer in: de transcripten, de pdf's, de data. Daarna vraag je het gewoon om de output voor elke persoon te genereren. Eén bron van waarheid, oneindig veel formats. Krijg je week terug.",
     "cta": "Probeer NotebookLM",
-    "tabCFO": "Voor de CFO",
-    "tabCMO": "Voor de CMO",
-    "tabCEO": "Voor de CEO",
-    "tabManager": "Voor je Manager",
-    "tabTeam": "Voor je Team",
+    "tabCFO": "💰 Voor de CFO",
+    "tabCMO": "📢 Voor de CMO",
+    "tabCEO": "👔 Voor de CEO",
+    "tabManager": "📋 Voor Je Manager",
+    "tabTeam": "👥 Voor Je Team",
+    "tabChild": "🧒 Voor een 6-Jarige",
+    "tabEngineer": "👨‍💻 Voor de Engineer",
     "bonusTitle": "Bonus Features: De 'Studio'-functies",
     "bonusIntro": "Naast tekst is dit waar het echt krachtig wordt voor creatieven.",
     "bonusAudioTitle": "Audio Overzichten:",
@@ -216,7 +229,7 @@
       },
       "step5": {
         "title": "Deploy naar Productie",
-        "desc": "Gepusht naar GitHub, automatisch gedeployed via GitHub Actions naar GitHub Pages. Live site met één commando."
+        "desc": "Gedeployed naar Google Firebase Hosting met Cloud Functions voor veilig API-beheer. Production-ready met één commando."
       },
       "step6": {
         "title": "Verfijn voor Publiek",
@@ -569,5 +582,17 @@
     "videoTitle": "Achter de Schermen",
     "videoPlaceholder": "[Video Komt Binnenkort] - Het verhaal achter deze site en de AI-workflows die het mogelijk maakten",
     "disclaimer": "Disclaimer: Hoewel ik in dienst ben bij Google, is dit project een persoonlijk initiatief en is het volledig losstaat van mijn werk bij Google. Alle meningen, standpunten en inhoud die op deze site worden uitgedrukt zijn van mij en vertegenwoordigen niet de standpunten of posities van Google of een van haar dochterondernemingen."
+  },
+  "common": {
+    "loading": "Gemini denkt na",
+    "you": "Jij",
+    "copied": "Gekopieerd!"
+  },
+  "cookieConsent": {
+    "title": "We Waarderen Je Privacy",
+    "description": "Deze site gebruikt Google Analytics om te begrijpen hoe bezoekers met de content omgaan en je ervaring te verbeteren. We verzamelen alleen anonieme gebruiksdata en tracken geen persoonlijke informatie.",
+    "learnMore": "Meer leren over Google's privacybeleid",
+    "accept": "Accepteer Analytics",
+    "decline": "Weigeren"
   }
 }

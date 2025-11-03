@@ -130,25 +130,25 @@ export const NotebookLM: React.FC = () => {
           {/* Stakeholder Tabs */}
           <div className="flex flex-wrap border-b border-secondary/20 mb-6">
             <button className={getTabClass(1)} onClick={() => setActiveTab(1)}>
-              💰 For the CFO
+              {t('notebookLM.tabCFO')}
             </button>
             <button className={getTabClass(2)} onClick={() => setActiveTab(2)}>
-              📢 For the CMO
+              {t('notebookLM.tabCMO')}
             </button>
             <button className={getTabClass(3)} onClick={() => setActiveTab(3)}>
-              👔 For the CEO
+              {t('notebookLM.tabCEO')}
             </button>
             <button className={getTabClass(4)} onClick={() => setActiveTab(4)}>
-              📋 For Your Manager
+              {t('notebookLM.tabManager')}
             </button>
             <button className={getTabClass(5)} onClick={() => setActiveTab(5)}>
-              👥 For Your Team
+              {t('notebookLM.tabTeam')}
             </button>
             <button className={getTabClass(6)} onClick={() => setActiveTab(6)}>
-              🧒 For a 6-Year-Old
+              {t('notebookLM.tabChild')}
             </button>
             <button className={getTabClass(7)} onClick={() => setActiveTab(7)}>
-              👨‍💻 For the Engineer
+              {t('notebookLM.tabEngineer')}
             </button>
           </div>
 

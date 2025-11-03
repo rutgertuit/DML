@@ -2,18 +2,32 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMF5YLQ5EJ"></script>
+  <!-- Google Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'G-FMF5YLQ5EJ');
+    // Set default consent mode - denied until user accepts
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMF5YLQ5EJ"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-FMF5YLQ5EJ', {
+      'anonymize_ip': true
+    });
   </script>
 
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/DML/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marketing Live & Effies the AI-ftershow</title>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -22,8 +36,8 @@
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <script type="module" crossorigin src="/DML/assets/index-DYoFLU-6.js"></script>
-  <link rel="stylesheet" crossorigin href="/DML/assets/index-ChZWJck3.css">
+  <script type="module" crossorigin src="/assets/index-DVw0xFgK.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CAbgJ4Cg.css">
 </head>
 
 <body>

@@ -63,6 +63,17 @@
   "promptImprover": {
     "systemPrompt": "You are Prompt Scribe, a patient, empathetic coach who helps users craft killer prompts through friendly dialogue. Your goal: Guide them to specificity without overwhelming – think collaborator, not critic. Never execute or answer their original prompt; only refine it collaboratively.\n\nCore Rules:\n- Analyze the draft for gaps in: Audience, Goal/Objective, Tone/Style, Format/Length, Constraints (e.g., sources, ethics), Examples/Context.\n- Respond with empathy first: Acknowledge their idea positively (e.g., \"Love the AI blog angle – let's make it pop!\").\n- Ask exactly 3-5 targeted, open-ended questions to fill gaps. Number them for clarity. Keep it concise (under 150 words total).\n- After their reply, synthesize: Update the draft prompt, show diffs (e.g., \"Added: target=beginners\"), and ask 1-2 follow-ups if needed. Cap at 2 rounds.\n- End by generating the final prompt. You MUST wrap this final, complete prompt in a single, non-nested code block, starting *exactly* with `[FINAL_PROMPT]` and ending *exactly* with `[/FINAL_PROMPT]`.\n- After the `[/FINAL_PROMPT]` tag, you MUST add a concluding sign-off (e.g., 'Here's the refined prompt, ready to use in Gemini!' ).\n- **Crucially, after you use the `[FINAL_PROMPT]` tags, your turn is over. You MUST NOT ask any more follow-up questions.**\n- If they say \"stop\" or \"finalize,\" output the prompt immediately.\n- Stay fun and encouraging: End responses with a micro-tip (e.g., \"Pro tip: Specificity = magic!\").",
     "initialResponse": "Got it. I'm Prompt Scribe, your friendly coach. What's your rough prompt idea?",
+    "proTip": "Pro Tip:",
+    "proTipText": "Research shows that iterative, dialogue-based refinement yields 20-50% better AI outputs compared to one-shot prompts, as it uncovers hidden assumptions and builds specificity organically.",
+    "poweredBy": "Powered by",
+    "findingInfo": "Finding what additional information a perfect prompt is still missing",
+    "promptReady": "Your Refined Prompt is Ready",
+    "promptReadyDesc": "Copy the prompt below and paste it into your favorite LLM to see the results.",
+    "testInGemini": "Test in Gemini",
+    "testInChatGPT": "Test in ChatGPT",
+    "testInLeChat": "Test in LeChat",
+    "testInGrok": "Test in Grok",
+    "testInClaude": "Test in Claude",
     "sectionTitle": "The 3 Core Tools",
     "sectionIntro": "These three tools work together, but start here: learning how to get AI into 'conversation mode' to help you build better prompts. Master this skill, and everything else becomes easier.",
     "toolsHeader": {
@@ -158,11 +169,13 @@
     "stakeholderDesc": "Use the prompts below to see how the same \"central brain\" can serve completely different needs. Same data, seven different outputs—instantly.",
     "description": "You know the drill. You finish the big research report. Then the CEO asks for a one-page summary. The CMO wants a 10-slide deck. And the creative team just wants the key insights for a brief.\n\nStop the copy-paste nightmare.\n\nNotebookLM is your 'central brain.' You dump everything in once—the transcripts, the PDFs, the data. Then, you just ask it to generate the output for each person. One source of truth, infinite formats. Get your week back.",
     "cta": "Try NotebookLM",
-    "tabCFO": "For the CFO",
-    "tabCMO": "For the CMO",
-    "tabCEO": "For the CEO",
-    "tabManager": "For your Manager",
-    "tabTeam": "For your Team",
+    "tabCFO": "💰 For the CFO",
+    "tabCMO": "📢 For the CMO",
+    "tabCEO": "👔 For the CEO",
+    "tabManager": "📋 For Your Manager",
+    "tabTeam": "👥 For Your Team",
+    "tabChild": "🧒 For a 6-Year-Old",
+    "tabEngineer": "👨‍💻 For the Engineer",
     "bonusTitle": "Bonus Usecase: The 'Studio' Features",
     "bonusIntro": "Beyond text, this is where it gets really powerful for creatives.",
     "bonusAudioTitle": "Audio Overviews:",
@@ -227,7 +240,7 @@
       },
       "step5": {
         "title": "Deploy to Production",
-        "desc": "Pushed to GitHub, auto-deployed via GitHub Actions to GitHub Pages. Live site with one command."
+        "desc": "Deployed to Google Firebase Hosting with Cloud Functions for secure API management. Production-ready with one command."
       },
       "step6": {
         "title": "Refine for Audience",
@@ -580,5 +593,17 @@
     "videoTitle": "Behind the Scenes",
     "videoPlaceholder": "[Video Coming Soon] - The story behind this site and the AI workflows that made it possible",
     "disclaimer": "Disclaimer: While I am employed by Google, this project is a personal initiative and is entirely unrelated to my work at Google. All opinions, views, and content expressed on this site are my own and do not represent the views or positions of Google or any of its affiliates."
+  },
+  "common": {
+    "loading": "Gemini is thinking",
+    "you": "You",
+    "copied": "Copied!"
+  },
+  "cookieConsent": {
+    "title": "We Value Your Privacy",
+    "description": "This site uses Google Analytics to understand how visitors interact with the content and improve your experience. We only collect anonymous usage data and do not track personal information.",
+    "learnMore": "Learn more about Google's privacy policy",
+    "accept": "Accept Analytics",
+    "decline": "Decline"
   }
 }

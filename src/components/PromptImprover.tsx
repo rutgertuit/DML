@@ -130,7 +130,7 @@ export const PromptImprover: React.FC = () => {
             <div className="flex justify-start">
               <div className="p-4 max-w-[80%] bg-primary/10 text-text-light/90 border border-primary/30 rounded-lg">
                 <p className="font-body text-sm md:text-base">
-                  💡 <span className="font-semibold">Pro Tip:</span> Research shows that iterative, dialogue-based refinement yields 20-50% better AI outputs compared to one-shot prompts, as it uncovers hidden assumptions and builds specificity organically.
+                  💡 <span className="font-semibold">{t('promptImprover.proTip')}</span> {t('promptImprover.proTipText')}
                 </p>
               </div>
             </div>
@@ -167,10 +167,10 @@ export const PromptImprover: React.FC = () => {
                   </div>
                   <div className="flex-1">
                     <p className="font-body text-sm md:text-base">
-                      <span className="font-semibold text-primary">Gemini 2.5 Flash</span> is analyzing your prompt...
+                      <span className="font-semibold text-primary">{t('promptImprover.poweredBy')} Gemini 2.5 Flash</span>...
                     </p>
                     <p className="font-mono text-sm text-text-light/60 mt-1">
-                      Finding what additional information a perfect prompt is still missing
+                      {t('promptImprover.findingInfo')}
                       <span className="inline-flex ml-1">
                         <span className="animate-bounce delay-0">.</span>
                         <span className="animate-bounce delay-100">.</span>
@@ -216,17 +216,17 @@ export const PromptImprover: React.FC = () => {
           className="mt-8 p-1 border border-primary/50 shadow-glow-blue"
         >
           <h3 className="font-display text-2xl font-bold text-text-light px-6 pt-6">
-            Your Refined Prompt is Ready
+            {t('promptImprover.promptReady')}
           </h3>
           <p className="font-body text-text-light/80 mt-2 mb-4 px-6">
-            Copy the prompt below and paste it into your favorite LLM to see the results.
+            {t('promptImprover.promptReadyDesc')}
           </p>
           <div className="bg-card-dark p-4 border border-primary/20 relative m-6 mt-0">
             <button
               onClick={handleCopy}
               className="absolute top-2 right-2 font-mono text-xs uppercase bg-secondary/70 text-text-light px-2 py-1 hover:bg-secondary hover:shadow-glow-purple transition-all"
             >
-              {isCopied ? 'Copied!' : t('promptImprover.copy')}
+              {isCopied ? t('common.copied') : t('promptImprover.copy')}
             </button>
             <pre className="font-mono text-sm text-text-light/90 whitespace-pre-wrap overflow-x-auto">
               <code>
@@ -236,19 +236,19 @@ export const PromptImprover: React.FC = () => {
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-6 px-6 pb-6">
             <a href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer" className="font-mono text-sm uppercase bg-primary/80 text-background-dark px-4 py-2 hover:bg-primary hover:shadow-glow-blue transition-all">
-              Test in Gemini
+              {t('promptImprover.testInGemini')}
             </a>
             <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" className="font-mono text-sm uppercase bg-white/80 text-background-dark px-4 py-2 hover:bg-white hover:shadow-glow-blue transition-all">
-              Test in ChatGPT
+              {t('promptImprover.testInChatGPT')}
             </a>
             <a href="https://chat.mistral.ai/" target="_blank" rel="noopener noreferrer" className="font-mono text-sm uppercase bg-red-500/80 text-white px-4 py-2 hover:bg-red-500 hover:shadow-glow-blue transition-all">
-              Test in LeChat
+              {t('promptImprover.testInLeChat')}
             </a>
             <a href="https://x.ai/grok" target="_blank" rel="noopener noreferrer" className="font-mono text-sm uppercase bg-blue-400/80 text-white px-4 py-2 hover:bg-blue-400 hover:shadow-glow-blue transition-all">
-              Test in Grok
+              {t('promptImprover.testInGrok')}
             </a>
             <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer" className="font-mono text-sm uppercase bg-orange-500/80 text-white px-4 py-2 hover:bg-orange-500 hover:shadow-glow-blue transition-all">
-              Test in Claude
+              {t('promptImprover.testInClaude')}
             </a>
           </div>
         </div>

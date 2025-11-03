@@ -32,8 +32,7 @@ jobs:
         
       - name: Build
         run: npm run build
-        env:
-          VITE_GEMINI_API_KEY: ${{ secrets.VITE_GEMINI_API_KEY }}
+        # No API key needed - handled securely by Firebase Functions
         
       - name: Setup Pages
         uses: actions/configure-pages@v4

@@ -24,10 +24,11 @@ This repository serves as both a functional demonstration and educational resour
 
 ## Current Status
 * **Status:** ✅ Live and Functional
-* **Last Updated:** November 1, 2025
-* **Deployment:** GitHub Pages with GitHub Actions CI/CD
-* **Environment:** Production-ready with secure environment variable configuration
-* **Live URL:** https://rutgertuit.github.io/DML/
+* **Last Updated:** November 3, 2025
+* **Deployment:** Firebase Hosting with Cloud Functions
+* **Environment:** Production with server-side API key management
+* **Live URL:** https://rutger-dml.web.app
+* **Security:** API key secured in Firebase Secrets Manager (not exposed to client)
 
 ## Tech Stack
 

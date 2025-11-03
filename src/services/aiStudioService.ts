@@ -4,40 +4,34 @@ interface ApiMessage {
   parts: { text: string }[];
 }
 
-// Our API key from the .env file
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
+// Use Cloud Function proxy - NO API KEY IN CLIENT CODE
+const API_URL = import.meta.env.DEV
+  ? 'http://localhost:5001/rutger-dml/us-central1/geminiProxy'  // Local emulator
+  : '/api/gemini';  // Production Cloud Function
 
 /**
- * Sends a conversation history to the Gemini API and gets a response.
+ * Sends a conversation history to the Gemini API via Cloud Function proxy.
+ * This keeps your API key secure on the server-side.
  * @param history The full conversation history, including the system prompt.
  * @returns The AI model's text response.
  */
 export const getScribeResponse = async (history: ApiMessage[]): Promise<string> => {
-  if (!API_KEY) {
-    // Only log errors in development mode
-    if (import.meta.env.DEV) {
-      console.error('Missing VITE_GEMINI_API_KEY environment variable');
-    }
-    return "⚠️ API key not configured. Please set up your VITE_GEMINI_API_KEY environment variable to use the Gemini API features.";
-  }
-
   try {
     const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-goog-api-key': API_KEY // Secure: API key in header instead of URL
       },
       body: JSON.stringify({ contents: history }),
+      credentials: 'include', // Include credentials for CORS
     });
 
     if (!response.ok) {
-      const errorData = await response.json();
+      const errorData = await response.json().catch(() => ({}));
       if (import.meta.env.DEV) {
-        console.error(`API Error ${response.status}:`, errorData.error?.message);
+        console.error(`API Error ${response.status}:`, errorData.error);
       }
-      throw new Error(`API Error ${response.status}: ${errorData.error?.message || 'Unknown error'}`);
+      throw new Error(`API Error ${response.status}: ${errorData.error || 'Unknown error'}`);
     }
 
     const data = await response.json();
