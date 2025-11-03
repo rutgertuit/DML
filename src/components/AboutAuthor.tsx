@@ -28,44 +28,26 @@ const AboutAuthor: React.FC = () => {
                             <h3 className="font-display text-2xl md:text-3xl font-bold text-primary mb-2">
                                 Rutger Tuit
                             </h3>
-                            <p className="text-secondary font-semibold mb-4">
-                                {t('aboutAuthor.role')}
+                            <p className="text-text-light/90 leading-relaxed mb-4">
+                                {t('aboutAuthor.intro')}
                             </p>
                             <p className="text-text-light/90 leading-relaxed mb-4">
                                 {t('aboutAuthor.bio')}
                             </p>
+                            <p className="text-text-light/90 leading-relaxed">
+                                {t('aboutAuthor.philosophy')}
+                            </p>
                         </div>
                     </div>
 
-                    {/* Philosophy Cards */}
-                    <div className="grid md:grid-cols-3 gap-6 mb-8">
-                        <div className="bg-background-dark/50 border border-primary/20 rounded-lg p-5">
-                            <div className="text-2xl mb-3">🚫</div>
-                            <h4 className="font-bold text-primary mb-2">{t('aboutAuthor.notA.title')}</h4>
-                            <p className="text-sm text-text-light/80">{t('aboutAuthor.notA.desc')}</p>
-                        </div>
-
-                        <div className="bg-background-dark/50 border border-secondary/20 rounded-lg p-5">
-                            <div className="text-2xl mb-3">✅</div>
-                            <h4 className="font-bold text-secondary mb-2">{t('aboutAuthor.butA.title')}</h4>
-                            <p className="text-sm text-text-light/80">{t('aboutAuthor.butA.desc')}</p>
-                        </div>
-
-                        <div className="bg-background-dark/50 border border-primary/20 rounded-lg p-5">
-                            <div className="text-2xl mb-3">🤖</div>
-                            <h4 className="font-bold text-primary mb-2">{t('aboutAuthor.aiRole.title')}</h4>
-                            <p className="text-sm text-text-light/80">{t('aboutAuthor.aiRole.desc')}</p>
-                        </div>
-                    </div>
-
-                    {/* Playground Note */}
+                    {/* Disclaimer */}
                     <div className="bg-secondary/10 border border-secondary/30 rounded-lg p-6 mb-6">
                         <div className="flex items-start gap-3">
-                            <span className="text-2xl flex-shrink-0">🎪</span>
+                            <span className="text-2xl flex-shrink-0">⚠️</span>
                             <div>
-                                <h4 className="font-bold text-secondary mb-2">{t('aboutAuthor.playground.title')}</h4>
-                                <p className="text-text-light/90 leading-relaxed">
-                                    {t('aboutAuthor.playground.desc')}
+                                <h4 className="font-bold text-secondary mb-2">{t('aboutAuthor.disclaimer.title')}</h4>
+                                <p className="text-text-light/90 leading-relaxed text-sm">
+                                    {t('aboutAuthor.disclaimer.desc')}
                                 </p>
                             </div>
                         </div>

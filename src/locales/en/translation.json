@@ -619,24 +619,13 @@
     "keyTakeawayDesc": "AI isn't magic—it's a workflow. This site demonstrates how to turn vague ideas into production-ready tools using Google's AI ecosystem. Everything here was built using the exact methods it teaches."
   },
   "aboutAuthor": {
-    "title": "About the Author",
-    "role": "Business Leader & AI Explorer",
-    "bio": "This site is one of many playgrounds and experiments by Rutger—a business leader who loves learning by doing. He's not a coder, not a designer, not a musician, but someone who sees AI as a bridge to work better with designers, engineers, and artists.",
-    "notA": {
-      "title": "Not a Technical Expert",
-      "desc": "No formal training in coding, design, or engineering. Just curiosity and AI tools."
-    },
-    "butA": {
-      "title": "But a Business Leader",
-      "desc": "Who understands that the best work happens when you collaborate across disciplines."
-    },
-    "aiRole": {
-      "title": "How AI Helps",
-      "desc": "AI helps bridge the gap—turning rough ideas into working prototypes that real experts can refine."
-    },
-    "playground": {
-      "title": "This is a Playground",
-      "desc": "This site, like many of Rutger's projects, is an experiment. It's not perfect. It's learning by doing, in public. The goal isn't to replace experts—it's to better communicate with them."
+    "title": "About the Author: Rutger Tuit",
+    "intro": "This website is a practical follow-up to an event, serving as a personal playground for experimenting with the concepts and tools discussed.",
+    "bio": "Rutger Tuit is a business leader operating at the intersection of technology, creativity, and commerce. He is driven by a strong philosophy of learning by doing.",
+    "philosophy": "While not a professional coder, designer, or musician, he leverages AI as a collaborative bridge—accelerating the creative process and enhancing his ability to work effectively with the engineers, artists, and designers who are masters of their craft.",
+    "disclaimer": {
+      "title": "Disclaimer",
+      "desc": "This site is a personal experiment. The views and projects shared here are strictly Rutger's own and do not represent those of his employer (Google)."
     },
     "linkedinCTA": "Connect on LinkedIn"
   },

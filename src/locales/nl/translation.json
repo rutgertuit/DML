@@ -608,24 +608,13 @@
     "keyTakeawayDesc": "AI is geen magie—het is een workflow. Deze site demonstreert hoe je vage ideeën omzet in production-ready tools met Google's AI-ecosysteem. Alles hier is gebouwd met exact dezelfde methodes die het onderwijst."
   },
   "aboutAuthor": {
-    "title": "Over de Auteur",
-    "role": "Zakenleider & AI Verkenner",
-    "bio": "Deze site is een van de vele speeltuinen en experimenten van Rutger—een zakenleider die houdt van leren door te doen. Hij is geen coder, geen designer, geen muzikant, maar iemand die AI ziet als een brug om beter samen te werken met designers, engineers en artiesten.",
-    "notA": {
-      "title": "Geen Technische Expert",
-      "desc": "Geen formele training in programmeren, design of engineering. Alleen nieuwsgierigheid en AI-tools."
-    },
-    "butA": {
-      "title": "Maar Wel Zakenleider",
-      "desc": "Die begrijpt dat het beste werk ontstaat wanneer je samenwerkt over disciplines heen."
-    },
-    "aiRole": {
-      "title": "Hoe AI Helpt",
-      "desc": "AI helpt de kloof te overbruggen—het zet ruwe ideeën om in werkende prototypes die echte experts kunnen verfijnen."
-    },
-    "playground": {
-      "title": "Dit is een Speeltuin",
-      "desc": "Deze site is, net als veel van Rutger's projecten, een experiment. Het is niet perfect. Het is leren door te doen, in het openbaar. Het doel is niet om experts te vervangen—het is om beter met ze te communiceren."
+    "title": "Over de Auteur: Rutger Tuit",
+    "intro": "Deze website is een praktische follow-up van een event, en dient als een persoonlijke speeltuin voor het experimenteren met de besproken concepten en tools.",
+    "bio": "Rutger Tuit is een zakenleider die opereert op het snijvlak van technologie, creativiteit en commerce. Hij wordt gedreven door een sterke filosofie van leren door te doen.",
+    "philosophy": "Hoewel hij geen professionele coder, designer of muzikant is, zet hij AI in als een collaboratieve brug—die het creatieve proces versnelt en zijn vermogen vergroot om effectief samen te werken met de engineers, artiesten en designers die meesters zijn in hun vak.",
+    "disclaimer": {
+      "title": "Disclaimer",
+      "desc": "Deze site is een persoonlijk experiment. De standpunten en projecten die hier worden gedeeld zijn strikt die van Rutger zelf en vertegenwoordigen niet die van zijn werkgever (Google)."
     },
     "linkedinCTA": "Verbind op LinkedIn"
   },
