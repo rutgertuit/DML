@@ -13,7 +13,6 @@ const SearchBar: React.FC<SearchBarProps> = ({ isOpen, onClose }) => {
 
     // Searchable sections - these match the section IDs in the app
     const searchableContent = [
-        { section: t('search.sections.intro'), title: t('intro.title'), anchor: 'intro' },
         { section: t('search.sections.tools'), title: t('promptImprover.sectionTitle'), anchor: 'tools' },
         { section: t('search.sections.promptImprover'), title: t('promptImprover.title'), anchor: 'tools' },
         { section: t('search.sections.heroGem'), title: t('heroGemWizard.title'), anchor: 'tools' },
