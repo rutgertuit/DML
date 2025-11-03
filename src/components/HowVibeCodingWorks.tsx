@@ -63,15 +63,16 @@ export const HowVibeCodingWorks: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Right: Video Placeholder */}
-                    <div className="w-full aspect-video bg-background-dark border border-primary/20 flex items-center justify-center rounded">
-                        <div className="text-center text-text-light/50">
-                            <div className="text-4xl mb-2">🎬</div>
-                            <p className="text-sm font-mono">{t('vibeCoding.videoPlaceholder')}</p>
-                            <p className="text-xs text-text-light/40 mt-2 max-w-xs mx-auto">
-                                {t('vibeCoding.videoDescription')}
-                            </p>
-                        </div>
+                    {/* Right: Video */}
+                    <div className="w-full aspect-video bg-background-dark border border-primary/20 rounded overflow-hidden">
+                        <iframe
+                            className="w-full h-full"
+                            src="https://www.youtube.com/embed/TF1E0v4l7-8"
+                            title={t('vibeCoding.videoDescription')}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
                     </div>
                 </div>
 
