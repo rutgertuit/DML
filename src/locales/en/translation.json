@@ -587,12 +587,7 @@
     "reminder": "Every expert was once a beginner who refused to quit."
   },
   "footer": {
-    "title": "Let's Connect & Continue the Conversation",
-    "description": "Ready to explore AI workflows further? Connect with me on LinkedIn to share insights, discuss your projects, or simply continue the conversation about the future of AI-powered development.",
-    "cta": "Connect on LinkedIn",
-    "videoTitle": "Behind the Scenes",
-    "videoPlaceholder": "[Video Coming Soon] - The story behind this site and the AI workflows that made it possible",
-    "disclaimer": "Disclaimer: While I am employed by Google, this project is a personal initiative and is entirely unrelated to my work at Google. All opinions, views, and content expressed on this site are my own and do not represent the views or positions of Google or any of its affiliates."
+    "copyright": "© 2024 AI-ftershow • Built with Google's AI Ecosystem"
   },
   "common": {
     "loading": "Gemini is thinking",
