@@ -141,14 +141,17 @@ export const AIRoadmap: React.FC = () => {
                     task1: {
                         title: t('roadmap.advanced.week4.task1.title'),
                         desc: t('roadmap.advanced.week4.task1.desc'),
+                        link: t('roadmap.advanced.week4.task1.link'),
                     },
                     task2: {
                         title: t('roadmap.advanced.week4.task2.title'),
                         desc: t('roadmap.advanced.week4.task2.desc'),
+                        link: undefined,
                     },
                     task3: {
                         title: t('roadmap.advanced.week4.task3.title'),
                         desc: t('roadmap.advanced.week4.task3.desc'),
+                        link: undefined,
                     },
                 },
             },

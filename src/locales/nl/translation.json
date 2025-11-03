@@ -559,7 +559,8 @@
         "goal": "Breng alles samen. Bouw een echt project vanaf nul met Vibe Coding principes.",
         "task1": {
           "title": "Dag 22-24: Strategie & Prototype",
-          "desc": "Kies een klein project (bijv. persoonlijk dashboard, tool, landingspagina). Gebruik AI Studio om de structuur te plannen. Gebruik Stitch om de UI te prototypen."
+          "desc": "Kies een klein project (bijv. persoonlijk dashboard, tool, landingspagina). Gebruik AI Studio om de structuur te plannen. Gebruik Stitch om de UI te prototypen.",
+          "link": "Begin met Bouwen"
         },
         "task2": {
           "title": "Dag 25-27: Integreer & Deploy",

@@ -570,7 +570,8 @@
         "goal": "Put it all together. Build a real project from scratch using Vibe Coding principles.",
         "task1": {
           "title": "Day 22-24: Strategy & Prototype",
-          "desc": "Pick a small project (e.g., personal dashboard, tool, landing page). Use AI Studio to plan the structure. Use Stitch to prototype the UI."
+          "desc": "Pick a small project (e.g., personal dashboard, tool, landing page). Use AI Studio to plan the structure. Use Stitch to prototype the UI.",
+          "link": "Start Building"
         },
         "task2": {
           "title": "Day 25-27: Integrate & Deploy",
