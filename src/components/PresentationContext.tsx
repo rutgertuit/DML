@@ -17,19 +17,6 @@ const PresentationContext: React.FC = () => {
                     </p>
                 </div>
 
-                {/* Video Section */}
-                <div className="bg-card-dark border border-primary/20 rounded-lg p-6 md:p-8 mb-8">
-                    <div className="aspect-video bg-background-dark border border-secondary/20 flex items-center justify-center rounded">
-                        <div className="text-center text-text-light/50">
-                            <div className="text-5xl mb-4">🎬</div>
-                            <p className="text-sm font-mono">{t('presentationContext.videoPlaceholder')}</p>
-                            <p className="text-xs text-text-light/40 mt-2 max-w-md mx-auto">
-                                {t('presentationContext.videoDescription')}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
                 {/* Context Cards */}
                 <div className="grid md:grid-cols-2 gap-6">
                     {/* What is this? */}
