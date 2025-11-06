@@ -25,7 +25,7 @@ function App() {
         <HeroSection />
 
         {/* Section Divider with enhanced visual connection */}
-        <div className="my-8 md:my-12 relative">
+        <div className="my-6 md:my-10 relative">
           <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-glow-blue"></div>
         </div>
@@ -33,7 +33,7 @@ function App() {
         <PresentationContext />
 
         {/* Section Divider with enhanced visual connection */}
-        <div className="my-8 md:my-12 relative">
+        <div className="my-6 md:my-10 relative">
           <div className="h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-30"></div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-secondary shadow-glow-purple"></div>
         </div>
@@ -41,7 +41,7 @@ function App() {
         <TheVibe />
 
         {/* Section Divider with enhanced visual connection */}
-        <div className="my-8 md:my-12 relative">
+        <div className="my-6 md:my-10 relative">
           <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-glow-blue"></div>
         </div>
@@ -49,7 +49,7 @@ function App() {
         <BeforeAfter />
 
         {/* Section Divider with enhanced visual connection */}
-        <div className="my-8 md:my-12 relative">
+        <div className="my-6 md:my-10 relative">
           <div className="h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-30"></div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-secondary shadow-glow-purple"></div>
         </div>
@@ -76,7 +76,7 @@ function App() {
         </ToolsSection>
 
         {/* Section Divider with enhanced visual connection */}
-        <div className="my-8 md:my-12 relative">
+        <div className="my-6 md:my-10 relative">
           <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-glow-blue"></div>
         </div>
@@ -84,7 +84,7 @@ function App() {
         <HowVibeCodingWorks />
 
         {/* Section Divider with enhanced visual connection */}
-        <div className="my-8 md:my-12 relative">
+        <div className="my-6 md:my-10 relative">
           <div className="h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-30"></div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-secondary shadow-glow-purple"></div>
         </div>
@@ -92,7 +92,7 @@ function App() {
         <AIRoadmap />
 
         {/* Section Divider with enhanced visual connection */}
-        <div className="my-8 md:my-12 relative">
+        <div className="my-6 md:my-10 relative">
           <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-glow-blue"></div>
         </div>
@@ -100,7 +100,7 @@ function App() {
         <Toolkit />
 
         {/* Section Divider with enhanced visual connection */}
-        <div className="my-8 md:my-12 relative">
+        <div className="my-6 md:my-10 relative">
           <div className="h-px bg-gradient-to-r from-transparent via-secondary to-transparent opacity-30"></div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-secondary shadow-glow-purple"></div>
         </div>
