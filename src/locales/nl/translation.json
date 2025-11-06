@@ -365,6 +365,33 @@
       "goodOutput": "Hi [Naam],\n\nIk wilde even terugkomen op het voorstel dat we vorige week bespraken. Ik weet dat je opties evalueert, dus geen druk—wilde alleen zeker weten dat je alles hebt wat je nodig hebt van onze kant.\n\nAls het nuttig zou zijn om specifieke secties samen door te nemen, spring ik graag deze week in een kort gesprek.\n\nIk kijk uit naar je gedachten.\n\nGroet,\n[Je Naam]",
       "goodWhy": "Professioneel maar menselijk, erkent hun proces, niet-opdringerige CTA"
     },
+    "example3": {
+      "title": "Voorbeeld 3: Omgaan met Je Wantrouwende Baas",
+      "badPrompt": "Schrijf een email naar mijn baas over de projectvertraging",
+      "badOutput": "Hoi,\n\nHelaas wordt het project twee weken vertraagd door enkele technische problemen. We werken eraan en hopen het snel op te lossen.\n\nBedankt voor je begrip.",
+      "badWhy": "Defensief, vaag over het probleem, geen plan of ownership",
+      "goodPrompt": "Schrijf een email naar mijn micromanagend baas (wantrouwt mijn oordeel, heeft details nodig). Leg uit: 2 weken vertraging door API-leverancier die authenticatie wijzigde zonder melding. Toon: Transparant maar zelfverzekerd. Inclusief: 1) Wat gebeurde (niet onze fout maar we nemen verantwoordelijkheid voor de reactie), 2) Wat we doen (workaround al geïmplementeerd, deze week testen), 3) Nieuwe tijdlijn met buffer, 4) Proactief overleg-aanbod. Max 120 woorden.",
+      "goodOutput": "Hi [Baas Naam],\n\nUpdate over de Project X tijdlijn: we verschuiven de oplevering 2 weken naar 15 maart.\n\nWat gebeurde: Onze API-leverancier wijzigde vrijdag hun authenticatiesysteem zonder vooraankondiging. Dit brak onze integratie. Niet onze fout, maar wel onze verantwoordelijkheid om het op te lossen.\n\nWat we hebben gedaan: Ik heb maandag een workaround geïmplementeerd (nieuwe auth-flow). QA test deze week. Extra week buffer voor edge cases.\n\nNieuwe tijdlijn:\n- Testing: deze week\n- Staging: 8 maart\n- Productie: 15 maart\n\nWil je een kort stand-up deze week voor details?\n\nGroet,\n[Je Naam]",
+      "goodWhy": "Transparant over probleem, toont ownership en proactieve actie, biedt controle"
+    },
+    "example4": {
+      "title": "Voorbeeld 4: De Sceptische CFO Overtuigen",
+      "badPrompt": "Schrijf een pitch voor de CFO om ons AI tool budget goed te keuren",
+      "badOutput": "We moeten investeren in AI-tools om competitief te blijven. De kosten zijn €50K per jaar, maar het zal de productiviteit verhogen en ons team helpen efficiënter te werken. Dit is een belangrijke strategische investering voor onze toekomst.",
+      "badWhy": "Geen ROI, vage voordelen, klinkt als elke andere 'innovatie' pitch die ze afwezen",
+      "goodPrompt": "Schrijf een budgetvoorstel voor een CFO (sceptisch, wil harde cijfers, haat buzzwoorden). Verzoek: €50K/jaar voor AI coding tools. Toon: Data-gedreven, geen hype. Structuur: 1) Probleem in € (huidige dev kosten €2M/jaar, 15% aan repetitief werk = €300K verspilling), 2) Oplossing (AI tools verminderen repetitief werk 60% = €180K/jaar besparing), 3) ROI berekening (2,6x rendement eerste jaar), 4) Risico-beperking (3 maanden pilot, makkelijk opzegbaar), 5) Eén concurrent referentie. Max 150 woorden.",
+      "goodOutput": "Budgetverzoek: AI Development Tools — €50K/jaar\n\nProbleem: Onze engineering kosten bedragen €2M per jaar. 15% daarvan (€300K) gaat naar repetitieve taken: boilerplate code, documentatie, debugging van syntax fouten.\n\nOplossing: AI coding tools (GitHub Copilot, Cursor IDE) verminderen repetitief werk met 60%. Gebaseerd op interne pilot met 5 developers (Q4 2024).\n\nROI:\n- Besparing: €180K/jaar\n- Kosten: €50K/jaar\n- Netto: €130K/jaar (2,6x rendement)\n\nRisico-beperking:\n- 3 maanden pilot met 10 developers\n- Opzegbaar per maand na pilot\n- Concurrentie: Atlassian bespaart 25% dev-tijd (hun Q3 rapport)\n\nBeslissing: Starten met pilot in Q1?\n\n[Je Naam]",
+      "goodWhy": "Begint met € probleem, ROI in eerste paragraaf, bevat risico-beperking, pilot optie"
+    },
+    "example5": {
+      "title": "Voorbeeld 5: Overleven van Diner met Schoonfamilie",
+      "badPrompt": "Help me mijn baan uit te leggen aan mijn schoonfamilie",
+      "badOutput": "Ik werk in product management. Eigenlijk manage ik de ontwikkeling van producten en coördineer ik tussen verschillende teams. Het is een vrij complexe rol die veel communicatie en planning vereist.",
+      "badWhy": "Bedrijfsjargon, verveelt mensen, weten nog steeds niet wat je echt doet",
+      "goodPrompt": "Leg mijn baan uit (Product Manager bij een B2B SaaS bedrijf) aan mijn 65-jarige schoonfamilie die denken dat ik 'computer dingen doe'. Toon: Warm, herkenbaar, nul jargon. Gebruik een analogie die ze begrijpen (ze hebben een restaurant). Doel: Hen trots maken en in staat stellen het aan hun vrienden te vertellen. Inclusief: 1) Simpele analogie, 2) Eén concreet voorbeeld van impact, 3) Waarom ik het leuk vind. Max 100 woorden. Eindig met een vraag die het gesprek naar hen verschuift.",
+      "goodOutput": "Weet je hoe jullie het restaurant runnen? Ik ben eigenlijk de chef-kok voor software—maar in plaats van menu's plannen, bedenk ik welke features onze klanten nodig hebben.\n\nVorige maand hielpen we een ziekenhuis om hun medicatie-tracking te verbeteren. Nu maken ze 90% minder fouten. Dat betekent echte mensen die veiligere zorg krijgen.\n\nIk hou ervan omdat ik problemen oplos voor mensen die ik nooit zal ontmoeten, maar wier dag ik beter maak.\n\nTrouwens, hoe gaat het met de nieuwe kaart die jullie aan het testen waren?",
+      "goodWhy": "Restaurant analogie die ze begrijpen, menselijk impact verhaal, herleid naar hen"
+    },
     "cta": "Klaar om je prompts te transformeren?",
     "ctaButton": "Probeer de Prompt Verbeteraar"
   },

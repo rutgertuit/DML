@@ -376,6 +376,33 @@
       "goodOutput": "Hi [Name],\n\nI wanted to circle back on the proposal we discussed last week. I know you're evaluating options, so no pressure—just wanted to make sure you have everything you need from our side.\n\nIf it would be helpful to walk through any specific sections together, I'm happy to jump on a quick call this week.\n\nLooking forward to hearing your thoughts.\n\nBest,\n[Your Name]",
       "goodWhy": "Professional but human, acknowledges their process, non-pushy CTA"
     },
+    "example3": {
+      "title": "Example 3: Handling Your Distrustful Boss",
+      "badPrompt": "Write an email to my boss about the project delay",
+      "badOutput": "Hi,\n\nUnfortunately, the project will be delayed by two weeks due to some technical issues. We're working on it and will keep you updated.\n\nThanks",
+      "badWhy": "Defensive, vague about the problem, no plan or ownership",
+      "goodPrompt": "Write an email to my micromanaging boss (distrusts my judgment, needs details). Explain 2-week delay caused by API vendor changing authentication without notice. Tone: Transparent but confident. Include: 1) What happened (not our fault but we own the response), 2) What we're doing (already implemented workaround, testing this week), 3) New timeline with buffer, 4) Proactive check-in offer. Max 120 words.",
+      "goodOutput": "Hi [Boss Name],\n\nUpdate on the Project X timeline: we're pushing delivery by 2 weeks to March 15th.\n\nWhat happened: Our API vendor changed their authentication system Friday without advance notice. Several customers were affected.\n\nWhat we've done: We implemented a workaround over the weekend and are running tests this week to ensure stability. I've also set up monitoring to catch similar issues early.\n\nNew timeline: Launch March 15th (includes 3-day buffer for final testing).\n\nI'll send you a progress update Wednesday, but happy to jump on a call sooner if you want to walk through the technical details.\n\nBest,\n[Your Name]",
+      "goodWhy": "Transparent about problem, shows ownership and proactive action, offers control"
+    },
+    "example4": {
+      "title": "Example 4: Convincing the Skeptical CFO",
+      "badPrompt": "Write a pitch for the CFO to approve our AI tool budget",
+      "badOutput": "We need to invest in AI tools to stay competitive. The cost is $50K annually. This will help us work faster and improve productivity. I believe this is a smart investment for the company's future.\n\nPlease approve.",
+      "badWhy": "No ROI, vague benefits, sounds like every other 'innovation' pitch they've rejected",
+      "goodPrompt": "Write a budget proposal for a CFO (skeptical, wants hard numbers, hates buzzwords). Request: $50K/year for AI coding tools. Tone: Data-driven, no hype. Structure: 1) Problem stated in $ (current dev costs $2M/year, 15% on repetitive tasks = $300K waste), 2) Solution (AI tools cut repetitive work 60% = $180K/year savings), 3) ROI math (2.6x return first year), 4) Risk mitigation (3-month pilot, easy to cancel), 5) One competitor reference. Max 150 words.",
+      "goodOutput": "Budget Request: AI Development Tools — $50K/year\n\nProblem: Our engineering costs run $2M annually. Analysis shows 15% of dev time ($300K) goes to repetitive tasks: boilerplate code, debugging, documentation.\n\nProposal: Implement AI coding assistants (GitHub Copilot + Claude Pro for 20 devs).\n\nExpected Impact:\n• 60% reduction in repetitive work = $180K/year savings\n• ROI: 2.6x return in year 1\n• Payback period: 3.3 months\n\nRisk Mitigation:\n• Start with 3-month pilot (5 devs)\n• Monthly cancellation option\n• Competitor reference: TechCorp saw 40% faster feature delivery after adoption\n\nRecommendation: Approve $12.5K for Q1 pilot. Scale if metrics confirm 30%+ efficiency gains.\n\nHappy to walk through the cost breakdown.",
+      "goodWhy": "Leads with $ problem, ROI in first paragraph, includes risk mitigation, pilot option"
+    },
+    "example5": {
+      "title": "Example 5: Surviving Dinner with In-Laws",
+      "badPrompt": "Help me explain my job to my in-laws",
+      "badOutput": "I work in product management. Basically, I manage the development of products and work with different teams to ensure we meet customer needs and business goals. It's a mix of strategy, coordination, and execution.",
+      "badWhy": "Corporate jargon, puts people to sleep, still doesn't know what you actually do",
+      "goodPrompt": "Explain my job (Product Manager at a B2B SaaS company) to my 65-year-old in-laws who think I 'do computer stuff'. Tone: Warm, relatable, zero jargon. Use an analogy they'd understand (they own a restaurant). Goal: Make them feel proud and able to tell their friends. Include: 1) Simple analogy, 2) One concrete example of impact, 3) Why I love it. Max 100 words. End with a question that shifts conversation to them.",
+      "goodOutput": "You know how you run the restaurant? I'm basically the head chef for software—but instead of menu planning, I figure out what features our customers need, work with the developers (my 'kitchen staff') to build them, and make sure everything works smoothly.\n\nLast month, we launched a tool that saves small business owners 5 hours a week on invoicing. One customer sent a thank-you note saying it gave her Sundays back with her kids.\n\nThat's why I love it—we actually make people's lives easier.\n\nSpeaking of the restaurant, how's the new menu going over?",
+      "goodWhy": "Restaurant analogy they understand, human impact story, redirects to them"
+    },
     "cta": "Ready to transform your prompts?",
     "ctaButton": "Try the Prompt Improver"
   },

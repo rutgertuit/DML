@@ -147,6 +147,195 @@ export const BeforeAfter: React.FC = () => {
                 </div>
             </div>
 
+            {/* Example 3: Distrustful Boss */}
+            <div className="mb-12 bg-card-dark border border-primary/20 rounded-lg overflow-hidden">
+                <div className="bg-primary/10 border-b border-primary/20 p-4">
+                    <h3 className="font-display text-xl font-bold text-primary">
+                        {t('beforeAfter.example3.title')}
+                    </h3>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-0">
+                    {/* Bad Example */}
+                    <div className="p-6 border-r border-primary/20">
+                        <div className="flex items-center gap-2 mb-4">
+                            <span className="text-2xl">🔴</span>
+                            <h4 className="font-bold text-red-400 uppercase text-sm">{t('beforeAfter.badLabel')}</h4>
+                        </div>
+
+                        <div className="bg-background-dark/50 border border-red-500/30 rounded p-4 mb-4">
+                            <p className="font-mono text-sm text-text-light/80 mb-2">{t('beforeAfter.promptLabel')}</p>
+                            <p className="text-text-light/60 italic">"{t('beforeAfter.example3.badPrompt')}"</p>
+                        </div>
+
+                        <div className="bg-red-900/10 border border-red-500/30 rounded p-4">
+                            <p className="font-mono text-sm text-red-400 mb-2">{t('beforeAfter.outputLabel')}</p>
+                            <p className="text-text-light/70 text-sm leading-relaxed whitespace-pre-wrap">
+                                {t('beforeAfter.example3.badOutput')}
+                            </p>
+                        </div>
+
+                        <div className="mt-4 flex items-start gap-2">
+                            <span className="text-red-400">❌</span>
+                            <p className="text-sm text-text-light/60">{t('beforeAfter.example3.badWhy')}</p>
+                        </div>
+                    </div>
+
+                    {/* Good Example */}
+                    <div className="p-6 bg-primary/5">
+                        <div className="flex items-center gap-2 mb-4">
+                            <span className="text-2xl">🟢</span>
+                            <h4 className="font-bold text-primary uppercase text-sm">{t('beforeAfter.goodLabel')}</h4>
+                        </div>
+
+                        <div className="bg-background-dark/50 border border-primary/30 rounded p-4 mb-4">
+                            <p className="font-mono text-sm text-text-light/80 mb-2">{t('beforeAfter.promptLabel')}</p>
+                            <p className="text-text-light/90 text-sm leading-relaxed">
+                                "{t('beforeAfter.example3.goodPrompt')}"
+                            </p>
+                        </div>
+
+                        <div className="bg-primary/10 border border-primary/30 rounded p-4">
+                            <p className="font-mono text-sm text-primary mb-2">{t('beforeAfter.outputLabel')}</p>
+                            <p className="text-text-light/90 text-sm leading-relaxed whitespace-pre-wrap">
+                                {t('beforeAfter.example3.goodOutput')}
+                            </p>
+                        </div>
+
+                        <div className="mt-4 flex items-start gap-2">
+                            <span className="text-primary">✅</span>
+                            <p className="text-sm text-text-light/80">{t('beforeAfter.example3.goodWhy')}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Example 4: Skeptical CFO */}
+            <div className="mb-12 bg-card-dark border border-secondary/20 rounded-lg overflow-hidden">
+                <div className="bg-secondary/10 border-b border-secondary/20 p-4">
+                    <h3 className="font-display text-xl font-bold text-secondary">
+                        {t('beforeAfter.example4.title')}
+                    </h3>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-0">
+                    {/* Bad Example */}
+                    <div className="p-6 border-r border-secondary/20">
+                        <div className="flex items-center gap-2 mb-4">
+                            <span className="text-2xl">🔴</span>
+                            <h4 className="font-bold text-red-400 uppercase text-sm">{t('beforeAfter.badLabel')}</h4>
+                        </div>
+
+                        <div className="bg-background-dark/50 border border-red-500/30 rounded p-4 mb-4">
+                            <p className="font-mono text-sm text-text-light/80 mb-2">{t('beforeAfter.promptLabel')}</p>
+                            <p className="text-text-light/60 italic">"{t('beforeAfter.example4.badPrompt')}"</p>
+                        </div>
+
+                        <div className="bg-red-900/10 border border-red-500/30 rounded p-4">
+                            <p className="font-mono text-sm text-red-400 mb-2">{t('beforeAfter.outputLabel')}</p>
+                            <p className="text-text-light/70 text-sm leading-relaxed whitespace-pre-wrap">
+                                {t('beforeAfter.example4.badOutput')}
+                            </p>
+                        </div>
+
+                        <div className="mt-4 flex items-start gap-2">
+                            <span className="text-red-400">❌</span>
+                            <p className="text-sm text-text-light/60">{t('beforeAfter.example4.badWhy')}</p>
+                        </div>
+                    </div>
+
+                    {/* Good Example */}
+                    <div className="p-6 bg-secondary/5">
+                        <div className="flex items-center gap-2 mb-4">
+                            <span className="text-2xl">🟢</span>
+                            <h4 className="font-bold text-secondary uppercase text-sm">{t('beforeAfter.goodLabel')}</h4>
+                        </div>
+
+                        <div className="bg-background-dark/50 border border-secondary/30 rounded p-4 mb-4">
+                            <p className="font-mono text-sm text-text-light/80 mb-2">{t('beforeAfter.promptLabel')}</p>
+                            <p className="text-text-light/90 text-sm leading-relaxed">
+                                "{t('beforeAfter.example4.goodPrompt')}"
+                            </p>
+                        </div>
+
+                        <div className="bg-secondary/10 border border-secondary/30 rounded p-4">
+                            <p className="font-mono text-sm text-secondary mb-2">{t('beforeAfter.outputLabel')}</p>
+                            <p className="text-text-light/90 text-sm leading-relaxed whitespace-pre-wrap">
+                                {t('beforeAfter.example4.goodOutput')}
+                            </p>
+                        </div>
+
+                        <div className="mt-4 flex items-start gap-2">
+                            <span className="text-secondary">✅</span>
+                            <p className="text-sm text-text-light/80">{t('beforeAfter.example4.goodWhy')}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Example 5: In-Laws */}
+            <div className="mb-12 bg-card-dark border border-primary/20 rounded-lg overflow-hidden">
+                <div className="bg-primary/10 border-b border-primary/20 p-4">
+                    <h3 className="font-display text-xl font-bold text-primary">
+                        {t('beforeAfter.example5.title')}
+                    </h3>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-0">
+                    {/* Bad Example */}
+                    <div className="p-6 border-r border-primary/20">
+                        <div className="flex items-center gap-2 mb-4">
+                            <span className="text-2xl">🔴</span>
+                            <h4 className="font-bold text-red-400 uppercase text-sm">{t('beforeAfter.badLabel')}</h4>
+                        </div>
+
+                        <div className="bg-background-dark/50 border border-red-500/30 rounded p-4 mb-4">
+                            <p className="font-mono text-sm text-text-light/80 mb-2">{t('beforeAfter.promptLabel')}</p>
+                            <p className="text-text-light/60 italic">"{t('beforeAfter.example5.badPrompt')}"</p>
+                        </div>
+
+                        <div className="bg-red-900/10 border border-red-500/30 rounded p-4">
+                            <p className="font-mono text-sm text-red-400 mb-2">{t('beforeAfter.outputLabel')}</p>
+                            <p className="text-text-light/70 text-sm leading-relaxed whitespace-pre-wrap">
+                                {t('beforeAfter.example5.badOutput')}
+                            </p>
+                        </div>
+
+                        <div className="mt-4 flex items-start gap-2">
+                            <span className="text-red-400">❌</span>
+                            <p className="text-sm text-text-light/60">{t('beforeAfter.example5.badWhy')}</p>
+                        </div>
+                    </div>
+
+                    {/* Good Example */}
+                    <div className="p-6 bg-primary/5">
+                        <div className="flex items-center gap-2 mb-4">
+                            <span className="text-2xl">🟢</span>
+                            <h4 className="font-bold text-primary uppercase text-sm">{t('beforeAfter.goodLabel')}</h4>
+                        </div>
+
+                        <div className="bg-background-dark/50 border border-primary/30 rounded p-4 mb-4">
+                            <p className="font-mono text-sm text-text-light/80 mb-2">{t('beforeAfter.promptLabel')}</p>
+                            <p className="text-text-light/90 text-sm leading-relaxed">
+                                "{t('beforeAfter.example5.goodPrompt')}"
+                            </p>
+                        </div>
+
+                        <div className="bg-primary/10 border border-primary/30 rounded p-4">
+                            <p className="font-mono text-sm text-primary mb-2">{t('beforeAfter.outputLabel')}</p>
+                            <p className="text-text-light/90 text-sm leading-relaxed whitespace-pre-wrap">
+                                {t('beforeAfter.example5.goodOutput')}
+                            </p>
+                        </div>
+
+                        <div className="mt-4 flex items-start gap-2">
+                            <span className="text-primary">✅</span>
+                            <p className="text-sm text-text-light/80">{t('beforeAfter.example5.goodWhy')}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {/* CTA */}
             <div className="text-center mt-12">
                 <p className="text-text-light/80 mb-6">{t('beforeAfter.cta')}</p>
