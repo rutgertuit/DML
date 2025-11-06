@@ -66,7 +66,7 @@ const FeedbackForm: React.FC = () => {
         return (
             <button
                 onClick={() => setIsOpen(true)}
-                className="fixed bottom-6 right-6 bg-secondary text-background-dark px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-glow-pink transition-all z-50 flex items-center gap-2"
+                className="fixed bottom-6 left-6 bg-secondary text-background-dark px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-glow-pink transition-all z-50 flex items-center gap-2"
             >
                 <span>💬</span>
                 <span>{t('feedback.buttonText', 'Give Feedback')}</span>
