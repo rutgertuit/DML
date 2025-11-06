@@ -22,7 +22,7 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ sender, content }) => {
 
                 {/* Chat Bubble */}
                 <div
-                    className={`rounded-2xl px-4 py-3 shadow-md ${isUser
+                    className={`rounded-2xl px-3 py-2 md:px-4 md:py-3 shadow-md ${isUser
                             ? 'bg-primary text-background-dark rounded-tr-sm'
                             : 'bg-background-light text-text-dark rounded-tl-sm border border-secondary/20'
                         }`}

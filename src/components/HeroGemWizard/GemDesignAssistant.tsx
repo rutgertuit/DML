@@ -361,7 +361,7 @@ Do not add *any* conversational text or markdown formatting around this JSON.` }
         </div>
       </div>
 
-      <div ref={chatContainerRef} className="chat-history bg-background-dark/80 rounded-lg p-4 border border-secondary/20 h-[600px] overflow-y-auto mb-4 flex flex-col space-y-4">
+      <div ref={chatContainerRef} className="chat-history bg-background-dark/80 rounded-lg p-2 md:p-4 border border-secondary/20 h-[600px] overflow-y-auto mb-4 flex flex-col space-y-4">
         {messages.map((msg, index) => (
           <ChatBubble key={index} sender={msg.sender} content={msg.content} />
         ))}

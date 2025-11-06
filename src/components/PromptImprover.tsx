@@ -118,13 +118,13 @@ export const PromptImprover: React.FC = () => {
       </div>
 
       {/* Interactive Chat Interface - Wrapped in Try It Now Border */}
-      <div className="border-2 border-primary rounded-lg p-6 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <div className="border-2 border-primary rounded-lg p-2 md:p-6 bg-gradient-to-br from-primary/5 to-secondary/5">
         {/* Chat-based UI */}
         <div className="bg-card-dark border border-secondary/20">
           {/* Chat Log */}
           <div
             ref={chatLogRef}
-            className="flex flex-col gap-4 p-4 min-h-[250px] max-h-[400px] overflow-y-auto"
+            className="flex flex-col gap-4 p-2 md:p-4 min-h-[250px] max-h-[400px] overflow-y-auto"
           >
             {/* Research improvement text as a system chat bubble */}
             <div className="flex justify-start">
@@ -186,7 +186,7 @@ export const PromptImprover: React.FC = () => {
           {/* Input Form */}
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row gap-4 p-6 border-t border-secondary/20"
+            className="flex flex-col sm:flex-row gap-4 p-3 md:p-6 border-t border-secondary/20"
           >
             <textarea
               id="prompt-input"

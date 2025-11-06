@@ -20,7 +20,7 @@ function App() {
     <div className="relative w-full flex flex-col">
       <Header />
       <QuickJumpMenu />
-      <main className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="w-full max-w-6xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         <HeroSection />
 
         {/* Section Divider with enhanced visual connection */}
