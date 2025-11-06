@@ -25,17 +25,17 @@ export const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#the-vibe">
-            {t('header.theVibe')}
+          <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#intro">
+            {t('header.intro')}
           </a>
           <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#prompt-improver">
-            {t('header.tools')}
+            {t('header.promptingTricks')}
           </a>
           <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#vibe-coding">
-            {t('header.deepDive')}
+            {t('header.vibeCoding')}
           </a>
           <a className="font-body text-sm font-medium uppercase text-text-light/80 hover:text-primary hover:text-glow-blue transition-colors" href="#roadmap">
-            {t('header.roadmap')}
+            {t('header.thirtyDayPlan')}
           </a>
         </nav>
 
@@ -86,31 +86,31 @@ export const Header: React.FC = () => {
           <div className="flex flex-col py-4">
             <a
               className="font-body text-base font-medium uppercase text-text-light/80 hover:text-primary hover:bg-primary/10 transition-colors px-6 py-4 border-l-2 border-transparent hover:border-primary"
-              href="#the-vibe"
+              href="#intro"
               onClick={handleNavClick}
             >
-              {t('header.theVibe')}
+              {t('header.intro')}
             </a>
             <a
               className="font-body text-base font-medium uppercase text-text-light/80 hover:text-primary hover:bg-primary/10 transition-colors px-6 py-4 border-l-2 border-transparent hover:border-primary"
               href="#prompt-improver"
               onClick={handleNavClick}
             >
-              {t('header.tools')}
+              {t('header.promptingTricks')}
             </a>
             <a
               className="font-body text-base font-medium uppercase text-text-light/80 hover:text-primary hover:bg-primary/10 transition-colors px-6 py-4 border-l-2 border-transparent hover:border-primary"
               href="#vibe-coding"
               onClick={handleNavClick}
             >
-              {t('header.deepDive')}
+              {t('header.vibeCoding')}
             </a>
             <a
               className="font-body text-base font-medium uppercase text-text-light/80 hover:text-primary hover:bg-primary/10 transition-colors px-6 py-4 border-l-2 border-transparent hover:border-primary"
               href="#roadmap"
               onClick={handleNavClick}
             >
-              {t('header.roadmap')}
+              {t('header.thirtyDayPlan')}
             </a>
           </div>
         </nav>

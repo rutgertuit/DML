@@ -5,7 +5,7 @@ const PresentationContext: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="py-12 md:py-16 bg-gradient-to-br from-background-dark via-card-dark to-background-dark">
+        <section id="intro" className="py-12 md:py-16 bg-gradient-to-br from-background-dark via-card-dark to-background-dark">
             <div className="max-w-5xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-8">

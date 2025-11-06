@@ -1,9 +1,9 @@
 {
   "header": {
-    "theVibe": "The Vibe",
-    "tools": "Tools",
-    "deepDive": "Deep Dive",
-    "roadmap": "Get Started"
+    "intro": "Intro",
+    "promptingTricks": "Prompting Tricks",
+    "vibeCoding": "Vibe Coding",
+    "thirtyDayPlan": "30 Day Plan"
   },
   "quickJump": {
     "title": "Quick Jump",
