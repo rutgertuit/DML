@@ -99,11 +99,34 @@ export const NotebookLM: React.FC = () => {
         </p>
       </div>
 
-      {/* Introductory Section */}
+      {/* What is NotebookLM - Intro Section */}
       <div className="mb-12">
-        <p className="font-body text-lg text-text-light/85 leading-relaxed mb-6">
+        <p className="font-body text-lg text-text-light/85 leading-relaxed mb-8">
           {t('notebookLM.intro')}
         </p>
+
+        {/* Video Demo */}
+        <div className="space-y-4">
+          <div className="w-full aspect-video bg-card-dark border border-primary/20">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/6dHmu1GALmA"
+              title="NotebookLM Demo"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+
+          <a
+            href="https://notebooklm.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block font-mono uppercase text-lg bg-primary text-background-dark font-bold py-3 px-6 hover:shadow-glow-blue transition-shadow"
+          >
+            {t('notebookLM.cta')}
+          </a>
+        </div>
       </div>
 
       {/* Interactive Stakeholder Prompt Generator */}
@@ -156,29 +179,6 @@ export const NotebookLM: React.FC = () => {
           <div className="bg-card-dark p-6 min-h-[300px] border border-t-0 border-secondary/20 rounded-b-lg">
             {renderTabContent()}
           </div>
-        </div>
-
-        {/* Video Demo Below Tabs */}
-        <div className="mt-8 space-y-4">
-          <div className="w-full aspect-video bg-card-dark border border-primary/20">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/6dHmu1GALmA"
-              title="NotebookLM Demo"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-
-          <a
-            href="https://notebooklm.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block font-mono uppercase text-lg bg-primary text-background-dark font-bold py-3 px-6 hover:shadow-glow-blue transition-shadow"
-          >
-            {t('notebookLM.cta')}
-          </a>
         </div>
       </div>
 
