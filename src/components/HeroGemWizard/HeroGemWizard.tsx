@@ -17,13 +17,13 @@ export const HeroGemWizard: React.FC = () => {
   } | null>(null);
   const [hasConfirmedFiles, setHasConfirmedFiles] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-  const step2Ref = useRef<HTMLDivElement>(null);
+  const tryItNowRef = useRef<HTMLDivElement>(null);
 
-  // Scroll to step 2 content when blueprint is selected
+  // Scroll to "Try It Now" banner when moving to any interactive step
   useEffect(() => {
-    if (currentStep === 2 && step2Ref.current) {
+    if (currentStep >= 2 && tryItNowRef.current) {
       setTimeout(() => {
-        step2Ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        tryItNowRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 100);
     }
   }, [currentStep]);
@@ -69,7 +69,7 @@ export const HeroGemWizard: React.FC = () => {
         </div>
 
         {/* Try It Now Banner - RIGHT ABOVE INTERACTIVE BLUEPRINT SELECTOR */}
-        <div className="mb-6 bg-gradient-to-r from-secondary/20 via-primary/20 to-secondary/20 border-2 border-secondary rounded-lg p-6 text-center animate-pulse-slow">
+        <div ref={tryItNowRef} className="mb-6 bg-gradient-to-r from-secondary/20 via-primary/20 to-secondary/20 border-2 border-secondary rounded-lg p-6 text-center animate-pulse-slow">
           <h3 className="font-display text-2xl font-bold text-secondary mb-2">
             {t('heroGemWizard.tryItTitle')}
           </h3>
@@ -85,13 +85,11 @@ export const HeroGemWizard: React.FC = () => {
             <BlueprintSelector onSelectBlueprint={handleBlueprintSelected} />
           )}
           {currentStep === 2 && selectedBlueprint && (
-            <div ref={step2Ref}>
-              <GemDesignAssistant
-                selectedBlueprint={selectedBlueprint}
-                onPlanCreated={handlePlanCreated}
-                onGoBack={handleGoBackToBlueprints}
-              />
-            </div>
+            <GemDesignAssistant
+              selectedBlueprint={selectedBlueprint}
+              onPlanCreated={handlePlanCreated}
+              onGoBack={handleGoBackToBlueprints}
+            />
           )}
           {currentStep === 3 && gemPlan && (
             <SourceMaterialGenerator

@@ -58,7 +58,7 @@ export const HeroSection: React.FC = () => {
           </a>
           <a
             className="font-mono text-sm uppercase border border-solid border-secondary text-text-light/90 hover:text-primary hover:border-primary hover:shadow-glow-purple transition-all px-6 py-4 min-h-[48px] flex items-center justify-center w-full md:w-auto"
-            href="#hero-gem"
+            href="#hero-gem-wizard"
           >
             {t('hero.cta2')}
           </a>
