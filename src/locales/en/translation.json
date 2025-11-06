@@ -680,5 +680,26 @@
       "about": "About the Author",
       "footer": "Contact & Connect"
     }
+  },
+  "feedback": {
+    "buttonText": "Give Feedback",
+    "title": "Help Us Improve! 🚀",
+    "thankYou": "Thank you!",
+    "submitted": "Your feedback has been submitted.",
+    "ratingLabel": "1. Overall, how would you rate this site?",
+    "ratingLow": "Poor",
+    "ratingHigh": "Excellent",
+    "usefulLabel": "2. What did you find most useful?",
+    "usefulPlaceholder": "e.g., The Prompt Improver helped me understand...",
+    "confusingLabel": "3. What was confusing or unclear?",
+    "confusingPlaceholder": "e.g., I didn't understand how to...",
+    "toolsLabel": "4. Which tools did you try?",
+    "useAgainLabel": "5. Would you use this site again?",
+    "suggestionsLabel": "6. What would make this better?",
+    "suggestionsPlaceholder": "Any ideas, bugs, or improvements...",
+    "emailLabel": "7. Email (optional - for follow-up)",
+    "cancel": "Cancel",
+    "submit": "Submit Feedback",
+    "submitting": "Submitting..."
   }
 }

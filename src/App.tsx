@@ -14,6 +14,7 @@ import AboutAuthor from './components/AboutAuthor';
 import Footer from './components/Footer';
 import QuickJumpMenu from './components/QuickJumpMenu';
 import CookieConsent from './components/CookieConsent';
+import FeedbackForm from './components/FeedbackForm';
 
 function App() {
   return (
@@ -108,6 +109,7 @@ function App() {
       </main>
       <Footer />
       <CookieConsent />
+      <FeedbackForm />
     </div>
   );
 }

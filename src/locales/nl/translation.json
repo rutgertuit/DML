@@ -669,5 +669,26 @@
       "about": "Over de Auteur",
       "footer": "Contact & Verbinding"
     }
+  },
+  "feedback": {
+    "buttonText": "Geef Feedback",
+    "title": "Help Ons Verbeteren! 🚀",
+    "thankYou": "Bedankt!",
+    "submitted": "Je feedback is verzonden.",
+    "ratingLabel": "1. Hoe zou je deze site beoordelen?",
+    "ratingLow": "Slecht",
+    "ratingHigh": "Uitstekend",
+    "usefulLabel": "2. Wat vond je het nuttigst?",
+    "usefulPlaceholder": "bijv., De Prompt Verbeteraar help me begrijpen...",
+    "confusingLabel": "3. Wat was verwarrend of onduidelijk?",
+    "confusingPlaceholder": "bijv., Ik begreep niet hoe...",
+    "toolsLabel": "4. Welke tools heb je geprobeerd?",
+    "useAgainLabel": "5. Zou je deze site opnieuw gebruiken?",
+    "suggestionsLabel": "6. Wat zou dit beter maken?",
+    "suggestionsPlaceholder": "Ideeën, bugs, of verbeteringen...",
+    "emailLabel": "7. Email (optioneel - voor follow-up)",
+    "cancel": "Annuleren",
+    "submit": "Verstuur Feedback",
+    "submitting": "Verzenden..."
   }
 }
