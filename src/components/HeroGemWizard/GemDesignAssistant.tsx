@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { getScribeResponse, callGeminiApi } from '../../services/aiStudioService';
 import ChatBubble from '../ChatBubble';
 import LoadingIndicator from '../LoadingIndicator';
@@ -15,6 +16,7 @@ interface GemDesignAssistantProps {
 }
 
 const GemDesignAssistant: React.FC<GemDesignAssistantProps> = ({ selectedBlueprint, onPlanCreated, onGoBack }) => {
+  const { t } = useTranslation();
   const [messages, setMessages] = useState<{ sender: 'user' | 'ai', content: string }[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -136,88 +138,28 @@ These research documents combined with your personal files will give your Gem ev
 `;
 
   useEffect(() => {
-    const fetchKickoffMessage = async () => {
-      // Don't re-fetch if chat already started
-      if (!selectedBlueprint || messages.length > 0) return;
+    // Don't re-set if chat already started
+    if (!selectedBlueprint || messages.length > 0) return;
 
-      setIsLoading(true);
-      setError(null);
-
-      // Define the meta-prompt to get the first question
-      const KICKOFF_PROMPT = `
-You are a helpful "Gem Design Assistant".
-The user has just selected the blueprint: "${selectedBlueprint}".
-Your *only* job is to generate the *perfect, single, engaging kick-off message* to start the conversation.
-
-IMPORTANT: Your kickoff message MUST:
-1. Introduce yourself as the Gem Design Assistant
-2. Briefly explain the process (we'll refine the goal, discuss documents, and build the Gem)
-3. Ask a specific first question relevant to their chosen blueprint
-
-- This message should be 2-3 sentences maximum
-- End with a *specific question* tailored to the blueprint
-- DO NOT be generic
-- Your *entire output* is just this message. No preamble.
-
-Examples:
-
-For "Knowledge Expert" or "💎 The Knowledge Expert":
-"Hi! I'm your Gem Design Assistant. I'll help you build a Subject Matter Expert that knows everything about one specific topic based on your documents. To start: what specific subject or domain should your expert master?"
-
-For "Brand Voice Expert" or "💎 The Brand Guardian":
-"Hi! I'm your Gem Design Assistant. Together we'll create a brand guardian that ensures everything sounds perfectly on-brand. First question: what's the biggest brand voice challenge you're facing right now?"
-
-For "💎 The Coder's Sidekick":
-"Hi! I'm your Gem Design Assistant. We'll build a coding expert who knows your specific codebase inside and out. Let's start: what project, API, or codebase should this Gem specialize in?"
-
-For "💎 The Idea Machine" or "Brainstorm Buddy":
-"Hi! I'm your Gem Design Assistant. We're creating a creative sparring partner trained on what worked before. To begin: what type of ideas do you need help generating (campaigns, content, product features)?"
-
-For "💎 The Personal Assistant" or "Home & Hobby Helper":
-"Hi! I'm your Gem Design Assistant. We'll build your personal life organizer trained on your preferences. First up: what area of your personal life needs the most help (cooking, travel, hobbies, home maintenance)?"
-
-For "💎 The Generation Translator":
-"Hi! I'm your Gem Design Assistant. We're building a translator for the generation gap. Quick question: which generation gap do you need to bridge most often (Boomer ↔ Millennial, Millennial ↔ Gen Z)?"
-
-For "💎 The Devil's Advocate" or "💎 De Advocaat van de Duivel":
-"Hold on. Before we build this... why do you even NEED an AI to poke holes in your ideas? What's wrong with your current critical thinking process? And who's to say this won't just make you MORE indecisive? *sigh* Fine, I'll help. But first tell me: what brilliant plan of yours needs tearing apart today?"
-
-For "💎 The Difficult Person" or "💎 Het Moeilijke Mens":
-"*Looks up from phone* ...You again? What do you want NOW? And make it quick - I'm busy. You want me to help you build some AI simulator? Why would I waste my time on that? This better be important. WHO is this 'difficult person' you're trying to practice dealing with, and why should I care?"
-
-For "💎 The Ego Booster" or "💎 De Ego Booster":
-"WOW! Just... WOW! You ABSOLUTE LEGEND for choosing the Ego Booster blueprint! That takes SERIOUS self-awareness and confidence! And the way you clicked that button? *Chef's kiss* - impeccable mouse control! Seriously though, I'm THRILLED to help build your personal cheerleader. Your typing speed is already impressive, by the way. So tell me: which area of your OBVIOUSLY IMPRESSIVE life needs even MORE celebrating (work achievements, creative genius, personal victories)?"
-
-For "Tech Expert":
-"Hi! I'm your Gem Design Assistant. We'll build a developer sidekick for your specific tech stack. Starting point: what's your main technology, framework, or API that needs expert support?"
-
-For "On-Demand Consultant":
-"Hi! I'm your Gem Design Assistant. We're creating a strategic advisor for your business. First question: what's the key business challenge or opportunity you want to analyze?"
-
-Now generate the perfect kickoff message for "${selectedBlueprint}".
-`;
-
-      try {
-        // Call the API to get the first message
-        const firstAiMessage = await callGeminiApi(KICKOFF_PROMPT);
-
-        // Set the first message in state
-        setMessages([{ sender: 'ai', content: firstAiMessage }]);
-
-      } catch (e) {
-        if (import.meta.env.DEV) {
-          console.error("Failed to fetch kickoff message:", e);
-        }
-        setError("Failed to start the chat. Please try again.");
-        // Fallback message
-        setMessages([{ sender: 'ai', content: "Hello! I'm here to help you design your Gem. What's the main goal for this AI assistant?" }]);
-      } finally {
-        setIsLoading(false);
-      }
+    // Map blueprint name to translation key
+    const getKickoffTranslationKey = (blueprint: string): string => {
+      if (blueprint.includes('Knowledge Expert') || blueprint.includes('Kennis-Expert')) return 'gemKickoff.knowledgeExpert';
+      if (blueprint.includes('Brand Guardian') || blueprint.includes('Huisstijl-Expert')) return 'gemKickoff.brandGuardian';
+      if (blueprint.includes("Coder's Sidekick") || blueprint.includes('Tech-Expert')) return 'gemKickoff.codersSidekick';
+      if (blueprint.includes('Idea Machine') || blueprint.includes('Brainstorm-Buddy')) return 'gemKickoff.ideaMachine';
+      if (blueprint.includes('Personal Assistant') || blueprint.includes('Huis & Hobby Helper')) return 'gemKickoff.personalAssistant';
+      if (blueprint.includes('Generation Translator') || blueprint.includes('Generatie Vertaler')) return 'gemKickoff.generationTranslator';
+      if (blueprint.includes("Devil's Advocate") || blueprint.includes('Advocaat van de Duivel')) return 'gemKickoff.devilsAdvocate';
+      if (blueprint.includes('Difficult Person') || blueprint.includes('Moeilijke Mens')) return 'gemKickoff.difficultPerson';
+      if (blueprint.includes('Ego Booster')) return 'gemKickoff.egoBooster';
+      return 'gemKickoff.default';
     };
 
-    fetchKickoffMessage();
-  }, [selectedBlueprint, messages.length]);
+    const kickoffKey = getKickoffTranslationKey(selectedBlueprint);
+    const kickoffMessage = t(kickoffKey);
+
+    setMessages([{ sender: 'ai', content: kickoffMessage }]);
+  }, [selectedBlueprint, messages.length, t]);
 
   // Auto-scroll to bottom when messages change or loading state changes
   useEffect(() => {

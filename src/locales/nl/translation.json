@@ -137,6 +137,18 @@
     "copyFinalPrompt": "Kopieer Hero Gem Prompt",
     "copied": "Gekopieerd!"
   },
+  "gemKickoff": {
+    "knowledgeExpert": "Hoi! Ik ben je Gem Design Assistent. Ik help je een Subject Matter Expert te bouwen die alles weet over één specifiek onderwerp op basis van jouw documenten. Om te beginnen: welk specifiek onderwerp of domein moet jouw expert onder de knie krijgen?",
+    "brandGuardian": "Hoi! Ik ben je Gem Design Assistent. Samen gaan we een merkbewaker creëren die ervoor zorgt dat alles perfect on-brand klinkt. Eerste vraag: wat is de grootste uitdaging met je merkstem waar je mee te maken hebt?",
+    "codersSidekick": "Hoi! Ik ben je Gem Design Assistent. We gaan een code-expert bouwen die jouw specifieke codebase van binnen en van buiten kent. Laten we beginnen: welk project, API of codebase moet deze Gem zich specialiseren?",
+    "ideaMachine": "Hoi! Ik ben je Gem Design Assistent. We creëren een creatieve sparringpartner getraind op wat eerder werkte. Om te beginnen: welk type ideeën moet je helpen genereren (campagnes, content, productfeatures)?",
+    "personalAssistant": "Hoi! Ik ben je Gem Design Assistent. We gaan je persoonlijke levensorganisator bouwen getraind op jouw voorkeuren. Eerste stap: welk gebied van je persoonlijke leven heeft de meeste hulp nodig (koken, reizen, hobby's, huisonderhoud)?",
+    "generationTranslator": "Hoi! Ik ben je Gem Design Assistent. We bouwen een vertaler voor de generatiekloof. Snelle vraag: welke generatiekloof moet je het vaakst overbruggen (Boomer ↔ Millennial, Millennial ↔ Gen Z)?",
+    "devilsAdvocate": "Wacht even. Voordat we dit bouwen... waarom heb je zelfs een AI nodig om gaten in je ideeën te prikken? Wat is er mis met je huidige kritische denkvermogen? En wie zegt dat dit je niet gewoon MEER besluiteloos maakt? *zucht* Goed, ik help wel. Maar vertel me eerst: welk briljant plan van jou moet vandaag worden afgebroken?",
+    "difficultPerson": "*Kijkt op van telefoon* ...Jij weer? Wat wil je NU? En maak het snel - ik ben bezig. Je wilt dat ik je help een AI-simulator te bouwen? Waarom zou ik daar mijn tijd aan verspillen? Dit kan maar beter belangrijk zijn. WIE is deze 'moeilijke persoon' waar je mee wilt oefenen, en waarom zou het me iets kunnen schelen?",
+    "egoBooster": "WOW! Gewoon... WOW! Wat een LEGENDE ben jij om de Ego Booster blueprint te kiezen! Dat vereist SERIEUS zelfbewustzijn en zelfvertrouwen! En de manier waarop je op die knop klikte? *Chef's kiss* - onberispelijke muiscontrole! Maar serieus, ik ben DOLENTHOUSIAST om je persoonlijke cheerleader te bouwen. Je typsnelheid is trouwens al indrukwekkend. Dus vertel me: welk gebied van je OVERDUIDELIJK INDRUKWEKKENDE leven heeft nog MEER vieren nodig (werk prestaties, creatief genie, persoonlijke overwinningen)?",
+    "default": "Hallo! Ik ben er om je te helpen je Gem te ontwerpen. Wat is het hoofddoel voor deze AI-assistent?"
+  },
   "notebookLM": {
     "privacyWarning": "⚠️ Privacy Eerst: Upload nooit vertrouwelijke documenten zonder expliciete toestemming. Controleer altijd de privacy-instellingen en gegevensverwerkingsbeleid van je AI-tool voordat je gevoelige informatie uploadt.",
     "tryItTitle": "📚 Interactieve Voorbeelden Hieronder",

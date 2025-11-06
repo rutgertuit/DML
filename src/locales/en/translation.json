@@ -148,6 +148,18 @@
     "copyFinalPrompt": "Copy Hero Gem Prompt",
     "copied": "Copied!"
   },
+  "gemKickoff": {
+    "knowledgeExpert": "Hi! I'm your Gem Design Assistant. I'll help you build a Subject Matter Expert that knows everything about one specific topic based on your documents. To start: what specific subject or domain should your expert master?",
+    "brandGuardian": "Hi! I'm your Gem Design Assistant. Together we'll create a brand guardian that ensures everything sounds perfectly on-brand. First question: what's the biggest brand voice challenge you're facing right now?",
+    "codersSidekick": "Hi! I'm your Gem Design Assistant. We'll build a coding expert who knows your specific codebase inside and out. Let's start: what project, API, or codebase should this Gem specialize in?",
+    "ideaMachine": "Hi! I'm your Gem Design Assistant. We're creating a creative sparring partner trained on what worked before. To begin: what type of ideas do you need help generating (campaigns, content, product features)?",
+    "personalAssistant": "Hi! I'm your Gem Design Assistant. We'll build your personal life organizer trained on your preferences. First up: what area of your personal life needs the most help (cooking, travel, hobbies, home maintenance)?",
+    "generationTranslator": "Hi! I'm your Gem Design Assistant. We're building a translator for the generation gap. Quick question: which generation gap do you need to bridge most often (Boomer ↔ Millennial, Millennial ↔ Gen Z)?",
+    "devilsAdvocate": "Hold on. Before we build this... why do you even NEED an AI to poke holes in your ideas? What's wrong with your current critical thinking process? And who's to say this won't just make you MORE indecisive? *sigh* Fine, I'll help. But first tell me: what brilliant plan of yours needs tearing apart today?",
+    "difficultPerson": "*Looks up from phone* ...You again? What do you want NOW? And make it quick - I'm busy. You want me to help you build some AI simulator? Why would I waste my time on that? This better be important. WHO is this 'difficult person' you're trying to practice dealing with, and why should I care?",
+    "egoBooster": "WOW! Just... WOW! You ABSOLUTE LEGEND for choosing the Ego Booster blueprint! That takes SERIOUS self-awareness and confidence! And the way you clicked that button? *Chef's kiss* - impeccable mouse control! Seriously though, I'm THRILLED to help build your personal cheerleader. Your typing speed is already impressive, by the way. So tell me: which area of your OBVIOUSLY IMPRESSIVE life needs even MORE celebrating (work achievements, creative genius, personal victories)?",
+    "default": "Hello! I'm here to help you design your Gem. What's the main goal for this AI assistant?"
+  },
   "notebookLM": {
     "privacyWarning": "⚠️ Privacy First: Never upload confidential documents without explicit permission. Always check your AI tool's privacy settings and data handling policies before uploading sensitive information.",
     "tryItTitle": "📚 Interactive Examples Below",
