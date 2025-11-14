@@ -239,12 +239,12 @@
         "desc": "Used Gemini Deep Research to analyze presentation notes, past feedback, and AI development articles. Result: Clear content strategy."
       },
       "step2": {
-        "title": "Prototype the Logic",
-        "desc": "Used Google AI Studio to test system prompts for each tool (Prompt Improver, Hero Gem). Fast iteration, no coding."
-      },
-      "step3": {
         "title": "Generate the UI",
         "desc": "Used Google Stitch to create the entire front-end from a single detailed design prompt. 90% of final code in minutes."
+      },
+      "step3": {
+        "title": "Prototype the Logic",
+        "desc": "Used Google AI Studio to test system prompts for each tool (Prompt Improver, Hero Gem). Fast iteration, no coding."
       },
       "step4": {
         "title": "Integrate Everything",

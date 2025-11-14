@@ -228,12 +228,12 @@
         "desc": "Gebruikte Gemini Deep Research om presentatienotities, eerdere feedback en AI-ontwikkelingsartikelen te analyseren. Resultaat: Duidelijke contentstrategie."
       },
       "step2": {
-        "title": "Prototype de Logica",
-        "desc": "Gebruikte Google AI Studio om systeemprompts te testen voor elke tool (Prompt Improver, Hero Gem). Snelle iteratie, geen coderen."
-      },
-      "step3": {
         "title": "Genereer de UI",
         "desc": "Gebruikte Google Stitch om de hele front-end te maken vanuit één gedetailleerde design prompt. 90% van de uiteindelijke code in minuten."
+      },
+      "step3": {
+        "title": "Prototype de Logica",
+        "desc": "Gebruikte Google AI Studio om systeemprompts te testen voor elke tool (Prompt Improver, Hero Gem). Snelle iteratie, geen coderen."
       },
       "step4": {
         "title": "Integreer Alles",
