@@ -628,87 +628,87 @@
     "builder": {
       "week1": {
         "tab": "Week 1",
-        "icon": "📋",
-        "title": "Research & Strategic Planning",
+        "icon": "💬",
+        "title": "Master Conversational Coding",
         "timeframe": "Days 1-7",
-        "goal": "Define your project vision, gather requirements, and create a comprehensive blueprint using NotebookLM.",
+        "goal": "Learn to have productive conversations with AI. Stop trying to write perfect prompts—start iterating like you're talking to a senior developer.",
         "task1": {
-          "title": "Day 1-2: Gather Inspiration & Requirements",
-          "desc": "Collect 10-15 source documents: competitor sites, design inspiration (Awwwards, Dribbble), presentation slides, brand guidelines, technical articles (React, Tailwind, i18next). Screenshot examples you like.",
-          "link": "Try NotebookLM"
+          "title": "Day 1-3: Start Building, Not Planning",
+          "desc": "Open Gemini. Say: 'I want to build [your idea]. What should I start with?' Let it guide you. When stuck, ask 'What would you do next?' Treat it like pair programming, not Google search. Build something ugly that works.",
+          "link": "Start Chatting"
         },
         "task2": {
-          "title": "Day 3-5: Build Your Knowledge Base",
-          "desc": "Upload all documents to NotebookLM. Ask it to generate: 1) Project brief (goals, audience, key features), 2) Technical stack recommendations, 3) Content structure outline, 4) Potential challenges and solutions."
+          "title": "Day 4-5: Learn the Follow-Up Pattern",
+          "desc": "After every AI response, ask a follow-up. Examples: 'Make it simpler,' 'Add error handling,' 'Explain why this works,' 'Show me an alternative.' The magic is in iteration, not the first answer. Build on what works."
         },
         "task3": {
-          "title": "Day 6-7: Create Stakeholder Perspectives",
-          "desc": "Use NotebookLM to generate different views of your project: User perspective (what they need), Developer perspective (technical requirements), Designer perspective (visual identity), Content perspective (copy structure)."
+          "title": "Day 6-7: Document Your Context",
+          "desc": "When AI forgets what you're building (it will), quickly brief it: 'We're building a React site with Tailwind. So far we have X. Now I need Y.' Keep a scratchpad with your tech stack and current state. Share it when starting new chats."
         },
-        "success": "You have a comprehensive project blueprint. You understand your tech stack, content structure, and design direction. You're ready to code."
+        "success": "You're comfortable having messy, iterative conversations with AI. You know when to start fresh vs. keep refining. You've built something small end-to-end."
       },
       "week2": {
         "tab": "Week 2",
-        "icon": "🏗️",
-        "title": "Structure & Scaffolding",
+        "icon": "🔀",
+        "title": "Learn When to Switch Tools",
         "timeframe": "Days 8-14",
-        "goal": "Set up your development environment, create the project structure, and build system prompts for your AI helpers.",
+        "goal": "Master the tool-switching pattern. Gemini for chat. NotebookLM for research. AI Studio for reusable prompts. Stitch for UI. Stop using one tool for everything.",
         "task1": {
-          "title": "Day 8-10: Initialize Project",
-          "desc": "Use AI Studio to draft your setup prompts. Ask Gemini: 'Create a React 19 + TypeScript + Vite + Tailwind project structure.' Follow the steps. Initialize git. Set up i18next for bilingual support. Test localhost.",
-          "link": "Open AI Studio"
+          "title": "Day 8-10: NotebookLM for Research",
+          "desc": "When you need to understand something complex: Upload docs, ask questions, generate different perspectives. Use it to analyze competitor sites, understand frameworks, synthesize design patterns. Then chat with Gemini to apply what you learned.",
+          "link": "Try NotebookLM"
         },
         "task2": {
-          "title": "Day 11-12: Design System & Theme",
-          "desc": "Use AI to create your Tailwind config. Prompt: 'Create a cyberpunk theme with neon cyan (#00FFFF) and purple (#D900FF), dark background, glow effects.' Build a color palette, typography system, and component variants."
+          "title": "Day 11-12: AI Studio for Repeatable Tasks",
+          "desc": "Notice a task you keep asking AI to do? (e.g., 'Write commit messages,' 'Generate component boilerplate'). Build a system instruction in AI Studio. Test it 5 times. Refine. Now you have a custom tool you can reuse anytime."
         },
         "task3": {
-          "title": "Day 13-14: Component Architecture",
-          "desc": "Map out your components (Header, Hero, PromptImprover, etc.). Use AI to generate boilerplate for each. Create a folder structure: components/, services/, locales/. Set up routing/section navigation."
+          "title": "Day 13-14: Stitch for UI Speed",
+          "desc": "Stop asking Gemini to write HTML/CSS. Describe your UI in Stitch: 'Dashboard with sidebar, 3 stat cards, table of users.' See it render instantly. Tweak the prompt. Export code when close. Edit the final 20% manually. 10x faster than describing components to a chat."
         },
-        "success": "You have a running React app with your theme applied. Component structure is clear. You can see 'Hello World' in your design system."
+        "success": "You instinctively know which tool to grab. You switch tools mid-task without thinking. You're not married to one AI—you use the right tool for the job."
       },
       "week3": {
         "tab": "Week 3",
-        "icon": "💻",
-        "title": "Development & UI Building",
+        "icon": "🔄",
+        "title": "The Build-Break-Fix Loop",
         "timeframe": "Days 15-21",
-        "goal": "Build interactive components, integrate AI APIs, and create the core user experience using Google Stitch and Gemini.",
+        "goal": "Build a real feature end-to-end. Embrace the messy loop: code → test → break → ask AI why → fix → repeat. This is vibe coding in practice.",
         "task1": {
-          "title": "Day 15-17: Build UI Components with Stitch",
-          "desc": "Use Google Stitch to rapidly prototype: 1) Hero section with video background, 2) Interactive chat interface for Prompt Improver, 3) Tabbed wizard interface for Hero Gem Builder, 4) Form components with validation. Export code and refine.",
-          "link": "Try Stitch"
+          "title": "Day 15-17: Pick ONE Feature, Build It Fully",
+          "desc": "Choose one feature (e.g., 'Chat interface with Gemini API'). Ask AI to build it. Run it. It will break. Paste the error. Ask: 'What's wrong?' Fix it. Run again. New error. Repeat. Don't switch features until this ONE works. Learn to debug with AI, not just code with it.",
+          "link": "Start Building"
         },
         "task2": {
-          "title": "Day 18-19: Integrate Gemini API",
-          "desc": "Set up aiStudioService.ts. Get API key from AI Studio. Create chat functionality: prompt -> API call -> streaming response -> display. Test with real prompts. Handle loading states and errors."
+          "title": "Day 18-19: When to Write Code Yourself",
+          "desc": "Notice when AI gives you 80% and you need to tweak the last 20%. That's normal. Small fixes (styling, edge cases, final polish) are faster to do manually. Ask AI for the structure, you own the details. Hybrid workflow > pure AI coding."
         },
         "task3": {
-          "title": "Day 20-21: Add Interactivity & State",
-          "desc": "Implement: Multi-step wizards (useState for steps), Copy-to-clipboard buttons, Language switcher (i18next), Smooth scrolling navigation, Loading indicators, Form validation. Make it feel polished."
+          "title": "Day 20-21: Use Gemini CLI for Terminal Workflow",
+          "desc": "Install Gemini CLI. When debugging or stuck in terminal: Ask 'What does this error mean?' or 'Write a script to automate X.' Keep AI in your terminal, not just browser. Faster context switching = faster shipping."
         },
-        "success": "Your site is interactive. AI features work. Users can switch languages. The UI feels professional. You're 70% done."
+        "success": "You shipped one complete feature. It's not perfect, but it works. You know how to debug with AI. You're comfortable switching between AI coding and manual tweaking."
       },
       "week4": {
         "tab": "Week 4",
-        "icon": "🚀",
-        "title": "Integration, Polish & Deployment",
+        "icon": "🚢",
+        "title": "Ship It & Make It Repeatable",
         "timeframe": "Days 22-30",
-        "goal": "Deploy to Firebase, add finishing touches, implement GDPR compliance, and launch your production site.",
+        "goal": "Deploy something real. Then: document your workflow so you can repeat this speed on your next project. Vibe coding isn't a trick—it's a system.",
         "task1": {
-          "title": "Day 22-24: Firebase Setup & Security",
-          "desc": "Initialize Firebase project. Create Cloud Function to proxy Gemini API (secure API key). Set up Firestore for feedback collection. Configure firebase.json. Deploy functions and hosting. Test production environment.",
-          "link": "Read Setup Guide"
+          "title": "Day 22-25: Just Ship Something",
+          "desc": "Don't wait for perfect. Deploy what you have: Ask AI 'How do I deploy this to Vercel/Netlify/Firebase?' Follow the steps. Fix errors as you go. Your first deploy will be messy. That's fine. Iterate in production. Real feedback > imaginary perfection.",
+          "link": "Deploy Now"
         },
         "task2": {
-          "title": "Day 25-27: Polish & Compliance",
-          "desc": "Add: Google Analytics with Consent Mode v2, Cookie consent banner, Privacy policy links, Feedback form (temp), Meta tags for SEO, OpenGraph images, Mobile responsiveness fixes, Performance optimization (lazy loading, code splitting)."
+          "title": "Day 26-27: Save Your Custom Prompts",
+          "desc": "Review your chat history. What prompts worked? Copy the best ones into AI Studio as reusable system instructions. Examples: 'Code reviewer,' 'Commit message writer,' 'API error debugger.' Build your personal AI toolbox."
         },
         "task3": {
-          "title": "Day 28-30: Documentation & Launch",
-          "desc": "Use Gemini CLI to generate: README.md, DEPLOYMENT_CHECKLIST.md, Component documentation, Git commit messages. Deploy final version. Share on LinkedIn with demo video. Add to portfolio. Celebrate! 🎉"
+          "title": "Day 28-30: Teach Someone Your Workflow",
+          "desc": "Best way to solidify vibe coding: Teach it. Show a colleague/friend your process. Record a 5min screen share: 'Here's how I built X using Gemini, Stitch, and NotebookLM.' Explain when you switch tools and why. Teaching = mastery."
         },
-        "success": "Your site is live at a production URL. It's secure, GDPR-compliant, mobile-responsive, and documented. You've built a real AI-powered web app from scratch. You're a Vibe Coder."
+        "success": "You shipped a real project using vibe coding. You have a library of custom AI tools. You can explain your workflow to others. This isn't a one-time trick—it's how you work now."
       }
     },
     "encouragement": "Remember: You don't need to do this perfectly. Just start.",
