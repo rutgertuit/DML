@@ -262,7 +262,7 @@ export const AIRoadmap: React.FC = () => {
             <div className="flex flex-col md:flex-row justify-center gap-6 mb-8 max-w-6xl mx-auto">
                 <button
                     onClick={() => { setActivePlan('beginner'); setActiveWeek(1); }}
-                    className={`flex-1 p-6 rounded-lg border-2 transition-all ${(activePlan === 'beginner' || activePlan === 'builder')
+                    className={`flex-1 p-6 rounded-lg border-2 transition-all ${activePlan === 'beginner'
                         ? 'bg-primary/20 border-primary shadow-glow-blue'
                         : 'bg-card-dark border-primary/30 hover:border-primary'
                         }`}
