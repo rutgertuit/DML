@@ -24,19 +24,21 @@ This repository serves as both a functional demonstration and educational resour
 
 ## Current Status
 * **Status:** ✅ Live and Functional
-* **Last Updated:** November 3, 2025
+* **Last Updated:** November 6, 2025
 * **Deployment:** Firebase Hosting with Cloud Functions
 * **Environment:** Production with server-side API key management
 * **Live URL:** https://rutger-dml.web.app
 * **Security:** API key secured in Firebase Secrets Manager (not exposed to client)
+* **Feedback:** Temporary user feedback collection via Firestore
 
 ## Tech Stack
 
 * **Framework:** React 19.1.1 with TypeScript (strict mode)
-* **Build Tool:** Vite 7.1.7
+* **Build Tool:** Vite 7.1.12
 * **Styling:** Tailwind CSS v4.1.16 (custom cyberpunk theme)
 * **Internationalization:** i18next with react-i18next (EN/NL support)
-* **AI Integration:** Google Gemini 2.5 Flash API
+* **AI Integration:** Google Gemini 2.5 Flash API via Cloud Functions
+* **Database:** Firebase Firestore (feedback collection)
 * **Linting:** ESLint 9.36.0 with TypeScript and React plugins
 
 ## Getting Started
@@ -84,11 +86,6 @@ This repository serves as both a functional demonstration and educational resour
 
 ### Other Useful Commands
 
-* **Build for production:**
-  ```bash
-  npm run build
-  ```
-
 * **Lint code:**
   ```bash
   npm run lint
@@ -97,6 +94,11 @@ This repository serves as both a functional demonstration and educational resour
 * **Preview production build:**
   ```bash
   npm run preview
+  ```
+
+* **Deploy to Firebase:**
+  ```bash
+  firebase deploy
   ```
 
 ## Core Components
@@ -126,7 +128,7 @@ Comprehensive guide demonstrating document-grounded AI workflows:
 Focused section explaining fast, conversational AI development:
 - What makes Vibe Coding great (Speed, Flexibility, Creativity)
 - Integrated tools showcase (Gemini, AI Studio, Google Stitch, Gemini CLI, GitHub)
-- Demo video placeholder for real-world example
+- Live demo video showcasing real-world example
 
 ### 🔧 How It Was Made
 Behind-the-scenes 6-step workflow showing how this site was built using Vibe Coding:
@@ -134,8 +136,15 @@ Behind-the-scenes 6-step workflow showing how this site was built using Vibe Cod
 2. Structure (AI Studio for scaffolding)
 3. Development (Gemini + Stitch for coding)
 4. Integration (Gemini CLI for testing)
-5. Deployment (GitHub for CI/CD)
+5. Deployment (Firebase Hosting + Cloud Functions)
 6. Polishing (Custom Gem for Dutch communication)
+
+### 📊 Feedback System (Temporary)
+User feedback collection system for testing phase:
+- 7-question structured feedback form
+- Firestore database integration
+- Email collection (optional)
+- Export guide for data analysis
 
 ### 🛠️ Google AI Toolkit
 Curated collection of 6 Google AI tools with direct links:
@@ -150,14 +159,16 @@ Curated collection of 6 Google AI tools with direct links:
 
 ```
 DML/
-├── .github/workflows/     # GitHub Actions CI/CD
-│   └── deploy.yml        # Automated deployment to GitHub Pages
-├── public/               # Static assets
-│   └── locales/          # Translation files
+├── functions/            # Firebase Cloud Functions
+│   ├── src/
+│   │   └── index.ts     # API proxy for Gemini
+│   └── package.json     # Functions dependencies
+├── public/              # Static assets
+│   └── locales/         # Translation files
 │       ├── en/translation.json  # English translations
 │       └── nl/translation.json  # Dutch translations
 ├── src/
-│   ├── components/       # React components
+│   ├── components/      # React components
 │   │   ├── HeroGemWizard/# 4-step wizard components
 │   │   │   ├── HeroGemWizard.tsx        # Main wizard container
 │   │   │   ├── BlueprintSelector.tsx    # Step 1: Choose expert type
@@ -166,32 +177,40 @@ DML/
 │   │   │   ├── FinalGemInstruction.tsx  # Step 4: Final output
 │   │   │   └── CopyButton.tsx           # Reusable copy utility
 │   │   ├── Header.tsx    # Navigation with language switcher
-│   │   ├── HeroSection.tsx# Landing section with video background
-│   │   ├── IntroSection.tsx# "From Toy to Tool" intro
+│   │   ├── HeroSection.tsx# Landing section
+│   │   ├── PresentationContext.tsx# Introduction section
+│   │   ├── TheVibe.tsx  # "The Vibe" explanation
+│   │   ├── BeforeAfter.tsx# Tabbed prompt examples
 │   │   ├── PromptImprover.tsx# Interactive AI chat tool
-│   │   ├── PromptImproverHeader.tsx# Multi-modal prompt guide
 │   │   ├── NotebookLM.tsx# Document-grounded AI guide
-│   │   ├── FlowVibe.tsx  # Vibe Coding section
-│   │   ├── Toolkit.tsx   # Google AI tools showcase
+│   │   ├── HowVibeCodingWorks.tsx# Vibe Coding section
+│   │   ├── Toolkit.tsx  # Google AI tools showcase
+│   │   ├── FeedbackForm.tsx# User feedback collection
+│   │   ├── CookieConsent.tsx# GDPR compliance
 │   │   ├── ChatBubble.tsx# Chat message component
 │   │   ├── LoadingIndicator.tsx# Loading state component
-│   │   └── Footer.tsx    # Contact and disclaimer
-│   ├── locales/          # (Deprecated - moved to public/)
-│   ├── services/         # API integration layer
+│   │   └── Footer.tsx   # Contact and disclaimer
+│   ├── services/        # API integration layer
 │   │   └── aiStudioService.ts# Gemini API client
+│   ├── firebase.ts      # Firebase initialization
 │   ├── App.tsx          # Main application with section layout
 │   ├── i18n.ts          # Internationalization config
 │   ├── main.tsx         # React entry point
-│   └── index.css        # Global styles
-├── dist/                # Built application (GitHub Pages)
+│   └── index.css        # Global styles + Tailwind
+├── dist/                # Built application (Firebase Hosting)
 ├── .env.example         # Environment variables template
+├── firebase.json        # Firebase configuration
+├── firestore.rules      # Firestore security rules
+├── firestore.indexes.json# Firestore indexes
 ├── index.html           # HTML entry point
 ├── package.json         # Dependencies and scripts
 ├── tailwind.config.js   # Custom cyberpunk theme
 ├── vite.config.ts       # Build configuration
 ├── README.md           # This file
 ├── GEMINI.md           # AI assistant guidelines
-└── PROMPT_IMPROVER_EXPLANATION.md  # Detailed component docs
+├── FIREBASE_SETUP.md   # Firebase deployment guide
+├── FEEDBACK_GUIDE.md   # Feedback data export guide
+└── SECURITY.md         # Security documentation
 ```
 
 ## Contributing
