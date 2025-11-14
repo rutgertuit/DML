@@ -313,7 +313,7 @@ export const AIRoadmap: React.FC = () => {
             <div className="flex justify-center mb-12">
                 <button
                     onClick={handleExportCalendar}
-                    className={`px-8 py-4 rounded-lg border-2 transition-all font-display font-bold ${(activePlan === 'beginner' || activePlan === 'builder') || activePlan === 'builder'
+                    className={`px-8 py-4 rounded-lg border-2 transition-all font-display font-bold ${(activePlan === 'beginner' || activePlan === 'builder')
                         ? 'bg-primary/10 border-primary text-primary hover:bg-primary/20 hover:shadow-glow-blue'
                         : 'bg-secondary/10 border-secondary text-secondary hover:bg-secondary/20 hover:shadow-glow-purple'
                         }`}
@@ -332,10 +332,10 @@ export const AIRoadmap: React.FC = () => {
                         key={week}
                         onClick={() => setActiveWeek(week)}
                         className={`px-6 py-3 font-display font-bold rounded transition-all ${activeWeek === week
-                            ? ((activePlan === 'beginner' || activePlan === 'builder') || activePlan === 'builder')
+                            ? (activePlan === 'beginner' || activePlan === 'builder')
                                 ? 'bg-primary text-background-dark shadow-glow-blue'
                                 : 'bg-secondary text-background-dark shadow-glow-purple'
-                            : `bg-card-dark border ${((activePlan === 'beginner' || activePlan === 'builder') || activePlan === 'builder') ? 'border-primary/30 hover:border-primary hover:text-primary' : 'border-secondary/30 hover:border-secondary hover:text-secondary'} text-text-light/70`
+                            : `bg-card-dark border ${(activePlan === 'beginner' || activePlan === 'builder') ? 'border-primary/30 hover:border-primary hover:text-primary' : 'border-secondary/30 hover:border-secondary hover:text-secondary'} text-text-light/70`
                             }`}
                     >
                         {t(`roadmap.${activePlan}.week${week}.tab`)}
