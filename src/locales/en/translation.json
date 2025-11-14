@@ -448,6 +448,8 @@
     "planBeginnerDesc": "You're new to AI or use it occasionally. This plan builds the foundation.",
     "planAdvanced": "For Vibe Coders",
     "planAdvancedDesc": "You use ChatGPT/Gemini daily. Ready to learn AI Studio, Stitch, and the CLI.",
+    "planBuilder": "Build This Site",
+    "planBuilderDesc": "Follow the exact process used to build this website. 30 days from concept to deployment.",
     "goalLabel": "Goal:",
     "successLabel": "Success Looks Like:",
     "beginner": {
@@ -621,6 +623,92 @@
           "desc": "Use AI to write documentation. Generate a README. Create a demo video. Share your project on LinkedIn or Twitter. Teach someone else."
         },
         "success": "You've built and deployed a real project using Vibe Coding. You can prototype in hours, not days. You're unstoppable."
+      }
+    },
+    "builder": {
+      "week1": {
+        "tab": "Week 1",
+        "icon": "📋",
+        "title": "Research & Strategic Planning",
+        "timeframe": "Days 1-7",
+        "goal": "Define your project vision, gather requirements, and create a comprehensive blueprint using NotebookLM.",
+        "task1": {
+          "title": "Day 1-2: Gather Inspiration & Requirements",
+          "desc": "Collect 10-15 source documents: competitor sites, design inspiration (Awwwards, Dribbble), presentation slides, brand guidelines, technical articles (React, Tailwind, i18next). Screenshot examples you like.",
+          "link": "Try NotebookLM"
+        },
+        "task2": {
+          "title": "Day 3-5: Build Your Knowledge Base",
+          "desc": "Upload all documents to NotebookLM. Ask it to generate: 1) Project brief (goals, audience, key features), 2) Technical stack recommendations, 3) Content structure outline, 4) Potential challenges and solutions."
+        },
+        "task3": {
+          "title": "Day 6-7: Create Stakeholder Perspectives",
+          "desc": "Use NotebookLM to generate different views of your project: User perspective (what they need), Developer perspective (technical requirements), Designer perspective (visual identity), Content perspective (copy structure)."
+        },
+        "success": "You have a comprehensive project blueprint. You understand your tech stack, content structure, and design direction. You're ready to code."
+      },
+      "week2": {
+        "tab": "Week 2",
+        "icon": "🏗️",
+        "title": "Structure & Scaffolding",
+        "timeframe": "Days 8-14",
+        "goal": "Set up your development environment, create the project structure, and build system prompts for your AI helpers.",
+        "task1": {
+          "title": "Day 8-10: Initialize Project",
+          "desc": "Use AI Studio to draft your setup prompts. Ask Gemini: 'Create a React 19 + TypeScript + Vite + Tailwind project structure.' Follow the steps. Initialize git. Set up i18next for bilingual support. Test localhost.",
+          "link": "Open AI Studio"
+        },
+        "task2": {
+          "title": "Day 11-12: Design System & Theme",
+          "desc": "Use AI to create your Tailwind config. Prompt: 'Create a cyberpunk theme with neon cyan (#00FFFF) and purple (#D900FF), dark background, glow effects.' Build a color palette, typography system, and component variants."
+        },
+        "task3": {
+          "title": "Day 13-14: Component Architecture",
+          "desc": "Map out your components (Header, Hero, PromptImprover, etc.). Use AI to generate boilerplate for each. Create a folder structure: components/, services/, locales/. Set up routing/section navigation."
+        },
+        "success": "You have a running React app with your theme applied. Component structure is clear. You can see 'Hello World' in your design system."
+      },
+      "week3": {
+        "tab": "Week 3",
+        "icon": "💻",
+        "title": "Development & UI Building",
+        "timeframe": "Days 15-21",
+        "goal": "Build interactive components, integrate AI APIs, and create the core user experience using Google Stitch and Gemini.",
+        "task1": {
+          "title": "Day 15-17: Build UI Components with Stitch",
+          "desc": "Use Google Stitch to rapidly prototype: 1) Hero section with video background, 2) Interactive chat interface for Prompt Improver, 3) Tabbed wizard interface for Hero Gem Builder, 4) Form components with validation. Export code and refine.",
+          "link": "Try Stitch"
+        },
+        "task2": {
+          "title": "Day 18-19: Integrate Gemini API",
+          "desc": "Set up aiStudioService.ts. Get API key from AI Studio. Create chat functionality: prompt -> API call -> streaming response -> display. Test with real prompts. Handle loading states and errors."
+        },
+        "task3": {
+          "title": "Day 20-21: Add Interactivity & State",
+          "desc": "Implement: Multi-step wizards (useState for steps), Copy-to-clipboard buttons, Language switcher (i18next), Smooth scrolling navigation, Loading indicators, Form validation. Make it feel polished."
+        },
+        "success": "Your site is interactive. AI features work. Users can switch languages. The UI feels professional. You're 70% done."
+      },
+      "week4": {
+        "tab": "Week 4",
+        "icon": "🚀",
+        "title": "Integration, Polish & Deployment",
+        "timeframe": "Days 22-30",
+        "goal": "Deploy to Firebase, add finishing touches, implement GDPR compliance, and launch your production site.",
+        "task1": {
+          "title": "Day 22-24: Firebase Setup & Security",
+          "desc": "Initialize Firebase project. Create Cloud Function to proxy Gemini API (secure API key). Set up Firestore for feedback collection. Configure firebase.json. Deploy functions and hosting. Test production environment.",
+          "link": "Read Setup Guide"
+        },
+        "task2": {
+          "title": "Day 25-27: Polish & Compliance",
+          "desc": "Add: Google Analytics with Consent Mode v2, Cookie consent banner, Privacy policy links, Feedback form (temp), Meta tags for SEO, OpenGraph images, Mobile responsiveness fixes, Performance optimization (lazy loading, code splitting)."
+        },
+        "task3": {
+          "title": "Day 28-30: Documentation & Launch",
+          "desc": "Use Gemini CLI to generate: README.md, DEPLOYMENT_CHECKLIST.md, Component documentation, Git commit messages. Deploy final version. Share on LinkedIn with demo video. Add to portfolio. Celebrate! 🎉"
+        },
+        "success": "Your site is live at a production URL. It's secure, GDPR-compliant, mobile-responsive, and documented. You've built a real AI-powered web app from scratch. You're a Vibe Coder."
       }
     },
     "encouragement": "Remember: You don't need to do this perfectly. Just start.",

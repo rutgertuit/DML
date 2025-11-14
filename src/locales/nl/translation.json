@@ -437,6 +437,8 @@
     "planBeginnerDesc": "Je bent nieuw met AI of gebruikt het af en toe. Dit plan bouwt de basis.",
     "planAdvanced": "Voor Vibe Coders",
     "planAdvancedDesc": "Je gebruikt ChatGPT/Gemini dagelijks. Klaar om AI Studio, Stitch, en de CLI te leren.",
+    "planBuilder": "Bouw Deze Site",
+    "planBuilderDesc": "Volg het exacte proces dat gebruikt is om deze website te bouwen. 30 dagen van concept tot deployment.",
     "goalLabel": "Doel:",
     "successLabel": "Succes Ziet Er Zo Uit:",
     "beginner": {
@@ -610,6 +612,92 @@
           "desc": "Gebruik AI om documentatie te schrijven. Genereer een README. Creëer een demo video. Deel je project op LinkedIn of Twitter. Leer iemand anders."
         },
         "success": "Je hebt een echt project gebouwd en gedeployed met Vibe Coding. Je kunt prototypen in uren, niet dagen. Je bent onstuitbaar."
+      }
+    },
+    "builder": {
+      "week1": {
+        "tab": "Week 1",
+        "icon": "📋",
+        "title": "Onderzoek & Strategische Planning",
+        "timeframe": "Dag 1-7",
+        "goal": "Definieer je projectvisie, verzamel requirements, en creëer een uitgebreide blauwdruk met NotebookLM.",
+        "task1": {
+          "title": "Dag 1-2: Verzamel Inspiratie & Requirements",
+          "desc": "Verzamel 10-15 brondocumenten: concurrerende sites, design inspiratie (Awwwards, Dribbble), presentatie slides, brand guidelines, technische artikelen (React, Tailwind, i18next). Maak screenshots van voorbeelden die je leuk vindt.",
+          "link": "Probeer NotebookLM"
+        },
+        "task2": {
+          "title": "Dag 3-5: Bouw Je Kennisbank",
+          "desc": "Upload alle documenten naar NotebookLM. Vraag het om te genereren: 1) Project brief (doelen, doelgroep, key features), 2) Tech stack aanbevelingen, 3) Content structuur outline, 4) Potentiële uitdagingen en oplossingen."
+        },
+        "task3": {
+          "title": "Dag 6-7: Creëer Stakeholder Perspectieven",
+          "desc": "Gebruik NotebookLM om verschillende views van je project te genereren: Gebruiker perspectief (wat ze nodig hebben), Developer perspectief (technische requirements), Designer perspectief (visuele identiteit), Content perspectief (copy structuur)."
+        },
+        "success": "Je hebt een uitgebreide project blauwdruk. Je begrijpt je tech stack, content structuur, en design richting. Je bent klaar om te coderen."
+      },
+      "week2": {
+        "tab": "Week 2",
+        "icon": "🏗️",
+        "title": "Structuur & Scaffolding",
+        "timeframe": "Dag 8-14",
+        "goal": "Stel je development omgeving in, creëer de project structuur, en bouw system prompts voor je AI helpers.",
+        "task1": {
+          "title": "Dag 8-10: Initialiseer Project",
+          "desc": "Gebruik AI Studio om je setup prompts te maken. Vraag Gemini: 'Creëer een React 19 + TypeScript + Vite + Tailwind project structuur.' Volg de stappen. Initialiseer git. Stel i18next in voor tweetalige ondersteuning. Test localhost.",
+          "link": "Open AI Studio"
+        },
+        "task2": {
+          "title": "Dag 11-12: Design System & Thema",
+          "desc": "Gebruik AI om je Tailwind config te maken. Prompt: 'Creëer een cyberpunk thema met neon cyaan (#00FFFF) en paars (#D900FF), donkere achtergrond, glow effecten.' Bouw een kleurenpalet, typografie systeem, en component varianten."
+        },
+        "task3": {
+          "title": "Dag 13-14: Component Architectuur",
+          "desc": "Map je componenten uit (Header, Hero, PromptImprover, etc.). Gebruik AI om boilerplate voor elk te genereren. Creëer een folder structuur: components/, services/, locales/. Stel routing/sectie navigatie in."
+        },
+        "success": "Je hebt een werkende React app met je thema toegepast. Component structuur is duidelijk. Je kunt 'Hello World' zien in je design system."
+      },
+      "week3": {
+        "tab": "Week 3",
+        "icon": "💻",
+        "title": "Development & UI Bouwen",
+        "timeframe": "Dag 15-21",
+        "goal": "Bouw interactieve componenten, integreer AI APIs, en creëer de core user experience met Google Stitch en Gemini.",
+        "task1": {
+          "title": "Dag 15-17: Bouw UI Componenten met Stitch",
+          "desc": "Gebruik Google Stitch om snel te prototypen: 1) Hero sectie met video achtergrond, 2) Interactieve chat interface voor Prompt Improver, 3) Tabbed wizard interface voor Hero Gem Builder, 4) Form componenten met validatie. Exporteer code en verfijn.",
+          "link": "Probeer Stitch"
+        },
+        "task2": {
+          "title": "Dag 18-19: Integreer Gemini API",
+          "desc": "Stel aiStudioService.ts in. Haal API key op van AI Studio. Creëer chat functionaliteit: prompt -> API call -> streaming response -> display. Test met echte prompts. Handle loading states en errors."
+        },
+        "task3": {
+          "title": "Dag 20-21: Voeg Interactiviteit & State Toe",
+          "desc": "Implementeer: Multi-step wizards (useState voor steps), Copy-to-clipboard buttons, Taal switcher (i18next), Smooth scrolling navigatie, Loading indicators, Form validatie. Maak het gepolijst."
+        },
+        "success": "Je site is interactief. AI features werken. Gebruikers kunnen talen switchen. De UI voelt professioneel. Je bent 70% klaar."
+      },
+      "week4": {
+        "tab": "Week 4",
+        "icon": "🚀",
+        "title": "Integratie, Polish & Deployment",
+        "timeframe": "Dag 22-30",
+        "goal": "Deploy naar Firebase, voeg finishing touches toe, implementeer GDPR compliance, en launch je productie site.",
+        "task1": {
+          "title": "Dag 22-24: Firebase Setup & Security",
+          "desc": "Initialiseer Firebase project. Creëer Cloud Function om Gemini API te proxyen (secure API key). Stel Firestore in voor feedback collectie. Configureer firebase.json. Deploy functions en hosting. Test productie omgeving.",
+          "link": "Lees Setup Gids"
+        },
+        "task2": {
+          "title": "Dag 25-27: Polish & Compliance",
+          "desc": "Voeg toe: Google Analytics met Consent Mode v2, Cookie consent banner, Privacy policy links, Feedback form (tijdelijk), Meta tags voor SEO, OpenGraph images, Mobile responsiveness fixes, Performance optimalisatie (lazy loading, code splitting)."
+        },
+        "task3": {
+          "title": "Dag 28-30: Documentatie & Launch",
+          "desc": "Gebruik Gemini CLI om te genereren: README.md, DEPLOYMENT_CHECKLIST.md, Component documentatie, Git commit messages. Deploy finale versie. Deel op LinkedIn met demo video. Voeg toe aan portfolio. Vier het! 🎉"
+        },
+        "success": "Je site is live op een productie URL. Het is veilig, GDPR-compliant, mobile-responsive, en gedocumenteerd. Je hebt een echte AI-powered web app vanaf scratch gebouwd. Je bent een Vibe Coder."
       }
     },
     "encouragement": "Onthoud: Je hoeft dit niet perfect te doen. Begin gewoon.",
