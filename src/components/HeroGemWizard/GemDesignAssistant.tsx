@@ -351,7 +351,7 @@ Do not add *any* conversational text or markdown formatting around this JSON.` }
 
         {/* Branding */}
         <p className="text-xs text-text-light/50 text-center mt-3">
-          Powered by Gemini 2.5 Flash ✨
+          Powered by Gemini 3 Flash ✨
         </p>
       </div>
     </div>

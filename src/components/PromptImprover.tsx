@@ -167,7 +167,7 @@ export const PromptImprover: React.FC = () => {
                   </div>
                   <div className="flex-1">
                     <p className="font-body text-sm md:text-base">
-                      <span className="font-semibold text-primary">{t('promptImprover.poweredBy')} Gemini 2.5 Flash</span>...
+                      <span className="font-semibold text-primary">{t('promptImprover.poweredBy')} Gemini 3 Flash</span>...
                     </p>
                     <p className="font-mono text-sm text-text-light/60 mt-1">
                       {t('promptImprover.findingInfo')}
